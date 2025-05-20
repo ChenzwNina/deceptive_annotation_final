@@ -52,25 +52,32 @@ let alreadyInuse = {
     }
 };
 
+function withCorsHeaders(response, origin) {
+    response.headers.set("Access-Control-Allow-Origin", origin || "*");
+    response.headers.set("Access-Control-Allow-Methods", "GET, POST, DELETE, OPTIONS");
+    response.headers.set("Access-Control-Allow-Headers", "Content-Type, Authorization");
+    return response;
+}
+
+
+
 export default {
     async fetch(request, env) {
-      if (request.method === "OPTIONS") {
-            // Make sure to customize these headers to fit your needs.
+        if (request.method === "OPTIONS") {
+            const origin = request.headers.get("Origin") || "*";
             return new Response(null, {
+                status: 204,
                 headers: {
-                    "Access-Control-Allow-Origin": "*", // Adjust this to be more restrictive if needed
-                    "Access-Control-Allow-Methods": "GET, POST, DELETE, OPTIONS", // Include other methods your API needs
-                    "Access-Control-Allow-Headers": "Content-Type, Authorization", // Add other headers your API expects
+                    "Access-Control-Allow-Origin": origin,
+                    "Access-Control-Allow-Methods": "GET, POST, DELETE, OPTIONS",
+                    "Access-Control-Allow-Headers": "Content-Type, Authorization",
                 },
-            })
+            });
         }
+        
 
         kvNamespace = env.annotation-final;
 
-        normalHeader.headers["Access-Control-Allow-Origin"] = request.headers.get('Origin');
-        NotAvailableHeader.headers["Access-Control-Allow-Origin"] = request.headers.get('Origin');
-        notFoundHeader.headers["Access-Control-Allow-Origin"] = request.headers.get('Origin');
-        alreadyInuse.headers["Access-Control-Allow-Origin"] = request.headers.get('Origin');
         const url = new URL(request.url);
         const path = url.pathname;
 
@@ -96,7 +103,12 @@ var getTime = function () {
 async function handlePutComment(request) {
     // only allow post
     if (request.method !== "POST") {
-        return new Response("Method Not Allowed", NotAvailableHeader);
+        return withCorsHeaders(
+            new Response("Method Not Allowed", NotAvailableHeader),
+            request.headers.get("Origin")
+        );
+        
+        
     }
     const { key, rater, value } = await request.json();
     
@@ -108,13 +120,21 @@ async function handlePutComment(request) {
       "value": value
     }));
 
-    return new Response(JSON.stringify({ "msg": 'Annotation uploaded successfully for screenshot', key}), normalHeader);
+    return withCorsHeaders(
+        new Response(JSON.stringify({ msg: 'Annotation uploaded successfully for screenshot', key }), normalHeader),
+        request.headers.get("Origin")
+    );
+    
 }
 
 async function handleGetComment(request) {
     // only allow post
     if (request.method !== "POST") {
-        return new Response("Method Not Allowed", NotAvailableHeader);
+        return withCorsHeaders(
+            new Response("Method Not Allowed", NotAvailableHeader),
+            request.headers.get("Origin")
+        );
+        
     }
     const { key } = await request.json();
     
@@ -122,10 +142,18 @@ async function handleGetComment(request) {
 
     if(value == null) {
         console.log("No value found in KV for the given image index");
-        return new Response("", normalHeader);
+        return withCorsHeaders(
+            new Response("", normalHeader),
+            request.headers.get("Origin")
+        );
+        
     } else{
         console.log("Value found in KV for the given image index");
-        return new Response(JSON.stringify(value), normalHeader);
+        return withCorsHeaders(
+            new Response(JSON.stringify(value), normalHeader),
+            request.headers.get("Origin")
+        );
+        
     }
 }
 
@@ -133,7 +161,11 @@ async function handleGetComment(request) {
 async function handleUpload(request) {
     // only allow post
     if (request.method !== "POST") {
-        return new Response("Method Not Allowed", NotAvailableHeader);
+        return withCorsHeaders(
+            new Response("Method Not Allowed", NotAvailableHeader),
+            request.headers.get("Origin")
+        );
+        
     }
     const { key, index, rater } = await request.json();
     
@@ -145,7 +177,11 @@ async function handleUpload(request) {
       "rater": rater
     }));
 
-    return new Response(JSON.stringify({ "msg": 'Annotation progress saved for screenshot', index }), normalHeader);
+    return withCorsHeaders(
+        new Response(JSON.stringify({ msg: 'Annotation progress saved for screenshot', index }), normalHeader),
+        request.headers.get("Origin")
+    );
+    
 }
 
 async function handleGet(request) {
@@ -157,5 +193,9 @@ async function handleGet(request) {
     
     const value = await kvNamespace.list({ prefix: key+":" });
 
-    return new Response(JSON.stringify(value.keys), normalHeader);
+    return withCorsHeaders(
+        new Response("Method Not Allowed", NotAvailableHeader),
+        request.headers.get("Origin")
+    );
+    
 }
