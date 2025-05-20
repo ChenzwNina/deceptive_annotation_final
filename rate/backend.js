@@ -9,7 +9,7 @@
  */
 
 // Define a KV namespace for storing applicant data
-var kvNamespace = env.annotation-final;
+var kvNamespace = null;
 
 let normalHeader = {
     status: 200,
@@ -64,6 +64,8 @@ export default {
                 },
             })
         }
+
+        kvNamespace = env.annotation-final;
 
         normalHeader.headers["Access-Control-Allow-Origin"] = request.headers.get('Origin');
         NotAvailableHeader.headers["Access-Control-Allow-Origin"] = request.headers.get('Origin');
