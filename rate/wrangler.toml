@@ -16,4 +16,4 @@ workers_dev = true
 
 [[kv_namespaces]]
 binding = "annotation-final"
-id = "a29b1d6300b143eab874c0918fec299f"
+id = "a12a16fdcee34a079378bc8d6a55723f"
