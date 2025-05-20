@@ -76,7 +76,7 @@ export default {
         }
         
 
-        kvNamespace = env.annotation-final;
+        kvNamespace = env["annotation-final"];
 
         const url = new URL(request.url);
         const path = url.pathname;
