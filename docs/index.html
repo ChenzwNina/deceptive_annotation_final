@@ -16,9 +16,7 @@
             const name = document.getElementById('name').value;
             fetch(`https://rate.chenziwei0499.workers.dev/getCompleted`, {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
+                headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
                     key: name
                 })
