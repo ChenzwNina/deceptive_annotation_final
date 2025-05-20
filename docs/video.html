@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Widget Annotation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"></script>
+    <style>
+        hr.dashed {
+        border-top: 2px dashed #bbb;
+        }
+
+
+        /* Clear floats after the columns */
+        .container {
+            display: flex; /* Use Flexbox for layout */
+            gap: 20px; /* Adds 20px space between columns */
+            padding-left: 20px;
+            padding-right: 20px;
+            justify-content: center; /* Center the columns horizontally */
+        }
+
+        .column:first-child {
+            flex: 0 0 60%; /* Left column takes 70% of the container */
+            max-width: 60%; /* Prevent it from growing larger than 70% */
+        }
+
+        .column:last-child {
+            flex: 0 0 40%; /* Right column takes 30% of the container */
+            max-width: 40%; /* Prevent it from growing larger than 30% */
+        }
+
+        .column img {
+            max-width: 100%;
+            height: auto; /* Ensure the image scales properly */
+        }
+
+        sl-button.primary::part(base) {
+            background-color: #d7e9ff;
+        }
+
+        h1 {
+            font-size: var(--sl-font-size-x-large);
+            font-family: var(--sl-font-sans);
+            font-weight: var(--sl-font-weight-bold);
+            line-height: var(--sl-line-height-normal);
+        }
+        body {
+            font-family: var(--sl-font-sans);
+            font-size: var(--sl-font-size-medium);
+        }
+
+        sl-dropdown::part(panel) {
+            width: 30em;
+            background-color: var(--sl-panel-background-color, white); 
+            border-radius: var(--sl-border-radius-medium);
+            box-shadow: var(--sl-shadow-large);
+        }
+
+        .transition_button{
+            width: 130px;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="column">
+            <div id="video-scenes">
+                <!-- Video scenes will be dynamically inserted here -->
+            </div>
+        </div>
+        <div class="column">
+            <h1>Deceptive Design Category Selection</h1>
+            <sl-button variant="default" size="small" a href="https://drive.google.com/file/d/12K7xDdavPqzHip-8qBNFckEUqNAqw70v/view?usp=drive_link">
+                <sl-icon slot="prefix" name="arrow-up-right-square"></sl-icon>
+                View Taxonomoy
+            </sl-button>
+            <br/>
+
+            <sl-divider></sl-divider>
+            
+            <div class="deceptive-design-group">
+                <br/>
+
+                <sl-dropdown>
+                    <sl-button slot="trigger" class="primary" caret>Select Deceptive Designs</sl-button>
+                    <sl-tree selectable selection="multiple" class="deceptive-selectable">
+                        <sl-tree-item value="obstruction" label="Obstruction">
+                            Obstruction
+                            <sl-tree-item expanded value="roach-motel" label="Roach motel">
+                                Roach motel
+                                    <sl-tree-item value="immortal-accounts" label="Immortal accounts">Immortal accounts</sl-tree-item>
+                                    <sl-tree-item value="dead-end" label="Dead end">Dead end</sl-tree-item>
+                            </sl-tree-item>
+                            <sl-tree-item expanded value="creating-barriers" label="Creating barriers">
+                                Creating barriers
+                                    <sl-tree-item value="price-comparison-prevetion" label="Price comparison prevention">Price comparison prevention</sl-tree-item>
+                                    <sl-tree-item value="intermediate-currency" label="Intermediate currency">Intermediate currency</sl-tree-item>
+                            </sl-tree-item>
+                            <sl-tree-item expanded value="adding-steps" label="Adding steps">
+                                Adding steps
+                                    <sl-tree-item value="privacy-maze" label="Privacy maze">Privacy maze</sl-tree-item>
+                            </sl-tree-item>
+                        </sl-tree-item>
+
+                        <sl-tree-item value="sneaking" label="Sneaking">
+                            Sneaking
+                            <sl-tree-item expanded value="bait-and-switch" label="Bait and switch">
+                                Bait and switch
+                                <sl-tree-item value="disguised-ad" label="Disguised ad">Disguised ad</sl-tree-item>
+                                <sl-tree-item value="disguised-sign-up" label="Disguised sign-up">Disguised sign-up</sl-tree-item>
+                            </sl-tree-item>
+                            <sl-tree-item expanded value="hiding-information" label="Hiding information">
+                                Hiding information
+                                <sl-tree-item value="sneak-into-basket" label="Sneak into basket">Sneak into basket</sl-tree-item>
+                                <sl-tree-item value="drip-pricing" label="Drip pricing, hidden costs, or partitioned pricing">Drip pricing, hidden costs, or partitioned pricing</sl-tree-item>
+                                <sl-tree-item value="reference-pricing" label="Reference pricing">Reference pricing</sl-tree-item>
+                            </sl-tree-item>
+                            <sl-tree-item expanded value="contexualizing-cues" label="(De)contextualizing cues">
+                                (De)contextualizing cues
+                                <sl-tree-item value="conflicting-inforamtion" label="Conflicting information">Conflicting information</sl-tree-item>
+                                <sl-tree-item value="info-without-context" label="Information without context">Information without context</sl-tree-item>
+                            </sl-tree-item>
+                        </sl-tree-item>
+
+                        <sl-tree-item value="interface-interference" label="Interface interference">
+                            Interface interference
+                            <sl-tree-item expanded value="manipulating-choice-architecture" label="Manipulating choice architecture">
+                                Manipulating choice architecture
+                                <sl-tree-item value="false-hierarchy" label="False hierarchy">False hierarchy</sl-tree-item>
+                                <sl-tree-item value="visual-prominence" label="Visual prominence">Visual prominence</sl-tree-item>
+                                <sl-tree-item value="bundling" label="Bundling">Bundling</sl-tree-item>
+                                <sl-tree-item value="pressued-selling" label="Pressured selling">Pressured selling</sl-tree-item>
+                                <sl-tree-item value="first-place-positioning" label="First place positioning">First place positioning</sl-tree-item>
+                                <sl-tree-item value="fake-data-comparison" label="Fake data comparison">Fake data comparison</sl-tree-item>
+                            </sl-tree-item>
+                            <sl-tree-item expanded value="bad-defaults" label="Bad defaults">
+                                Bad defaults
+                            </sl-tree-item>
+                            <sl-tree-item expanded value="emotional-or-sensory-manipulation" label="Emotional or sensory manipulation">
+                                Emotional or sensory manipulation
+                                <sl-tree-item value="cuteness" label="Cuteness">Cuteness</sl-tree-item>
+                                <sl-tree-item value="positive-or-negative-framing" label="Positive or negative framing">Positive or negative framing</sl-tree-item>
+                            </sl-tree-item>
+                            <sl-tree-item expanded value="trick-questions" label="Trick questions">
+                                Trick questions
+                            </sl-tree-item>
+                            <sl-tree-item expanded value="choice-overload" label="Choice overload">
+                                Choice overload
+                            </sl-tree-item>
+                            <sl-tree-item expanded value="hidden-information" label="Hidden information">
+                                Hidden information
+                            </sl-tree-item>
+                            <sl-tree-item expanded value="language-inaccessibility" label="Language inaccessibility">
+                                Language inaccessibility
+                                <sl-tree-item value="wrong-language" label="Wrong language">Wrong language</sl-tree-item>
+                                <sl-tree-item value="complex-language" label="Complex language">Complex language</sl-tree-item>
+                            </sl-tree-item>
+                            <sl-tree-item expanded value="feedforward-ambiguity" label="Feedforward ambiguity">
+                                Feedforward ambiguity
+                            </sl-tree-item>
+                        </sl-tree-item>
+
+                        <sl-tree-item value="forced-action" label="Forced action">
+                            Forced action
+                            <sl-tree-item expanded value="nagging" label="Nagging">
+                                Nagging
+                            </sl-tree-item>
+                            <sl-tree-item expanded value="forced-continuity" label="Forced continuity">
+                                Forced continuity
+                            </sl-tree-item>
+                            <sl-tree-item expanded value="forced-registration" label="Forced registration">
+                                Forced registration
+                            </sl-tree-item>
+                            <sl-tree-item value="forced-communication-or-disclosure" label="Forced communication or disclosure">
+                                Forced communication or disclosure
+                                <sl-tree-item value="privacy-zuckering" label="Privacy zuckering">Privacy zuckering</sl-tree-item>
+                                <sl-tree-item value="friend-spam" label="Friend spam">Friend spam</sl-tree-item>
+                                <sl-tree-item value="address-book-leeching" label="Address book leeching">Address book leeching</sl-tree-item> 
+                                <sl-tree-item value="social-pyramid" label="Social pyramid">Social pyramid</sl-tree-item>                        
+                            </sl-tree-item>
+                            <sl-tree-item value="gamification" label="Gamification">
+                                Gamification
+                                <sl-tree-item value="pay-to-play" label="Pay-to-play">Pay-to-play</sl-tree-item>
+                                <sl-tree-item value="grinding" label="Grinding">Grinding</sl-tree-item>                  
+                            </sl-tree-item>
+                            <sl-tree-item value="attention-capture" label="Attention capture">
+                                Attention capture
+                                <sl-tree-item value="autoplay" label="Auto-play"> Auto-play</sl-tree-item>
+                            </sl-tree-item>
+                        </sl-tree-item>
+
+                        <sl-tree-item value="social-engineering" label="Social engineering">
+                            Social engineering
+                            <sl-tree-item expanded value="scarcity-and-popularity-claims" label="Scarcity and popularity claims">
+                                Scarcity and popularity claims
+                                <sl-tree-item value="high-demand" label="High demand">High demand</sl-tree-item>
+                                <sl-tree-item value="fake-discount" label="(Fake) Discount">(Fake) Discount</sl-tree-item>
+                            </sl-tree-item>
+                            <sl-tree-item expanded value="social-proof" label="Social proof">
+                                Social proof
+                                <sl-tree-item value="low-stock" label="Low stock">Low stock</sl-tree-item>
+                                <sl-tree-item value="endorsements-and-testimonials" label="Endorsements and testimonials">Endorsements and testimonials</sl-tree-item>
+                                <sl-tree-item value="parasocial-pressure" label="Parasocial pressure">Parasocial pressure</sl-tree-item>
+                            </sl-tree-item>
+                            <sl-tree-item expanded value="urgency" label="Urgency">
+                                Urgency
+                                <sl-tree-item value="activity-messages" label="Activity messages">Activity messages</sl-tree-item>
+                                <sl-tree-item value="countdown-timer" label = "Countdown timer">Countdown timer</sl-tree-item>
+                                <sl-tree-item value="limited-time-message" label = "Limited time message">Limited time message</sl-tree-item>
+                            </sl-tree-item>
+                            <sl-tree-item expanded value="shaming" label="Shaming">
+                                Shaming
+                                <sl-tree-item value="confirmshaming" label="Confirmshaming">Confirmshaming</sl-tree-item>
+                            </sl-tree-item>
+                            <sl-tree-item expanded value="personalization" label="Personalization">
+                                Personalization
+                            </sl-tree-item>
+                        </sl-tree-item>
+                        <sl-tree-item value="not-sure" label="I'm not sure">I'm not sure</sl-tree-item>
+                    </sl-tree>
+                </sl-dropdown>
+                
+                <p id="selection-log" style="margin-top: 1rem;">Selected: (none)</p>
+            
+
+                <br/>   
+                <sl-textarea rows="5" id="explanation-text" label="Which elements use deceptive designs? Provide one explanation per deceptive design, using a single line for each." help-text="Example: Visual Prominence - The 'Add to Cart' and 'Buy Now' action buttons use deceptive design. The 'Buy Now' button uses a much brighter color to draw more attention, making it an example of the 'Visual Prominence' deceptive design."></sl-textarea>
+                <br/>
+                <sl-divider></sl-divider>
+                <sl-button variant="default" id="prev-button" class="transition_button">
+                    <sl-icon slot="prefix" name="arrow-left"></sl-icon>
+                    Previous
+                </sl-button>
+                <sl-button variant="default" id="next-button" class="transition_button">
+                    <sl-icon slot="suffix" name="arrow-right"></sl-icon>
+                    Next
+                </sl-button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        // Tree selection logic
+        const tree = document.querySelector('.deceptive-selectable');
+        const log = document.getElementById('selection-log');
+        let currentSummaryLabel = '(none)';
+        
+        tree.addEventListener('sl-selection-change', event => {
+            const selectedItems = Array.from(event.detail.selection);
+        
+            const getLabel = (item) => {
+            // Fallback to visible text if label is undefined
+            return item.label || item.childNodes[0]?.textContent.trim() || '(Unnamed)';
+            };
+        
+            const labels = [...new Set(selectedItems.map(getLabel))];
+            const summaryLabels = `Selected: ${labels.length ? labels.join(', ') : '(none)'}`;
+        
+            log.textContent = summaryLabels;
+            currentSummaryLabel = `${labels.length ? labels.join(', ') : '(none)'}`;
+            console.log("summary labels", summaryLabels)
+
+        });
+
+
+        async function fetchVideoData() {
+            const response = await fetch('widget_data.json');
+                
+            if (response) {
+                console.log("Data JSON fetch succeeded")
+                return await response.json();}
+        }
+
+        function getQueryParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            console.log(urlParams.get(name));
+            return urlParams.get(name);
+        }
+
+        let videoSource = {};
+
+        async function createVideoScene(videoPair) {
+            const scene = document.createElement('div');
+
+            scene.innerHTML = `
+            <div>
+                <h2><Widget Image</h2>
+                <img alt="design_screenshot sizes="print 73px,117px" src="${videoPair.screenshot_location}">
+            </div>
+            `;
+
+            // const response = await fetch('https://rate.chenziwei0499.workers.dev/get', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json'
+            //     },
+            //     body: JSON.stringify({
+            //         key: getQueryParameter('videoIndex') + getQueryParameter('user')
+            //     })
+            // });
+
+            // const data = await response.json();
+
+            const response = await fetch('https://rate.chenziwei0499.workers.dev/get', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ key: getQueryParameter('videoIndex') + getQueryParameter('user') })
+            });
+
+            let data = {};
+            try {
+            const text = await response.text();
+            if (text.trim()) {
+                data = JSON.parse(text);
+            } else {
+                console.warn('Empty response from /get endpoint');
+                return scene; // Skip processing this entry
+            }
+            } catch (err) {
+            console.error('Failed to parse JSON:', err);
+            return scene;
+            }
+
+            const parsed = data; 
+
+            console.log("parsed", parsed)
+            console.log("parsed type", typeof parsed)
+            parsed_dict = JSON.parse(parsed)
+
+            // Get dark pattern type and explanation text
+            dark_pattern_type = parsed_dict.value.dark_pattern_type
+            explanation = parsed_dict.value.explanation
+
+            console.log("explanation", explanation)
+            console.log("dark_pattern_type", dark_pattern_type)
+            console.log("dark_pattern_type type", typeof dark_pattern_type)
+
+            // Get text back to the textbox
+            document.getElementById('explanation-text').value = explanation;
+
+            // If there is no value, skip this scene
+            if (dark_pattern_type === "") {
+                console.warn("Missing or malformed data:", parsed);
+                return scene;
+            }
+
+            const selectedValues = dark_pattern_type.split(',').map(t => t.trim());       
+            // clean each item
+
+            console.log("SelectedValues", typeof selectedValues)
+
+            console.log("SelectedValues isArray?", Array.isArray(selectedValues));
+            console.log("SelectedValues", selectedValues)
+
+            // ensure custom element is defined
+            await customElements.whenDefined('sl-tree-item');
+
+            // Select matching sl-tree-item elements
+            const allItems = document.querySelectorAll('sl-tree-item');
+            
+            allItems.forEach(item => {
+                const label = item.getAttribute('label');
+                if (selectedValues.includes(label.trim())) {
+                    item.selected = true;
+                    console.log("Selected:", label);
+                }
+            });
+
+            document.getElementById("selection-log").innerHTML = "Selected: " + selectedValues; 
+
+            // Fix log and label tracking after selection restoration
+            const selectedLabels = selectedValues.join(', ');
+            const summaryLabels = `Selected: ${selectedLabels || '(none)'}`;
+            document.getElementById("selection-log").innerHTML = summaryLabels;
+            currentSummaryLabel = selectedLabels || '(none)';
+
+            console.log("currentSummaryLabel", currentSummaryLabel);
+
+
+            return scene;
+        }
+        
+        async function showScene() {
+            const videoData = await fetchVideoData();
+            console.log("Video Data :" + JSON.stringify(videoData));
+            const videoIndex = getQueryParameter('videoIndex');
+            const videoScenes = document.getElementById('video-scenes');
+            videoScenes.innerHTML = '<p> Current widget index: ' + videoIndex;
+
+            if (videoIndex !== null && videoIndex < videoData.length && videoIndex >= 0) {
+                console.log("Video Data[index]: "+ JSON.stringify(videoData[videoIndex]));
+                const scene = await createVideoScene(videoData[videoIndex]);
+                videoSource = videoData[videoIndex];
+                console.log("scene:", scene)
+                videoScenes.appendChild(scene);
+            } else {
+                videoScenes.innerHTML = `
+                    <p><strong>Invalid image index</strong></p>
+                    <p> Current video index is ${videoIndex}. Total index is ${videoData.length}.</p>
+                `;
+            }
+
+
+        }
+
+        // Initialize by showing the scene based on the URL parameter
+        showScene();
+
+        function collectData() {
+            console.log("summary labels in collectData", currentSummaryLabel)
+            const urlParams = new URLSearchParams(window.location.search);
+            const videoIndex = urlParams.get('videoIndex');
+
+            const explanation_text = document.getElementById('explanation-text').value;
+
+            // Save deceptive design categories and explanation text
+            const data = {
+                dark_pattern_type: currentSummaryLabel,
+                explanation: explanation_text
+            }
+            return data;
+        }
+
+
+        async function uploadData() {
+            const data = collectData();
+            Toast('Uploading data...', 1000);
+            let myuuid = crypto.randomUUID();
+            const response = await fetch('https://rate.chenziwei0499.workers.dev/upload', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    key: myuuid,
+                    index: getQueryParameter('videoIndex'),
+                    rater: getQueryParameter('user')
+                })
+            });
+            // Toast(JSON.stringify(await response.json()), 1000);
+
+            const response1 = await fetch('https://rate.chenziwei0499.workers.dev/put', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    key: getQueryParameter('videoIndex') + getQueryParameter('user'),
+                    rater: getQueryParameter('user'),
+                    value: data
+                    })
+            });
+            await Toast(JSON.stringify(await response1.json()), 1000);
+        }
+
+        async function goToNextScene() {
+            const videoIndex = parseInt(getQueryParameter('videoIndex'), 10);
+            await uploadData();
+            const nextIndex = isNaN(videoIndex) ? 0 : videoIndex + 1;
+            console.log("Next Scene Index is :"+ nextIndex)
+            window.location.search = `?videoIndex=${nextIndex}&user=${getQueryParameter('user')}`;
+
+        }
+
+        async function goToPrevScene() {
+            const videoIndex = parseInt(getQueryParameter('videoIndex'), 10);
+            await uploadData();
+            const nextIndex = isNaN(videoIndex) ? 0 : videoIndex - 1;
+            window.location.search = `?videoIndex=${nextIndex}&user=${getQueryParameter('user')}`;
+        }
+
+        async function Toast(msg, duration) {
+            duration = isNaN(duration) ? 3000 : duration;
+            var m = document.createElement('div');
+            m.textContent = msg;
+            m.style.cssText = "max-width:60%;min-width: 150px;padding:0 14px;height: 40px;color: rgb(255, 255, 255);line-height: 40px;text-align: center;border-radius: 4px;position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 999999;background: rgba(0, 0, 0,.7);font-size: 16px;";
+            document.body.appendChild(m);
+            setTimeout(function () {
+                var d = 0.5;
+                m.style.webkitTransition = '-webkit-transform ' + d + 's ease-in, opacity ' + d + 's ease-in';
+                m.style.opacity = '0';
+                setTimeout(function () { document.body.removeChild(m) }, d * 1000);
+            }, duration);
+            // wait for the toast to disappear
+            await new Promise(r => setTimeout(r, duration));
+        }
+
+
+        document.getElementById('next-button').addEventListener('click', goToNextScene);
+        document.getElementById('prev-button').addEventListener('click', goToPrevScene);
+    </script>
+</body>
+
+</html>
