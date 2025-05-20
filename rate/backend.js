@@ -187,15 +187,17 @@ async function handleUpload(request) {
 async function handleGet(request) {
     // only allow post
     if (request.method !== "POST") {
-        return new Response("Method Not Allowed", NotAvailableHeader);
+        return withCorsHeaders(
+            new Response("Method Not Allowed", NotAvailableHeader),
+            request.headers.get("Origin")
+        );
     }
+
     const { key } = await request.json();
-    
-    const value = await kvNamespace.list({ prefix: key+":" });
+    const value = await kvNamespace.list({ prefix: key + ":" });
 
     return withCorsHeaders(
-        new Response("Method Not Allowed", NotAvailableHeader),
+        new Response(JSON.stringify(value.keys), normalHeader),
         request.headers.get("Origin")
     );
-    
 }
