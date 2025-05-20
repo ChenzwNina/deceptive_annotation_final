@@ -58,7 +58,7 @@ export default {
             // Make sure to customize these headers to fit your needs.
             return new Response(null, {
                 headers: {
-                    "Access-Control-Allow-Origin": request.headers.get('Origin'), // Adjust this to be more restrictive if needed
+                    "Access-Control-Allow-Origin": "*", // Adjust this to be more restrictive if needed
                     "Access-Control-Allow-Methods": "GET, POST, DELETE, OPTIONS", // Include other methods your API needs
                     "Access-Control-Allow-Headers": "Content-Type, Authorization", // Add other headers your API expects
                 },
