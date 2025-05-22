@@ -175,6 +175,10 @@
             width: 30px;
         }
 
+        .reasoning-title{
+            font-size: var(--sl-font-size-large);
+        }
+
 
 
     </style>
@@ -185,6 +189,11 @@
         <div class="column">
             <div id="video-scenes">
                 <!-- Screenshots will be dynamically inserted here -->
+            </div>
+            <div id="llm-reasoning">
+                <p class="reasoning-title"> Placement and Reasoning</p>
+                <p id="reasoning-context"></p>
+                <!-- Reasoning text will be dynamically inserted here -->
             </div>
         </div>
         <div class="column">
@@ -707,11 +716,25 @@
             </div>
             `;
 
+            // Get LLM reasoning
+            const txt_location = screenshot_location.replace(".png", ".txt");
+            fetch(txt_location)
+                .then(response => response.text())
+                .then(text => {
+                    document.getElementById("reasoning-context").textContent = text;
+                })
+                .catch(error => {
+                    console.error('Error fetching text:', error);
+                    document.getElementById("reasoning-context").textContent ="Fail to load text.";
+                });
+                
+
             const response = await fetch('https://rate.chenziwei0499.workers.dev/get', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({ key: getQueryParameter('videoIndex') + getQueryParameter('user') })
             });
+
 
             let data = {};
             try {
@@ -788,6 +811,7 @@
             const videoIndex = getQueryParameter('videoIndex');
             const videoScenes = document.getElementById('video-scenes');
             videoScenes.innerHTML = '<p> Current widget index: ' + videoIndex;
+    
 
             if (videoIndex !== null && videoIndex < videoData.length && videoIndex >= 0) {
                 console.log("Video Data[index]: "+ JSON.stringify(videoData[videoIndex]));
@@ -801,7 +825,6 @@
                     <p> Current video index is ${videoIndex}. Total index is ${videoData.length}.</p>
                 `;
             }
-
 
         }
 
