@@ -717,14 +717,14 @@
             `;
 
             // Get LLM reasoning
-            const txt_location = screenshot_location.replace(".png", ".txt");
+            const txt_location = videoPair.screenshot_location.replace(".png", ".txt");
             fetch(txt_location)
                 .then(response => response.text())
                 .then(text => {
                     document.getElementById("reasoning-context").textContent = text;
                 })
                 .catch(error => {
-                    console.error('Error fetching text:', error);
+                    console.error("Error fetching text:", error);
                     document.getElementById("reasoning-context").textContent ="Fail to load text.";
                 });
                 
