@@ -8,6 +8,76 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css" />
     <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"></script>
     <style>
+
+        /* Index level 1 */
+        .label-on-left {
+            margin-left: 3rem;
+            --label-width: 12rem;
+            --gap-width: 2rem;
+        }
+
+        .label-on-left + .label-on-left {
+            margin-top: var(--sl-spacing-medium);
+        }
+
+        .label-on-left::part(form-control) {
+            display: grid;
+            grid: auto / var(--label-width) 1fr;
+            gap: var(--sl-spacing-3x-small) var(--gap-width);
+            align-items: center;
+        }
+
+        .label-on-left::part(form-control-input) {
+            justify-self: end; 
+            width: 100px;
+        }
+
+        .label-on-left::part(form-control-label) {
+            text-align: right;
+            flex: 1;
+            width: 10rem;
+        }
+
+        .label-on-left::part(form-control-help-text) {
+            grid-column-start: 2;
+        }
+
+
+        .label-on-left-upper {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            --label-width: 12rem;
+            --gap-width: 2rem;
+        }
+
+        .label-on-left-upper + .label-on-left-upper {
+            margin-top: var(--sl-spacing-medium);
+        }
+
+        .label-on-left-upper::part(form-control) {
+            display: grid;
+            grid: auto / var(--label-width) 1fr;
+            gap: var(--sl-spacing-3x-small) var(--gap-width);
+            align-items: center;
+        }
+
+        .label-on-left-upper::part(form-control-input) {
+            justify-self: end; 
+            width: 100px;
+            background: #E3F2FF;
+        }
+
+        .label-on-left-upper::part(form-control-label) {
+            text-align: left;
+            flex: 1;
+            width: 12rem;
+            font-weight: var(--sl-font-weight-semibold);
+        }
+
+        .label-on-left-upper::part(form-control-help-text) {
+            grid-column-start: 2;
+        }
+
         hr.dashed {
         border-top: 2px dashed #bbb;
         }
@@ -63,6 +133,48 @@
             width: 130px;
         }
 
+        .level0{
+            display: flex;
+            align-items: center; 
+            gap: 1rem;
+        }
+
+        .level1{
+            font-size: var(--sl-font-size-medium);
+            width: 500px;
+        }
+
+        .level2{
+            display: inline-flex;
+            width: 100%;
+            font-size: var(--sl-font-size-medium);
+            font-weight: var(--sl-font-weight-semibold);
+        }
+
+        .level2-first-flex-child{
+            flex: 1
+        }
+
+        .number-style-level0{
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            background: #f9f8a7;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+        }
+
+        .number-style-level1{
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            background: #E3F2FF;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+        }
+
 
 
     </style>
@@ -72,7 +184,7 @@
     <div class="container">
         <div class="column">
             <div id="video-scenes">
-                <!-- Video scenes will be dynamically inserted here -->
+                <!-- Screenshots will be dynamically inserted here -->
             </div>
         </div>
         <div class="column">
@@ -84,191 +196,476 @@
             <br/>
 
             <sl-divider></sl-divider>
-            
-            <div class="deceptive-design-group">
-                <br/>
 
-                <sl-dropdown>
-                    <sl-button slot="trigger" class="primary" caret>Select Deceptive Designs</sl-button>
-                    <sl-tree selectable selection="multiple" class="deceptive-selectable">
-                        <sl-tree-item value="obstruction" label="Obstruction">
-                            Obstruction
-                            <sl-tree-item expanded value="roach-motel" label="Roach motel">
-                                Roach motel
-                                    <sl-tree-item value="immortal-accounts" label="Immortal accounts">Immortal accounts</sl-tree-item>
-                                    <sl-tree-item value="dead-end" label="Dead end">Dead end</sl-tree-item>
-                            </sl-tree-item>
-                            <sl-tree-item expanded value="creating-barriers" label="Creating barriers">
-                                Creating barriers
-                                    <sl-tree-item value="price-comparison-prevetion" label="Price comparison prevention">Price comparison prevention</sl-tree-item>
-                                    <sl-tree-item value="intermediate-currency" label="Intermediate currency">Intermediate currency</sl-tree-item>
-                            </sl-tree-item>
-                            <sl-tree-item expanded value="adding-steps" label="Adding steps">
-                                Adding steps
-                                    <sl-tree-item value="privacy-maze" label="Privacy maze">Privacy maze</sl-tree-item>
-                            </sl-tree-item>
-                        </sl-tree-item>
+            <div id="taxonomy-selection">
+                <!-- Obstruction -->
+                <div class="level0">
+                    <sl-details class="level1" summary="Obstruction" >
+                        <div class="level2">
+                            <p class="level2-first-flex-child"> Roach Motel </p>
+                            <p id="roach-motel-sum" class="number-style-level1">0</p>
+                        </div>
+                        <sl-input class="label-on-left" id="immortal-accounts-vote" value=0 label="Immortal accounts" type="number" placeholder="0"></sl-input>
+                        <sl-input class="label-on-left" id="dead-end-vote" value=0 label="Dead end" type="number" placeholder="0"></sl-input>
 
-                        <sl-tree-item value="sneaking" label="Sneaking">
-                            Sneaking
-                            <sl-tree-item expanded value="bait-and-switch" label="Bait and switch">
-                                Bait and switch
-                                <sl-tree-item value="disguised-ad" label="Disguised ad">Disguised ad</sl-tree-item>
-                                <sl-tree-item value="disguised-sign-up" label="Disguised sign-up">Disguised sign-up</sl-tree-item>
-                            </sl-tree-item>
-                            <sl-tree-item expanded value="hiding-information" label="Hiding information">
-                                Hiding information
-                                <sl-tree-item value="sneak-into-basket" label="Sneak into basket">Sneak into basket</sl-tree-item>
-                                <sl-tree-item value="drip-pricing" label="Drip pricing, hidden costs, or partitioned pricing">Drip pricing, hidden costs, or partitioned pricing</sl-tree-item>
-                                <sl-tree-item value="reference-pricing" label="Reference pricing">Reference pricing</sl-tree-item>
-                            </sl-tree-item>
-                            <sl-tree-item expanded value="contexualizing-cues" label="(De)contextualizing cues">
-                                (De)contextualizing cues
-                                <sl-tree-item value="conflicting-inforamtion" label="Conflicting information">Conflicting information</sl-tree-item>
-                                <sl-tree-item value="info-without-context" label="Information without context">Information without context</sl-tree-item>
-                            </sl-tree-item>
-                        </sl-tree-item>
+                        <div class="level2">
+                            <p class="level2-first-flex-child"> Creating Barriers </p>
+                            <p id="creating-barriers-sum" class="number-style-level1">0</p>
+                        </div>
+                        <sl-input class="label-on-left" id="price-comparison-prevention-vote" value=0 label="Price comparison prevention" type="number" placeholder="0"></sl-input>
+                        <sl-input class="label-on-left" id="intermediate-currency-vote" value=0 label="Intermediate currency" type="number" placeholder="0"></sl-input>
 
-                        <sl-tree-item value="interface-interference" label="Interface interference">
-                            Interface interference
-                            <sl-tree-item expanded value="manipulating-choice-architecture" label="Manipulating choice architecture">
-                                Manipulating choice architecture
-                                <sl-tree-item value="false-hierarchy" label="False hierarchy">False hierarchy</sl-tree-item>
-                                <sl-tree-item value="visual-prominence" label="Visual prominence">Visual prominence</sl-tree-item>
-                                <sl-tree-item value="bundling" label="Bundling">Bundling</sl-tree-item>
-                                <sl-tree-item value="pressued-selling" label="Pressured selling">Pressured selling</sl-tree-item>
-                                <sl-tree-item value="first-place-positioning" label="First place positioning">First place positioning</sl-tree-item>
-                                <sl-tree-item value="fake-data-comparison" label="Fake data comparison">Fake data comparison</sl-tree-item>
-                            </sl-tree-item>
-                            <sl-tree-item expanded value="bad-defaults" label="Bad defaults">
-                                Bad defaults
-                            </sl-tree-item>
-                            <sl-tree-item expanded value="emotional-or-sensory-manipulation" label="Emotional or sensory manipulation">
-                                Emotional or sensory manipulation
-                                <sl-tree-item value="cuteness" label="Cuteness">Cuteness</sl-tree-item>
-                                <sl-tree-item value="positive-or-negative-framing" label="Positive or negative framing">Positive or negative framing</sl-tree-item>
-                            </sl-tree-item>
-                            <sl-tree-item expanded value="trick-questions" label="Trick questions">
-                                Trick questions
-                            </sl-tree-item>
-                            <sl-tree-item expanded value="choice-overload" label="Choice overload">
-                                Choice overload
-                            </sl-tree-item>
-                            <sl-tree-item expanded value="hidden-information" label="Hidden information">
-                                Hidden information
-                            </sl-tree-item>
-                            <sl-tree-item expanded value="language-inaccessibility" label="Language inaccessibility">
-                                Language inaccessibility
-                                <sl-tree-item value="wrong-language" label="Wrong language">Wrong language</sl-tree-item>
-                                <sl-tree-item value="complex-language" label="Complex language">Complex language</sl-tree-item>
-                            </sl-tree-item>
-                            <sl-tree-item expanded value="feedforward-ambiguity" label="Feedforward ambiguity">
-                                Feedforward ambiguity
-                            </sl-tree-item>
-                        </sl-tree-item>
+                        <div class="level2">
+                            <p class="level2-first-flex-child"> Adding Steps </p>
+                            <p id="adding-steps-sum" class="number-style-level1">0</p>
+                        </div>
+                        <sl-input class="label-on-left" id="privacy-maze-vote" value=0 label="Privacy maze" type="number" placeholder="0"></sl-input>
 
-                        <sl-tree-item value="forced-action" label="Forced action">
-                            Forced action
-                            <sl-tree-item expanded value="nagging" label="Nagging">
-                                Nagging
-                            </sl-tree-item>
-                            <sl-tree-item expanded value="forced-continuity" label="Forced continuity">
-                                Forced continuity
-                            </sl-tree-item>
-                            <sl-tree-item expanded value="forced-registration" label="Forced registration">
-                                Forced registration
-                            </sl-tree-item>
-                            <sl-tree-item value="forced-communication-or-disclosure" label="Forced communication or disclosure">
-                                Forced communication or disclosure
-                                <sl-tree-item value="privacy-zuckering" label="Privacy zuckering">Privacy zuckering</sl-tree-item>
-                                <sl-tree-item value="friend-spam" label="Friend spam">Friend spam</sl-tree-item>
-                                <sl-tree-item value="address-book-leeching" label="Address book leeching">Address book leeching</sl-tree-item> 
-                                <sl-tree-item value="social-pyramid" label="Social pyramid">Social pyramid</sl-tree-item>                        
-                            </sl-tree-item>
-                            <sl-tree-item value="gamification" label="Gamification">
-                                Gamification
-                                <sl-tree-item value="pay-to-play" label="Pay-to-play">Pay-to-play</sl-tree-item>
-                                <sl-tree-item value="grinding" label="Grinding">Grinding</sl-tree-item>                  
-                            </sl-tree-item>
-                            <sl-tree-item value="attention-capture" label="Attention capture">
-                                Attention capture
-                                <sl-tree-item value="autoplay" label="Auto-play"> Auto-play</sl-tree-item>
-                            </sl-tree-item>
-                        </sl-tree-item>
+                    </sl-details>
+                    <p id="obstruction-sum" value=0 class="number-style-level0">0</p>
+                </div>
 
-                        <sl-tree-item value="social-engineering" label="Social engineering">
-                            Social engineering
-                            <sl-tree-item expanded value="scarcity-and-popularity-claims" label="Scarcity and popularity claims">
-                                Scarcity and popularity claims
-                                <sl-tree-item value="high-demand" label="High demand">High demand</sl-tree-item>
-                                <sl-tree-item value="fake-discount" label="(Fake) Discount">(Fake) Discount</sl-tree-item>
-                            </sl-tree-item>
-                            <sl-tree-item expanded value="social-proof" label="Social proof">
-                                Social proof
-                                <sl-tree-item value="low-stock" label="Low stock">Low stock</sl-tree-item>
-                                <sl-tree-item value="endorsements-and-testimonials" label="Endorsements and testimonials">Endorsements and testimonials</sl-tree-item>
-                                <sl-tree-item value="parasocial-pressure" label="Parasocial pressure">Parasocial pressure</sl-tree-item>
-                            </sl-tree-item>
-                            <sl-tree-item expanded value="urgency" label="Urgency">
-                                Urgency
-                                <sl-tree-item value="activity-messages" label="Activity messages">Activity messages</sl-tree-item>
-                                <sl-tree-item value="countdown-timer" label = "Countdown timer">Countdown timer</sl-tree-item>
-                                <sl-tree-item value="limited-time-message" label = "Limited time message">Limited time message</sl-tree-item>
-                            </sl-tree-item>
-                            <sl-tree-item expanded value="shaming" label="Shaming">
-                                Shaming
-                                <sl-tree-item value="confirmshaming" label="Confirmshaming">Confirmshaming</sl-tree-item>
-                            </sl-tree-item>
-                            <sl-tree-item expanded value="personalization" label="Personalization">
-                                Personalization
-                            </sl-tree-item>
-                        </sl-tree-item>
-                        <sl-tree-item value="not-sure" label="I'm not sure">I'm not sure</sl-tree-item>
-                    </sl-tree>
-                </sl-dropdown>
-                
-                <p id="selection-log" style="margin-top: 1rem;">Selected: (none)</p>
-            
+                <!-- Sneaking -->
+                <div class="level0">
+                    <sl-details class="level1" summary="Sneaking" >
+                        <div class="level2">
+                            <p class="level2-first-flex-child"> Bait and Switch </p>
+                            <p id="bait-and-switch-sum" class="number-style-level1">0</p>
+                        </div>
+                        <sl-input class="label-on-left" id="disguised-ad-vote" value=0 label="Disguised ad" type="number" placeholder="0"></sl-input>
+                        <sl-input class="label-on-left" id="disguised-sign-up-vote" value=0 label="Disguised sign-up" type="number" placeholder="0"></sl-input>
 
-                <br/>   
-                <sl-textarea rows="5" id="explanation-text" label="Which elements use deceptive designs? Provide one explanation per deceptive design, using a single line for each." help-text="Example: Visual Prominence - The 'Add to Cart' and 'Buy Now' action buttons use deceptive design. The 'Buy Now' button uses a much brighter color to draw more attention, making it an example of the 'Visual Prominence' deceptive design."></sl-textarea>
-                <br/>
-                <sl-divider></sl-divider>
-                <sl-button variant="default" id="prev-button" class="transition_button">
-                    <sl-icon slot="prefix" name="arrow-left"></sl-icon>
-                    Previous
-                </sl-button>
-                <sl-button variant="default" id="next-button" class="transition_button">
-                    <sl-icon slot="suffix" name="arrow-right"></sl-icon>
-                    Next
-                </sl-button>
+                        <div class="level2">
+                            <p class="level2-first-flex-child"> Hiding information </p>
+                            <p id="hiding-information-sum" class="number-style-level1">0</p>
+                        </div>
+                        <sl-input class="label-on-left" id="sneak-into-basket-vote" value=0 label="Sneak into basket" type="number" placeholder="0"></sl-input>
+                        <sl-input class="label-on-left" id="drip-pricing-vote" value=0 label="Drip pricing, hidden costs, or paritioned pricing" type="number" placeholder="0"></sl-input>
+                        <sl-input class="label-on-left" id="reference-pricing-vote" value=0 label="Reference pricing" type="number" placeholder="0"></sl-input>
+
+                        <div class="level2">
+                            <p class="level2-first-flex-child"> (De)contextualizing Cues </p>
+                            <p id="(de)contextualizing-cues-sum" class="number-style-level1">0</p>
+                        </div>
+                        <sl-input class="label-on-left" id="conflicting-information-vote" value=0 label="Confliciting information" type="number" placeholder="0"></sl-input>
+                        <sl-input class="label-on-left" id="information-without-context-vote" value=0 label="Information without context" type="number" placeholder="0"></sl-input>
+
+                    </sl-details>
+                    <p id="sneaking-sum" value=0 class="number-style-level0">0</p>
+                </div>
+
+                <!-- Interface Interference -->
+                <div class="level0">
+                    <sl-details class="level1" summary="Interface Interference" >
+                        <div class="level2">
+                            <p class="level2-first-flex-child"> Manipulating Choice Architecture </p>
+                            <p id="manipulating-choice-architecture-sum" class="number-style-level1">0</p>
+                        </div>
+                        <sl-input class="label-on-left" id="false-hierarchy-vote" value=0 label="False hierarchy" type="number" placeholder="0"></sl-input>
+                        <sl-input class="label-on-left" id="visual-prominence-vote" value=0 label="Visual prominence" type="number" placeholder="0"></sl-input>
+                        <sl-input class="label-on-left" id="bundling-vote" value=0 label="Bundling" type="number" placeholder="0"></sl-input>
+                        <sl-input class="label-on-left" id="first-place-positioning-vote" value=0 label="First place positioning" type="number" placeholder="0"></sl-input>
+                        <sl-input class="label-on-left" id="fake-data-comparison-vote" value=0 label="Fake data comparison" type="number" placeholder="0"></sl-input>
+                    
+                        <sl-input class="label-on-left-upper" id="bad-defaults-sum" value=0 label="Bad defaults" type="number" placeholder="0"></sl-input>
+
+                        <div class="level2">
+                            <p class="level2-first-flex-child"> Emotional or Sensory Manipulation </p>
+                            <p id="emotional-sum" class="number-style-level1">0</p>
+                        </div>
+                        <sl-input class="label-on-left" id="cuteness-vote" value=0 label="Cuteness" type="number" placeholder="0"></sl-input>
+                        <sl-input class="label-on-left" id="positive-vote" value=0 label="Positive or negative framing" type="number" placeholder="0"></sl-input>
+
+                        <sl-input class="label-on-left-upper" id="trick-questions-sum" value=0 label="Trick Questions" type="number" placeholder="0"></sl-input>
+                        
+                        <sl-input class="label-on-left-upper" id="choice-overload-sum" value=0 label="Choice Overload" type="number" placeholder="0"></sl-input>
+                        
+                        <sl-input class="label-on-left-upper" id="hidden-information-sum" value=0 label="Hidden Information" type="number" placeholder="0"></sl-input>
+
+                        <div class="level2">
+                            <p class="level2-first-flex-child"> Language Inaccessibility </p>
+                            <p id="language-inaccessibility-sum" class="number-style-level1">0</p>
+                        </div>
+                        <sl-input class="label-on-left" id="wrong-language-vote" value=0 label="Wrong language" type="number" placeholder="0"></sl-input>
+                        <sl-input class="label-on-left" id="complex-language-vote" value=0 label="Complex language" type="number" placeholder="0"></sl-input>
+
+                        <sl-input class="label-on-left-upper" id="feedward-ambiguity-sum" value=0 label="Feedward ambiguity" type="number" placeholder="0"></sl-input>
+
+                    </sl-details>
+                    <p id="interface-interference-sum" value=0 class="number-style-level0">0</p>
+                </div>
+
+                <!-- Forced Action -->
+                <div class="level0">
+                    <sl-details class="level1" summary="Forced Action" >
+
+                        <sl-input class="label-on-left-upper" id="nagging-sum" value=0 label="Nagging" type="number" placeholder="0"></sl-input>
+
+                        <sl-input class="label-on-left-upper" id="forced-continuity-sum" value=0 label="Forced Continuity" type="number" placeholder="0"></sl-input>
+
+                        <sl-input class="label-on-left-upper" id="forced-registration-sum" value=0 label="Forced Registration" type="number" placeholder="0"></sl-input>
+
+                        <div class="level2">
+                            <p class="level2-first-flex-child"> Forced Communication or Disclosure </p>
+                            <p id="forced-communication-sum" class="number-style-level1">0</p>
+                        </div>
+                        <sl-input class="label-on-left" id="privacy-zukering-vote" value=0 label="Privacy zukering" type="number" placeholder="0"></sl-input>
+                        <sl-input class="label-on-left" id="friend-spam-vote" value=0 label="Friend spam" type="number" placeholder="0"></sl-input>
+                        <sl-input class="label-on-left" id="address-book-leeching-vote" value=0 label="Address book leeching" type="number" placeholder="0"></sl-input>
+                        <sl-input class="label-on-left" id="social-pyramid-vote" value=0 label="Social pyramid" type="number" placeholder="0"></sl-input>
+
+                        <div class="level2">
+                            <p class="level2-first-flex-child"> Gamification </p>
+                            <p id="gamification-sum" class="number-style-level1">0</p>
+                        </div>
+                        <sl-input class="label-on-left" id="pay-to-play-vote" value=0 label="Pay-to-play" type="number" placeholder="0"></sl-input>
+                        <sl-input class="label-on-left" id="grinding-vote" value=0 label="Grinding" type="number" placeholder="0"></sl-input>
+
+                        <div class="level2">
+                            <p class="level2-first-flex-child"> Attention Capture </p>
+                            <p id="attention-capture-sum" class="number-style-level1">0</p>
+                        </div>
+                        <sl-input class="label-on-left" id="auto-play-vote" value=0 label="Auto-play" type="number" placeholder="0"></sl-input>
+
+                    </sl-details>
+                    <p id="forced-action-sum" value=0 class="number-style-level0">0</p>
+                </div>
+
+
+                <!-- Social Engineering -->
+                <div class="level0">
+                    <sl-details class="level1" summary="Social Engineering" >
+
+                        <div class="level2">
+                            <p class="level2-first-flex-child"> Scarcity and Popularity Claims </p>
+                            <p id="scarcity-sum" class="number-style-level1">0</p>
+                        </div>
+                        <sl-input class="label-on-left" id="high-demand-vote" value=0 label="High demand" type="number" placeholder="0"></sl-input>
+                        <sl-input class="label-on-left" id="(Fake)-discount-vote" value=0 label="(Fake) Discount" type="number" placeholder="0"></sl-input>
+
+                        <div class="level2">
+                            <p class="level2-first-flex-child"> Social Proof </p>
+                            <p id="social-proof-sum" class="number-style-level1">0</p>
+                        </div>
+                        <sl-input class="label-on-left" id="low-stock-vote" value=0 label="Low stock" type="number" placeholder="0"></sl-input>
+                        <sl-input class="label-on-left" id="endorsement-vote" value=0 label="Endorsement and testimonials" type="number" placeholder="0"></sl-input>
+                        <sl-input class="label-on-left" id="parasocial-vote" value=0 label="Parasocial pressure" type="number" placeholder="0"></sl-input>
+
+                        <div class="level2">
+                            <p class="level2-first-flex-child"> Urgency </p>
+                            <p id="urgency-sum" class="number-style-level1">0</p>
+                        </div>
+                        <sl-input class="label-on-left" id="activity-messages-vote" value=0 label="Activity messages" type="number" placeholder="0"></sl-input>
+                        <sl-input class="label-on-left" id="countdown-timer-vote" value=0 label="Countdown timer" type="number" placeholder="0"></sl-input>
+                        <sl-input class="label-on-left" id="limited-time-vote" value=0 label="Limited time message" type="number" placeholder="0"></sl-input>
+
+                        <div class="level2">
+                            <p class="level2-first-flex-child"> Personalization </p>
+                            <p id="personalization-sum" class="number-style-level1">0</p>
+                        </div>
+                        <sl-input class="label-on-left" id="confirmshaming-vote" value=0 label="Confirmshaming" type="number" placeholder="0"></sl-input>
+                    </sl-details>
+                    <p id="social-engineering-sum" value=0 class="number-style-level0">0</p>
+                </div>
             </div>
-        </div>
-    </div>
+
+            <sl-checkbox size="medium" id="not-sure" style="margin-top:2rem; margin-right: 5rem;">I'm not sure</sl-checkbox>
+            <sl-checkbox size="medium" id="no-dd" style="margin-top:2rem;">No dark pattern</sl-checkbox>
 
 
     <script>
 
-        // Tree selection logic
-        const tree = document.querySelector('.deceptive-selectable');
-        const log = document.getElementById('selection-log');
-        let currentSummaryLabel = '(none)';
-        
-        tree.addEventListener('sl-selection-change', event => {
-            const selectedItems = Array.from(event.detail.selection);
-        
-            const getLabel = (item) => {
-            // Fallback to visible text if label is undefined
-            return item.label || item.childNodes[0]?.textContent.trim() || '(Unnamed)';
-            };
-        
-            const labels = [...new Set(selectedItems.map(getLabel))];
-            const summaryLabels = `Selected: ${labels.length ? labels.join(', ') : '(none)'}`;
-        
-            log.textContent = summaryLabels;
-            currentSummaryLabel = `${labels.length ? labels.join(', ') : '(none)'}`;
-            console.log("summary labels", summaryLabels)
+        // Function to add sum to the middle-level category
+        function add_votes_medium(sum_list, final_id){
+            final_element = document.getElementById(final_id); // Final output
+            var selectionLength = sum_list.length; // How many categories are inside
 
+            var updateNumber = 0;
+
+            for (var i = 0; i < selectionLength; i++) {
+                const element = document.getElementById(sum_list[i]);
+                if (element.tagName === "SL-INPUT"){
+                    updateNumber += parseInt(document.getElementById(sum_list[i]).value); // Add category vote number to updateNumber
+                } else {
+                    updateNumber += parseInt(document.getElementById(sum_list[i]).textContent); // Add category vote number to updateNumber
+                }
+            }
+
+            final_element.textContent = updateNumber; // Update the medium level number of corresponding category);
+        }
+
+        // Highl-level: Obstruction Field
+
+        // Roach Motels
+        document.getElementById("immortal-accounts-vote").addEventListener("input", () => {
+            add_votes_medium(["immortal-accounts-vote", "dead-end-vote"], "roach-motel-sum");
+            add_votes_medium(["roach-motel-sum", "creating-barriers-sum", "adding-steps-sum"], "obstruction-sum");
+        });
+
+        document.getElementById("dead-end-vote").addEventListener("input", () => {
+            add_votes_medium(["immortal-accounts-vote", "dead-end-vote"], "roach-motel-sum");
+            add_votes_medium(["roach-motel-sum", "creating-barriers-sum", "adding-steps-sum"], "obstruction-sum");
+        });
+
+        // Creating Barriers
+        document.getElementById("price-comparison-prevention-vote").addEventListener("input", () => {
+            add_votes_medium(["price-comparison-prevention-vote", "intermediate-currency-vote"], "creating-barriers-sum");
+            add_votes_medium(["roach-motel-sum", "creating-barriers-sum", "adding-steps-sum"], "obstruction-sum");
+        });
+
+        document.getElementById("intermediate-currency-vote").addEventListener("input", () => {
+            add_votes_medium(["price-comparison-prevention-vote", "intermediate-currency-vote"], "creating-barriers-sum");
+            add_votes_medium(["roach-motel-sum", "creating-barriers-sum", "adding-steps-sum"], "obstruction-sum");
+        });
+
+        // Adding Steps
+        document.getElementById("privacy-maze-vote").addEventListener("input", () => {
+            add_votes_medium(["privacy-maze-vote"], "adding-steps-sum");
+            add_votes_medium(["roach-motel-sum", "creating-barriers-sum", "adding-steps-sum"], "obstruction-sum");
+        });
+
+        // High-level: Sneaking
+        // Bait and Switch
+        document.getElementById("disguised-ad-vote").addEventListener("input", () => {
+            add_votes_medium(["disguised-ad-vote", "disguised-sign-up-vote"], "bait-and-switch-sum");
+            add_votes_medium(["bait-and-switch-sum", "hiding-information-sum", "(de)contextualizing-cues-sum"], "sneaking-sum");
+        });
+
+        document.getElementById("disguised-sign-up-vote").addEventListener("input", () => {
+            add_votes_medium(["disguised-ad-vote", "disguised-sign-up-vote"], "bait-and-switch-sum");
+            add_votes_medium(["bait-and-switch-sum", "hiding-information-sum", "(de)contextualizing-cues-sum"], "sneaking-sum");
+        });
+
+        // Hiding Information
+        document.getElementById("sneak-into-basket-vote").addEventListener("input", () => {
+            add_votes_medium(["sneak-into-basket-vote", "drip-pricing-vote", "reference-pricing-vote"], "hiding-information-sum");
+            add_votes_medium(["bait-and-switch-sum", "hiding-information-sum", "(de)contextualizing-cues-sum"], "sneaking-sum");
+        });
+
+        document.getElementById("drip-pricing-vote").addEventListener("input", () => {
+            add_votes_medium(["sneak-into-basket-vote", "drip-pricing-vote", "reference-pricing-vote"], "hiding-information-sum");
+            add_votes_medium(["bait-and-switch-sum", "hiding-information-sum", "(de)contextualizing-cues-sum"], "sneaking-sum");
+        });
+
+
+        document.getElementById("reference-pricing-vote").addEventListener("input", () => {
+            add_votes_medium(["sneak-into-basket-vote", "drip-pricing-vote", "reference-pricing-vote"], "hiding-information-sum");
+            add_votes_medium(["bait-and-switch-sum", "hiding-information-sum", "(de)contextualizing-cues-sum"], "sneaking-sum");
+        });
+
+        // (De)contextualizing Cues
+        document.getElementById("conflicting-information-vote").addEventListener("input", () => {
+            add_votes_medium(["conflicting-information-vote", "information-without-context-vote"], "(de)contextualizing-cues-sum");
+            add_votes_medium(["bait-and-switch-sum", "hiding-information-sum", "(de)contextualizing-cues-sum"], "sneaking-sum");
+        });
+
+        document.getElementById("information-without-context-vote").addEventListener("input", () => {
+            add_votes_medium(["conflicting-information-vote", "information-without-context-vote"], "(de)contextualizing-cues-sum");
+            add_votes_medium(["bait-and-switch-sum", "hiding-information-sum", "(de)contextualizing-cues-sum"], "sneaking-sum");
+        });
+
+        // High-level: Interface Interference
+        // Manipulating Choice Architecture
+        document.getElementById("false-hierarchy-vote").addEventListener("input", () => {
+            add_votes_medium(["false-hierarchy-vote", "visual-prominence-vote", "bundling-vote", "first-place-positioning-vote", "fake-data-comparison-vote"], "manipulating-choice-architecture-sum");
+            add_votes_medium(["manipulating-choice-architecture-sum", "bad-defaults-sum", "emotional-sum", "trick-questions-sum", "choice-overload-sum", "hidden-information-sum", "language-inaccessibility-sum", "feedward-ambiguity-sum"], "interface-interference-sum");
+        });
+
+        document.getElementById("visual-prominence-vote").addEventListener("input", () => {
+            add_votes_medium(["false-hierarchy-vote", "visual-prominence-vote", "bundling-vote", "first-place-positioning-vote", "fake-data-comparison-vote"], "manipulating-choice-architecture-sum");
+            add_votes_medium(["manipulating-choice-architecture-sum", "bad-defaults-sum", "emotional-sum", "trick-questions-sum", "choice-overload-sum", "hidden-information-sum", "language-inaccessibility-sum", "feedward-ambiguity-sum"], "interface-interference-sum");
+        });
+
+        document.getElementById("bundling-vote").addEventListener("input", () => {
+            add_votes_medium(["false-hierarchy-vote", "visual-prominence-vote", "bundling-vote", "first-place-positioning-vote", "fake-data-comparison-vote"], "manipulating-choice-architecture-sum");
+            add_votes_medium(["manipulating-choice-architecture-sum", "bad-defaults-sum", "emotional-sum", "trick-questions-sum", "choice-overload-sum", "hidden-information-sum", "language-inaccessibility-sum", "feedward-ambiguity-sum"], "interface-interference-sum");
+        });
+
+        document.getElementById("first-place-positioning-vote").addEventListener("input", () => {
+            add_votes_medium(["false-hierarchy-vote", "visual-prominence-vote", "bundling-vote", "first-place-positioning-vote", "fake-data-comparison-vote"], "manipulating-choice-architecture-sum");
+            add_votes_medium(["manipulating-choice-architecture-sum", "bad-defaults-sum", "emotional-sum", "trick-questions-sum", "choice-overload-sum", "hidden-information-sum", "language-inaccessibility-sum", "feedward-ambiguity-sum"], "interface-interference-sum");
+        });
+
+        document.getElementById("fake-data-comparison-vote").addEventListener("input", () => {
+            add_votes_medium(["false-hierarchy-vote", "visual-prominence-vote", "bundling-vote", "first-place-positioning-vote", "fake-data-comparison-vote"], "manipulating-choice-architecture-sum");
+            add_votes_medium(["manipulating-choice-architecture-sum", "bad-defaults-sum", "emotional-sum", "trick-questions-sum", "choice-overload-sum", "hidden-information-sum", "language-inaccessibility-sum", "feedward-ambiguity-sum"], "interface-interference-sum");
+        });
+
+        // Bad defaults
+        document.getElementById("bad-defaults-sum").addEventListener("input", () => {
+            add_votes_medium(["manipulating-choice-architecture-sum", "bad-defaults-sum", "emotional-sum", "trick-questions-sum", "choice-overload-sum", "hidden-information-sum", "language-inaccessibility-sum", "feedward-ambiguity-sum"], "interface-interference-sum");
+        });
+
+        // Emotional or Sensory Manipulation
+        document.getElementById("cuteness-vote").addEventListener("input", () => {
+            add_votes_medium(["cuteness-vote", "positive-vote"], "emotional-sum");
+            add_votes_medium(["manipulating-choice-architecture-sum", "bad-defaults-sum", "emotional-sum", "trick-questions-sum", "choice-overload-sum", "hidden-information-sum", "language-inaccessibility-sum", "feedward-ambiguity-sum"], "interface-interference-sum");
+        });
+
+        document.getElementById("positive-vote").addEventListener("input", () => {
+            add_votes_medium(["cuteness-vote", "positive-vote"], "emotional-sum");
+            add_votes_medium(["manipulating-choice-architecture-sum", "bad-defaults-sum", "emotional-sum", "trick-questions-sum", "choice-overload-sum", "hidden-information-sum", "language-inaccessibility-sum", "feedward-ambiguity-sum"], "interface-interference-sum");
+        });
+
+        // Trick Questions
+        document.getElementById("trick-questions-sum").addEventListener("input", () => {
+            add_votes_medium(["manipulating-choice-architecture-sum", "bad-defaults-sum", "emotional-sum", "trick-questions-sum", "choice-overload-sum", "hidden-information-sum", "language-inaccessibility-sum", "feedward-ambiguity-sum"], "interface-interference-sum");
+        });
+
+        // Choice Overload
+        document.getElementById("choice-overload-sum").addEventListener("input", () => {
+            add_votes_medium(["manipulating-choice-architecture-sum", "bad-defaults-sum", "emotional-sum", "trick-questions-sum", "choice-overload-sum", "hidden-information-sum", "language-inaccessibility-sum", "feedward-ambiguity-sum"], "interface-interference-sum");
+        });
+
+        // Hidden Information
+        document.getElementById("hidden-information-sum").addEventListener("input", () => {
+            add_votes_medium(["manipulating-choice-architecture-sum", "bad-defaults-sum", "emotional-sum", "trick-questions-sum", "choice-overload-sum", "hidden-information-sum", "language-inaccessibility-sum", "feedward-ambiguity-sum"], "interface-interference-sum");
+        });
+
+        // Language Inaccessibility
+        document.getElementById("wrong-language-vote").addEventListener("input", () => {
+            add_votes_medium(["wrong-language-vote", "complex-language-vote"], "language-inaccessibility-sum");
+            add_votes_medium(["manipulating-choice-architecture-sum", "bad-defaults-sum", "emotional-sum", "trick-questions-sum", "choice-overload-sum", "hidden-information-sum", "language-inaccessibility-sum", "feedward-ambiguity-sum"], "interface-interference-sum");
+        });
+
+        document.getElementById("complex-language-vote").addEventListener("input", () => {
+            add_votes_medium(["wrong-language-vote", "complex-language-vote"], "language-inaccessibility-sum");
+            add_votes_medium(["manipulating-choice-architecture-sum", "bad-defaults-sum", "emotional-sum", "trick-questions-sum", "choice-overload-sum", "hidden-information-sum", "language-inaccessibility-sum", "feedward-ambiguity-sum"], "interface-interference-sum");
+        });
+
+        // Feedward Ambiguity
+        document.getElementById("feedward-ambiguity-sum").addEventListener("input", () => {
+            add_votes_medium(["manipulating-choice-architecture-sum", "bad-defaults-sum", "emotional-sum", "trick-questions-sum", "choice-overload-sum", "hidden-information-sum", "language-inaccessibility-sum", "feedward-ambiguity-sum"], "interface-interference-sum");
+        });
+
+
+        // High-level: Forced Action
+        // Nagging
+        document.getElementById("nagging-sum").addEventListener("input", () => {
+            add_votes_medium(["nagging-sum", "forced-continuity-sum", "forced-registration-sum", "forced-communication-sum", "gamification-sum","attention-capture-sum"], "forced-action-sum");
+        });
+
+        // Forced Continuity
+        document.getElementById("forced-continuity-sum").addEventListener("input", () => {
+            add_votes_medium(["nagging-sum", "forced-continuity-sum", "forced-registration-sum", "forced-communication-sum", "gamification-sum","attention-capture-sum"], "forced-action-sum");
+        });
+
+        // Forced Registration
+        document.getElementById("forced-registration-sum").addEventListener("input", () => {
+            add_votes_medium(["nagging-sum", "forced-continuity-sum", "forced-registration-sum", "forced-communication-sum", "gamification-sum","attention-capture-sum"], "forced-action-sum");
+        });
+
+        // Forced Communication or Disclosure
+        document.getElementById("privacy-zukering-vote").addEventListener("input", () => {
+            add_votes_medium(["privacy-zukering-vote", "friend-spam-vote", "address-book-leeching-vote", "social-pyramid-vote"], "forced-communication-sum");
+            add_votes_medium(["nagging-sum", "forced-continuity-sum", "forced-registration-sum", "forced-communication-sum", "gamification-sum","attention-capture-sum"], "forced-action-sum");
+        });
+
+        document.getElementById("friend-spam-vote").addEventListener("input", () => {
+            add_votes_medium(["privacy-zukering-vote", "friend-spam-vote", "address-book-leeching-vote", "social-pyramid-vote"], "forced-communication-sum");
+            add_votes_medium(["nagging-sum", "forced-continuity-sum", "forced-registration-sum", "forced-communication-sum", "gamification-sum","attention-capture-sum"], "forced-action-sum");
+        });
+
+        document.getElementById("address-book-leeching-vote").addEventListener("input", () => {
+            add_votes_medium(["privacy-zukering-vote", "friend-spam-vote", "address-book-leeching-vote", "social-pyramid-vote"], "forced-communication-sum");
+            add_votes_medium(["nagging-sum", "forced-continuity-sum", "forced-registration-sum", "forced-communication-sum", "gamification-sum","attention-capture-sum"], "forced-action-sum");
+        });
+
+        document.getElementById("social-pyramid-vote").addEventListener("input", () => {
+            add_votes_medium(["privacy-zukering-vote", "friend-spam-vote", "address-book-leeching-vote", "social-pyramid-vote"], "forced-communication-sum");
+            add_votes_medium(["nagging-sum", "forced-continuity-sum", "forced-registration-sum", "forced-communication-sum", "gamification-sum","attention-capture-sum"], "forced-action-sum");
+        });
+
+        // Gamification
+        document.getElementById("pay-to-play-vote").addEventListener("input", () => {
+            add_votes_medium(["pay-to-play-vote", "grinding-vote"], "gamification-sum");
+            add_votes_medium(["nagging-sum", "forced-continuity-sum", "forced-registration-sum", "forced-communication-sum", "gamification-sum","attention-capture-sum"], "forced-action-sum");
+        });
+
+        document.getElementById("grinding-vote").addEventListener("input", () => {
+            add_votes_medium(["pay-to-play-vote", "grinding-vote"], "gamification-sum");
+            add_votes_medium(["nagging-sum", "forced-continuity-sum", "forced-registration-sum", "forced-communication-sum", "gamification-sum","attention-capture-sum"], "forced-action-sum");
+        });
+
+        // Attention Capture
+        document.getElementById("auto-play-vote").addEventListener("input", () => {
+            add_votes_medium(["auto-play-vote"], "attention-capture-sum");
+            add_votes_medium(["nagging-sum", "forced-continuity-sum", "forced-registration-sum", "forced-communication-sum", "gamification-sum","attention-capture-sum"], "forced-action-sum");
+        });
+
+       // High-level: Social Engineering
+       // Scarcity and Popularity Claims
+        document.getElementById("high-demand-vote").addEventListener("input", () => {
+            add_votes_medium(["high-demand-vote", "(Fake)-discount-vote"], "scarcity-sum");
+            add_votes_medium(["scarcity-sum", "social-proof-sum", "urgency-sum", "personalization-sum"], "social-engineering-sum");
+        });
+     
+        document.getElementById("(Fake)-discount-vote").addEventListener("input", () => {
+            add_votes_medium(["high-demand-vote", "(Fake)-discount-vote"], "scarcity-sum");
+            add_votes_medium(["scarcity-sum", "social-proof-sum", "urgency-sum", "personalization-sum"], "social-engineering-sum");
+        });
+
+       // Social Proof
+       document.getElementById("low-stock-vote").addEventListener("input", () => {
+            add_votes_medium(["low-stock-vote", "endorsement-vote", "parasocial-vote"], "social-proof-sum");
+            add_votes_medium(["scarcity-sum", "social-proof-sum", "urgency-sum", "personalization-sum"], "social-engineering-sum");
+        });
+
+        document.getElementById("endorsement-vote").addEventListener("input", () => {
+            add_votes_medium(["low-stock-vote", "endorsement-vote", "parasocial-vote"], "social-proof-sum");
+            add_votes_medium(["scarcity-sum", "social-proof-sum", "urgency-sum", "personalization-sum"], "social-engineering-sum");
+        });
+
+        document.getElementById("parasocial-vote").addEventListener("input", () => {
+            add_votes_medium(["low-stock-vote", "endorsement-vote", "parasocial-vote"], "social-proof-sum");
+            add_votes_medium(["scarcity-sum", "social-proof-sum", "urgency-sum", "personalization-sum"], "social-engineering-sum");
+        });
+
+        // Urgency
+        document.getElementById("activity-messages-vote").addEventListener("input", () => {
+            add_votes_medium(["activity-messages-vote", "countdown-timer-vote", "limited-time-vote"], "urgency-sum");
+            add_votes_medium(["scarcity-sum", "social-proof-sum", "urgency-sum", "personalization-sum"], "social-engineering-sum");
+        });
+
+        document.getElementById("countdown-timer-vote").addEventListener("input", () => {
+            add_votes_medium(["activity-messages-vote", "countdown-timer-vote", "limited-time-vote"], "urgency-sum");
+            add_votes_medium(["scarcity-sum", "social-proof-sum", "urgency-sum", "personalization-sum"], "social-engineering-sum");
+        });
+
+        document.getElementById("limited-time-vote").addEventListener("input", () => {
+            add_votes_medium(["activity-messages-vote", "countdown-timer-vote", "limited-time-vote"], "urgency-sum");
+            add_votes_medium(["scarcity-sum", "social-proof-sum", "urgency-sum", "personalization-sum"], "social-engineering-sum");
+        });
+
+        // Personalization
+        document.getElementById("confirmshaming-vote").addEventListener("input", () => {
+            add_votes_medium(["confirmshaming-vote"], "personalization-sum");
+            add_votes_medium(["scarcity-sum", "social-proof-sum", "urgency-sum", "personalization-sum"], "social-engineering-sum");
+        });
+
+
+
+
+        // Select no DD, unselect other DD input boxes
+        document.getElementById("no-dd").addEventListener("sl-change", function(){
+            if (this.checked){
+                const taxonomyDiv = document.getElementById("taxonomy-selection");
+                const inputs = taxonomyDiv.querySelectorAll("sl-input");
+                const number_outputs = taxonomyDiv.querySelectorAll("p");
+                inputs.forEach(input => {
+                    console.log(input.value);
+                    input.value = 0;
+                });
+
+                number_outputs.forEach(output => {
+                    let output_item = parseInt(output.textContent);
+                    if (Number.isNaN(output_item)){
+                        // Do nothing if it is a text
+                    } else{
+                        output.textContent = 0;
+                    };
+                });
+            }
         });
 
 
@@ -297,18 +694,6 @@
                 <img alt="design_screenshot sizes="print 73px,117px" src="${videoPair.screenshot_location}">
             </div>
             `;
-
-            // const response = await fetch('https://rate.chenziwei0499.workers.dev/get', {
-            //     method: 'POST',
-            //     headers: {
-            //         'Content-Type': 'application/json'
-            //     },
-            //     body: JSON.stringify({
-            //         key: getQueryParameter('videoIndex') + getQueryParameter('user')
-            //     })
-            // });
-
-            // const data = await response.json();
 
             const response = await fetch('https://rate.chenziwei0499.workers.dev/get', {
                 method: 'POST',
@@ -345,46 +730,37 @@
             console.log("dark_pattern_type type", typeof dark_pattern_type)
 
             // Get text back to the textbox
-            document.getElementById('explanation-text').value = explanation;
+            document.getElementById("explanation-text").value = explanation;
+
+            // Get bucket 1, 2, 3
+            const bucket1 = dark_pattern_type[0];
+            const bucket2 = dark_pattern_type[1];
+            const bucket3 = dark_pattern_type[2];
+
+            // Return number to input field
+            for (const key in bucket1) {
+                const bucket1_value = bucket1[key];
+                document.getElementById("key").value = bucket1_value;
+            };
+
+            // Return number to p field
+            for (const key2 in bucket2) {
+                const bucket2_value = bucket2[key2];
+                document.getElementById('key2').textContent = bucket2_value;
+            };
+
+            // Return checkbox value to checkbox
+            for (const key3 in bucket3) {
+                const bucket3_value = bucket3[key3];
+                document.getElementById('key3').checked = bucket3_value;
+            };
+
 
             // If there is no value, skip this scene
             if (dark_pattern_type === "") {
                 console.warn("Missing or malformed data:", parsed);
                 return scene;
             }
-
-            const selectedValues = dark_pattern_type.split(',').map(t => t.trim());       
-            // clean each item
-
-            console.log("SelectedValues", typeof selectedValues)
-
-            console.log("SelectedValues isArray?", Array.isArray(selectedValues));
-            console.log("SelectedValues", selectedValues)
-
-            // ensure custom element is defined
-            await customElements.whenDefined('sl-tree-item');
-
-            // Select matching sl-tree-item elements
-            const allItems = document.querySelectorAll('sl-tree-item');
-            
-            allItems.forEach(item => {
-                const label = item.getAttribute('label');
-                if (selectedValues.includes(label.trim())) {
-                    item.selected = true;
-                    console.log("Selected:", label);
-                }
-            });
-
-            document.getElementById("selection-log").innerHTML = "Selected: " + selectedValues; 
-
-            // Fix log and label tracking after selection restoration
-            const selectedLabels = selectedValues.join(', ');
-            const summaryLabels = `Selected: ${selectedLabels || '(none)'}`;
-            document.getElementById("selection-log").innerHTML = summaryLabels;
-            currentSummaryLabel = selectedLabels || '(none)';
-
-            console.log("currentSummaryLabel", currentSummaryLabel);
-
 
             return scene;
         }
@@ -416,15 +792,52 @@
         showScene();
 
         function collectData() {
-            console.log("summary labels in collectData", currentSummaryLabel)
+            const taxonomyDiv = document.getElementById("taxonomy-selection");
+
+            // Get votes for meso(have no low-level) and low-level patterns
+            const inputs = taxonomyDiv.querySelectorAll("sl-input");
+
+            // Get votes for meso(have low-level) and high-level patterns
+            const number_outputs = taxonomyDiv.querySelectorAll("p");
+
+            // Empty dictionary
+            const bucket1 = {};
+            const bucket2 = {};
+            const bucket3 = {};
+
+            // Save into a dictionary
+            inputs.forEach(input => {
+                bucket1[toString(input.id)] = parseInt(input.value);
+                console.log(bucket1)
+            });
+
+
+            number_outputs.forEach(output => {
+                let output_item = parseInt(output.textContent);
+                if (Number.isNaN(output_item)){
+                    // Do nothing if it is a text
+                } else{
+                    bucket2[toString(output.id)] = output_item;
+                };
+            });
+
+            // Save selection whether not sure and no dd are selected
+            bucket3["not-sure"] = document.getElementById("not-sure").checked;
+            bucket3["no-dd"] = document.getElementById("no-dd").checked;
+
+
+            // Save selection into an empty list
+            const saved_list = [bucket1, bucket2, bucket3];
+
+            // Explanation text
+            const explanation_text = document.getElementById('explanation-text').value;
+
             const urlParams = new URLSearchParams(window.location.search);
             const videoIndex = urlParams.get('videoIndex');
 
-            const explanation_text = document.getElementById('explanation-text').value;
-
             // Save deceptive design categories and explanation text
             const data = {
-                dark_pattern_type: currentSummaryLabel,
+                dark_pattern_type: saved_list,
                 explanation: explanation_text
             }
             return data;
@@ -446,7 +859,6 @@
                     rater: getQueryParameter('user')
                 })
             });
-            // Toast(JSON.stringify(await response.json()), 1000);
 
             const response1 = await fetch('https://rate.chenziwei0499.workers.dev/put', {
                 method: 'POST',
