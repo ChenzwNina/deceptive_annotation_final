@@ -718,6 +718,7 @@
 
             // Get LLM reasoning
             const txt_location = videoPair.screenshot_location.replace(".png", ".txt");
+            
             fetch(txt_location)
                 .then(response => response.text())
                 .then(text => {
