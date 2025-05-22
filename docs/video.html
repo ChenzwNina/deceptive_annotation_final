@@ -192,7 +192,7 @@
             </div>
             <div id="llm-reasoning">
                 <p class="reasoning-title"> Placement and Reasoning</p>
-                <pre id="reasoning-context">Loading...</pre>
+                <p id="reasoning-context"></p>
                 <!-- Reasoning text will be dynamically inserted here -->
             </div>
         </div>
@@ -718,7 +718,7 @@
 
             // Get LLM reasoning
             const txt_location = videoPair.screenshot_location.replace(".png", ".txt");
-
+            
             fetch(txt_location)
                 .then(response => response.text())
                 .then(text => {
