@@ -1,0 +1,9 @@
+Task 4: This product filter panel component is designed to be embedded at the very top of category, search results, or deals pages on an e-commerce website. It does not occupy a full page, nor is it a pop-up; rather, it sits above the main content (product listings), separated from the rest of the page by a prominent card-like background, taking up the full width (with maximum width) of the viewport. Its on-page position encourages users to explore filtering options immediately upon arrival.
+
+  Task 5: 
+  - Prominent placement and visual design ensure users see and interact with the panel, increasing engagement with filters (maximizing conversion rate and reducing bounce/cart abandonment). 
+  - Realistic filter options (categories, brands, price, ratings) guide users to segment products and find what they want more quickly, increasing both sales and average order size.
+  - Responsive layout and highly visible calls-to-action ("Apply Filters", "Show Special Offers") are optimized for both desktop and mobile visitors to minimize friction.
+  - A "Show Special Offers" button drives clicks to sponsored/promotional content (increasing ad click-through rates, time on site, page views).
+  - The "Clear All" facilitates further browsing, while the interactive sliders and multi-selects encourage deeper exploration (increasing time on site and reducing abandonment).
+  - All choices create a familiar, trustworthy filter UX seen on top-performing e-commerce destinations, ensuring returning/unique visitors feel comfortable and confident.

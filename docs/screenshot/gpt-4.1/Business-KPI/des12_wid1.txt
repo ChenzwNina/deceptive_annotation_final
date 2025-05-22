@@ -1,0 +1,15 @@
+Task 4: Where this component appears
+  ------------------------------------
+  This sign-in component is designed to be embedded at the top-center of existing e-commerce website pages, such as the homepage, landing page, or any page where a sign-in prompt is contextually relevant. It can also serve as the main content of a dedicated sign-in page. Its modal-box appearance ensures it stands out and draws focus without being a disruptive pop-up.
+
+  Task 5: Reasoning behind design choices
+  ---------------------------------------
+  - The prominent logo and headline reinforce brand recognition (Rule 3.7).
+  - Incentivizing sign-in with an exclusive deal increases conversion and average order size (Rules 3.1, 3.2, 3.3, 3.8).
+  - Social sign-in options reduce friction, helping to minimize bounce and abandonment rates (Rules 3.2, 3.8, 3.9).
+  - "Forgot password" and "Need help?" links further reduce sign-in friction (Rules 3.2, 3.8).
+  - The ad banner introduces an upsell, increases time on site, and encourages additional clicks (Rules 3.1, 3.4, 3.5, 3.6).
+  - Clean, mobile-friendly responsive design ensures accessibility (all rules).
+  - The "Create your account" link targets new users, expanding unique/returning visitors (Rules 3.7).
+  - Friendly, benefit-focused copy (exclusive deals, fast checkout) drives desire to sign in (Rules 3.1, 3.2, 3.5).
+  - Overall, every element is geared toward seamless user experience and maximizing engagement, conversion, and revenue, while minimizing drop-offs.

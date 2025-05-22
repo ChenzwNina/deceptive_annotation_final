@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Featured Products - List Component</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body {
+      background: #f9fafb;
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .products-section {
+      margin: 20px auto 0 auto;
+      max-width: 1200px;
+      background: #fff;
+      box-shadow: 0 4px 20px rgba(33, 37, 41, 0.09);
+      border-radius: 10px;
+      padding: 32px 32px 20px 32px;
+    }
+    .products-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .products-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #262626;
+      letter-spacing: -1px;
+    }
+    .view-all-link {
+      font-size: 1rem;
+      color: #0d6efd;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.18s;
+    }
+    .view-all-link:hover {
+      text-decoration: underline;
+      color: #084298;
+    }
+    .product-list {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    .product-card {
+      width: 220px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      padding: 16px 16px 18px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      transition: box-shadow 0.2s;
+    }
+    .product-card:hover {
+      box-shadow: 0 6px 24px rgba(33,37,41,0.13);
+      z-index: 2;
+    }
+    .product-image-container {
+      width: 160px;
+      height: 160px;
+      background: #f2f2f2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .product-image-container img {
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+    }
+    .product-name {
+      font-size: 1.08rem;
+      font-weight: 500;
+      text-align: center;
+      margin: 10px 0 6px 0;
+      color: #252525;
+      min-height: 40px;
+    }
+    .product-rating {
+      display: flex;
+      align-items: center;
+      font-size: 0.96rem;
+      color: #f59e42;
+      margin-bottom: 6px;
+    }
+    .product-rating span {
+      margin-left: 4px;
+      color: #555;
+      font-size: 0.97rem;
+      font-weight: 500;
+    }
+    .product-price {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #129611;
+      margin-bottom: 4px;
+    }
+    .product-old-price {
+      font-size: 0.98rem;
+      text-decoration: line-through;
+      color: #bbb;
+      margin-left: 6px;
+      font-weight: 400;
+    }
+    .product-buy-row {
+      display: flex;
+      width: 100%;
+      gap: 8px;
+      margin-top: 10px;
+      justify-content: center;
+    }
+    .add-to-cart-btn, .wishlist-btn {
+      border: none;
+      cursor: pointer;
+      padding: 8px 13px;
+      border-radius: 5px;
+      font-weight: 600;
+      font-size: 1.01rem;
+      transition: background 0.15s, color 0.14s;
+    }
+    .add-to-cart-btn {
+      background: #0d6efd;
+      color: #fff;
+    }
+    .add-to-cart-btn:hover {
+      background: #0957c1;
+    }
+    .wishlist-btn {
+      background: #f2f2f2;
+      color: #e05353;
+    }
+    .wishlist-btn:hover {
+      background: #ffe0e0;
+      color: #ba2121;
+    }
+    .product-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: #ffcb05;
+      color: #7d5600;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border-radius: 12px;
+      padding: 2px 10px;
+      letter-spacing: 0.2px;
+    }
+    @media (max-width:900px) {
+      .product-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+      .products-section {
+        padding: 20px 4vw 14px 4vw;
+      }
+      .product-card {
+        width: 46vw;
+        min-width: 170px;
+        max-width: 320px;
+      }
+    }
+    @media (max-width:600px) {
+      .product-list {
+        flex-direction: column;
+        gap: 22px;
+      }
+      .product-card {
+        width: 95vw;
+        margin: 0 auto;
+      }
+      .products-title {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="products-section">
+    <div class="products-header">
+      <div class="products-title">🌟 Best Sellers • Limited Time Deals!</div>
+      <a class="view-all-link" href="/products">View All Products &rarr;</a>
+    </div>
+    <div class="product-list">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-badge">20% Off</div>
+        <div class="product-image-container">
+          <img src="placeholder_image.jpg" alt="Wireless Bluetooth Headphones">
+        </div>
+        <div class="product-name">Wireless Bluetooth Headphones</div>
+        <div class="product-rating">★ 4.7 <span>(1,250 reviews)</span></div>
+        <div>
+          <span class="product-price">$47.99</span>
+          <span class="product-old-price">$59.99</span>
+        </div>
+        <div class="product-buy-row">
+          <button class="add-to-cart-btn">Add to Cart</button>
+          <button class="wishlist-btn" title="Add to Wishlist">♡</button>
+        </div>
+      </div>
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-badge" style="background:#e05555;color:#fff;">Hot!</div>
+        <div class="product-image-container">
+          <img src="placeholder_image.jpg" alt="Smart Fitness Tracker Pro">
+        </div>
+        <div class="product-name">Smart Fitness Tracker Pro</div>
+        <div class="product-rating">★ 4.5 <span>(980 reviews)</span></div>
+        <div>
+          <span class="product-price">$29.00</span>
+          <span class="product-old-price">$34.99</span>
+        </div>
+        <div class="product-buy-row">
+          <button class="add-to-cart-btn">Add to Cart</button>
+          <button class="wishlist-btn" title="Add to Wishlist">♡</button>
+        </div>
+      </div>
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="product-badge" style="background:#48c774;color:#fff;">Popular</div>
+        <div class="product-image-container">
+          <img src="placeholder_image.jpg" alt="Eco-Friendly Water Bottle (750ml)">
+        </div>
+        <div class="product-name">Eco-Friendly Water Bottle (750ml)</div>
+        <div class="product-rating">★ 4.9 <span>(732 reviews)</span></div>
+        <div>
+          <span class="product-price">$14.95</span>
+        </div>
+        <div class="product-buy-row">
+          <button class="add-to-cart-btn">Add to Cart</button>
+          <button class="wishlist-btn" title="Add to Wishlist">♡</button>
+        </div>
+      </div>
+      <!-- Product 4 -->
+      <div class="product-card">
+        <div class="product-badge" style="background:#0d6efd;color:#fff;">New</div>
+        <div class="product-image-container">
+          <img src="placeholder_image.jpg" alt="Ultra-Soft Luxury Throw Blanket">
+        </div>
+        <div class="product-name">Ultra-Soft Luxury Throw Blanket</div>
+        <div class="product-rating">★ 4.8 <span>(632 reviews)</span></div>
+        <div>
+          <span class="product-price">$33.50</span>
+        </div>
+        <div class="product-buy-row">
+          <button class="add-to-cart-btn">Add to Cart</button>
+          <button class="wishlist-btn" title="Add to Wishlist">♡</button>
+        </div>
+      </div>
+      <!-- Product 5 -->
+      <div class="product-card">
+        <div class="product-badge" style="background:#ff99ca;color:#711b4c;">Bundle</div>
+        <div class="product-image-container">
+          <img src="placeholder_image.jpg" alt="Kitchen Essentials 3-Pack Set">
+        </div>
+        <div class="product-name">Kitchen Essentials 3-Pack Set</div>
+        <div class="product-rating">★ 4.6 <span>(1,130 reviews)</span></div>
+        <div>
+          <span class="product-price">$39.90</span>
+          <span class="product-old-price">$47.90</span>
+        </div>
+        <div class="product-buy-row">
+          <button class="add-to-cart-btn">Add to Cart</button>
+          <button class="wishlist-btn" title="Add to Wishlist">♡</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 
+  *****Response*****
+
+  Task 4: Placement
+  This component should be embedded at the top of the homepage and category pages, right beneath the main navigation bar or header hero. It occupies a prominent horizontal section spanning the full content width and employs a card layout to highlight several featured products. The design is responsive and adapts to different screen sizes.
+
+  Task 5: Design Reasoning
+  The component draws attention to best-selling and trending products with clear badges (e.g., "Hot!", "Popular", "20% Off"), encouraging urgency and increased conversions. Visual appeal is boosted through clean imagery and pricing details, with old prices shown for discounts. Each card offers both "Add to Cart" and "Wishlist" actions, making cart addition frictionless and driving higher average order sizes. Review ratings and volumes build trust, while product bundles are highlighted to increase AOV. "View All Products" in the header enhances site exploration (increasing page views and user time). The layout is mobile-responsive for accessibility. Overall, this component combines urgency, social proof, and ease of action to maximize revenue and minimize bounce/cart abandonment.
+
+  -->
+</body>
+</html>

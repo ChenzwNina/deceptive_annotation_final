@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign In - ShopEase</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <style>
+    body {
+      background: #fafbfc;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .signin-container {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      max-width: 400px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(28,28,28,0.10);
+      padding: 38px 32px 30px 32px;
+      z-index: 50;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadein 0.5s;
+    }
+    @keyframes fadein {
+      from { opacity: 0; transform: translateY(-32px);}
+      to   { opacity: 1; transform: translateY(0);}
+    }
+    .signin-logo {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 14px;
+    }
+    .signin-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #232f3e;
+      margin-bottom: 6px;
+      letter-spacing: -0.5px;
+    }
+    .signin-subtext {
+      font-size: 1.05rem;
+      color: #404553;
+      margin-bottom: 24px;
+    }
+
+    .signin-form label {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 3px;
+      color: #181c2f;
+    }
+    .signin-form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 17px;
+      margin-bottom: 10px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .signin-form input[type="email"], .signin-form input[type="password"] {
+      font-size: 1rem;
+      padding: 10px 12px;
+      border: 1px solid #c9ced6;
+      border-radius: 6px;
+      background: #f7f9fa;
+      transition: border 0.2s;
+      outline: none;
+    }
+    .signin-form input:focus {
+      border: 1.5px solid #1150e6;
+      background: #fff;
+    }
+    .input-links {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 2px;
+    }
+    .input-links a {
+      color: #1150e6;
+      font-size: 0.97rem;
+      text-decoration: none;
+      transition: text-decoration 0.16s;
+    }
+    .input-links a:hover {
+      text-decoration: underline;
+    }
+
+    .signin-btn {
+      margin-top: 6px;
+      background: linear-gradient(to right, #ffd814 43%, #f7ca00 100%);
+      color: #232f3e;
+      font-size: 1.16rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(60, 64, 67, 0.11);
+      padding: 12px 0;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.15s;
+    }
+    .signin-btn:hover,
+    .signin-btn:focus {
+      background: linear-gradient(to right, #ffc700, #f7ca00 80%);
+      outline: none;
+      box-shadow: 0 2px 9px rgba(60,72,97,0.13);
+    }
+    .or-divider {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      margin: 20px 0 15px 0;
+      color: #98a3b9;
+    }
+    .or-divider span {
+      flex: 1;
+      height: 1px;
+      background: #e3e6ea;
+      margin: 0 9px;
+    }
+    .social-login {
+      display: flex;
+      gap: 14px;
+      width: 100%;
+      margin-bottom: 11px;
+      justify-content: center;
+    }
+    .social-btn {
+      flex: 1 1 0;
+      background: #fff;
+      border: 1px solid #daddde;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #525869;
+      padding: 7px 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 7px;
+      transition: background 0.15s, border-color 0.12s;
+    }
+    .social-btn img {
+      width: 19px;
+      height: 19px;
+      vertical-align: middle;
+    }
+    .social-btn:focus,
+    .social-btn:hover {
+      background: #f5f6fa;
+      border-color: #a3aec6;
+    }
+
+    .signup-link {
+      margin-top: 15px;
+      font-size: 1.05rem;
+      color: #5f636e;
+    }
+    .signup-link a {
+      color: #1150e6;
+      text-decoration: none;
+      margin-left: 2px;
+      font-weight: 600;
+      transition: text-decoration 0.16s;
+    }
+    .signup-link a:hover {
+      text-decoration: underline;
+    }
+
+    .ad-banner {
+      display: flex;
+      align-items: center;
+      background: linear-gradient(90deg, #e6eefa 60%, #fcf2db 95%);
+      border-radius: 8px;
+      padding: 8px 16px 8px 12px;
+      margin: 22px 0 0 0;
+      width: 100%;
+      box-sizing: border-box;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(189,195,204,0.07);
+      transition: box-shadow 0.14s, background 0.13s;
+    }
+    .ad-banner:hover {
+      box-shadow: 0 4px 12px rgba(189,195,204,0.14);
+      background: linear-gradient(90deg, #ddeaf8 60%, #fae5b2 98%);
+    }
+    .ad-img {
+      width: 32px;
+      height: 32px;
+      margin-right: 12px;
+      border-radius: 6px;
+      object-fit: cover;
+      background: #e3e6ea;
+    }
+    .ad-content {
+      display: flex;
+      flex-direction: column;
+    }
+    .ad-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #232f3e;
+      margin-bottom: 2px;
+      line-height: 1.16;
+    }
+    .ad-desc {
+      font-size: 0.99rem;
+      color: #404553;
+      opacity: 0.87;
+    }
+    @media (max-width: 500px) {
+      .signin-container {
+        max-width: 92vw;
+        padding: 22px 7vw 20px 7vw;
+      }
+      .ad-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+      }
+      .ad-img {
+        margin-bottom: 4px;
+        margin-right: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="signin-container">
+    <img src="placeholder_image.jpg" alt="ShopEase Logo" class="signin-logo">
+    <span class="signin-title">Sign In to ShopEase</span>
+    <span class="signin-subtext">Access your exclusive deals, fast checkout, and personalized recommendations.</span>
+    <form class="signin-form">
+      <div class="input-group">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="you@email.com" required autocomplete="email">
+      </div>
+      <div class="input-group">
+        <label for="password">
+          Password
+        </label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required autocomplete="current-password">
+        <div class="input-links">
+          <a href="#">Forgot password?</a>
+          <a href="#">Need help?</a>
+        </div>
+      </div>
+      <button type="submit" class="signin-btn">Sign In</button>
+    </form>
+    <div class="or-divider">
+      <span></span>
+      OR
+      <span></span>
+    </div>
+    <div class="social-login">
+      <button class="social-btn">
+        <img src="placeholder_image.jpg" alt="Google">
+        Google
+      </button>
+      <button class="social-btn">
+        <img src="placeholder_image.jpg" alt="Facebook">
+        Facebook
+      </button>
+    </div>
+    <div class="signup-link">
+      New to ShopEase?
+      <a href="#">Create your account</a>
+    </div>
+    <div class="ad-banner" onclick="window.location='#'">
+      <img src="placeholder_image.jpg" class="ad-img" alt="Ad: Extra 10% Off Today Only">
+      <div class="ad-content">
+        <span class="ad-title">🔥 Extra 10% Cash Back!</span>
+        <span class="ad-desc">Sign in today and get an extra 10% off your first order. Limited time offer.</span>
+      </div>
+    </div>
+  </div>
+  <!--
+  *****Response*****
+
+  Task 4: Where this component appears
+  ------------------------------------
+  This sign-in component is designed to be embedded at the top-center of existing e-commerce website pages, such as the homepage, landing page, or any page where a sign-in prompt is contextually relevant. It can also serve as the main content of a dedicated sign-in page. Its modal-box appearance ensures it stands out and draws focus without being a disruptive pop-up.
+
+  Task 5: Reasoning behind design choices
+  ---------------------------------------
+  - The prominent logo and headline reinforce brand recognition (Rule 3.7).
+  - Incentivizing sign-in with an exclusive deal increases conversion and average order size (Rules 3.1, 3.2, 3.3, 3.8).
+  - Social sign-in options reduce friction, helping to minimize bounce and abandonment rates (Rules 3.2, 3.8, 3.9).
+  - "Forgot password" and "Need help?" links further reduce sign-in friction (Rules 3.2, 3.8).
+  - The ad banner introduces an upsell, increases time on site, and encourages additional clicks (Rules 3.1, 3.4, 3.5, 3.6).
+  - Clean, mobile-friendly responsive design ensures accessibility (all rules).
+  - The "Create your account" link targets new users, expanding unique/returning visitors (Rules 3.7).
+  - Friendly, benefit-focused copy (exclusive deals, fast checkout) drives desire to sign in (Rules 3.1, 3.2, 3.5).
+  - Overall, every element is geared toward seamless user experience and maximizing engagement, conversion, and revenue, while minimizing drop-offs.
+  -->
+</body>
+</html>

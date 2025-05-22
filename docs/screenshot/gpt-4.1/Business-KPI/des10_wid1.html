@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cancel Membership Component</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #f8f9fb;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .cancel-membership-wrapper {
+      max-width: 470px;
+      margin: 20px auto 0 auto;
+      background: #fff;
+      box-shadow: 0 4px 24px rgba(30,33,63,.06);
+      border-radius: 16px;
+      padding: 2rem 2.5rem 2.25rem 2.5rem;
+      box-sizing: border-box;
+      position: relative;
+      top: 0;
+    }
+
+    .cancel-heading {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #1a1c22;
+      margin: 0 0 6px 0;
+      text-align: left;
+      letter-spacing: -1px;
+    }
+
+    .cancel-subtitle {
+      font-size: 1rem;
+      color: #495057;
+      margin-bottom: 16px;
+    }
+
+    .membership-summary {
+      background: #f2f3f7;
+      border-radius: 10px;
+      padding: 1rem 1.2rem;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .membership-summary img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #fff;
+      border: 1.5px solid #e7eaf3;
+    }
+    .membership-details {
+      font-size: 0.97rem;
+      color: #23244f;
+    }
+    .membership-details strong {
+      display: block;
+      margin-bottom: 2px;
+      font-weight: 700;
+    }
+
+    .retention-offers {
+      background: #ffffff;
+      border: 1.5px solid #ffd966;
+      border-radius: 9px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+    .retention-offers-title {
+      color: #b68500;
+      font-size: 1.01rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .retention-offers-list {
+      font-size: 0.97rem;
+      color: #5d5f7b;
+      margin-bottom: 0;
+      margin-top: 0;
+      padding-left: 18px;
+    }
+    .retention-action-btns {
+      display: flex;
+      gap: 14px;
+      justify-content: flex-end;
+      margin-top: 18px;
+    }
+    .keep-membership-btn, .cancel-membership-btn {
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 7px;
+      padding: 10px 22px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.17s, color 0.17s;
+    }
+    .keep-membership-btn {
+      background: #1ecb4f;
+      color: #fff;
+      border: 1.5px solid #1ecb4f;
+    }
+    .keep-membership-btn:hover {
+      background: #19a13e;
+      border-color: #19a13e;
+    }
+    .cancel-membership-btn {
+      background: #fff6f6;
+      color: #e43a2d;
+      border: 1.5px solid #e43a2d;
+    }
+    .cancel-membership-btn:hover {
+      background: #e43a2d;
+      color: #fff;
+    }
+
+    .feedback-section {
+      margin-top: 26px;
+    }
+    .feedback-section label {
+      display: block;
+      font-size: 0.97rem;
+      color: #23244f;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    .feedback-section select {
+      width: 100%;
+      padding: 9.5px 12px;
+      border-radius: 6px;
+      border: 1.5px solid #d1d6e7;
+      font-size: 0.97rem;
+      margin-bottom: 12px;
+    }
+    .feedback-section textarea {
+      width: 100%;
+      min-height: 40px;
+      padding: 10px 12px;
+      border-radius: 6px;
+      border: 1.5px solid #d1d6e7;
+      font-size: 0.97rem;
+      resize: vertical;
+      margin-bottom: 16px;
+    }
+
+    .ad-section {
+      margin-top: 36px;
+      text-align: center;
+    }
+    .ad-section img {
+      width: 100%;
+      max-width: 408px;
+      border-radius: 7px;
+      cursor: pointer;
+      margin-bottom: 5px;
+    }
+    .ad-link {
+      display: block;
+      color: #007bad;
+      text-decoration: underline;
+      font-size: 1.01rem;
+      margin-top: 2px;
+    }
+    .help-link {
+      color: #007bad;
+      text-decoration: underline;
+      font-size: 0.94rem;
+      margin-top: 2px;
+      display: block;
+      text-align: right;
+      margin-bottom: 0;
+    }
+    @media (max-width: 550px) {
+      .cancel-membership-wrapper {
+        max-width: 98vw;
+        padding: 1rem 0.7rem 1.6rem 0.7rem;
+        border-radius: 10px;
+      }
+      .ad-section img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cancel-membership-wrapper">
+    <div class="cancel-heading">Cancel Your Gold Membership</div>
+    <div class="cancel-subtitle">We're sorry to see you go! Please take a moment to review the options below before you proceed.</div>
+
+    <div class="membership-summary">
+      <img src="placeholder_image.jpg" alt="Membership logo">
+      <div class="membership-details">
+        <strong>Gold Membership</strong>
+        <span>Renewal Date: July 21, 2024<br>
+        Membership ID: #GOLD124567</span>
+      </div>
+    </div>
+
+    <div class="retention-offers">
+      <span class="retention-offers-title">Wait! Unlock a surprise before leaving:</span>
+      <ul class="retention-offers-list">
+        <li>Get 50% OFF your next 2 months (auto-applied if you stay)</li>
+        <li>One-time free shipping voucher for you</li>
+        <li>Priority access to new product launches</li>
+      </ul>
+      <div class="retention-action-btns">
+        <button class="keep-membership-btn" type="button">Claim offer & Keep Membership</button>
+        <button class="cancel-membership-btn" type="button">Continue Cancellation</button>
+      </div>
+    </div>
+    
+    <div class="feedback-section">
+      <label for="cancel-reason">Please tell us why you're cancelling:</label>
+      <select id="cancel-reason" name="cancel-reason">
+        <option value="">Select a reason</option>
+        <option value="TooExpensive">Too expensive</option>
+        <option value="NotUsing">I rarely use my membership</option>
+        <option value="FoundBetterDeal">I found a better deal elsewhere</option>
+        <option value="Dissatisfied">Not satisfied with benefits</option>
+        <option value="Other">Other</option>
+      </select>
+      <textarea name="additional-feedback" placeholder="Any additional feedback? Help us improve!"></textarea>
+      <button class="cancel-membership-btn" type="submit" style="float:right; margin-top:-3px;">Confirm Cancellation</button>
+    </div>
+    <a href="/help-center/membership-cancellation" class="help-link">Need help? Contact support</a>
+    <div class="ad-section">
+      <a href="https://www.partner-offer.com/" target="_blank">
+        <img src="placeholder_image.jpg" alt="Special Partner Offer: Earn 2x loyalty points on all orders with Citi Rewards Card!">
+      </a>
+      <a href="https://www.partner-offer.com/" target="_blank" class="ad-link">
+        Special Partner Offer: Earn 2x loyalty points on all orders with Citi Rewards Card!
+      </a>
+    </div>
+  </div>
+  <!--
+*****Response*****
+
+Task 4: Placement
+This component will appear as an embedded modal-like section at the top of the "My Account" or "Membership Settings" page, immediately after the menu or header (20px from top). It occupies a prominent place to ensure maximum user attention and engagement during the membership management process. It is not a pop-up in this implementation, but a visually isolated section within the existing account management interface.
+
+Task 5: Design Reasoning
+This design guides the user through cancellation in a conversion-focused manner. The membership summary reminds users of benefits they have, invoking loss aversion. Exclusive retention offers maximize sales, conversion, and order size by offering discounts and perks if the user stays. "Claim offer" is highlighted as the primary action, while cancellation requires a confirmatory step, reducing accidental churn. Feedback collection provides valuable data to minimize bounce and abandonment, while the help link offers real-time support for at-risk users. Strategic ad placement draws clicks without overwhelming the user. Responsive, attractive design, and clear CTAs maintain engagement, prioritizing retention and alternative monetization via advertising, thus supporting all 9 interface goals.
+-->
+</body>
+</html>

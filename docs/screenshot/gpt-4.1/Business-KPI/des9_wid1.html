@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Membership Sign Up Component</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      background: #f6f8fb;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .membership-signup-container {
+      position: relative;
+      max-width: 370px;
+      margin: 20px auto 0 auto;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 0 32px 28px 32px;
+      text-align: center;
+      z-index: 10;
+    }
+    .membership-signup-container .brand-ads {
+      margin-top: -30px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand-ads a {
+      display: inline-block;
+      margin: 0 2px;
+      transition: transform 0.15s;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .brand-ads a:hover {
+      transform: scale(1.04);
+      box-shadow: 0 2px 12px rgba(228,120,42,0.13);
+    }
+    .brand-ads img {
+      width: 42px;
+      height: 42px;
+      object-fit: cover;
+    }
+    .membership-logo {
+      width: 72px;
+      display: block;
+      margin: 0 auto 10px auto;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(233,176,56,0.16);
+    }
+    .membership-title {
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: #222a38;
+      margin: 10px 0 7px 0;
+      letter-spacing: 0.01em;
+    }
+    .membership-benefits {
+      font-size: 1.0rem;
+      color: #49516f;
+      margin-bottom: 20px;
+      line-height: 1.5;
+      padding: 0;
+      text-align: left;
+      margin-top: 0;
+      margin-left: 4px;
+    }
+    .membership-benefits li {
+      margin-bottom: 7px;
+      list-style: disc inside;
+    }
+    .membership-highlight {
+      display: inline-block;
+      background: linear-gradient(90deg,#ffc93c,#ff7f36);
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 8px;
+      font-size: 0.99em;
+      font-weight: 600;
+      margin-bottom: 10px;
+      letter-spacing: 0.04em;
+    }
+    form.membership-form {
+      text-align: left;
+      margin-top: 12px;
+    }
+    .membership-form-label {
+      font-size: 1em;
+      margin-bottom: 4px;
+      color: #243050;
+      display: block;
+      font-weight: 500;
+    }
+    .membership-form-input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 11px 12px;
+      margin-bottom: 12px;
+      border: 1px solid #dde2ef;
+      border-radius: 7px;
+      background: #f8fafc;
+      font-size: 1em;
+      transition: border-color 0.12s;
+      font-family: inherit;
+    }
+    .membership-form-input:focus {
+      outline: none;
+      border-color: #fda541;
+      background: #fff;
+    }
+    .signup-btn {
+      width: 100%;
+      background: linear-gradient(90deg,#ff7f36,#ffc93c);
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.06rem;
+      padding: 12px 0;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(255,195,60,0.15);
+      transition: background 0.18s;
+      margin-top: 4px;
+      margin-bottom: 5px;
+    }
+    .signup-btn:hover, .signup-btn:focus {
+      background: linear-gradient(90deg,#ffc93c,#ff7f36);
+    }
+    .membership-legal {
+      font-size: 0.9em;
+      color: #8d95ac;
+      margin: 6px 0 0 0;
+      padding-bottom: 0;
+      text-align: center;
+    }
+    .membership-footer {
+      margin-top: 25px;
+      font-size: 0.97em;
+      color: #4a5470;
+    }
+    .login-link {
+      color: #ff7f36;
+      font-weight: 600;
+      text-decoration: none;
+      margin-left: 5px;
+      transition: color .13s;
+    }
+    .login-link:hover { color: #e75027; text-decoration: underline; }
+
+    @media (max-width: 480px) {
+      .membership-signup-container {
+        max-width: 99vw;
+        margin: 20px 1.5vw 0 1.5vw;
+        padding: 0 10px 20px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="membership-signup-container">
+    <!-- Display advertising / brand exposure row (click-through banners) -->
+    <div class="brand-ads">
+      <a href="/deals/top-picks" title="Top Picks"><img src="placeholder_image.jpg" alt="Top Picks"></a>
+      <a href="/collections/brands" title="Shop Brands"><img src="placeholder_image.jpg" alt="Shop Brands"></a>
+      <a href="/deals/daily" title="Daily Deals"><img src="placeholder_image.jpg" alt="Daily Deals"></a>
+    </div>
+    <img class="membership-logo" src="placeholder_image.jpg" alt="SuperSaver Membership Logo">
+    <span class="membership-highlight">Save up to 20% every order!</span>
+    <div class="membership-title">Join SuperSaver Membership</div>
+    <ul class="membership-benefits">
+      <li>Exclusive <strong>members-only discounts</strong> on 4,000+ products</li>
+      <li><strong>Free 2-day shipping</strong> on all orders – no minimum</li>
+      <li>Priority access to flash sales &amp; new arrivals</li>
+      <li>Instant $10 coupon for new members</li>
+      <li>Early access to Black Friday &amp; Cyber Monday deals</li>
+      <li>Birthday gift every year</li>
+    </ul>
+    <form class="membership-form" autocomplete="on">
+      <label class="membership-form-label" for="member-email">Email Address</label>
+      <input id="member-email" class="membership-form-input" type="email" name="email" placeholder="your@email.com" required autocomplete="email">
+
+      <label class="membership-form-label" for="member-password">Password</label>
+      <input id="member-password" class="membership-form-input" type="password" name="password" placeholder="Create a password" required minlength="7" autocomplete="new-password">
+
+      <button type="submit" class="signup-btn">Start your Free 30-day Trial</button>
+    </form>
+    <div class="membership-legal">
+      By joining, you agree to our <a href="/terms" target="_blank">Terms &amp; Conditions</a> and <a href="/privacy" target="_blank">Privacy Policy</a>.
+    </div>
+    <div class="membership-footer">
+      Already a member?
+      <a href="/login" class="login-link">Sign in</a>
+    </div>
+  </div>
+  <!-- 
+    *****Response*****
+    Task 4: 
+    This component is designed to be embedded prominently at the very top section of the homepage or any key landing page—just below the navigation/header area, with a 20-pixel margin from the top of the viewport. On a membership/promotion landing page, it would occupy the main section above the fold. Alternatively, it can appear as a persistent signup callout across the site.
+
+    Task 5: 
+    Design choices:
+    - Vibrant call-to-action and benefits list directly communicate tangible value (converts users, maximizes sales).
+    - Free trial + $10 coupon + exclusive perks reduce perceived risk and incentivize upgrades, maximizing conversion and average order size.
+    - Prominently displayed membership benefits address common objections, while direct access to deals and top brands (brand-ad banners) maximizes advertising click-through and keeps users exploring.
+    - Encouraging account creation (with legal info, sign-in link for returners) reduces abandonment and bounce rates.
+    - Clean, mobile-friendly design, visual highlights, and quick input forms optimize usability and completion.
+    - Early access and birthday perks incentivize return visits, growing loyalty and repeat traffic.
+    - Component's position at top, strong offer, and strategic ad/brand placements all help drive more user attention, clicks, and downstream engagement/retention metrics.
+  -->
+</body>
+</html>

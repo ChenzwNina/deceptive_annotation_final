@@ -1,0 +1,12 @@
+Task 4: 
+    This component is designed to be embedded prominently at the very top section of the homepage or any key landing page—just below the navigation/header area, with a 20-pixel margin from the top of the viewport. On a membership/promotion landing page, it would occupy the main section above the fold. Alternatively, it can appear as a persistent signup callout across the site.
+
+    Task 5: 
+    Design choices:
+    - Vibrant call-to-action and benefits list directly communicate tangible value (converts users, maximizes sales).
+    - Free trial + $10 coupon + exclusive perks reduce perceived risk and incentivize upgrades, maximizing conversion and average order size.
+    - Prominently displayed membership benefits address common objections, while direct access to deals and top brands (brand-ad banners) maximizes advertising click-through and keeps users exploring.
+    - Encouraging account creation (with legal info, sign-in link for returners) reduces abandonment and bounce rates.
+    - Clean, mobile-friendly design, visual highlights, and quick input forms optimize usability and completion.
+    - Early access and birthday perks incentivize return visits, growing loyalty and repeat traffic.
+    - Component's position at top, strong offer, and strategic ad/brand placements all help drive more user attention, clicks, and downstream engagement/retention metrics.

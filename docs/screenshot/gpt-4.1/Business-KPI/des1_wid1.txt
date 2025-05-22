@@ -1,0 +1,10 @@
+Task 4. Placement:
+This product category navigation component is designed to be embedded directly at the top of every page (just under the main site header or logo) of the e-commerce website. It is horizontally aligned, full-width, and sticky to the top (with a 20px margin) so users can easily access category links from anywhere on the site, maximizing discoverability.
+
+Task 5. Design Reasoning:
+- Maximizes sales, conversions, and average order size by making categories and promotions instantly visible, with badges ("New," "Sale," "10% OFF," "Hot") that nudge users to click.
+- Category links are large and visually engaging, with icons for rapid recognition, which decreases bounce rate and cart abandonment by fostering quick homepage-to-product transitions.
+- Including a visually highlighted "Deals" section and animated promo badges increases ad/click-through rates.
+- Scrollable nav ensures all categories are viewable on all devices, boosting time on site and reducing bounce by encouraging exploration.
+- Aesthetic consistency and engaging hover styles build perceived trust, supporting the return/unique visitor metric and improving brand perception.
+- The navigation's always-visible design (just below the main header) keeps users engaged, encourages more clicks, and facilitates multi-category browsing, maximizing both session depth and pageviews per visit.

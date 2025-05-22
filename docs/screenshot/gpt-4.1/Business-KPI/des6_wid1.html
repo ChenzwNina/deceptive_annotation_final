@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Ratings Component - E-commerce</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f8fafd;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .ratings-component {
+      max-width: 740px;
+      margin: 20px auto 0 auto;
+      padding: 28px 34px 32px 34px;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07), 0 1.5px 6px rgba(0,0,0,0.04);
+      display: flex;
+      gap: 36px;
+      align-items: flex-start;
+      position: relative;
+      z-index: 10;
+    }
+    .ratings-summary {
+      min-width: 210px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-right: 1px solid #e4ebf3;
+      padding-right: 32px;
+      flex-shrink: 0;
+    }
+    .summary-score {
+      font-size: 2.7rem;
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      color: #174ea6;
+    }
+    .star-row {
+      display: flex;
+      align-items: center;
+      margin: 10px 0 6px 0;
+    }
+    .star-row svg {
+      width: 24px;
+      height: 24px;
+      fill: #ffd600;
+      margin-right: 2px;
+    }
+    .total-reviews {
+      color: #3d6cab;
+      font-size: 1.1rem;
+      letter-spacing: 0.03em;
+      margin-bottom: 0;
+      margin-top: 2px;
+      font-weight: 500;
+    }
+    .write-review-btn {
+      margin-top: 18px;
+      text-decoration: none;
+      background: linear-gradient(90deg, #ffd600 40%, #ffaa00 100%);
+      color: #133168;
+      font-size: 1.05rem;
+      padding: 9px 22px 8px 22px;
+      border-radius: 22px;
+      font-weight: 600;
+      box-shadow: 0 0.5px 3px rgba(255,214,0,0.12);
+      transition: background 0.2s, box-shadow 0.2s;
+      display: inline-block;
+    }
+    .write-review-btn:hover {
+      background: linear-gradient(90deg, #ffaa00 40%, #ffd600 100%);
+      box-shadow: 0 3px 14px rgba(255,214,0,0.18);
+      color: #000;
+    }
+    .ratings-breakdown {
+      flex: 1;
+      padding-left: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .ratings-bar-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .breakdown-label {
+      font-size: 1.07rem;
+      width: 44px;
+      color: #193876;
+      font-weight: 600;
+      margin-right: 10px;
+    }
+    .breakdown-bar {
+      height: 12px;
+      border-radius: 10px;
+      width: 186px;
+      background: #e4ebf3;
+      margin-right: 14px;
+      overflow: hidden;
+    }
+    .breakdown-bar-fill {
+      height: 100%;
+      background: linear-gradient(to right, #ffd600 50%, #ffaa00 100%);
+      border-radius: 10px;
+    }
+    .breakdown-count {
+      min-width: 36px;
+      text-align: right;
+      color: #6888b0;
+      font-size: 1.01rem;
+      font-weight: 600;
+      margin-left: 8px;
+    }
+    .rating-actions {
+      margin-top: 20px;
+      display: flex;
+      gap: 16px;
+    }
+    .see-reviews-link,
+    .related-products-link {
+      color: #3978df;
+      text-decoration: underline;
+      font-weight: 500;
+      font-size: 1.06rem;
+      cursor: pointer;
+      transition: color 0.16s;
+    }
+    .see-reviews-link:hover,
+    .related-products-link:hover {
+      color: #174ea6;
+      text-decoration: none;
+    }
+    @media (max-width: 650px) {
+      .ratings-component {
+        flex-direction: column;
+        gap: 18px;
+        max-width: 97vw;
+        padding: 22px 10px;
+      }
+      .ratings-summary, .ratings-breakdown {
+        border-right: none;
+        padding-right: 0;
+        padding-left: 0;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="ratings-component">
+    <div class="ratings-summary">
+      <div class="summary-score" aria-label="Average rating: 4.7 out of 5">4.7</div>
+      <div class="star-row">
+        <!-- 4.7 stars: 4 full, 1 half -->
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 18.45l7.48 4.38-2.02-8.38 6.54-5.52-8.57-.7-3.43-7.82-3.42 7.82-8.58.7 6.55 5.52-2.02 8.38z"/></svg>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 18.45l7.48 4.38-2.02-8.38 6.54-5.52-8.57-.7-3.43-7.82-3.42 7.82-8.58.7 6.55 5.52-2.02 8.38z"/></svg>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 18.45l7.48 4.38-2.02-8.38 6.54-5.52-8.57-.7-3.43-7.82-3.42 7.82-8.58.7 6.55 5.52-2.02 8.38z"/></svg>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 18.45l7.48 4.38-2.02-8.38 6.54-5.52-8.57-.7-3.43-7.82-3.42 7.82-8.58.7 6.55 5.52-2.02 8.38z"/></svg>
+        <!-- Half star -->
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <defs>
+            <linearGradient id="starHalf">
+              <stop offset="50%" stop-color="#ffd600"/>
+              <stop offset="50%" stop-color="#e4ebf3"/>
+            </linearGradient>
+          </defs>
+          <path fill="url(#starHalf)" d="M12 18.45l7.48 4.38-2.02-8.38 6.54-5.52-8.57-.7-3.43-7.82-3.42 7.82-8.58.7 6.55 5.52-2.02 8.38z"/>
+        </svg>
+      </div>
+      <div class="total-reviews">2,152 verified reviews</div>
+      <a href="#write-review" class="write-review-btn">Write a review</a>
+    </div>
+    <div class="ratings-breakdown" aria-label="Ratings breakdown">
+      <!-- Example data, could be dynamic in a real implementation -->
+      <div class="ratings-bar-row">
+        <div class="breakdown-label">5<span style="color: #ffd600;">★</span></div>
+        <div class="breakdown-bar"><div class="breakdown-bar-fill" style="width: 66%;"></div></div>
+        <div class="breakdown-count">1,420</div>
+      </div>
+      <div class="ratings-bar-row">
+        <div class="breakdown-label">4<span style="color: #ffd600;">★</span></div>
+        <div class="breakdown-bar"><div class="breakdown-bar-fill" style="width: 21%;"></div></div>
+        <div class="breakdown-count">454</div>
+      </div>
+      <div class="ratings-bar-row">
+        <div class="breakdown-label">3<span style="color: #ffd600;">★</span></div>
+        <div class="breakdown-bar"><div class="breakdown-bar-fill" style="width: 8%;"></div></div>
+        <div class="breakdown-count">178</div>
+      </div>
+      <div class="ratings-bar-row">
+        <div class="breakdown-label">2<span style="color: #ffd600;">★</span></div>
+        <div class="breakdown-bar"><div class="breakdown-bar-fill" style="width: 3%;"></div></div>
+        <div class="breakdown-count">62</div>
+      </div>
+      <div class="ratings-bar-row">
+        <div class="breakdown-label">1<span style="color: #ffd600;">★</span></div>
+        <div class="breakdown-bar"><div class="breakdown-bar-fill" style="width: 2%;"></div></div>
+        <div class="breakdown-count">38</div>
+      </div>
+      <div class="rating-actions">
+        <a href="#see-all-reviews" class="see-reviews-link">See all 2,152 reviews</a>
+        <a href="#related-products" class="related-products-link">Customers also bought</a>
+      </div>
+    </div>
+  </div>
+  <!-- *****Response*****
+Task 4. Placement:
+This user ratings component is designed to be embedded at the top section of a product detail page, just below the main product title or hero image carousel. It spans the full width of the main content area, ensuring immediate visibility to both new and returning visitors.
+
+Task 5. Reasoning:
+This design prominently displays high social validation (average rating and review count) at the top of the page, supporting conversion and trust (rules 1 & 2). The breakdown encourages users to explore more reviews, increasing site engagement and reducing bounce/cart abandonment (rules 5, 6, 8, 9). The "Write a review" button prompts valuable user-generated content and engagement (rule 7), and the "Customers also bought" link increases average order size (rule 3) and multiple page views (rule 6). The color scheme and visual prominence (stars, counts, action buttons) draw attention, building trust and increasing time on site and click-through rates (rules 4, 5). By placing the component at the top, it reassures visitors early, minimizing bounce and abandonment rates, and maximizes conversion potential.
+***** -->
+</body>
+</html>

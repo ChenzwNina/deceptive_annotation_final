@@ -1,0 +1,11 @@
+Task 4: Position of Component
+  This shopping cart component should be embedded at the top center of any page in the e-commerce website, approximately 20 pixels below the top viewport edge. It is not a full-page layout, nor a pop-up/modal; instead, it is a fixed, visually prominent sidebar-sized block. Typically, it's shown when a user clicks the cart icon, overlays page content but doesn't obstruct navigation or branding elements.
+
+  Task 5: Design Choices Reasoning
+  - Maximizing sales, conversions, and AOV: The design emphasizes product details, visually attractive discounts (savings message & advert banner), and easy access to upsell/back-to-school deals.
+  - Minimizing abandonment & bounce rates: The subtotal and clear "Proceed to Checkout" call-to-action reduce friction and ambiguity. Inline removal and quantity adjusters offer control, preventing checkout frustration.
+  - Brand/ad click-through: The banner advert is styled to attract clicks (different background, imagery, actionable “Shop Now”).
+  - Maximizing site engagement: “Continue Shopping,” promo, and help links lead users deeper into the site, increasing time-on-site and page views.
+  - Visually, concise typography improves scan-ability, and subtle color highlights draw the user to actions and deals.
+  - CTA is large, colored (gradient), and prominent to draw focus.
+  - The component works well across desktop and mobile (responsive), ensuring a smooth experience for unique and returning visitors.

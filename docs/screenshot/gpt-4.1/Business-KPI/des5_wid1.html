@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Item Component</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: #f5f7fa;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .product-card {
+            margin: 20px auto 0 auto;
+            max-width: 960px;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 8px 32px rgba(60,60,90,.21), 0 1.5px 4px 0 rgba(100,105,140,.13);
+            display: flex;
+            align-items: flex-start;
+            padding: 28px 36px 28px 28px;
+            gap: 36px;
+            position: sticky;
+            top: 20px;
+            z-index: 10;
+        }
+        .product-image {
+            width: 260px;
+            height: 320px;
+            border-radius: 12px;
+            background: #ededed url('placeholder_image.jpg') center center/cover no-repeat;
+            box-shadow: 0 2px 12px rgba(40,60,100,0.12);
+            flex-shrink: 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .product-image::after {
+            content: "Best Seller";
+            position: absolute;
+            top: 16px;
+            left: 0;
+            background: #FFD700;
+            color: #222;
+            padding: 6px 16px;
+            font-size: 0.93em;
+            font-weight: bold;
+            border-radius: 0 12px 12px 0;
+            letter-spacing: 0.02em;
+            box-shadow: 0 2px 6px rgba(160,130,0,0.13);
+            z-index: 4;
+        }
+        .product-info {
+            flex: 1 1 0%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .product-brand {
+            font-size: 1em;
+            color: #4d578e;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            margin-bottom: 3px;
+        }
+        .product-title {
+            font-size: 2.1em;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 4px;
+        }
+        .product-rating {
+            margin: 5px 0 11px 0;
+            font-size: 1.1em;
+            color: #FFA500;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .product-rating span {
+            color: #222;
+            font-size: 0.97em;
+            margin-left: 3px;
+        }
+        .product-desc {
+            font-size: 1.13em;
+            color: #636588;
+            margin-bottom: 18px;
+            line-height: 1.55em;
+            max-width: 520px;
+        }
+        .product-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 13px;
+        }
+        .product-stock {
+            color: #388e3c;
+            font-size: 1em;
+            font-weight: 500;
+        }
+        .product-delivery {
+            color: #3f51b5;
+            font-size: 1em;
+        }
+        .product-ads {
+            background: #f2f2ff;
+            color: #2e50a2;
+            font-size: 1em;
+            padding: 7px 17px;
+            border-radius: 8px;
+            margin-bottom: 14px;
+            display: inline-block;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: underline;
+            transition: background 0.18s;
+        }
+        .product-ads:hover {
+            background: #dde5ff;
+        }
+        .product-pricing {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 22px;
+        }
+        .product-price {
+            font-size: 2.1em;
+            color: #ff3457;
+            font-weight: 700;
+        }
+        .product-old-price {
+            font-size: 1.1em;
+            color: #adb0b7;
+            text-decoration: line-through;
+        }
+        .product-save {
+            background: #f8ffdf;
+            color: #7fa315;
+            font-size: 1em;
+            padding: 4px 13px;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-left: 5px;
+        }
+        .product-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-top: 12px;
+        }
+        .btn-primary {
+            background: #287de8;
+            color: #fff;
+            font-size: 1.14em;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            padding: 12px 35px;
+            cursor: pointer;
+            transition: background 0.14s, box-shadow 0.13s;
+            box-shadow: 0 2px 9px rgba(40,125,232,.09);
+        }
+        .btn-primary:hover {
+            background: #2061ba;
+        }
+        .btn-secondary {
+            background: #fff;
+            color: #287de8;
+            font-size: 1.13em;
+            border: 1.5px solid #287de8;
+            border-radius: 6px;
+            padding: 12px 28px;
+            cursor: pointer;
+            transition: background 0.14s, color 0.11s;
+        }
+        .btn-secondary:hover {
+            background: #f4faff;
+            color: #2061ba;
+        }
+        .product-upsell {
+            margin-top: 19px;
+            color: #567;
+            font-size: 1.01em;
+            background: linear-gradient(90deg,#e0f7fa70,#ffffff 70%);
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+        .product-upsell a {
+            color: #118aff;
+            font-weight: 600;
+            text-decoration: underline;
+            margin-left: 6px;
+        }
+        /* Responsive */
+        @media (max-width: 800px) {
+            .product-card {
+                flex-direction: column;
+                padding: 20px 7vw;
+                gap: 24px;
+            }
+            .product-image {
+                width: 100%;
+                max-width: 320px;
+                height: 230px;
+                margin: 0 auto;
+            }
+        }
+        @media (max-width: 500px) {
+            .product-card {
+                margin: 20px 3vw 0 3vw;
+                padding: 16px 4vw 16px 4vw;
+            }
+            .product-title {
+                font-size: 1.33em;
+            }
+            .product-price {
+                font-size: 1.33em;
+            }
+            .product-image {
+                max-width: 100vw;
+                height: 170px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="product-card">
+        <div class="product-image"></div>
+        <div class="product-info">
+            <div class="product-brand">AuroraHome</div>
+            <div class="product-title">Ultra Plush Weighted Blanket - King Size, Sapphire Blue</div>
+            <div class="product-rating">
+                ★★★★★
+                <span>4.8 / 5 <a href="#" style="color:#396dd6;text-decoration:underline;font-size:0.94em;">(1,042 reviews)</a></span>
+            </div>
+            <div class="product-desc">
+                Experience deep, restorative sleep with our Ultra Plush Weighted Blanket in Sapphire Blue. Featuring dual-layered microfiber and hypoallergenic, glass bead filling, this king-size blanket helps to relieve stress and anxiety while providing unmatched comfort. Machine-washable and perfect for all seasons.
+            </div>
+            <div class="product-meta">
+                <span class="product-stock">In stock - 6 left!</span>
+                <span class="product-delivery">Free next-day delivery</span>
+            </div>
+            <a href="https://www.aurorahome.com/deals/blanket" class="product-ads" target="_blank">🔥 See limited-time bundle offers</a>
+            <div class="product-pricing">
+                <div class="product-price">$89.99</div>
+                <div class="product-old-price">$129.99</div>
+                <div class="product-save">Save 30%</div>
+            </div>
+            <div class="product-actions">
+                <button class="btn-primary">Add to Cart</button>
+                <button class="btn-secondary">Add to Wishlist</button>
+            </div>
+            <div class="product-upsell">
+                <span>Buy 2 blankets, get an exclusive Satin Sleep Mask <b>FREE</b>! <a href="#">View Offer</a></span>
+            </div>
+        </div>
+    </div>
+    <!-- 
+    *****Response*****
+    Task 4: This product item component is intended to appear at the top of a product detail page, occupying the main visible area above the fold. It is embedded as a key section within the product details page template, directly beneath the website's header/navigation bar. This placement ensures maximum visibility and interaction for every potential customer landing on a product page.
+
+    Task 5:
+    - The design prioritizes a large, clear product image and concise, benefit-focused copy, coupled with strong price anchoring (old price, percent savings) to maximize conversions and average order size (Rules 1-3, 8).
+    - "Best Seller", rating, and stock urgency signals increase trust and induce purchase urgency (Rules 2, 7, 8).
+    - Prominent and differentiated "Add to Cart" and "Wishlist" buttons reduce friction, minimize abandonment, and accommodate various shopping behaviors (Rules 2, 8).
+    - Upsell and bundle offers plus a strong ad/banner link boost average order value and advertising revenue (Rules 3, 4).
+    - Responsive interactive elements (reviews, upsell offers) encourage engagement, leading to deeper site exploration and longer time on site (Rules 5, 6).
+    - The free delivery and low-stock badges address common abandonment causes and encourage conversions (Rule 8).
+    - The visual hierarchy and color palette reflect credibility and brand identity, fostering return visits and minimizing bounce rate (Rules 6, 7, 9).
+    -->
+</body>
+</html>

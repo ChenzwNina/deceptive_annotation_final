@@ -1,0 +1,6 @@
+Task 4. Placement:
+This user ratings component is designed to be embedded at the top section of a product detail page, just below the main product title or hero image carousel. It spans the full width of the main content area, ensuring immediate visibility to both new and returning visitors.
+
+Task 5. Reasoning:
+This design prominently displays high social validation (average rating and review count) at the top of the page, supporting conversion and trust (rules 1 & 2). The breakdown encourages users to explore more reviews, increasing site engagement and reducing bounce/cart abandonment (rules 5, 6, 8, 9). The "Write a review" button prompts valuable user-generated content and engagement (rule 7), and the "Customers also bought" link increases average order size (rule 3) and multiple page views (rule 6). The color scheme and visual prominence (stars, counts, action buttons) draw attention, building trust and increasing time on site and click-through rates (rules 4, 5). By placing the component at the top, it reassures visitors early, minimizing bounce and abandonment rates, and maximizes conversion potential.
+*****
