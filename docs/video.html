@@ -819,7 +819,7 @@
 
             // Save into a dictionary
             inputs.forEach(input => {
-                bucket1[toString(input.id)] = parseInt(input.value);
+                bucket1[input.id] = parseInt(input.value);
                 console.log(bucket1)
             });
 
@@ -829,7 +829,7 @@
                 if (Number.isNaN(output_item)){
                     // Do nothing if it is a text
                 } else{
-                    bucket2[toString(output.id)] = output_item;
+                    bucket2[output.id] = output_item;
                 };
             });
 
