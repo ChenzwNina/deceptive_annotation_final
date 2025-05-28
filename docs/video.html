@@ -773,15 +773,24 @@
             console.log("dark_pattern_type bucket1", typeof bucket1, bucket1)
 
             const bucket2 = dark_pattern_type[1];
-            console.log("dark_pattern_type bucket1", typeof bucket2, bucket2)
+            console.log("dark_pattern_type bucket2", typeof bucket2, bucket2)
 
             const bucket3 = dark_pattern_type[2];
-            console.log("dark_pattern_type bucket1", typeof bucket3, bucket3)
+            console.log("dark_pattern_type bucket3", typeof bucket3, bucket3)
+
+            // If the widget has not been displayed before
+            if (bucket1)
 
             // Return number to input field
             for (const key in bucket1) {
                 const bucket1_value = bucket1[key];
+
+                // If the widget has not been displayed before
+                if (bucket1_value === null){
+                    console.log("First encounter the widget");
+                } else {
                 document.getElementById(key).value = bucket1_value;
+                }
             };
 
             // Return number to p field
