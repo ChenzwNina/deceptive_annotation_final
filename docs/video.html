@@ -729,13 +729,14 @@
 
             // Get LLM reasoning
             const txt_location = videoPair.screenshot_location.replace(".png", ".txt");
+
             console.log("txt location", txt_location);
             
             fetch(txt_location)
                 .then(response => response.text())
                 .then(text => {
                     console.log("txt content", text);
-                    document.getElementById("reasoning-context").innerHTML = text.replace(/\n/g, "<br/>");
+                    document.getElementById("reasoning-context").textContent = text.replace(/\n/g, "<br/>");
                 })
                 .catch(error => {
                     console.error("Error fetching text:", error);
