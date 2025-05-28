@@ -791,11 +791,13 @@
             for (const key in bucket1) {
                 const bucket1_value = bucket1[key];
 
+                console.log("value type", typeof bucket1_value, bucket1_value)
+
                 // If the widget has not been displayed before
-                if (bucket1_value === null){
-                    console.log("First encounter the widget");
-                } else {
+                try{
                 document.getElementById(key).value = bucket1_value;
+                } catch {
+                    console.log("First time seeing the widget")
                 }
             };
 
