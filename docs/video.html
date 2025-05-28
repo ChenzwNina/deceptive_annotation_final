@@ -797,7 +797,7 @@
 
                 console.log("value type", typeof bucket1_value, bucket1_value)
 
-                // If the widget has not been displayed before
+                // If the widget has not been displayed before, the answer section will be null
                 try{
                     document.getElementById(key).value = bucket1_value;
                 } catch {
@@ -809,6 +809,7 @@
             for (const key2 in bucket2) {
                 const bucket2_value = bucket2[key2];
 
+                // If the widget has not been displayed before, the answer section will be null
                 try{
                     document.getElementById(key2).textContent = bucket2_value;
                 } catch {
@@ -820,6 +821,7 @@
             for (const key3 in bucket3) {
                 const bucket3_value = bucket3[key3];
 
+                // If the widget has not been displayed before, the answer section will be null
                 try{
                     document.getElementById(key3).checked = bucket3_value;
                 } catch {
