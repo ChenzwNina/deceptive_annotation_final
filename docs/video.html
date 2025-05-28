@@ -191,6 +191,9 @@
                 <!-- Screenshots will be dynamically inserted here -->
             </div>
             <div id="llm-reasoning">
+                <p class="reasoning-title"> Widget Description</p>
+                <p id="widget-content"></p>
+                <!-- Prompt widget description will be dynamically inserted here -->
                 <p class="reasoning-title"> Placement and Reasoning</p>
                 <p id="reasoning-context"></p>
                 <!-- Reasoning text will be dynamically inserted here -->
@@ -715,6 +718,9 @@
                 <img alt="design_screenshot sizes="print 73px,117px" src="${videoPair.screenshot_location}">
             </div>
             `;
+            // Get widget description
+            const description_prompt = videoPair.Description
+            document.getElementById("widget-content").textContent = description_prompt;
 
             // Get LLM reasoning
             const txt_location = videoPair.screenshot_location.replace(".png", ".txt");
@@ -722,7 +728,7 @@
             fetch(txt_location)
                 .then(response => response.text())
                 .then(text => {
-                    document.getElementById("reasoning-context").textContent = text;
+                    document.getElementById("reasoning-context").textContent = text.replace(/\n/g, "<br>");
                 })
                 .catch(error => {
                     console.error("Error fetching text:", error);
