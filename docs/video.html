@@ -728,7 +728,7 @@
             fetch(txt_location)
                 .then(response => response.text())
                 .then(text => {
-                    document.getElementById("reasoning-context").textContent = text.replace(/\n/g, "<br/>");
+                    document.getElementById("reasoning-context").innerHTML = text.replace(/\n/g, "<br/>");
                 })
                 .catch(error => {
                     console.error("Error fetching text:", error);
