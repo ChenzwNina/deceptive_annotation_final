@@ -199,7 +199,7 @@
                 <p class ="smaller-text" id="widget-content"></p>
                 <!-- Prompt widget description will be dynamically inserted here -->
                 <p class="reasoning-title"> Placement and Reasoning</p>
-                <p class ="smaller-text" id="reasoning-context"></p>
+                <p class ="smaller-text" id="reasoning-context" style="white-space: pre-wrap;"></p>
                 <!-- Reasoning text will be dynamically inserted here -->
             </div>
         </div>
@@ -736,7 +736,7 @@
                 .then(response => response.text())
                 .then(text => {
                     console.log("txt content", text);
-                    document.getElementById("reasoning-context").innerHTML = text.replace(/\n/g, "<br/>");
+                    document.getElementById("reasoning-context").textContent = text;
                 })
                 .catch(error => {
                     console.error("Error fetching text:", error);
