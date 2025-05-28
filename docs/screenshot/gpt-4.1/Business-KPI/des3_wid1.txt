@@ -1,5 +1,0 @@
-Task 4: Placement
-  This component should be embedded at the top of the homepage and category pages, right beneath the main navigation bar or header hero. It occupies a prominent horizontal section spanning the full content width and employs a card layout to highlight several featured products. The design is responsive and adapts to different screen sizes.
-
-  Task 5: Design Reasoning
-  The component draws attention to best-selling and trending products with clear badges (e.g., "Hot!", "Popular", "20% Off"), encouraging urgency and increased conversions. Visual appeal is boosted through clean imagery and pricing details, with old prices shown for discounts. Each card offers both "Add to Cart" and "Wishlist" actions, making cart addition frictionless and driving higher average order sizes. Review ratings and volumes build trust, while product bundles are highlighted to increase AOV. "View All Products" in the header enhances site exploration (increasing page views and user time). The layout is mobile-responsive for accessibility. Overall, this component combines urgency, social proof, and ease of action to maximize revenue and minimize bounce/cart abandonment.

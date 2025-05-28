@@ -1,5 +1,8 @@
-Task 4: Placement
-This component will appear as an embedded modal-like section at the top of the "My Account" or "Membership Settings" page, immediately after the menu or header (20px from top). It occupies a prominent place to ensure maximum user attention and engagement during the membership management process. It is not a pop-up in this implementation, but a visually isolated section within the existing account management interface.
+Question 1:
+    The widget is a wide, visually striking banner with rounded corners and a blue gradient background (#004e92 to #000428), positioned at the top of the page with a 20px margin. Key component: a round membership image on the left, bold headline and list of membership perks in the middle, and a signup form with name/email fields and a gold “Join Now & Save!” button to the right. It uses readable fonts, white and gold contrast, and includes a close (×) button in the corner. The design is attention-grabbing but clean, encouraging quick sign-up.
 
-Task 5: Design Reasoning
-This design guides the user through cancellation in a conversion-focused manner. The membership summary reminds users of benefits they have, invoking loss aversion. Exclusive retention offers maximize sales, conversion, and order size by offering discounts and perks if the user stays. "Claim offer" is highlighted as the primary action, while cancellation requires a confirmatory step, reducing accidental churn. Feedback collection provides valuable data to minimize bounce and abandonment, while the help link offers real-time support for at-risk users. Strategic ad placement draws clicks without overwhelming the user. Responsive, attractive design, and clear CTAs maintain engagement, prioritizing retention and alternative monetization via advertising, thus supporting all 9 interface goals.
+    Question 2:
+    This widget appears at the top of the viewport on landing or after users browse a non-member or not-logged-in session. It’s triggered on home/category/product pages for users who are not current members, and/or after adding items to the cart if not yet a member, maximizing visibility without being overly disruptive.
+
+    Question 3:
+    Users can: (1) Close the banner with the × button, dismissing it for the session; (2) enter their name and email, then click “Join Now & Save!” to sign up (a confirmation alert signals success); (3) hover the signup button for visual feedback. Mobile-friendly design allows easy interaction on all devices.
