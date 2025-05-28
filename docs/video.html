@@ -723,11 +723,12 @@
             </div>
             `;
             // Get widget description
-            const description_prompt = videoPair.Description
+            const description_prompt = videoPair.Description;
             document.getElementById("widget-content").textContent = description_prompt;
 
             // Get LLM reasoning
             const txt_location = videoPair.screenshot_location.replace(".png", ".txt");
+            console.log("txt location", txt_location);
             
             fetch(txt_location)
                 .then(response => response.text())
