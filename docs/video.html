@@ -799,22 +799,32 @@
 
                 // If the widget has not been displayed before
                 try{
-                document.getElementById(key).value = bucket1_value;
+                    document.getElementById(key).value = bucket1_value;
                 } catch {
-                    console.log("First time seeing the widget")
+                    console.log("First time seeing the widget");
                 }
             };
 
             // Return number to p field
             for (const key2 in bucket2) {
                 const bucket2_value = bucket2[key2];
-                document.getElementById(key2).textContent = bucket2_value;
+
+                try{
+                    document.getElementById(key2).textContent = bucket2_value;
+                } catch {
+                    console.log("First time seeing the widget");
+                }
             };
 
             // Return checkbox value to checkbox
             for (const key3 in bucket3) {
                 const bucket3_value = bucket3[key3];
-                document.getElementById(key3).checked = bucket3_value;
+
+                try{
+                    document.getElementById(key3).checked = bucket3_value;
+                } catch {
+                    console.log("First time seeing the widget");
+                }
             };
 
 
