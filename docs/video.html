@@ -223,6 +223,7 @@
                         </div>
                         <sl-input class="label-on-left" id="immortal-accounts-vote" value=0 label="Immortal accounts" type="number" placeholder="0"></sl-input>
                         <sl-input class="label-on-left" id="dead-end-vote" value=0 label="Dead end" type="number" placeholder="0"></sl-input>
+                        <sl-input class="label-on-left" id="no-way-back" value=0 label="No way back" type="number" placeholder="0"></sl-input>
 
                         <div class="level2">
                             <p class="level2-first-flex-child"> Creating Barriers </p>
@@ -230,12 +231,14 @@
                         </div>
                         <sl-input class="label-on-left" id="price-comparison-prevention-vote" value=0 label="Price comparison prevention" type="number" placeholder="0"></sl-input>
                         <sl-input class="label-on-left" id="intermediate-currency-vote" value=0 label="Intermediate currency" type="number" placeholder="0"></sl-input>
+                        <sl-input class="label-on-left" id="discount-framing-manipulation" value=0 label="Discount framing manipulation" type="number" placeholder="0"></sl-input>
 
                         <div class="level2">
                             <p class="level2-first-flex-child"> Adding Steps </p>
                             <p id="adding-steps-sum" class="number-style-level1">0</p>
                         </div>
                         <sl-input class="label-on-left" id="privacy-maze-vote" value=0 label="Privacy maze" type="number" placeholder="0"></sl-input>
+                        <sl-input class="label-on-left" id="extra-burden" value=0 label="Extra burden" type="number" placeholder="0"></sl-input>
 
                     </sl-details>
                     <p id="obstruction-sum" value=0 class="number-style-level0">0</p>
@@ -319,7 +322,7 @@
 
                         <sl-input class="label-on-left-upper" id="forced-continuity-sum" value=0 label="Forced Continuity" type="number" placeholder="0"></sl-input>
 
-                        <sl-input class="label-on-left-upper" id="forced-registration-sum" value=0 label="Forced Registration" type="number" placeholder="0"></sl-input>
+                        <sl-input class="label-on-left-upper" id="forced-registration-sum" value=0 label="Forced Registration or Sign-in" type="number" placeholder="0"></sl-input>
 
                         <div class="level2">
                             <p class="level2-first-flex-child"> Forced Communication or Disclosure </p>
@@ -426,29 +429,44 @@
 
         // Roach Motels
         document.getElementById("immortal-accounts-vote").addEventListener("input", () => {
-            add_votes_medium(["immortal-accounts-vote", "dead-end-vote"], "roach-motel-sum");
+            add_votes_medium(["immortal-accounts-vote", "dead-end-vote", "no-way-back"], "roach-motel-sum");
             add_votes_medium(["roach-motel-sum", "creating-barriers-sum", "adding-steps-sum"], "obstruction-sum");
         });
 
         document.getElementById("dead-end-vote").addEventListener("input", () => {
-            add_votes_medium(["immortal-accounts-vote", "dead-end-vote"], "roach-motel-sum");
+            add_votes_medium(["immortal-accounts-vote", "dead-end-vote", "no-way-back"], "roach-motel-sum");
+            add_votes_medium(["roach-motel-sum", "creating-barriers-sum", "adding-steps-sum"], "obstruction-sum");
+        });
+
+        document.getElementById("no-way-back").addEventListener("input", () => {
+            add_votes_medium(["immortal-accounts-vote", "dead-end-vote", "no-way-back"], "roach-motel-sum");
             add_votes_medium(["roach-motel-sum", "creating-barriers-sum", "adding-steps-sum"], "obstruction-sum");
         });
 
         // Creating Barriers
         document.getElementById("price-comparison-prevention-vote").addEventListener("input", () => {
-            add_votes_medium(["price-comparison-prevention-vote", "intermediate-currency-vote"], "creating-barriers-sum");
+            add_votes_medium(["price-comparison-prevention-vote", "intermediate-currency-vote", "discount-framing-manipulation"], "creating-barriers-sum");
             add_votes_medium(["roach-motel-sum", "creating-barriers-sum", "adding-steps-sum"], "obstruction-sum");
         });
 
         document.getElementById("intermediate-currency-vote").addEventListener("input", () => {
-            add_votes_medium(["price-comparison-prevention-vote", "intermediate-currency-vote"], "creating-barriers-sum");
+            add_votes_medium(["price-comparison-prevention-vote", "intermediate-currency-vote", "discount-framing-manipulation"], "creating-barriers-sum");
+            add_votes_medium(["roach-motel-sum", "creating-barriers-sum", "adding-steps-sum"], "obstruction-sum");
+        });
+
+        document.getElementById("discount-framing-manipulation").addEventListener("input", () => {
+            add_votes_medium(["price-comparison-prevention-vote", "intermediate-currency-vote", "discount-framing-manipulation"], "creating-barriers-sum");
             add_votes_medium(["roach-motel-sum", "creating-barriers-sum", "adding-steps-sum"], "obstruction-sum");
         });
 
         // Adding Steps
         document.getElementById("privacy-maze-vote").addEventListener("input", () => {
-            add_votes_medium(["privacy-maze-vote"], "adding-steps-sum");
+            add_votes_medium(["privacy-maze-vote", "extra-burden"], "adding-steps-sum");
+            add_votes_medium(["roach-motel-sum", "creating-barriers-sum", "adding-steps-sum"], "obstruction-sum");
+        });
+
+        document.getElementById("extra-burden").addEventListener("input", () => {
+            add_votes_medium(["privacy-maze-vote", "extra-burden"], "adding-steps-sum");
             add_votes_medium(["roach-motel-sum", "creating-barriers-sum", "adding-steps-sum"], "obstruction-sum");
         });
 
