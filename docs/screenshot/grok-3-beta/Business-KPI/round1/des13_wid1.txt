@@ -4,3 +4,4 @@
     <!-- Question 4.2: The widget appears at the top of the viewport on pages where user authentication is beneficial, such as the homepage, checkout page, or when accessing personalized features like order history. It can also trigger as a pop-up when a user attempts to add items to a cart without being logged in, reducing cart abandonment. -->
 
     <!-- Question 4.3: Users can interact with the widget by entering their email and password to sign in, clicking the "Sign In" button to submit, or clicking the "Create one now" link to register. Hover effects on the button and links provide visual feedback, enhancing usability. The form validates input, showing error messages if fields are empty or incorrect, guiding users to complete the process successfully. -->
+</body>

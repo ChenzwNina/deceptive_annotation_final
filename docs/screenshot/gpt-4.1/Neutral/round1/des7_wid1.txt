@@ -4,3 +4,4 @@
 
   3.3 Question 3: Users can visually scan overall ratings, examine a detailed breakdown of rating levels, see the total review count, and click the “Write a Review” button to contribute their own feedback (leading to a review form/modal). There are no advanced interactions (e.g., filtering) in this static version, but in production, individual breakdown bars could be clickable for filtering.
   -->
+</body>

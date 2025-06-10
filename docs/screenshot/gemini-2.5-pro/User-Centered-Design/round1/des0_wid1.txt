@@ -19,3 +19,4 @@ Question 1: Can you describe how the widget looks, such as its colors, size of e
     4.  **Viewing Price Information:** Users can see current prices clearly. If a product is on sale, the discounted price is prominent, and the original price is shown with a strikethrough.
     5.  **Clicking "Add to Cart" Button:** Each product card has an "Add to Cart" button. Clicking this button would typically initiate the process of adding the item to the user's shopping cart. The button provides visual feedback on hover (color change) and active (slight shrink) states.
     *****Response***** -->
+</body>

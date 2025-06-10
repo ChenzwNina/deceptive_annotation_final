@@ -4,3 +4,4 @@
     <!-- Question 2: The widget appears statically at the top of the viewport on every page of the e-commerce site as a primary navigation tool. It remains sticky to ensure constant access while scrolling, triggered by the initial page load without requiring user action. -->
 
     <!-- Question 3: Users can interact with the widget by hovering over category items for visual feedback (border and color change), indicating clickability. Clicking an item navigates to the respective category page. The design prevents incorrect actions by limiting interactions to clicks on defined items. On mobile, horizontal scrolling accommodates all categories, maintaining accessibility and efficiency. -->
+</body>

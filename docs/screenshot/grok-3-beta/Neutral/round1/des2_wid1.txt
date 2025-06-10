@@ -4,3 +4,4 @@
     <!-- Question 2: This widget appears statically at the top of the page with a 20px margin and remains sticky as users scroll, ensuring constant access to navigation. It is triggered on page load as a core navigation element, not dependent on user actions, to provide immediate category access on an e-commerce site. -->
 
     <!-- Question 3: Users can interact with the widget by hovering over category links, which change color to indicate clickability. Clicking a link navigates to the respective category page. The active state visually confirms the current category. There are no additional interactions like dropdowns, keeping the design simple and focused on primary navigation. -->
+</body>

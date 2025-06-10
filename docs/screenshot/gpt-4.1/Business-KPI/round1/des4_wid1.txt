@@ -4,3 +4,4 @@
 
   4.3: Users can: click on products (going to product pages), add products directly to the cart (reducing abandonment), use “Quick View” (view details without leaving current view), and click the “See All” link (boosting product discovery). The ad/banner is clickable (going to promotions or featured campaigns), supporting ad revenue and engagement. Interactions are optimized for effortless sales, user retention, and site exploration.
   -->
+</body>

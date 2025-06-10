@@ -23,3 +23,4 @@ Q1. Question 1: Can you describe how the widget looks, such as its colors, size 
      5.  **Scrolling:** If the list of brands or the entire panel content exceeds its visible area, users can scroll vertically within the brand list or the main panel respectively.
      6.  **Focus Navigation:** Users can navigate interactive elements (checkboxes, buttons, links, search input) using a keyboard (Tab key), with clear focus indicators.
 *****Response***** -->
+</body>

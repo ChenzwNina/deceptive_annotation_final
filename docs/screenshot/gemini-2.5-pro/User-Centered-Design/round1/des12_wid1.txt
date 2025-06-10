@@ -37,3 +37,4 @@ Question 1: Can you describe how the widget looks, such as its colors, size of e
     7.  **Navigation to Login:** Users who already have an account can click the "Log In Here" link, which would typically navigate them to the website's login page.
     8.  **Hover Effects:** Interactive elements like the submit button and links show visual feedback (e.g., color change) on mouse hover, indicating clickability.
     *****Response***** -->
+</body>

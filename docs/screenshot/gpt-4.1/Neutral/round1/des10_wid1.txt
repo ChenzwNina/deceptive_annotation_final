@@ -7,3 +7,4 @@ Question 1:
   Question 3:
   Users can interact with the widget by entering their name, email, and password, then clicking "Sign Up for Free." Input fields validate for completeness (with “required”). They can also follow the link to view terms of service. Links and buttons highlight on hover, and users can scroll on smaller screens for full access. The only primary action is submitting the sign-up form.
   -->
+</body>

@@ -33,3 +33,4 @@ Users interact with this widget primarily to obtain information about their orde
 3.  **No Direct Data Input:** This widget is informational. Users do not typically input or modify data here. Functions like changing an address (if still possible) or initiating a return would be handled through separate, linked interfaces.
 These interactions are designed to be intuitive, provide quick answers, and offer clear pathways for next steps, enhancing user satisfaction and reducing support load.
 *****Response***** -->
+</body>

@@ -4,3 +4,4 @@
 
     4.3 Users can: view a large product image, click the title for more details, see ratings/reviews, hover for more info, add the item to cart, or add to wishlist. The ad banner is clickable, providing bonus offers. All elements are accessible and interactive, encouraging shopping, cross-promotion clicks, and list building, supporting remarketing and reducing abandonment.
     -->
+</body>

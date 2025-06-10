@@ -22,3 +22,4 @@ Users can interact with the category navigation widget in the following ways:
 
 The navigation bar itself is static; interactions are focused on the individual category links within it.
 -->
+</body>

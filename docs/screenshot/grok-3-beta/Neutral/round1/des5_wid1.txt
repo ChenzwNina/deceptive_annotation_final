@@ -4,3 +4,4 @@
     <!-- Question 2: This widget appears on product listing pages, typically when a user navigates to a category or search results page. It can also be triggered by a user clicking a "Filter" button on smaller screens where it might be collapsed by default to save space. -->
 
     <!-- Question 3: Users can interact with the widget by selecting/deselecting checkboxes for categories, price ranges, and brands to narrow down product results. Hovering over labels provides visual feedback with color changes. Clicking the "Apply Filters" button submits the selections to update the product list. On mobile, users might tap to expand/collapse the panel if implemented with a toggle. -->
+</body>

@@ -16,3 +16,4 @@ Question 1: Can you describe how the widget looks, such as its colors, size of e
     4.  **Hover States (Implicit):** Buttons have visual feedback on hover (e.g., color changes) to indicate they are clickable, enhancing affordance. Other elements like breakdown rows could potentially offer tooltips on hover for more details, though not implemented in this version.
     The widget itself doesn't allow direct manipulation of the displayed rating data; it's a read-only summary.
     -->
+</body>

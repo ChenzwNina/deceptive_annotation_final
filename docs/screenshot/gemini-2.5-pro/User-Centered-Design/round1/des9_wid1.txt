@@ -29,3 +29,4 @@ Users can interact with the widget in the following ways:
 4.  **Confirmation:** Users click the "Confirm Shipping & Options" button to save their selections and proceed to the next step in the checkout process (e.g., payment or order review). This button also has hover and active states for feedback.
 5.  **Implicit Interaction (Scrolling):** While not direct interaction *with* the widget's functions, if the page content below the widget is scrollable, the widget remains fixed, allowing users to refer to it while potentially viewing other information (though in a focused modal-like component, this is less common).
 -->
+</body>

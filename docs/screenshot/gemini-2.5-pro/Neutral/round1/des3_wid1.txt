@@ -35,3 +35,4 @@ Users can interact with the search panel in several ways:
 5.  **Hover Interaction:** The "Search" button changes its background color slightly on mouse hover, providing visual feedback to the user that it's an interactive element.
 *****Response*****
 -->
+</body>

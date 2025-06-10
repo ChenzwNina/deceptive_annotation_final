@@ -4,3 +4,4 @@
     <!-- Question 2: The widget appears at the top of the page with a 20px margin, likely triggered when a user visits the membership sign-up page or clicks a promotional banner/link encouraging membership. It may also appear for non-logged-in users as a call-to-action on the homepage. -->
 
     <!-- Question 3: Users can enter their name, email, and password in the form fields, with real-time feedback via border color changes on focus. They can submit the form, receiving success or error messages. Hover effects on the button and links provide visual cues. The button disables during submission to prevent multiple clicks, and required fields constrain invalid actions. -->
+</body>

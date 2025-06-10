@@ -24,3 +24,4 @@
     7.  **Close/Dismiss Widget:** Users can click the "×" (close) button in the header to hide the cart widget and continue interacting with the main site.
     If the cart is empty, users see a message indicating this and a "Start Shopping" button to encourage browsing.
     *****Response***** -->
+</body>

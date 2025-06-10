@@ -4,3 +4,4 @@ Question 1: The widget has a clean, modern design: white background, rounded cor
 
   Question 3: Users can scroll horizontally through the featured products, view key product details (images, names, prices, discounts), click "Add to Cart" to initiate a purchase flow for individual items, or use the "See all" link to view a broader list of featured products or the entire category. Hovering on product cards brings minor visual feedback (increased shadow/border color), and buttons have hover states for clearer interactivity. No additional interactions (like swapping images or quick views) are included in this widget.
   -->
+</body>

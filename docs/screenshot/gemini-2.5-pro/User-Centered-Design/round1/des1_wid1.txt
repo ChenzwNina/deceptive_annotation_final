@@ -17,3 +17,4 @@ Question 1: Can you describe how the widget looks, such as its colors, size of e
 
     There are no other inputs or complex navigations within the banner itself, keeping its purpose focused and interactions simple. Hover effects on the CTA and close button provide visual feedback before clicking (Rule 3.2).
 *****Response***** -->
+</body>

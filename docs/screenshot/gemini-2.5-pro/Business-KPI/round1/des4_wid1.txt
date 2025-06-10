@@ -23,3 +23,4 @@
     No direct manipulation (like sorting or filtering) is built into this specific component, as it's focused on displaying a curated list.
 *****Response*****
 -->
+</body>

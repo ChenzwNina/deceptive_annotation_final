@@ -26,3 +26,4 @@
     6.  **Closing the Widget:** Users can click the "×" (close) button, typically located at the top-right corner, to dismiss the sign-in widget and return to their previous view on the website. This provides user control and reduces frustration (Rule 3.9).
     These interactions are designed to be intuitive and cover common user scenarios related to account access.
 *****Response***** -->
+</body>

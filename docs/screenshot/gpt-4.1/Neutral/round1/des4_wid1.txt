@@ -4,3 +4,4 @@ Question 1: The widget appears as a horizontally-aligned product list box, cente
 
   Question 3: User interactions include: hovering on a product card for a shadow effect, clicking on "Add to Cart" buttons (could be enhanced to trigger actual add-to-cart logic), or viewing details (e.g. image alt text). The design can also support click events for navigating to product detail pages if desired.
   -->
+</body>

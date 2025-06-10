@@ -4,3 +4,4 @@
 
     4.3. Users can select one shipping method (radio buttons), add optional order add-ons (checkboxes), and proceed ("Continue to Payment"). Users may toggle options freely. The secure badge builds trust (hoverable for details, in a live site). The layout adapts responsively. All selections are actionable, persist through the checkout process, maximize engagement, and provide upselling opportunities.
     -->
+</body>

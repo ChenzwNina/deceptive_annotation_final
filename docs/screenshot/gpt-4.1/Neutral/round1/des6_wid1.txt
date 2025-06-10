@@ -4,3 +4,4 @@ Question 1: The widget is a compact, card-style product display. It uses a white
 
   Question 3: Users can view the key product information, see visual indicators like ratings and pricing (with savings), and interact with the "Add to Cart" button, which would (upon implementation) add the item to the shopping cart. Hover and focus styles on the button give feedback, enhancing usability. The product image supports alt text for accessibility. 
   -->
+</body>

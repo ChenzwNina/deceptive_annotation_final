@@ -25,3 +25,4 @@ Users can engage with the order tracking widget in several ways:
 4.  **Hover Effects (Visual Feedback)**: Standard visual cues are provided for interactive elements. For instance, the "Track Package" button and the close button will typically change appearance slightly on mouse hover (e.g., background color darkens, or transform effect) to affirm their clickability. The current status dot in the progress bar also has a subtle visual distinction (e.g., slightly larger, glowing outline) to draw attention.
 The widget is designed for quick information access and a clear path to more details, rather than complex input or configuration.
 -->
+</body>

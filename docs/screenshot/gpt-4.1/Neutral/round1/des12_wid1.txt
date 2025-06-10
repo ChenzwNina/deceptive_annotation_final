@@ -7,3 +7,4 @@ Question 1:
   Question 3:
   The user can fill in the Full Name, Email, and Password fields (including form validation). They can submit the form to create a new account or choose to sign up using their Google account with one click. If they already have an account, they can navigate to the sign-in page via the link at the bottom.
   -->
+</body>

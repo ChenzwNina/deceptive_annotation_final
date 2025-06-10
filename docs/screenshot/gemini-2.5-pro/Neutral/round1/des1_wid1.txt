@@ -37,3 +37,4 @@ Users can have the following interactions with the deal banner widget:
 
 There are no other complex interactions like form inputs or dropdowns within this specific banner design; it's focused on information delivery and a single CTA.
 -->
+</body>

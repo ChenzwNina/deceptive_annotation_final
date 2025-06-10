@@ -54,3 +54,4 @@ Users can interact with the category navigation widget in several intuitive ways
 
 These interactions are standard for e-commerce navigation, designed to be efficient and user-friendly, ultimately supporting goals like minimizing bounce rates (Rule 3.9) and maximizing conversion (Rule 3.2).
 -->
+</body>

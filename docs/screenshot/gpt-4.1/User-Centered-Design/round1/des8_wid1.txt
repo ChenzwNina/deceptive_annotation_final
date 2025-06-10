@@ -7,3 +7,4 @@ Question 1:
   Question 3:
   Users can: (1) Adjust quantity for each item (never below 1, disabled as needed), (2) Remove items using the visible remove button, (3) See live updates for subtotal and total items, (4) Proceed to checkout using the checkout button, (5) Close the cart with the close button. If the cart becomes empty, a helpful message appears and checkout is disabled, ensuring constraints and clear feedback for all actions.
   -->
+</body>

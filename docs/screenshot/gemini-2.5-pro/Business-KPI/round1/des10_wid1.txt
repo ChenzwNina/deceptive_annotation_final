@@ -40,3 +40,4 @@
     7.  **Visual Feedback:** Users experience hover effects on buttons and links, and focus states on input fields, providing visual cues of interactivity. Input fields also have placeholder text to guide the user.
     *****Response*****
 -->
+</body>

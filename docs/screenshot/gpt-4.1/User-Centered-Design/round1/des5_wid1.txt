@@ -5,3 +5,4 @@ Question 1: This widget is a modern, top-fixed filter panel with a white backgro
   Question 3: Users can select filter criteria (category, price range, brand, and rating) via dropdown menus, number inputs, or checkboxes. "Apply Filters" triggers instant visual feedback, confirming application of the selected filters. The "Reset" button clears all filters and provides feedback. Inputs enforce logical constraints (e.g., min price ≤ max price), giving error prevention. Focus and interactivity states change visually for clarity. All controls are keyboard and screen-reader accessible, supporting an accessible, consistent, and satisfying experience.
 
   -->
+</body>

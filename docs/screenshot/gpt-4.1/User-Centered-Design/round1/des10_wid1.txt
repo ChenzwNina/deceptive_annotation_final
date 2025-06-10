@@ -8,3 +8,4 @@ Question 1:
     Users can: enter full name, email, password, accept terms (checkbox); the sign-up button enables only when all required criteria are met. On submission, users get immediate success/error feedback. There’s a link to sign in if already a member. All fields offer standard input feedback (focus, errors). 
 
   -->
+</body>

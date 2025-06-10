@@ -7,3 +7,4 @@ Question 1:
   Question 3:
   Users can view the order number, order date, current shipment progress (with visually distinct steps), and product details. The "Track Package" button invites deeper tracking (e.g., opening carrier tracking or a modal). The user can interpret at a glance where their order is and what item is being tracked; the steps visually update based on live status.
   -->
+</body>

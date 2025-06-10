@@ -4,3 +4,4 @@
     <!-- Question 4.2: The widget appears automatically when a user logs into their account and navigates to the "My Orders" section or clicks a tracking link from an email confirmation. It can also be triggered post-purchase via a dashboard widget for active orders, ensuring users stay updated. -->
 
     <!-- Question 4.3: Users can view detailed order information and tracking status visually through the progress bar. They can interact by clicking the "Shop More Deals" button, redirecting them to featured products or sales, encouraging additional purchases. The responsive design ensures usability across devices, maintaining engagement. -->
+</body>

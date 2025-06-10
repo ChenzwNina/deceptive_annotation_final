@@ -7,3 +7,4 @@ Question 1:
   Question 3:
   Users can: 1) Click "Add to Cart" to add the item, triggering visual feedback and temporary disabling to prevent repeats; 2) Click the Wishlist button to add/remove it from their wishlist, with color/heart icon feedback; 3) See dynamic instant feedback for their actions; 4) Buttons visually respond to permitted actions and follow usability best practices, ensuring constraints and clear affordance are maintained at every step.
   -->
+</body>

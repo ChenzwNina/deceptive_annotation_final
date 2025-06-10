@@ -47,3 +47,4 @@
 
     5.  **Visual Feedback:** Selected options are visually highlighted (e.g., checkboxes are ticked, selected color swatches get a distinct border/halo, selected size buttons change color). Item counts next to filter options provide an estimate of products available for that criterion. Hover states provide additional visual cues on interactive elements.
 *****Response***** -->
+</body>

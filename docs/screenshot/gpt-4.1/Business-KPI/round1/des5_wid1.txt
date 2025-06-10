@@ -4,3 +4,4 @@
 
   4.3 Users can: select one or multiple categories, brands, and ratings via checkboxes; set a price range using numeric inputs; use “Apply Filters” to filter products below; reset with “Clear All Filters” (quickly removing all selections); click the promotional ad banner to access special deals. Hover/click states give feedback, and all elements are accessible (using keyboard/focus as well). The ad banner is separately clickable, boosting cross-promotion and ad clicks.
   -->
+</body>

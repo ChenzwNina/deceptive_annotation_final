@@ -4,3 +4,4 @@
     <!-- Question 4.2: The filter panel appears automatically on product listing pages, such as category or search result pages, where users need to narrow down options. It remains fixed as users scroll, ensuring constant accessibility without obstructing main content, reducing bounce rates. -->
 
     <!-- Question 4.3: Users can interact with the widget by checking/unchecking filter options for category, price, and brand to refine product results. They can click 'Apply Filters' to update the product list dynamically or 'Clear All' to reset selections. Hover effects on buttons provide feedback, enhancing engagement and minimizing cart abandonment by simplifying the shopping process. -->
+</body>

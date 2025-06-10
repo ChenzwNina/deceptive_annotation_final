@@ -21,3 +21,4 @@ Users can interact with the search panel in several ways:
 4.  **Submitting via "Enter" Key:** After typing their query in the input field, users can press the "Enter" or "Return" key on their keyboard, which also submits the form.
 5.  **Attempting Empty Submission:** If a user tries to submit an empty search (e.g., clicking "Search" without typing), the browser's built-in HTML5 validation will prevent submission due to the `required` attribute on the input field. A message prompting the user to fill in the field will typically appear. The `minlength="2"` attribute also ensures the query is at least two characters long.
 -->
+</body>

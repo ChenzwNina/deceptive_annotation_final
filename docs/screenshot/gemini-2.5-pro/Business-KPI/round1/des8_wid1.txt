@@ -22,3 +22,4 @@ Users can perform several key interactions:
 These interactions ensure the cart is informative, easy to manage, and effectively funnels users towards completing their purchase.
 *****Response*****
 -->
+</body>

@@ -4,3 +4,4 @@
 
   4.3: Users can: (1) choose a cancellation reason; (2) confirm membership cancellation; (3) decide to keep membership; (4) explore more offers via the link, which redirects to a benefits page. The "Keep My Membership" and "Explore Offers" actions are designed to deter cancellation and encourage engagement. The dropdown ensures user feedback is gathered for analytics and service improvement.
   -->
+</body>

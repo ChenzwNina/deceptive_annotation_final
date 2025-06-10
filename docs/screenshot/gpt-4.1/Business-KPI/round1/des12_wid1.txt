@@ -5,3 +5,4 @@
   4.3 Question 3: Users can enter their name, email, and password (toggle show/hide), accept terms, and submit the form. They can also sign up with Google or Facebook. Links allow users to switch to sign-in or view current promotions (keeping the user on-site). Invalid submissions will be handled by usual form validation, minimizing abandonment.
 
   -->
+</body>
