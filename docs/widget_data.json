@@ -113,10 +113,10 @@
       },
       {
         "Description_number": 5,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that displays a product filter panel",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Business-KPI/round1/des5_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round1/des5_wid1.png"
       },
       {
         "Description_number": 6,
@@ -127,10 +127,10 @@
       },
       {
         "Description_number": 3,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that displays a search panel",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Business-KPI/round1/des3_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round1/des3_wid1.png"
       },
       {
         "Description_number": 0,
@@ -211,10 +211,10 @@
       },
       {
         "Description_number": 6,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that displays a individual product item",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/User-Centered-Design/round1/des6_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round1/des6_wid1.png"
       },
       {
         "Description_number": 6,
@@ -267,10 +267,10 @@
       },
       {
         "Description_number": 2,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that displays product category navigation",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/User-Centered-Design/round1/des2_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round1/des2_wid1.png"
       },
       {
         "Description_number": 0,
@@ -323,10 +323,10 @@
       },
       {
         "Description_number": 11,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that allows users to cancel a membership",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Neutral/round1/des11_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round1/des11_wid1.png"
       },
       {
         "Description_number": 7,
@@ -379,10 +379,10 @@
       },
       {
         "Description_number": 9,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that displays shipping options and optional add-ons",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Neutral/round1/des9_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round1/des9_wid1.png"
       },
       {
         "Description_number": 1,
@@ -393,17 +393,17 @@
       },
       {
         "Description_number": 1,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that displays a banner with current deals",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/User-Centered-Design/round1/des1_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round1/des1_wid1.png"
       },
       {
         "Description_number": 3,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that displays a search panel",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/User-Centered-Design/round1/des3_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round1/des3_wid1.png"
       },
       {
         "Description_number": 9,
@@ -428,17 +428,17 @@
       },
       {
         "Description_number": 5,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that displays a product filter panel",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/User-Centered-Design/round1/des5_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round1/des5_wid1.png"
       },
       {
         "Description_number": 12,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that allows users to create an account",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/User-Centered-Design/round1/des12_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round1/des12_wid1.png"
       },
       {
         "Description_number": 7,
@@ -456,10 +456,10 @@
       },
       {
         "Description_number": 5,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that displays a product filter panel",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Neutral/round1/des5_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round1/des5_wid1.png"
       },
       {
         "Description_number": 14,
@@ -470,17 +470,17 @@
       },
       {
         "Description_number": 4,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that displays a list of product items",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Business-KPI/round1/des4_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round1/des4_wid1.png"
       },
       {
         "Description_number": 3,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that displays a search panel",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Neutral/round1/des3_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round1/des3_wid1.png"
       },
       {
         "Description_number": 1,
@@ -512,10 +512,10 @@
       },
       {
         "Description_number": 14,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that displays order tracking details",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/User-Centered-Design/round1/des14_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round1/des14_wid1.png"
       },
       {
         "Description_number": 6,
@@ -540,10 +540,10 @@
       },
       {
         "Description_number": 10,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that allows users to sign up for a membership",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Neutral/round1/des10_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round1/des10_wid1.png"
       },
       {
         "Description_number": 5,
@@ -554,10 +554,10 @@
       },
       {
         "Description_number": 9,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that displays shipping options and optional add-ons",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Business-KPI/round1/des9_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round1/des9_wid1.png"
       },
       {
         "Description_number": 6,
@@ -568,17 +568,17 @@
       },
       {
         "Description_number": 0,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that displays featured products",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/User-Centered-Design/round1/des0_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round1/des0_wid1.png"
       },
       {
         "Description_number": 8,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that displays the shopping cart",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/User-Centered-Design/round1/des8_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round1/des8_wid1.png"
       },
       {
         "Description_number": 1,
@@ -617,10 +617,10 @@
       },
       {
         "Description_number": 13,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that allows users to sign in to an account",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/User-Centered-Design/round1/des13_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round1/des13_wid1.png"
       },
       {
         "Description_number": 13,
@@ -638,10 +638,10 @@
       },
       {
         "Description_number": 10,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that allows users to sign up for a membership",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/User-Centered-Design/round1/des10_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round1/des10_wid1.png"
       },
       {
         "Description_number": 14,
@@ -673,17 +673,17 @@
       },
       {
         "Description_number": 8,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that displays the shopping cart",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Neutral/round1/des8_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round1/des8_wid1.png"
       },
       {
         "Description_number": 2,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that displays product category navigation",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Business-KPI/round1/des2_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round1/des2_wid1.png"
       },
       {
         "Description_number": 9,
@@ -701,17 +701,17 @@
       },
       {
         "Description_number": 13,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that allows users to sign in to an account",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Business-KPI/round1/des13_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round1/des13_wid1.png"
       },
       {
         "Description_number": 11,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that allows users to cancel a membership",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Business-KPI/round1/des11_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round1/des11_wid1.png"
       },
       {
         "Description_number": 13,
@@ -736,10 +736,10 @@
       },
       {
         "Description_number": 8,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that displays the shopping cart",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Business-KPI/round1/des8_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round1/des8_wid1.png"
       },
       {
         "Description_number": 1,
@@ -764,10 +764,10 @@
       },
       {
         "Description_number": 1,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that displays a banner with current deals",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Business-KPI/round1/des1_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round1/des1_wid1.png"
       },
       {
         "Description_number": 12,
@@ -778,10 +778,10 @@
       },
       {
         "Description_number": 7,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that displays user ratings",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/User-Centered-Design/round1/des7_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round1/des7_wid1.png"
       },
       {
         "Description_number": 14,
@@ -834,10 +834,10 @@
       },
       {
         "Description_number": 12,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that allows users to create an account",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Neutral/round1/des12_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round1/des12_wid1.png"
       },
       {
         "Description_number": 11,
@@ -855,17 +855,17 @@
       },
       {
         "Description_number": 7,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that displays user ratings",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Neutral/round1/des7_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round1/des7_wid1.png"
       },
       {
         "Description_number": 0,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that displays featured products",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Business-KPI/round1/des0_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round1/des0_wid1.png"
       },
       {
         "Description_number": 7,
@@ -876,10 +876,10 @@
       },
       {
         "Description_number": 14,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that displays order tracking details",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Neutral/round1/des14_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round1/des14_wid1.png"
       },
       {
         "Description_number": 13,
@@ -911,17 +911,17 @@
       },
       {
         "Description_number": 0,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that displays featured products",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Neutral/round1/des0_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round1/des0_wid1.png"
       },
       {
         "Description_number": 2,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that displays product category navigation",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Neutral/round1/des2_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round1/des2_wid1.png"
       },
       {
         "Description_number": 11,
@@ -939,45 +939,45 @@
       },
       {
         "Description_number": 4,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that displays a list of product items",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/User-Centered-Design/round1/des4_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round1/des4_wid1.png"
       },
       {
         "Description_number": 11,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that allows users to cancel a membership",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/User-Centered-Design/round1/des11_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round1/des11_wid1.png"
       },
       {
         "Description_number": 10,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that allows users to sign up for a membership",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Business-KPI/round1/des10_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round1/des10_wid1.png"
       },
       {
         "Description_number": 6,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that displays a individual product item",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Business-KPI/round1/des6_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round1/des6_wid1.png"
       },
       {
         "Description_number": 6,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that displays a individual product item",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Neutral/round1/des6_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round1/des6_wid1.png"
       },
       {
         "Description_number": 14,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that displays order tracking details",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Business-KPI/round1/des14_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round1/des14_wid1.png"
       },
       {
         "Description_number": 9,
@@ -988,17 +988,17 @@
       },
       {
         "Description_number": 1,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that displays a banner with current deals",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Neutral/round1/des1_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round1/des1_wid1.png"
       },
       {
         "Description_number": 13,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that allows users to sign in to an account",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Neutral/round1/des13_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round1/des13_wid1.png"
       },
       {
         "Description_number": 7,
@@ -1058,10 +1058,10 @@
       },
       {
         "Description_number": 12,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that allows users to create an account",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Business-KPI/round1/des12_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round1/des12_wid1.png"
       },
       {
         "Description_number": 11,
@@ -1100,10 +1100,10 @@
       },
       {
         "Description_number": 9,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that displays shipping options and optional add-ons",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/User-Centered-Design/round1/des9_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round1/des9_wid1.png"
       },
       {
         "Description_number": 0,
@@ -1121,17 +1121,17 @@
       },
       {
         "Description_number": 4,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that displays a list of product items",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Neutral/round1/des4_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round1/des4_wid1.png"
       },
       {
         "Description_number": 7,
-        "Model": "gemini-2.5-pro-exp-03-25",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that displays user ratings",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro-exp-03-25/Business-KPI/round1/des7_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round1/des7_wid1.png"
       },
       {
         "Description_number": 5,
@@ -1163,17 +1163,17 @@
     },
     {
         "Description_number": 0,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that displays featured products",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Business-KPI/round2/des0_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round2/des0_wid1.png"
     },
     {
         "Description_number": 6,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that displays a individual product item",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Neutral/round2/des6_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round2/des6_wid1.png"
     },
     {
         "Description_number": 3,
@@ -1191,10 +1191,10 @@
     },
     {
         "Description_number": 4,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that displays a list of product items",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/User-Centered-Design/round2/des4_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round2/des4_wid1.png"
     },
     {
         "Description_number": 9,
@@ -1226,10 +1226,10 @@
     },
     {
         "Description_number": 7,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that displays user ratings",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Business-KPI/round2/des7_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round2/des7_wid1.png"
     },
     {
         "Description_number": 6,
@@ -1240,10 +1240,10 @@
     },
     {
         "Description_number": 4,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that displays a list of product items",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Business-KPI/round2/des4_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round2/des4_wid1.png"
     },
     {
         "Description_number": 7,
@@ -1261,38 +1261,38 @@
     },
     {
         "Description_number": 10,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that allows users to sign up for a membership",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/User-Centered-Design/round2/des10_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round2/des10_wid1.png"
     },
     {
         "Description_number": 11,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that allows users to cancel a membership",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/User-Centered-Design/round2/des11_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round2/des11_wid1.png"
     },
     {
         "Description_number": 10,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that allows users to sign up for a membership",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Business-KPI/round2/des10_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round2/des10_wid1.png"
     },
     {
         "Description_number": 6,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that displays a individual product item",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/User-Centered-Design/round2/des6_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round2/des6_wid1.png"
     },
     {
         "Description_number": 12,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that allows users to create an account",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Neutral/round2/des12_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round2/des12_wid1.png"
     },
     {
         "Description_number": 12,
@@ -1303,10 +1303,10 @@
     },
     {
         "Description_number": 7,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that displays user ratings",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/User-Centered-Design/round2/des7_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round2/des7_wid1.png"
     },
     {
         "Description_number": 6,
@@ -1338,10 +1338,10 @@
     },
     {
         "Description_number": 6,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that displays a individual product item",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Business-KPI/round2/des6_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round2/des6_wid1.png"
     },
     {
         "Description_number": 1,
@@ -1352,10 +1352,10 @@
     },
     {
         "Description_number": 5,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that displays a product filter panel",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Business-KPI/round2/des5_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round2/des5_wid1.png"
     },
     {
         "Description_number": 1,
@@ -1366,17 +1366,17 @@
     },
     {
         "Description_number": 12,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that allows users to create an account",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/User-Centered-Design/round2/des12_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round2/des12_wid1.png"
     },
     {
         "Description_number": 13,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that allows users to sign in to an account",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/User-Centered-Design/round2/des13_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round2/des13_wid1.png"
     },
     {
         "Description_number": 1,
@@ -1387,10 +1387,10 @@
     },
     {
         "Description_number": 2,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that displays product category navigation",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Neutral/round2/des2_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round2/des2_wid1.png"
     },
     {
         "Description_number": 3,
@@ -1485,10 +1485,10 @@
     },
     {
         "Description_number": 4,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that displays a list of product items",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Neutral/round2/des4_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round2/des4_wid1.png"
     },
     {
         "Description_number": 14,
@@ -1506,10 +1506,10 @@
     },
     {
         "Description_number": 8,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that displays the shopping cart",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Neutral/round2/des8_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round2/des8_wid1.png"
     },
     {
         "Description_number": 5,
@@ -1520,10 +1520,10 @@
     },
     {
         "Description_number": 8,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that displays the shopping cart",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/User-Centered-Design/round2/des8_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round2/des8_wid1.png"
     },
     {
         "Description_number": 3,
@@ -1555,10 +1555,10 @@
     },
     {
         "Description_number": 13,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that allows users to sign in to an account",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Business-KPI/round2/des13_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round2/des13_wid1.png"
     },
     {
         "Description_number": 8,
@@ -1688,10 +1688,10 @@
     },
     {
         "Description_number": 14,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that displays order tracking details",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Neutral/round2/des14_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round2/des14_wid1.png"
     },
     {
         "Description_number": 11,
@@ -1702,10 +1702,10 @@
     },
     {
         "Description_number": 5,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that displays a product filter panel",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/User-Centered-Design/round2/des5_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round2/des5_wid1.png"
     },
     {
         "Description_number": 14,
@@ -1716,10 +1716,10 @@
     },
     {
         "Description_number": 14,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that displays order tracking details",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Business-KPI/round2/des14_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round2/des14_wid1.png"
     },
     {
         "Description_number": 2,
@@ -1751,24 +1751,24 @@
     },
     {
         "Description_number": 9,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that displays shipping options and optional add-ons",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/User-Centered-Design/round2/des9_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round2/des9_wid1.png"
     },
     {
         "Description_number": 10,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that allows users to sign up for a membership",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Neutral/round2/des10_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round2/des10_wid1.png"
     },
     {
         "Description_number": 13,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that allows users to sign in to an account",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Neutral/round2/des13_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round2/des13_wid1.png"
     },
     {
         "Description_number": 11,
@@ -1793,17 +1793,17 @@
     },
     {
         "Description_number": 2,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that displays product category navigation",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Business-KPI/round2/des2_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round2/des2_wid1.png"
     },
     {
         "Description_number": 12,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that allows users to create an account",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Business-KPI/round2/des12_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round2/des12_wid1.png"
     },
     {
         "Description_number": 3,
@@ -1814,10 +1814,10 @@
     },
     {
         "Description_number": 2,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that displays product category navigation",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/User-Centered-Design/round2/des2_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round2/des2_wid1.png"
     },
     {
         "Description_number": 11,
@@ -1828,10 +1828,10 @@
     },
     {
         "Description_number": 5,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that displays a product filter panel",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Neutral/round2/des5_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round2/des5_wid1.png"
     },
     {
         "Description_number": 13,
@@ -1870,10 +1870,10 @@
     },
     {
         "Description_number": 9,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that displays shipping options and optional add-ons",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Neutral/round2/des9_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round2/des9_wid1.png"
     },
     {
         "Description_number": 0,
@@ -1905,10 +1905,10 @@
     },
     {
         "Description_number": 1,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that displays a banner with current deals",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Neutral/round2/des1_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round2/des1_wid1.png"
     },
     {
         "Description_number": 11,
@@ -2010,10 +2010,10 @@
     },
     {
         "Description_number": 11,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that allows users to cancel a membership",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Neutral/round2/des11_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round2/des11_wid1.png"
     },
     {
         "Description_number": 2,
@@ -2045,17 +2045,17 @@
     },
     {
         "Description_number": 0,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that displays featured products",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Neutral/round2/des0_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round2/des0_wid1.png"
     },
     {
         "Description_number": 3,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that displays a search panel",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Neutral/round2/des3_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round2/des3_wid1.png"
     },
     {
         "Description_number": 10,
@@ -2066,10 +2066,10 @@
     },
     {
         "Description_number": 8,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that displays the shopping cart",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Business-KPI/round2/des8_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round2/des8_wid1.png"
     },
     {
         "Description_number": 7,
@@ -2087,10 +2087,10 @@
     },
     {
         "Description_number": 7,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Neutral",
         "Description": "a component that displays user ratings",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Neutral/round2/des7_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Neutral/round2/des7_wid1.png"
     },
     {
         "Description_number": 4,
@@ -2101,10 +2101,10 @@
     },
     {
         "Description_number": 14,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that displays order tracking details",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/User-Centered-Design/round2/des14_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round2/des14_wid1.png"
     },
     {
         "Description_number": 10,
@@ -2129,10 +2129,10 @@
     },
     {
         "Description_number": 1,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that displays a banner with current deals",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/User-Centered-Design/round2/des1_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round2/des1_wid1.png"
     },
     {
         "Description_number": 5,
@@ -2143,10 +2143,10 @@
     },
     {
         "Description_number": 11,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that allows users to cancel a membership",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Business-KPI/round2/des11_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round2/des11_wid1.png"
     },
     {
         "Description_number": 10,
@@ -2164,10 +2164,10 @@
     },
     {
         "Description_number": 3,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that displays a search panel",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/User-Centered-Design/round2/des3_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round2/des3_wid1.png"
     },
     {
         "Description_number": 13,
@@ -2227,10 +2227,10 @@
     },
     {
         "Description_number": 1,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that displays a banner with current deals",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Business-KPI/round2/des1_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round2/des1_wid1.png"
     },
     {
         "Description_number": 12,
@@ -2276,10 +2276,10 @@
     },
     {
         "Description_number": 9,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that displays shipping options and optional add-ons",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Business-KPI/round2/des9_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round2/des9_wid1.png"
     },
     {
         "Description_number": 14,
@@ -2332,10 +2332,10 @@
     },
     {
         "Description_number": 0,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "User-Centered-Design",
         "Description": "a component that displays featured products",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/User-Centered-Design/round2/des0_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design/round2/des0_wid1.png"
     },
     {
         "Description_number": 8,
@@ -2374,10 +2374,10 @@
     },
     {
         "Description_number": 3,
-        "Model": "Gemini-2.5-Pro-Preview-05-06",
+        "Model": "gemini-2.5-pro",
         "Condition": "Business-KPI",
         "Description": "a component that displays a search panel",
-        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/Gemini-2.5-Pro-Preview-05-06/Business-KPI/round2/des3_wid1.png"
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/Business-KPI/round2/des3_wid1.png"
     },
     {
         "Description_number": 14,
