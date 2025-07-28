@@ -2412,7 +2412,7 @@
       "Model": "grok-3-beta",
       "Condition": "Neutral",
       "Description": "a component that displays a list of product items",
-      "screenshot_locati,on": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/grok-3-beta/Neutral/round3/des4_wid1.png"
+      "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/grok-3-beta/Neutral/round3/des4_wid1.png"
   },
   {
       "Description_number": 2,
