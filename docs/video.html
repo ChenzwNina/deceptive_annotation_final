@@ -902,17 +902,34 @@
             // Save selection into an empty list
             const saved_list = [bucket1, bucket2, bucket3];
 
-            // Explanation text
-            const explanation_text = document.getElementById('explanation-text').value;
+            // // Explanation text
+            // const explanation_text = document.getElementById('explanation-text').value;
 
             const urlParams = new URLSearchParams(window.location.search);
             const videoIndex = urlParams.get('videoIndex');
+
+            // Explanation text
+            const explanationElement = document.getElementById('explanation-text');
+            if (!explanationElement) {
+                console.error("explanation-text element not found!");
+                return null;
+            }
+            console.log("Explanation element:", explanationElement);
+            console.log("Explanation value:", explanationElement.value);
+            console.log("Explanation value type:", typeof explanationElement.value);
+            
+            const explanation_text = explanationElement.value;
+            console.log("Final explanation_text:", explanation_text);
+            console.log("Final explanation_text type:", typeof explanation_text);
 
             // Save deceptive design categories and explanation text
             const data = {
                 dark_pattern_type: saved_list,
                 explanation: explanation_text
             }
+            console.log("Final data object:", data);
+            console.log("Data serialized:", JSON.stringify(data));
+
             return data;
         }
 
