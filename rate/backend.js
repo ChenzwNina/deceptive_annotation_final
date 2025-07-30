@@ -105,24 +105,43 @@ async function handleGetComment(request, origin) {
   }
   
 
-async function handlePutComment(request, origin) {
-  if (request.method !== "POST") {
-    return withCorsHeaders(new Response("Method Not Allowed", { status: 405 }), origin);
+  async function handlePutComment(request, origin) {
+    if (request.method !== "POST") {
+      return withCorsHeaders(new Response("Method Not Allowed", { status: 405 }), origin);
+    }
+  
+    try {
+      const { key, rater, value } = await request.json();
+      console.log("handlePutComment payload:", { key, rater, value });
+  
+      if (!key || !rater || !value) {
+        console.warn("Missing fields in /put:", { key, rater, value });
+        return withCorsHeaders(new Response("Bad Request: Missing fields", { status: 400 }), origin);
+      }
+  
+      await kvNamespace.put(key, JSON.stringify({ time: getTime(), rater, value }));
+  
+      return withCorsHeaders(
+        new Response(JSON.stringify({ msg: "Annotation saved", key }), {
+          status: 200,
+          headers: { 'Content-Type': 'application/json' }
+        }),
+        origin
+      );
+    } catch (err) {
+      console.error("handlePutComment error:", err);
+      return withCorsHeaders(new Response(JSON.stringify({ error: "Internal Error" }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' }
+      }), origin);
+    }
   }
-
-  const { key, rater, value } = await request.json();
-  await kvNamespace.put(key, JSON.stringify({ time: getTime(), rater, value }));
-
-  return withCorsHeaders(
-    new Response(JSON.stringify({ msg: "Annotation saved", key }), { status: 200 }),
-    origin
-  );
-}
+  
 
 export default {
   async fetch(request, env) {
     console.log("env keys:", Object.keys(env));
-    
+
     const origin = request.headers.get("Origin") || "*";
 
     // Set the global KV binding
