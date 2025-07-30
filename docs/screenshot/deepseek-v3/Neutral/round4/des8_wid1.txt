@@ -1,0 +1,6 @@
+Question 1: The widget is a right-side sliding panel (350px wide) with a clean white background and subtle shadow. It features product cards with 70px square images, clear typography (bold names, red prices), and quantity controls. The design prioritizes readability with ample spacing, visual hierarchy, and a prominent checkout button. The color scheme (white, red accents, gray text) aligns with e-commerce conventions for clarity and action prompting.
+
+    Question 2: Typically triggered by clicking a cart icon in the header. The mockup includes JavaScript to close the cart (clicking X), but in implementation, another button would toggle the 'active' class to show it. Some sites may also trigger it automatically when adding items.
+
+    Question 3: Users can: 1) View all cart items with images/details, 2) Adjust quantities (+/- buttons), 3) Remove items, 4) See real-time price updates, 5) Close the cart, and 6) Proceed to checkout. The design supports all fundamental cart operations while maintaining simplicity.
+    -->

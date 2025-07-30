@@ -1,0 +1,7 @@
+-->
+    <!-- Question 1: The cart widget is positioned at the top-right with a white background, subtle shadow, and rounded corners for a clean, modern look. It’s 350px wide with a max height of 400px, ensuring it’s compact yet readable. Items are listed in a flex layout for alignment, with green for prices (#2ecc71) to highlight value and red for remove buttons (#e74c3c) for clarity. The design uses a minimalistic style to avoid clutter, mimicking real e-commerce sites like Amazon for user familiarity. -->
+
+    <!-- Question 2: The widget appears when the user clicks the "Cart (3)" toggle button at the top-right corner. It can also be triggered programmatically when items are added to the cart (though not implemented in this static code), ensuring users can review their selections instantly. -->
+
+    <!-- Question 3: Users can interact by clicking the toggle button to open/close the cart, viewing item details (image, name, quantity, price), removing items via the "Remove" button, and proceeding to payment with the "Proceed to Checkout" button. Hover effects on buttons provide visual feedback, enhancing usability. -->
+</body>
