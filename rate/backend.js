@@ -44,8 +44,9 @@ async function handleUpload(request, origin) {
   }
 
   try {
-    console.log("log", key, index, rater)
+
     const { key, index, rater } = await request.json();
+    console.log("log", key, index, rater);
     if (!key || !index || !rater) {
         console.warn("Missing fields:", { key, index, rater });
         return withCorsHeaders(new Response("Bad Request: Missing fields", { status: 400 }), origin);
