@@ -44,6 +44,7 @@ async function handleUpload(request, origin) {
   }
 
   try {
+    console.log("log", key, index, rater)
     const { key, index, rater } = await request.json();
     if (!key || !index || !rater) {
         console.warn("Missing fields:", { key, index, rater });
