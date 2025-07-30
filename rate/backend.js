@@ -76,14 +76,34 @@ async function handleGetCompleted(request, origin) {
 }
 
 async function handleGetComment(request, origin) {
-  if (request.method !== "POST") {
-    return withCorsHeaders(new Response("Method Not Allowed", { status: 405 }), origin);
+    if (request.method !== "POST") {
+      return withCorsHeaders(new Response("Method Not Allowed", { status: 405 }), origin);
+    }
+  
+    try {
+      const { key } = await request.json();
+      console.log("handleGetComment received key:", key);
+  
+      if (!key) {
+        return withCorsHeaders(new Response(JSON.stringify({ error: "Missing key" }), {
+          status: 400,
+          headers: { 'Content-Type': 'application/json' }
+        }), origin);
+      }
+  
+      const value = await kvNamespace.get(key);
+      console.log("Retrieved value:", value);
+  
+      return withCorsHeaders(new Response(value || "", { status: 200 }), origin);
+    } catch (err) {
+      console.error("handleGetComment error:", err);
+      return withCorsHeaders(new Response(JSON.stringify({ error: "Internal Error" }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' }
+      }), origin);
+    }
   }
-
-  const { key } = await request.json();
-  const value = await kvNamespace.get(key);
-  return withCorsHeaders(new Response(value || "", { status: 200 }), origin);
-}
+  
 
 async function handlePutComment(request, origin) {
   if (request.method !== "POST") {
@@ -101,6 +121,8 @@ async function handlePutComment(request, origin) {
 
 export default {
   async fetch(request, env) {
+    console.log("env keys:", Object.keys(env));
+    
     const origin = request.headers.get("Origin") || "*";
 
     // Set the global KV binding
@@ -132,7 +154,11 @@ export default {
       }
     } catch (err) {
       console.error("Unexpected error:", err);
-      return withCorsHeaders(new Response("Internal Error", { status: 500 }), origin);
+      return withCorsHeaders(new Response(JSON.stringify({ error: "Internal Error" }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' }
+      }), origin);
+      
     }
   }
 };

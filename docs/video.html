@@ -917,10 +917,48 @@
         }
 
 
+        // async function uploadData() {
+        //     const data = collectData();
+        //     Toast('Uploading data...', 1000);
+        //     let myuuid = crypto.randomUUID();
+        //     const response = await fetch('https://rate.chenziwei0499.workers.dev/upload', {
+        //         method: 'POST',
+        //         headers: {
+        //             'Content-Type': 'application/json'
+        //         },
+        //         body: JSON.stringify({
+        //             key: myuuid,
+        //             index: getQueryParameter('videoIndex'),
+        //             rater: getQueryParameter('user')
+        //         })
+        //     });
+
+        //     const response1 = await fetch('https://rate.chenziwei0499.workers.dev/put', {
+        //         method: 'POST',
+        //         headers: {
+        //             'Content-Type': 'application/json'
+        //         },
+        //         body: JSON.stringify({
+        //             key: getQueryParameter('videoIndex') + getQueryParameter('user'),
+        //             rater: getQueryParameter('user'),
+        //             value: data
+        //             })
+        //     });
+        //     await Toast(JSON.stringify(await response1.json()), 1000);
+        // }
         async function uploadData() {
             const data = collectData();
             Toast('Uploading data...', 1000);
+
             let myuuid = crypto.randomUUID();
+
+            console.log("Uploading to /upload with:", {
+                key: myuuid,
+                index: getQueryParameter('videoIndex'),
+                rater: getQueryParameter('user')
+            });
+        
+            
             const response = await fetch('https://rate.chenziwei0499.workers.dev/upload', {
                 method: 'POST',
                 headers: {
@@ -933,6 +971,12 @@
                 })
             });
 
+            console.log("Uploading to /put with:", {
+                key: getQueryParameter('videoIndex') + getQueryParameter('user'),
+                rater: getQueryParameter('user'),
+                value: data
+            });
+
             const response1 = await fetch('https://rate.chenziwei0499.workers.dev/put', {
                 method: 'POST',
                 headers: {
@@ -942,10 +986,8 @@
                     key: getQueryParameter('videoIndex') + getQueryParameter('user'),
                     rater: getQueryParameter('user'),
                     value: data
-                    })
+                })
             });
-            await Toast(JSON.stringify(await response1.json()), 1000);
-        }
 
         async function goToNextScene() {
             const videoIndex = parseInt(getQueryParameter('videoIndex'), 10);
