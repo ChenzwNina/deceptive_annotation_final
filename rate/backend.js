@@ -16,8 +16,9 @@ let normalHeader = {
     statusText: 'OK',
     headers: {
         'Content-Type': 'application/json;charset=utf-8',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET,POST,DELETE'
+        'Access-Control-Allow-Origin': 'https://chenzwnina.github.io',
+        'Access-Control-Allow-Methods': 'GET,POST,DELETE,OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type, Authorization'
     }
 };
 
@@ -26,8 +27,10 @@ let notFoundHeader = {
     statusText: 'Not Found',
     headers: {
         'Content-Type': 'text/plain;charset=utf-8',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET,POST,DELETE'
+        'Access-Control-Allow-Origin': 'https://chenzwnina.github.io',
+        'Access-Control-Allow-Methods': 'GET,POST,DELETE',
+        'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+
     }
 };
 
