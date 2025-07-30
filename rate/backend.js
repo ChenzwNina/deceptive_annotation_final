@@ -45,6 +45,11 @@ async function handleUpload(request, origin) {
 
   try {
     const { key, index, rater } = await request.json();
+    if (!key || !index || !rater) {
+        console.warn("Missing fields:", { key, index, rater });
+        return withCorsHeaders(new Response("Bad Request: Missing fields", { status: 400 }), origin);
+    }
+
     const fullKey = `${rater}:${key}`;
     await kvNamespace.put(fullKey, JSON.stringify({ time: getTime(), index, rater }));
 
