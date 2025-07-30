@@ -989,6 +989,9 @@
                 })
             });
 
+            await Toast(JSON.stringify(await response1.json()), 1000);
+        }
+
         async function goToNextScene() {
             const videoIndex = parseInt(getQueryParameter('videoIndex'), 10);
             await uploadData();
