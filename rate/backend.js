@@ -11,196 +11,105 @@
 // Define a KV namespace for storing applicant data
 var kvNamespace = null;
 
-let normalHeader = {
-    status: 200,
-    statusText: 'OK',
-    headers: {
-        'Content-Type': 'application/json;charset=utf-8',
-        'Access-Control-Allow-Origin': 'https://chenzwnina.github.io',
-        'Access-Control-Allow-Methods': 'GET,POST,DELETE,OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type, Authorization'
-    }
-};
-
-let notFoundHeader = {
-    status: 404,
-    statusText: 'Not Found',
-    headers: {
-        'Content-Type': 'text/plain;charset=utf-8',
-        'Access-Control-Allow-Origin': 'https://chenzwnina.github.io',
-        'Access-Control-Allow-Methods': 'GET,POST,DELETE',
-        'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-
-    }
-};
-
-let NotAvailableHeader = {
-    status: 405,
-    statusText: 'Not Found',
-    headers: {
-        'Content-Type': 'text/plain;charset=utf-8',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET,POST,DELETE'
-    }
-};
-
-
-let alreadyInuse = {
-    status: 409,
-    statusText: 'Not Found',
-    headers: {
-        'Content-Type': 'text/plain;charset=utf-8',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET,POST,DELETE'
-    }
-};
-
-function withCorsHeaders(response, origin) {
-    response.headers.set("Access-Control-Allow-Origin", origin || "*");
-    response.headers.set("Access-Control-Allow-Methods", "GET, POST, DELETE, OPTIONS");
-    response.headers.set("Access-Control-Allow-Headers", "Content-Type, Authorization");
-    return response;
+function getCorsHeaders(origin) {
+    return {
+        "Access-Control-Allow-Origin": origin || "*",
+        "Access-Control-Allow-Methods": "GET, POST, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        "Access-Control-Max-Age": "86400" // Optional: cache preflight for 1 day
+    };
 }
 
-
+function withCorsHeaders(response, origin) {
+    const headers = new Headers(response.headers);
+    const corsHeaders = getCorsHeaders(origin);
+    for (const [key, value] of Object.entries(corsHeaders)) {
+        headers.set(key, value);
+    }
+    return new Response(response.body, {
+        status: response.status,
+        statusText: response.statusText,
+        headers
+    });
+}
 
 export default {
     async fetch(request, env) {
+        const origin = request.headers.get("Origin") || "*";
+
         if (request.method === "OPTIONS") {
-            const origin = request.headers.get("Origin") || "*";
             return new Response(null, {
                 status: 204,
-                headers: {
-                    "Access-Control-Allow-Origin": origin,
-                    "Access-Control-Allow-Methods": "GET, POST, DELETE, OPTIONS",
-                    "Access-Control-Allow-Headers": "Content-Type, Authorization",
-                },
+                headers: getCorsHeaders(origin)
             });
         }
-        
 
         kvNamespace = env["annotation-final"];
-
         const url = new URL(request.url);
         const path = url.pathname;
 
         if (path === "/upload") {
-            return handleUpload(request);
+            return handleUpload(request, origin);
         } else if (path === "/getCompleted") {
-            return handleGet(request);
-        }else if (path === "/get") {
-            return handleGetComment(request);
-        }else if (path === "/put") {
-            return handlePutComment(request);
-        }else {
-            return new Response("Not Found", notFoundHeader);
+            return handleGet(request, origin);
+        } else if (path === "/get") {
+            return handleGetComment(request, origin);
+        } else if (path === "/put") {
+            return handlePutComment(request, origin);
+        } else {
+            return withCorsHeaders(new Response("Not Found", { status: 404 }), origin);
         }
     }
-}
-
-var getTime = function () {
-    return new Date().getTime();
 };
 
-
-async function handlePutComment(request) {
-    // only allow post
-    if (request.method !== "POST") {
-        return withCorsHeaders(
-            new Response("Method Not Allowed", NotAvailableHeader),
-            request.headers.get("Origin")
-        );
-        
-        
-    }
-    const { key, rater, value } = await request.json();
-    
-
-    // Store applicant data in KV storage
-    await kvNamespace.put(key, JSON.stringify({
-      "time": getTime(),
-      "rater": rater,
-      "value": value
-    }));
-
-    return withCorsHeaders(
-        new Response(JSON.stringify({ msg: 'Annotation uploaded successfully for screenshot', key }), normalHeader),
-        request.headers.get("Origin")
-    );
-    
+function getTime() {
+    return new Date().getTime();
 }
 
-async function handleGetComment(request) {
-    // only allow post
+async function handlePutComment(request, origin) {
     if (request.method !== "POST") {
-        return withCorsHeaders(
-            new Response("Method Not Allowed", NotAvailableHeader),
-            request.headers.get("Origin")
-        );
-        
+        return withCorsHeaders(new Response("Method Not Allowed", { status: 405 }), origin);
     }
+
+    const { key, rater, value } = await request.json();
+    await kvNamespace.put(key, JSON.stringify({ time: getTime(), rater, value }));
+
+    return withCorsHeaders(new Response(JSON.stringify({ msg: "Annotation uploaded successfully for screenshot", key }), { status: 200 }), origin);
+}
+
+async function handleGetComment(request, origin) {
+    if (request.method !== "POST") {
+        return withCorsHeaders(new Response("Method Not Allowed", { status: 405 }), origin);
+    }
+
     const { key } = await request.json();
-    
     const value = await kvNamespace.get(key);
 
-    if(value == null) {
-        console.log("No value found in KV for the given image index");
-        return withCorsHeaders(
-            new Response("", normalHeader),
-            request.headers.get("Origin")
-        );
-        
-    } else{
-        console.log("Value found in KV for the given image index");
-        return withCorsHeaders(
-            new Response(JSON.stringify(value), normalHeader),
-            request.headers.get("Origin")
-        );
-        
+    if (value == null) {
+        return withCorsHeaders(new Response("", { status: 200 }), origin);
+    } else {
+        return withCorsHeaders(new Response(value, { status: 200 }), origin);
     }
 }
 
-
-async function handleUpload(request) {
-    // only allow post
+async function handleUpload(request, origin) {
     if (request.method !== "POST") {
-        return withCorsHeaders(
-            new Response("Method Not Allowed", NotAvailableHeader),
-            request.headers.get("Origin")
-        );
-        
+        return withCorsHeaders(new Response("Method Not Allowed", { status: 405 }), origin);
     }
+
     const { key, index, rater } = await request.json();
-    
+    await kvNamespace.put(`${rater}:${key}`, JSON.stringify({ time: getTime(), index, rater }));
 
-    // Store applicant data in KV storage
-    await kvNamespace.put(rater+":"+key, JSON.stringify({
-      "time": getTime(),
-      "index": index,
-      "rater": rater
-    }));
-
-    return withCorsHeaders(
-        new Response(JSON.stringify({ msg: 'Annotation progress saved for screenshot', index }), normalHeader),
-        request.headers.get("Origin")
-    );
-    
+    return withCorsHeaders(new Response(JSON.stringify({ msg: "Annotation progress saved for screenshot", index }), { status: 200 }), origin);
 }
 
-async function handleGet(request) {
-    // only allow post
+async function handleGet(request, origin) {
     if (request.method !== "POST") {
-        return withCorsHeaders(
-            new Response("Method Not Allowed", NotAvailableHeader),
-            request.headers.get("Origin")
-        );
+        return withCorsHeaders(new Response("Method Not Allowed", { status: 405 }), origin);
     }
 
     const { key } = await request.json();
-    const value = await kvNamespace.list({ prefix: key + ":" });
+    const value = await kvNamespace.list({ prefix: `${key}:` });
 
-    return withCorsHeaders(
-        new Response(JSON.stringify(value.keys), normalHeader),
-        request.headers.get("Origin")
-    );
+    return withCorsHeaders(new Response(JSON.stringify(value.keys), { status: 200 }), origin);
 }
