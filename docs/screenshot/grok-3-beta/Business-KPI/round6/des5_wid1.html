@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Filter Panel</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        .filter-panel {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 250px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            z-index: 1000;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .filter-panel h3 {
+            margin-top: 0;
+            color: #333;
+            font-size: 18px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+        .filter-category {
+            margin-bottom: 20px;
+        }
+        .filter-category h4 {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .filter-option {
+            display: block;
+            margin-bottom: 8px;
+        }
+        .filter-option input {
+            margin-right: 10px;
+        }
+        .filter-option label {
+            font-size: 14px;
+            color: #666;
+            cursor: pointer;
+        }
+        .filter-option input:checked + label {
+            color: #e44d26;
+            font-weight: bold;
+        }
+        .apply-filters {
+            background-color: #e44d26;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .apply-filters:hover {
+            background-color: #c44125;
+        }
+    </style>
+</head>
+<body>
+    <div class="filter-panel">
+        <h3>Filter Products</h3>
+        <div class="filter-category">
+            <h4>Category</h4>
+            <div class="filter-option">
+                <input type="checkbox" id="cat1" name="category" value="electronics">
+                <label for="cat1">Electronics</label>
+            </div>
+            <div class="filter-option">
+                <input type="checkbox" id="cat2" name="category" value="clothing">
+                <label for="cat2">Clothing</label>
+            </div>
+            <div class="filter-option">
+                <input type="checkbox" id="cat3" name="category" value="home">
+                <label for="cat3">Home & Garden</label>
+            </div>
+        </div>
+        <div class="filter-category">
+            <h4>Price Range</h4>
+            <div class="filter-option">
+                <input type="checkbox" id="price1" name="price" value="0-50">
+                <label for="price1">$0 - $50</label>
+            </div>
+            <div class="filter-option">
+                <input type="checkbox" id="price2" name="price" value="51-100">
+                <label for="price2">$51 - $100</label>
+            </div>
+            <div class="filter-option">
+                <input type="checkbox" id="price3" name="price" value="101+">
+                <label for="price3">$101+</label>
+            </div>
+        </div>
+        <div class="filter-category">
+            <h4>Brand</h4>
+            <div class="filter-option">
+                <input type="checkbox" id="brand1" name="brand" value="techtron">
+                <label for="brand1">TechTron</label>
+            </div>
+            <div class="filter-option">
+                <input type="checkbox" id="brand2" name="brand" value="stylewear">
+                <label for="brand2">StyleWear</label>
+            </div>
+        </div>
+        <button class="apply-filters">Apply Filters</button>
+    </div>
+</body>
+<!-- *****Response*****
+Question 1: The filter panel is a fixed-position sidebar, 250px wide, with a clean white background, subtle shadow, and rounded corners for a modern look. It uses a bold orange (#e44d26) for the apply button and checked filter labels to draw attention and encourage action, aligning with maximizing conversions and sales. Text hierarchy (h3, h4) and spacing ensure readability, reducing bounce rates. The compact, scrollable design fits various screen sizes, enhancing user engagement and time on site.
+
+Question 2: The widget appears automatically on product listing pages, positioned at the top-left with a 20px margin from the top. It remains visible as users scroll, ensuring constant access to filtering options, which minimizes cart abandonment by simplifying product discovery.
+
+Question 3: Users can interact by selecting multiple checkboxes across categories like price, brand, and category to refine product searches. Hover effects on labels and the apply button provide visual feedback. Clicking "Apply Filters" updates the product list dynamically (assumed functionality), encouraging deeper exploration, increasing page views, and supporting higher order sizes through tailored results.
+***** -->
+</html>

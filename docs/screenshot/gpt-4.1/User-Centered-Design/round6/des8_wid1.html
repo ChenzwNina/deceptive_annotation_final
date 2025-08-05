@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping Cart Component</title>
+  <style>
+    body {
+      background-color: #f5f6fa;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .cart-container {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      min-width: 360px;
+      max-width: 440px;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+      border-radius: 12px;
+      padding: 0 0 18px 0;
+      z-index: 1000;
+      transition: box-shadow 0.2s;
+    }
+
+    .cart-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #ececec;
+      padding: 20px 28px 16px 28px;
+      border-radius: 12px 12px 0 0;
+      background-color: #fafbfc;
+    }
+
+    .cart-title {
+      font-weight: 600;
+      font-size: 1.23rem;
+      letter-spacing: .015em;
+      color: #31344b;
+    }
+
+    .cart-close {
+      background: none;
+      border: none;
+      font-size: 1.6rem;
+      cursor: pointer;
+      color: #bbb;
+      transition: color 0.2s;
+      outline: none;
+    }
+
+    .cart-close:hover, .cart-close:focus {
+      color: #f45b69;
+    }
+
+    .cart-content {
+      max-height: 320px;
+      overflow-y: auto;
+      padding: 10px 28px 0 28px;
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 18px;
+      gap: 18px;
+    }
+
+    .cart-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .cart-item-image {
+      width: 62px;
+      height: 62px;
+      background: #def0fa;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 1px solid #e2e8f0;
+      box-sizing: border-box;
+    }
+
+    .cart-item-details {
+      flex: 1 1 auto;
+    }
+
+    .cart-item-name {
+      font-weight: 500;
+      font-size: 1rem;
+      color: #2b2d42;
+      margin-bottom: 4px;
+    }
+
+    .cart-item-variant {
+      font-size: 0.93rem;
+      color: #6c7284;
+      margin-bottom: 6px;
+    }
+
+    .cart-item-price-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .cart-item-price {
+      color: #087e8b;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .cart-item-qty {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #f2f2fa;
+      padding: 3px 10px;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: 500;
+      user-select: none;
+    }
+
+    .cart-item-qty-btn {
+      background: none;
+      border: none;
+      font-size: 1rem;
+      color: #087e8b;
+      cursor: pointer;
+      font-weight: 600;
+      padding: 2px 6px;
+      border-radius: 50%;
+      transition: color 0.2s, background 0.2s;
+      outline: none;
+    }
+
+    .cart-item-qty-btn:disabled {
+      color: #c3c9d4;
+      cursor: not-allowed;
+      background: none;
+    }
+    .cart-item-qty-btn:active:not(:disabled), .cart-item-qty-btn:focus:not(:disabled) {
+      background: #cbeaf0;
+    }
+
+    .cart-item-remove {
+      margin-left: 7px;
+      background: none;
+      border: none;
+      color: #e86a68;
+      cursor: pointer;
+      font-size: 0.98rem;
+      transition: text-decoration 0.2s;
+      padding: 0 5px;
+      border-radius: 4px;
+    }
+    .cart-item-remove:hover, .cart-item-remove:focus {
+      text-decoration: underline;
+      background: #fbe8e1;
+    }
+
+    .cart-empty {
+      text-align: center;
+      padding: 40px 0 28px 0;
+      font-size: 1.07rem;
+      color: #8fa1b5;
+      font-style: italic;
+    }
+
+    .cart-footer {
+      border-top: 1px solid #ececec;
+      padding: 18px 28px 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .cart-subtotal-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      color: #222445;
+      font-size: 1.02rem;
+    }
+
+    .cart-checkout-btn {
+      width: 100%;
+      padding: 13px 0;
+      background: #087e8b;
+      color: white;
+      font-size: 1.09rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: background 0.1s, box-shadow 0.1s;
+      box-shadow: 0 2px 8px rgba(8,126,139, 0.06);
+      letter-spacing: .013em;
+      outline: none;
+    }
+
+    .cart-checkout-btn:active, .cart-checkout-btn:focus {
+      background: #066c72;
+    }
+    .cart-checkout-btn:disabled {
+      background: #bbdde1;
+      cursor: not-allowed;
+    }
+    @media (max-width: 500px) {
+      .cart-container {
+        left: 0;
+        transform: none;
+        min-width: 98vw;
+        max-width: 100vw;
+        margin: 0 1vw;
+      }
+      .cart-header, .cart-content, .cart-footer {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cart-container" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+    <div class="cart-header">
+      <span class="cart-title" id="cart-title">Your Shopping Cart</span>
+      <button class="cart-close" aria-label="Close Cart" title="Close Cart" onclick="document.querySelector('.cart-container').style.display='none';">&times;</button>
+    </div>
+    <div class="cart-content" id="cart-content">
+      <!-- Example cart items below -->
+      <div class="cart-item">
+        <img class="cart-item-image" src="placeholder_image.jpg" alt="Nike Air Zoom Pegasus 40 Running Shoes">
+        <div class="cart-item-details">
+          <div class="cart-item-name">Nike Air Zoom Pegasus 40</div>
+          <div class="cart-item-variant">Men’s / Size 10 / Black</div>
+          <div class="cart-item-price-group">
+            <span class="cart-item-price">$120.00</span>
+            <span class="cart-item-qty" aria-label="Quantity">
+              <button class="cart-item-qty-btn" aria-label="Decrease Quantity" onclick="changeQty(this, -1)">−</button>
+              <span class="cart-item-qty-value" aria-live="polite">1</span>
+              <button class="cart-item-qty-btn" aria-label="Increase Quantity" onclick="changeQty(this, 1)">+</button>
+            </span>
+            <button class="cart-item-remove" aria-label="Remove from cart" onclick="removeItem(this)">Remove</button>
+          </div>
+        </div>
+      </div>
+      <div class="cart-item">
+        <img class="cart-item-image" src="placeholder_image.jpg" alt="Apple AirPods Pro (2nd Gen)">
+        <div class="cart-item-details">
+          <div class="cart-item-name">Apple AirPods Pro (2nd Gen)</div>
+          <div class="cart-item-variant">Wireless Earbuds</div>
+          <div class="cart-item-price-group">
+            <span class="cart-item-price">$249.00</span>
+            <span class="cart-item-qty" aria-label="Quantity">
+              <button class="cart-item-qty-btn" aria-label="Decrease Quantity" onclick="changeQty(this, -1)">−</button>
+              <span class="cart-item-qty-value" aria-live="polite">2</span>
+              <button class="cart-item-qty-btn" aria-label="Increase Quantity" onclick="changeQty(this, 1)">+</button>
+            </span>
+            <button class="cart-item-remove" aria-label="Remove from cart" onclick="removeItem(this)">Remove</button>
+          </div>
+        </div>
+      </div>
+      <!-- END Example cart items -->
+    </div>
+    <div class="cart-footer" id="cart-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal-val">$618.00</span>
+      </div>
+      <button class="cart-checkout-btn" id="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+    </div>
+  </div>
+  <script>
+    // Change quantity logic & update subtotal and affordances
+    function changeQty(btn, delta) {
+      const qtyValueSpan = btn.parentNode.querySelector('.cart-item-qty-value');
+      let qty = parseInt(qtyValueSpan.textContent, 10) + delta;
+      if(qty < 1) qty = 1;
+      qtyValueSpan.textContent = qty;
+
+      // Disable minus if qty==1
+      const minusBtn = btn.parentNode.querySelectorAll('.cart-item-qty-btn')[0];
+      minusBtn.disabled = qty === 1;
+
+      updateSubtotal();
+    }
+
+    // Remove item
+    function removeItem(btn) {
+      const item = btn.closest('.cart-item');
+      item.parentNode.removeChild(item);
+      updateSubtotal();
+      showEmptyIfNeeded();
+    }
+
+    // Update subtotal
+    function updateSubtotal() {
+      const cartItems = document.querySelectorAll('.cart-item');
+      let subtotal = 0;
+      cartItems.forEach(item => {
+        const price = parseFloat(item.querySelector('.cart-item-price').textContent.replace('$',''));
+        const qty = parseInt(item.querySelector('.cart-item-qty-value').textContent, 10);
+        subtotal += price * qty;
+      });
+      document.getElementById('cart-subtotal-val').textContent = subtotal ? `$${subtotal.toFixed(2)}` : '$0.00';
+      document.getElementById('checkout-btn').disabled = subtotal === 0;
+    }
+
+    // Show "Your cart is empty" UI if no items remain
+    function showEmptyIfNeeded() {
+      const cartItems = document.querySelectorAll('.cart-item');
+      if(cartItems.length === 0) {
+        document.getElementById('cart-content').innerHTML =
+          '<div class="cart-empty">Your shopping cart is empty.<br>Browse products and add items to your cart!</div>';
+        document.getElementById('cart-subtotal-val').textContent = '$0.00';
+        document.getElementById('checkout-btn').disabled = true;
+      }
+    }
+
+    // Initialize constraints & feedback
+    function initCart() {
+      document.querySelectorAll('.cart-item').forEach(item => {
+        const qty = parseInt(item.querySelector('.cart-item-qty-value').textContent, 10);
+        const minusBtn = item.querySelectorAll('.cart-item-qty-btn')[0];
+        minusBtn.disabled = qty === 1;
+      });
+      updateSubtotal();
+    }
+
+    function checkout() {
+      alert('Proceeding to checkout...'); // Real e-commerce would route to checkout page
+    }
+
+    // On page load
+    window.onload = initCart;
+  </script>
+  <!--
+  *****Response*****
+  4.1 Question 1: The shopping cart widget has a white background for contrast, subtle drop shadow for focus, and soft rounded corners for friendly UX. The title bar uses a pale grey background. Item cards show thumbnail images on the left, product name and detail, price, and actionable controls (qty +/- as buttons with visual states, remove as a link with red highlight). Font sizes and layout mimic real e-commerce clarity. Buttons are strong in color (blue/teal), disabled states are muted. Cart subtotal is emphasized, and the checkout button is blue and prominent. Responsive design ensures consistency and clean separation of elements. Choices ensure usability, clarity, and reassuring feedback.
+
+  4.2 Question 2: This widget typically appears when a user clicks a "cart" icon in the site header or after adding an item to their cart. In this code snippet, it's set to display immediately for demo purposes, but in practice its visibility would be controlled (toggle show/hide).
+
+  4.3 Question 3: Users can increase/decrease item quantities (minus disables at 1), remove items, close the cart, or proceed to checkout. All quantity changes update the subtotal and disable the checkout button if the cart is empty. There‘s clear, immediate feedback for all actions, constraints to prevent negative quantities or checkout with no items, and disabled states on relevant buttons. The “Remove” affordance is clear and visually distinct. The component also adapts for mobile screen widths.
+  -->
+</html>

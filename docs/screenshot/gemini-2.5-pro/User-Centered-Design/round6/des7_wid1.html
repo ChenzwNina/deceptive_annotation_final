@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Ratings Component</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+        :root {
+            --primary-color: #007bff;
+            --primary-hover-color: #0056b3;
+            --text-color-dark: #212529;
+            --text-color-light: #6c757d;
+            --star-color: #ffc107;
+            --border-color: #dee2e6;
+            --background-color: #ffffff;
+            --background-alt-color: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #e9ecef;
+            color: var(--text-color-dark);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .ratings-container {
+            position: relative;
+            top: 20px;
+            background-color: var(--background-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 24px;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            display: flex;
+            gap: 30px;
+        }
+
+        /* Left Column: Summary */
+        .ratings-summary {
+            flex: 0 0 250px;
+            border-right: 1px solid var(--border-color);
+            padding-right: 30px;
+        }
+
+        .ratings-summary h2 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+        
+        .average-rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 4px;
+        }
+
+        .average-rating .score {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .total-reviews-summary {
+            font-size: 0.9rem;
+            color: var(--text-color-light);
+            margin-bottom: 20px;
+        }
+        
+        .stars-display {
+            color: var(--star-color);
+            font-size: 1.2rem;
+        }
+
+        .stars-display .star.filled {
+            /* Using a text star for simplicity, but SVG is often better */
+            content: '★';
+        }
+
+        .stars-display .star.empty {
+            color: var(--border-color);
+            content: '★';
+        }
+        
+        .rating-breakdown {
+            margin-bottom: 24px;
+        }
+
+        .rating-breakdown-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .rating-breakdown-item .star-label {
+            white-space: nowrap;
+        }
+
+        .progress-bar-container {
+            flex-grow: 1;
+            height: 8px;
+            background-color: var(--background-alt-color);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: var(--star-color);
+            border-radius: 4px;
+        }
+
+        .write-review-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+            text-align: center;
+        }
+
+        .write-review-btn:hover {
+            background-color: var(--primary-hover-color);
+        }
+
+        /* Right Column: Reviews List */
+        .reviews-list-section {
+            flex: 1 1 auto;
+        }
+
+        .reviews-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 16px;
+        }
+
+        .reviews-header h3 {
+            margin: 0;
+            font-size: 1.25rem;
+        }
+        
+        .sort-dropdown select {
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            background-color: var(--background-color);
+            font-family: inherit;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        
+        .review-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
+        }
+
+        .review-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .review-author-name {
+            font-weight: 700;
+        }
+
+        .verified-purchase {
+            font-size: 0.8rem;
+            color: #28a745;
+            font-weight: 700;
+        }
+
+        .review-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+
+        .review-meta .review-date {
+            font-size: 0.85rem;
+            color: var(--text-color-light);
+        }
+
+        .review-content .review-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .review-content .review-text {
+            line-height: 1.6;
+        }
+        
+        .review-actions {
+            margin-top: 16px;
+        }
+
+        .helpful-button {
+            padding: 6px 12px;
+            font-size: 0.85rem;
+            border: 1px solid var(--border-color);
+            background-color: var(--background-alt-color);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .helpful-button:hover {
+            background-color: #e2e6ea;
+            border-color: #dae0e5;
+        }
+
+        .helpful-button .thumb-icon {
+            margin-right: 6px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .ratings-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .ratings-summary {
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+                padding-right: 0;
+                padding-bottom: 20px;
+                flex: 0 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ratings-container">
+        <!-- Summary Column (Left) -->
+        <div class="ratings-summary">
+            <h2>Customer Reviews</h2>
+            <div class="average-rating">
+                <div class="score">4.8</div>
+                <div class="stars-display">
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span><!-- Partially filled star is complex, using full star for clarity -->
+                </div>
+            </div>
+            <div class="total-reviews-summary">based on 1,234 reviews</div>
+
+            <div class="rating-breakdown">
+                <div class="rating-breakdown-item">
+                    <div class="star-label">5 star</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="rating-breakdown-item">
+                    <div class="star-label">4 star</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 9%;"></div>
+                    </div>
+                </div>
+                <div class="rating-breakdown-item">
+                    <div class="star-label">3 star</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 3%;"></div>
+                    </div>
+                </div>
+                <div class="rating-breakdown-item">
+                    <div class="star-label">2 star</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 2%;"></div>
+                    </div>
+                </div>
+                <div class="rating-breakdown-item">
+                    <div class="star-label">1 star</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 1%;"></div>
+                    </div>
+                </div>
+            </div>
+            <button class="write-review-btn">Write a Review</button>
+        </div>
+
+        <!-- Reviews List Column (Right) -->
+        <div class="reviews-list-section">
+            <div class="reviews-header">
+                <h3>Showing 1-3 of 1,234 reviews</h3>
+                <div class="sort-dropdown">
+                    <select aria-label="Sort reviews">
+                        <option>Sort by: Most recent</option>
+                        <option>Sort by: Highest rating</option>
+                        <option>Sort by: Lowest rating</option>
+                        <option>Sort by: Most helpful</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="reviews-list">
+                <!-- Review 1 -->
+                <div class="review-item">
+                    <div class="review-author">
+                        <span class="review-author-name">Sarah J.</span>
+                        <span class="verified-purchase">✔ Verified Purchase</span>
+                    </div>
+                    <div class="review-meta">
+                        <div class="stars-display">
+                            <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+                        </div>
+                        <div class="review-date">Reviewed on March 15, 2024</div>
+                    </div>
+                    <div class="review-content">
+                        <h4 class="review-title">Best Travel Backpack I've Ever Owned!</h4>
+                        <p class="review-text">Absolutely incredible backpack. The material is durable and waterproof, which was tested on my last trip to Costa Rica. The compartments are thoughtfully designed, especially the padded laptop sleeve and the hidden security pocket. It's comfortable to wear even when fully packed. Highly recommend!</p>
+                    </div>
+                    <div class="review-actions">
+                        <button class="helpful-button"><span class="thumb-icon">👍</span> Helpful (112)</button>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-item">
+                    <div class="review-author">
+                        <span class="review-author-name">Mike R.</span>
+                        <span class="verified-purchase">✔ Verified Purchase</span>
+                    </div>
+                    <div class="review-meta">
+                        <div class="stars-display">
+                            <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star empty">★</span>
+                        </div>
+                        <div class="review-date">Reviewed on March 10, 2024</div>
+                    </div>
+                    <div class="review-content">
+                        <h4 class="review-title">Great bag, just one small issue.</h4>
+                        <p class="review-text">Overall, this is a fantastic product. It has plenty of space and feels very sturdy. My only complaint is that the water bottle holder on the side is a bit tight for my 32oz bottle. It fits, but it's a struggle to get it in and out. Otherwise, it's a solid 4.5 stars.</p>
+                    </div>
+                    <div class="review-actions">
+                        <button class="helpful-button"><span class="thumb-icon">👍</span> Helpful (45)</button>
+                    </div>
+                </div>
+                
+                <!-- Review 3 -->
+                <div class="review-item">
+                    <div class="review-author">
+                        <span class="review-author-name">Chloe Chen</span>
+                        <span class="verified-purchase">✔ Verified Purchase</span>
+                    </div>
+                    <div class="review-meta">
+                        <div class="stars-display">
+                            <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+                        </div>
+                        <div class="review-date">Reviewed on February 28, 2024</div>
+                    </div>
+                    <div class="review-content">
+                        <h4 class="review-title">Sleek and functional</h4>
+                        <p class="review-text">Love the minimalist design. It doesn't look bulky but holds a surprising amount of stuff. Perfect for my daily commute to work and for weekend trips. The zippers are high quality and feel very secure.</p>
+                    </div>
+                    <div class="review-actions">
+                        <button class="helpful-button"><span class="thumb-icon">👍</span> Helpful (78)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 
+    *****Response*****
+    Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+    
+    The widget has a clean, two-column layout within a white container with a subtle shadow, making it stand out against a light grey page background. The left column provides a high-level summary: a large, bold "4.8" average score, gold stars (using a standard #ffc107 color for universal recognition), and progress bars showing the rating distribution. The right column lists individual reviews, separated by light grey borders. Key colors include a trustworthy blue (#007bff) for the main "Write a Review" button to draw attention, dark grey (#212529) for text for high readability, and green for the "Verified Purchase" tag to build trust. This layout is chosen for efficiency; users can get a quick summary on the left or dive into detailed feedback on the right, catering to different information-seeking behaviors.
+
+    *****Response*****
+    Question 2: What triggers the appearance of this widget?
+    
+    The appearance of this widget is not triggered by a specific user action like a click or hover. Instead, it is a permanent, static component of a product detail page on an e-commerce website. It would typically be located below the primary product information section (which includes images, price, and the "Add to Cart" button) and above other sections like "Related Products" or the page footer. Users will see this widget simply by scrolling down the product page to learn more about other customers' experiences before making a purchase decision. Its constant presence reinforces transparency and the importance of community feedback on the site.
+
+    *****Response*****
+    Question 3: Can you describe the full range of interactions users can have with the widget?
+    
+    Users have several interaction points designed for efficiency and control. First, they can read the summary and individual reviews. Second, they can use the "Sort by" dropdown to reorder the reviews by recency, rating, or helpfulness, allowing them to find the most relevant information quickly. Third, the prominent "Write a Review" button provides a clear call-to-action that would navigate them to a review submission form. Fourth, on each individual review, a "Helpful" button allows users to upvote a review, providing social proof and feedback; clicking it would ideally change its state and increment the counter. Lastly, though not explicitly coded for filtering in this example, a common extension would be to allow users to click on the progress bars in the summary section (e.g., the "4 star" bar) to filter the list and show only reviews with that specific rating.
+    -->
+</body>
+</html>

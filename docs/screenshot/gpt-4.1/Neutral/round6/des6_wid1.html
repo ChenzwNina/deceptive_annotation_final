@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Item Component</title>
+  <style>
+    body {
+      background: #f5f5f7;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .product-card {
+      margin: 20px auto 0 auto;
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 340px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 3px 16px rgba(60, 60, 60, 0.13);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .product-image {
+      width: 100%;
+      height: 220px;
+      background: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .product-image img {
+      width: 90%;
+      height: auto;
+      max-height: 90%;
+      object-fit: contain;
+    }
+    .product-details {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .product-title {
+      font-size: 1.18rem;
+      font-weight: 600;
+      color: #232323;
+      margin: 0 0 4px 0;
+      line-height: 1.18;
+    }
+    .product-desc {
+      font-size: 0.97rem;
+      color: #585858;
+      margin: 0;
+    }
+    .product-price {
+      color: #e53935;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-top: 6px;
+    }
+    .product-rating {
+      font-size: 0.92rem;
+      color: #fbc02d;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .product-rating span {
+      color: #757575;
+      font-size: 0.92rem;
+      margin-left: 2px;
+    }
+    .product-actions {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+    }
+    .add-to-cart-btn,
+    .view-details-btn {
+      flex: 1;
+      padding: 10px 0;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.18s;
+    }
+    .add-to-cart-btn {
+      background: #2874f0;
+      color: #fff;
+    }
+    .add-to-cart-btn:hover {
+      background: #1565c0;
+    }
+    .view-details-btn {
+      background: #fff;
+      color: #2874f0;
+      border: 1px solid #2874f0;
+    }
+    .view-details-btn:hover {
+      background: #ecf3fa;
+    }
+  </style>
+</head>
+<body>
+  <div class="product-card">
+    <div class="product-image">
+      <img src="placeholder_image.jpg" alt="Apple AirPods Pro (2nd generation)">
+    </div>
+    <div class="product-details">
+      <div class="product-title">Apple AirPods Pro (2nd generation)</div>
+      <div class="product-desc">Active Noise Cancellation&nbsp;&bull;&nbsp;Wireless Charging Case&nbsp;&bull;&nbsp;Up to 6 Hours Listening Time</div>
+      <div class="product-rating">
+        ★★★★☆
+        <span>(1,254 reviews)</span>
+      </div>
+      <div class="product-price">$239.00</div>
+      <div class="product-actions">
+        <button class="add-to-cart-btn">Add to Cart</button>
+        <button class="view-details-btn">View Details</button>
+      </div>
+    </div>
+  </div>
+
+
+<!--
+*****Response*****
+Question 1:
+The product card has a soft white background, rounded corners, and a subtle shadow for elevation, sitting atop a very light gray background. The component is compact (340px wide), with a prominent product image at the top (220px tall). Below, product details like the title (bold, dark), a concise description, a gold-star rating with muted review count, and a red price catch attention. Two action buttons—“Add to Cart” (blue, white text) and “View Details” (white with blue border)—stand out for conversion and product exploration. These choices mirror leading e-commerce UX for clarity and persuasive action.
+
+Question 2:
+This widget appears wherever an individual product is being displayed, such as in a product listing grid, a recommendation row, or search results. It is not triggered by a user action—it is a static component rendered to visually represent a product item.
+
+Question 3:
+Users can: (1) Click "Add to Cart" to add the item to their shopping cart. (2) Click "View Details" to navigate to the full product page. (3) View the product's image, star rating, review count, price, and key attributes. Image accessibility is supported through alt text. No further in-widget interactions are present, but external events (like hover) provide feedback for the buttons.
+-->
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Tracking Component</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .order-tracking-container {
+            margin-top: 20px;
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .order-tracking-header {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .order-details {
+            width: 80%;
+            max-width: 800px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .order-info {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            flex: 1;
+            margin: 0 10px;
+            text-align: center;
+        }
+
+        .order-info h3 {
+            margin: 0;
+            color: #007bff;
+            font-size: 18px;
+        }
+
+        .order-info p {
+            margin: 5px 0 0;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .tracking-progress {
+            width: 80%;
+            max-width: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .progress-bar {
+            position: absolute;
+            height: 4px;
+            background-color: #ddd;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        .progress {
+            height: 100%;
+            background-color: #28a745;
+            width: 60%;
+            z-index: 2;
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 3;
+            width: 25%;
+        }
+
+        .step-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 5px;
+        }
+
+        .step.active .step-icon {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .step.completed .step-icon {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .step-label {
+            font-size: 12px;
+            color: #555;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="order-tracking-container">
+        <div class="order-tracking-header">Track Your Order</div>
+        <div class="order-details">
+            <div class="order-info">
+                <h3>Order ID</h3>
+                <p>#12345-ABCDE</p>
+            </div>
+            <div class="order-info">
+                <h3>Placed On</h3>
+                <p>October 10, 2023</p>
+            </div>
+            <div class="order-info">
+                <h3>Estimated Delivery</h3>
+                <p>October 15, 2023</p>
+            </div>
+        </div>
+        <div class="tracking-progress">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="step completed">
+                <div class="step-icon">✓</div>
+                <div class="step-label">Order Placed</div>
+            </div>
+            <div class="step completed">
+                <div class="step-icon">✓</div>
+                <div class="step-label">Processing</div>
+            </div>
+            <div class="step active">
+                <div class="step-icon">✓</div>
+                <div class="step-label">Shipped</div>
+            </div>
+            <div class="step">
+                <div class="step-icon">?</div>
+                <div class="step-label">Delivered</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- *****Response***** -->
+    <!-- Question 1: The order tracking widget features a clean, modern design with a white background and subtle shadow for elevation. It uses a green (#28a745) progress bar and icons to indicate completed/active steps, contrasting with gray (#ddd) for pending steps, ensuring visual clarity. The layout is centered with a max-width of 800px for readability, and font sizes (24px for header, 14-18px for details) ensure hierarchy. Blue (#007bff) highlights key info for emphasis. These choices mimic real e-commerce designs, prioritizing simplicity and user focus on tracking status. -->
+    <!-- Question 2: This widget appears when a user navigates to the "Track Order" page or clicks a tracking link in their order confirmation email. It may also display in the user’s account dashboard under "My Orders" after an order is placed, triggered by user authentication and order data retrieval from the backend. -->
+    <!-- Question 3: Users can view static order details (ID, dates) and tracking progress visually via the progress bar and step icons. While this version lacks interactivity, future enhancements could include clickable steps for detailed status updates, a refresh button for real-time tracking, or links to contact support if delays occur, enhancing user engagement. -->
+</body>
+</html>

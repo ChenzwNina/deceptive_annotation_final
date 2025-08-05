@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Featured Products Component</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f6f8fa;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .featured-products-container {
+      margin-top: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .featured-products-bar {
+      background: #fff;
+      box-shadow: 0 2px 12px rgba(30, 41, 59, 0.08);
+      border-radius: 14px;
+      max-width: 1080px;
+      width: 96vw;
+      padding: 28px 32px 22px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .featured-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 18px;
+      gap: 12px;
+    }
+    .featured-header-title {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #262626;
+      letter-spacing: 0.02em;
+    }
+    .featured-header-icon {
+      width: 30px;
+      height: 30px;
+      background: linear-gradient(135deg, #8f5aff, #b886f9);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .featured-header-icon::after {
+      content: "★";
+      font-size: 1.3rem;
+      color: #fff;
+    }
+    .products-list {
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+    }
+    .product-card {
+      background: #f7f5fc;
+      border: 1.5px solid #e0d8f9;
+      border-radius: 10px;
+      min-width: 220px;
+      max-width: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 18px 12px;
+      transition: box-shadow 0.2s, border-color 0.2s;
+      position: relative;
+    }
+    .product-card:hover {
+      box-shadow: 0 4px 14px rgba(85, 60, 149, 0.13);
+      border-color: #a683d2;
+      z-index: 1;
+    }
+    .product-image {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 8px;
+      background: #eee;
+      margin-bottom: 14px;
+      user-select: none;
+      pointer-events: none;
+    }
+    .product-name {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #453571;
+      margin-bottom: 7px;
+      text-align: center;
+    }
+    .product-price {
+      font-size: 1.1rem;
+      color: #653dc6;
+      font-weight: 600;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .add-to-cart-btn {
+      background: linear-gradient(90deg, #6a37c9, #b677fc);
+      color: #fff;
+      border: none;
+      padding: 9px 20px;
+      border-radius: 5px;
+      font-weight: 500;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.15s, opacity 0.15s;
+      box-shadow: 0 2px 8px rgba(72,34,167,0.08);
+      outline: none;
+    }
+    .add-to-cart-btn:active {
+      opacity: 0.85;
+    }
+    .add-to-cart-btn:disabled {
+      background: #d3c8e6;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+    .feedback-message {
+      display: none;
+      margin-top: 6px;
+      font-size: 0.95rem;
+      color: #71bc69;
+      font-weight: 500;
+      background: #f0fbe3;
+      padding: 3px 0;
+      border-radius: 3px;
+      text-align: center;
+      min-height: 16px;
+    }
+    .product-card.cart-adding .feedback-message {
+      display: block;
+      animation: fadeIn 0.5s;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+    @media (max-width: 700px) {
+      .featured-products-bar {
+        padding: 12px 4vw;
+      }
+      .products-list {
+        gap: 13px;
+      }
+      .product-card {
+        min-width: 160px;
+        max-width: 160px;
+        padding: 10px 4px;
+      }
+      .product-image {
+        width: 78px;
+        height: 78px;
+        margin-bottom: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="featured-products-container">
+    <div class="featured-products-bar" aria-label="Featured products carousel">
+      <div class="featured-header">
+        <div class="featured-header-icon" aria-hidden="true"></div>
+        <span class="featured-header-title">Featured Products</span>
+      </div>
+      <div class="products-list" role="list">
+        <div class="product-card" role="listitem">
+          <img src="placeholder_image.jpg" alt="Midnight Wireless Headphones" class="product-image">
+          <div class="product-name">Midnight Wireless Headphones</div>
+          <div class="product-price">$129.99</div>
+          <button class="add-to-cart-btn" aria-label="Add Midnight Wireless Headphones to cart">Add to Cart</button>
+          <div class="feedback-message" role="status"></div>
+        </div>
+        <div class="product-card" role="listitem">
+          <img src="placeholder_image.jpg" alt="EcoSmart Water Bottle" class="product-image">
+          <div class="product-name">EcoSmart Water Bottle</div>
+          <div class="product-price">$24.95</div>
+          <button class="add-to-cart-btn" aria-label="Add EcoSmart Water Bottle to cart">Add to Cart</button>
+          <div class="feedback-message" role="status"></div>
+        </div>
+        <div class="product-card" role="listitem">
+          <img src="placeholder_image.jpg" alt="Lumina Desk Lamp" class="product-image">
+          <div class="product-name">Lumina Desk Lamp</div>
+          <div class="product-price">$54.20</div>
+          <button class="add-to-cart-btn" aria-label="Add Lumina Desk Lamp to cart">Add to Cart</button>
+          <div class="feedback-message" role="status"></div>
+        </div>
+        <div class="product-card" role="listitem">
+          <img src="placeholder_image.jpg" alt="Classic Leather Backpack" class="product-image">
+          <div class="product-name">Classic Leather Backpack</div>
+          <div class="product-price">$89.99</div>
+          <button class="add-to-cart-btn" aria-label="Add Classic Leather Backpack to cart">Add to Cart</button>
+          <div class="feedback-message" role="status"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Add to cart feedback logic to simulate positive UX feedback
+    document.querySelectorAll('.product-card').forEach(function(card) {
+      const btn = card.querySelector('.add-to-cart-btn');
+      const feedback = card.querySelector('.feedback-message');
+      btn.addEventListener('click', function() {
+        if(btn.disabled) return;
+        btn.disabled = true;
+        card.classList.add('cart-adding');
+        feedback.textContent = "Added to cart!";
+        setTimeout(() => {
+          feedback.textContent = "";
+          card.classList.remove('cart-adding');
+          btn.disabled = false;
+        }, 1300);
+      });
+    });
+  </script>
+
+  <!--
+  *****Response*****
+
+  Question 1: The widget is a horizontally scrollable, visually elevated white bar near the top of the viewport, with a 20px top margin. It contains a purple-accented “Featured Products” header and 4 product cards. Each card has a soft lavender background, product image, product name, price in accent color, and a clear purple gradient “Add to Cart” button. Hover and action feedback are provided for clarity and engagement. Cards are spaced apart for clarity on all screen sizes. These choices together create a modern, trustworthy, appealing e-commerce card component with crisp visual hierarchy.
+
+  Question 2: This widget is designed to always appear at the top of the page, directly below any main header or navigation, to immediately showcase featured products upon landing on the site. There is no special trigger; it is always visible, giving instant access to popular or promoted items.
+
+  Question 3: Users can scroll horizontally to browse all featured products. Each card's “Add to Cart” button can be clicked; it gives visual feedback by disabling the button, briefly showing “Added to cart!” so users know their action succeeded, and then resets to allow repeated actions. Buttons are disabled during feedback, preventing duplicate actions and clarifying action results.
+  -->
+</body>
+</html>

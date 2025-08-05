@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Cancellation Component</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .cancellation-widget {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 500px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            padding: 20px;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .cancellation-widget h2 {
+            color: #d32f2f;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .cancellation-widget p {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .cancellation-widget .options {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .cancellation-widget button {
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .cancellation-widget .confirm-btn {
+            background-color: #d32f2f;
+            color: white;
+        }
+
+        .cancellation-widget .confirm-btn:hover {
+            background-color: #b71c1c;
+        }
+
+        .cancellation-widget .reconsider-btn {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .cancellation-widget .reconsider-btn:hover {
+            background-color: #388e3c;
+        }
+
+        .cancellation-widget .feedback {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .cancellation-widget a {
+            color: #1976d2;
+            text-decoration: none;
+        }
+
+        .cancellation-widget a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="cancellation-widget">
+        <h2>Cancel Your Membership?</h2>
+        <p>We're sorry to see you go! Canceling your membership means you'll lose exclusive benefits like free shipping, early access to sales, and member-only discounts. Are you sure you want to proceed?</p>
+        <div class="options">
+            <button class="confirm-btn">Yes, Cancel Membership</button>
+            <button class="reconsider-btn">No, Keep My Benefits</button>
+        </div>
+        <div class="feedback">
+            <p>Need help? <a href="#">Contact Support</a> or learn about <a href="#">Membership Benefits</a>.</p>
+        </div>
+    </div>
+
+    <!-- *****Response***** -->
+    <!-- Question 1: The widget features a clean, centered layout with a white background, subtle shadow, and rounded corners for a modern, professional look. The red heading and "Cancel" button emphasize urgency and caution, while the green "Reconsider" button encourages retention with a positive tone. Text is clear (16px) and buttons are large (12x24px padding) for easy interaction. These choices reduce friction, enhance readability, and emotionally engage users to reconsider, maximizing retention and minimizing cart abandonment. -->
+    <!-- Question 2: This widget appears when a user navigates to the membership cancellation page or clicks a "Cancel Membership" option in their account settings. It serves as a final confirmation step to prevent impulsive decisions and encourage retention. -->
+    <!-- Question 3: Users can interact by clicking "Yes, Cancel Membership" to proceed with cancellation, or "No, Keep My Benefits" to return to their account. They can also click "Contact Support" for assistance or "Membership Benefits" to explore perks, encouraging engagement and reducing bounce rates. Hover effects on buttons and links provide visual feedback, enhancing usability. -->
+</body>
+</html>

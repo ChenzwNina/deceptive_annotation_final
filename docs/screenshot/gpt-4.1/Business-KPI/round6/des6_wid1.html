@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Item Component</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      background: #f5f6fa;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .product-component {
+      margin: 20px auto 0 auto;
+      max-width: 380px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 18px rgba(34, 50, 84, 0.11), 0 1.5px 2.5px rgba(20, 20, 60, 0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 22px 28px 18px 28px;
+      position: relative;
+    }
+    .product-image-wrapper {
+      width: 210px;
+      height: 210px;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 18px;
+      background: #f0f3f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(100, 125, 180, 0.10);
+    }
+    .product-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .product-category {
+      font-size: 13px;
+      color: #8a95ad;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
+    .product-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 5px;
+      color: #21254a;
+      line-height: 1.15;
+      text-align: center;
+      min-height: 56px;
+      max-height: 56px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    .product-rating {
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .product-rating .stars {
+      color: #ffd700;
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+    .product-rating .rating-value {
+      color: #444;
+      font-weight: 500;
+      font-size: 14px;
+      margin-left: 3px;
+    }
+    .product-price-row {
+      display: flex;
+      align-items: flex-end;
+      gap: 10px;
+      margin-bottom: 13px;
+    }
+    .product-price {
+      color: #1bb858;
+      font-size: 25px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .product-price-old {
+      color: #a5abbd;
+      font-size: 16px;
+      text-decoration: line-through;
+      font-weight: 500;
+      margin-top: 4px;
+    }
+    .product-discount {
+      background: #ffeaea;
+      color: #d9213a;
+      font-size: 13px;
+      padding: 2px 7px;
+      border-radius: 6px;
+      font-weight: 600;
+      margin-left: 2px;
+    }
+    .product-description {
+      font-size: 15px;
+      color: #56608a;
+      margin-bottom: 15px;
+      text-align: center;
+      line-height: 1.45;
+      min-height: 36px;
+      max-height: 44px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    .product-cta-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+      justify-content: center;
+      width: 100%;
+    }
+    .add-to-cart-btn {
+      flex: 2;
+      background: linear-gradient(90deg,#23c483 0%,#17a976 100%);
+      color: #fff;
+      font-size: 17px;
+      font-weight: 700;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 0;
+      cursor: pointer;
+      transition: background 0.18s, box-shadow 0.18s;
+      box-shadow: 0 2px 6px rgba(34,158,107,0.20);
+    }
+    .add-to-cart-btn:hover {
+      background: linear-gradient(90deg,#17a976 0%,#23c483 100%);
+      box-shadow: 0 4px 12px rgba(34,158,107,0.28);
+    }
+    .add-to-wishlist-btn {
+      flex: 0 0 46px;
+      background: #f2f5ff;
+      color: #1a57c7;
+      border: none;
+      font-size: 20px;
+      border-radius: 10px;
+      padding: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.16s, color 0.18s;
+    }
+    .add-to-wishlist-btn:hover {
+      background: #dde6fb;
+      color: #d9213a;
+    }
+    .product-shipping {
+      font-size: 13px;
+      color: #158239;
+      background: #effaf3;
+      border-radius: 7px;
+      padding: 3.5px 11px;
+      font-weight: 600;
+      margin-bottom: 1px;
+      display: inline-block;
+    }
+    .see-more {
+      color: #1a57c7;
+      text-decoration: underline;
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 7px;
+      display: inline-block;
+      cursor: pointer;
+      transition: color 0.15s;
+    }
+    .see-more:hover {
+      color: #d9213a;
+    }
+    .ad-banner {
+      margin-top: 18px;
+      width: calc(100% + 56px);
+      margin-left: -28px;
+      background: linear-gradient(90deg,#e7f0fd,#fbe7e7 100%);
+      border-radius: 0 0 13px 13px;
+      padding: 10px 0 10px 88px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      min-height: 48px;
+    }
+    .ad-banner img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #fff;
+    }
+    .ad-banner .ad-text {
+      color: #47536a;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .ad-banner .ad-cta {
+      color: #1a57c7;
+      font-weight: 700;
+      font-size: 14px;
+      margin-left: 14px;
+    }
+    @media (max-width: 500px) {
+      .product-component {
+        padding: 11px 4vw 14px 4vw;
+        max-width: 98vw;
+      }
+      .product-image-wrapper {
+        width: 80vw;
+        max-width: 190px;
+        height: 80vw;
+        max-height: 190px;
+      }
+      .ad-banner {
+        padding-left: 52px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="product-component">
+    <div class="product-image-wrapper">
+      <img src="placeholder_image.jpg" alt="Apple AirPods Pro (2nd Gen)">
+    </div>
+    <div class="product-category">Wireless Earbuds</div>
+    <div class="product-title">Apple AirPods Pro (2nd Generation) with MagSafe Charging Case</div>
+    <div class="product-rating">
+      <span class="stars">★★★★★</span>
+      <span class="rating-value">4.8 (3,942 reviews)</span>
+    </div>
+    <div class="product-price-row">
+      <span class="product-price">$199.00</span>
+      <span class="product-price-old">$249.00</span>
+      <span class="product-discount">20% OFF</span>
+    </div>
+    <div class="product-description">
+      Experience next-level audio with Active Noise Cancellation, Transparency mode, Adaptive EQ, and up to 30 hours of battery life. Now with MagSafe charging!
+    </div>
+    <div class="product-shipping">
+      🎉 Free Express Shipping Today!
+    </div>
+    <div class="product-cta-row">
+      <button class="add-to-cart-btn">Add to Cart</button>
+      <button class="add-to-wishlist-btn" aria-label="Add to Wishlist">
+        <span>♡</span>
+      </button>
+    </div>
+    <a class="see-more" href="#">See more details &gt;</a>
+    <div class="ad-banner" onclick="window.open('https://www.apple.com/shop/accessories/all-accessories', '_blank')">
+      <img src="placeholder_image.jpg" alt="Accessory Deal">
+      <span class="ad-text">
+        Don't forget! Add AppleCare+ and save 10% on accessories.
+      </span>
+      <span class="ad-cta">Shop Accessory Deals</span>
+    </div>
+  </div>
+  <!--
+  *****Response*****
+  4.1: The widget features a white, rounded product card with subtle shadows to create a sense of elevation and focus, using a clean, modern color palette (white, soft blue backgrounds, green prices for urgency, red for discounts). The image is dominant, the title large and bold, and the price section accentuated. Primary actions stand out with gradients, while secondary CTAs like "wishlist" are approachable and easy to spot. Ratings and trust info build credibility. An integrated ad banner with contextual deals/display ad increases cross-sell potential. The card is compact (max-width 380px), mobile-friendly, balanced and uncluttered, driving both conversion and order size.
+
+  4.2: The widget is triggered on any listing/search/product page within the e-commerce experience, or as part of a featured/suggested product carousel on the homepage. It serves as the primary interface for individual product engagement wherever a single product must be promoted.
+
+  4.3: Users can: open full product details ("see more"), add the product to cart, add to wishlist (with potential for popover login or animation), click the ad banner to explore related accessories for cross/up-sell, and hover or tap for price/discount details as needed. The "add to cart" action visually confirms the addition. All elements are clickable/tappable for maximum engagement, driving sales, ad clicks, and time spent.
+
+  -->
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>E-commerce Search Panel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #f6f7fb;
+    }
+    .search-panel-wrapper {
+      position: fixed;
+      top: 20px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+      pointer-events: none;
+    }
+    .search-panel {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      width: 480px;
+      max-width: 92vw;
+      padding: 16px 20px;
+      gap: 10px;
+      pointer-events: auto;
+      transition: box-shadow 0.12s;
+    }
+    .search-panel:focus-within {
+      box-shadow: 0 4px 28px 0 rgba(44,120,212,0.15);
+    }
+    .search-logo {
+      width: 32px;
+      height: 32px;
+      background: url('placeholder_image.jpg') center center/cover;
+      border-radius: 6px;
+      flex-shrink: 0;
+      margin-right: 16px;
+    }
+    .search-form {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      position: relative;
+    }
+    .search-form input[type="text"] {
+      width: 100%;
+      font-size: 1rem;
+      padding: 10px 44px 10px 16px;
+      border: 1.5px solid #e2e5ec;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.2s;
+      background: #f8fafc;
+      color: #23262f;
+    }
+    .search-form input[type="text"]:focus {
+      border-color: #2c78d4;
+      background: #fff;
+    }
+    .search-button {
+      position: absolute;
+      top: 50%;
+      right: 6px;
+      transform: translateY(-50%);
+      background: #2c78d4;
+      padding: 0 16px;
+      height: 32px;
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.18s;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .search-button:disabled {
+      background: #b4cceb;
+      cursor: not-allowed;
+    }
+    .search-icon {
+      font-size: 1.15em;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .search-feedback {
+      margin-left: 14px;
+      color: #fa4e45;
+      font-size: 0.93rem;
+      font-weight: 500;
+      min-width: 100px;
+      text-align: left;
+      display: none;
+    }
+    .search-panel--error .search-feedback {
+      display: block;
+    }
+    @media (max-width: 570px) {
+      .search-panel {
+        flex-direction: column;
+        align-items: stretch;
+        width: 98vw;
+        padding: 12px 8px;
+        gap: 8px;
+      }
+      .search-logo {
+        margin: 0 0 8px 0;
+        align-self: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="search-panel-wrapper">
+    <div class="search-panel" id="searchPanel">
+      <div class="search-logo" aria-label="Shop Logo"></div>
+      <form class="search-form" id="searchForm" autocomplete="off" role="search" aria-label="Product search">
+        <input 
+          type="text" 
+          id="searchInput" 
+          name="search" 
+          placeholder="Search for products, brands, or categories…” 
+          aria-label="Search for products" 
+          maxlength="120" 
+          required
+        >
+        <button 
+          type="submit" 
+          class="search-button" 
+          id="searchButton" 
+          disabled 
+          aria-label="Submit search"
+        >
+          <span class="search-icon" aria-hidden="true">&#128269;</span> Search
+        </button>
+        <span class="search-feedback" id="searchFeedback"></span>
+      </form>
+    </div>
+  </div>
+  <script>
+    // Immediate function to handle input state & feedback
+    (function() {
+      const form = document.getElementById('searchForm');
+      const input = document.getElementById('searchInput');
+      const button = document.getElementById('searchButton');
+      const feedback = document.getElementById('searchFeedback');
+      const panel = document.getElementById('searchPanel');
+      input.addEventListener('input', function() {
+        if(this.value.trim().length > 0) {
+          button.disabled = false;
+          panel.classList.remove('search-panel--error');
+          feedback.textContent = '';
+        } else {
+          button.disabled = true;
+        }
+      });
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        if(input.value.trim().length === 0) {
+          panel.classList.add('search-panel--error');
+          feedback.textContent = "Please enter a product, brand, or category to search.";
+          input.focus();
+        } else {
+          panel.classList.remove('search-panel--error');
+          feedback.textContent = '';
+          // Simulate search action; in production, submit/redirect/search here
+          button.disabled = true;
+          button.innerHTML = `<span class="search-icon" aria-hidden="true">&#8635;</span> Searching…`;
+          setTimeout(() => {
+            button.disabled = false;
+            button.innerHTML = `<span class="search-icon" aria-hidden="true">&#128269;</span> Search`;
+            // In real implementation, perform actual search here
+            alert('No results found for "' + input.value.trim() + '".'); // Demo feedback
+          }, 1200);
+        }
+      });
+    })();
+  </script>
+</body>
+<!--
+*****Response*****
+Question 1:
+The search panel is a horizontally-oriented white box with soft shadows and rounded corners, positioned at the top center of the viewport with a 20px margin. Its width is 480px (responsive for mobile), housing (from left to right) the shop logo, a large rounded input with a subtle placeholder, and a bold blue "Search" button with a magnifying glass icon. All controls are spaced for easy tap/click. Error feedback appears in red text under invalid entries, and the panel provides visual feedback with shadow changes and button states. These choices maximize visibility, touch targets, task efficiency, and a consistent, modern e-commerce feel.
+
+Question 2:
+The widget appears by default on every page load, fixed at the top. It is always visible for efficient searching, consistent with major e-commerce UX patterns so users can search from anywhere. No additional trigger is required.
+
+Question 3:
+Users can click in the input, type a query, and the button enables only when there is text (prevents empty search). Pressing Enter or the button submits; invalid or empty attempts show feedback inline. The panel visually indicates focus. Once submission is in progress, the button shows a spinner and disables to prevent spam. The placeholder and icons guide affordance, and errors are clearly visible. The design provides direct, efficient, and satisfying search interactions.
+-->
+</html>

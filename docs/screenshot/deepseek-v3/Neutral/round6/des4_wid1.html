@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Product List</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 15px;
+        }
+        
+        .product-title {
+            font-size: 16px;
+            margin: 0 0 8px 0;
+            color: #333;
+        }
+        
+        .product-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2a5885;
+            margin-bottom: 12px;
+        }
+        
+        .add-to-cart {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .add-to-cart:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-list">
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300" alt="Product 1" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Premium Wireless Headphones</h3>
+                <p class="product-price">$199.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300" alt="Product 2" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Smart Watch Pro</h3>
+                <p class="product-price">$249.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300" alt="Product 3" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Ultra HD 4K Camera</h3>
+                <p class="product-price">$599.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300" alt="Product 4" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Bluetooth Speaker</h3>
+                <p class="product-price">$129.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- *****Response***** 
+    Question 1: The widget displays products in a responsive grid layout with clean white cards on a light gray background. Each card has a product image (200px height), title (16px), price (18px, blue), and a green "Add to Cart" button. I chose this design for clarity and visual appeal - white cards stand out against the background, the grid adapts to screen size, and the hover effect adds interactivity. The green button draws attention to the primary action.
+
+    Question 2: This product list widget would typically appear when a user visits a category page or the homepage of the e-commerce site. It could also appear as search results or recommended products based on user behavior.
+
+    Question 3: Users can: 1) View product images and details, 2) Click "Add to Cart" to purchase, 3) Hover over cards to see a subtle lift effect (visual feedback), and 4) On mobile, tap cards for potential expansion. The grid layout also responds to screen size changes.
+    -->
+</body>
+</html>

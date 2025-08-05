@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Ratings - E-Commerce Component</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f6fa;
+        }
+        .ratings-widget-container {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            background: #fff;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.09);
+            border-radius: 12px;
+            padding: 24px 32px 18px 32px;
+            min-width: 340px;
+            max-width: 385px;
+        }
+        .ratings-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+        .ratings-average {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #21409a;
+        }
+        .ratings-stars {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+        .star {
+            width: 24px;
+            height: 24px;
+            fill: #ffc107;
+            filter: drop-shadow(0 1px 1px rgba(0,0,0,0.06));
+        }
+        .star.inactive {
+            fill: #e0e0e0;
+        }
+        .ratings-count {
+            font-size: 1rem;
+            color: #626f86;
+            margin-left: 2px;
+        }
+        .ratings-progress {
+            margin: 18px 0 0 0;
+        }
+        .ratings-bar-row {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            margin-bottom: 8px;
+        }
+        .bar-label {
+            font-size: 0.95rem;
+            min-width: 16px;
+            color: #29304d;
+        }
+        .bar-outer {
+            flex: 1;
+            background: #edf0f5;
+            border-radius: 7px;
+            height: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+        .bar-inner {
+            height: 100%;
+            border-radius: 7px;
+            background: linear-gradient(90deg, #ffc107 80%, #ffa800 100%);
+            transition: width 0.3s cubic-bezier(.4,0,.2,1);
+        }
+        .bar-count {
+            min-width: 28px;
+            text-align: right;
+            color: #8590ab;
+            font-size: 0.93rem;
+        }
+        .submit-rating-section {
+            margin-top: 16px;
+            border-top: 1px solid #e4e9f1;
+            padding-top: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .submit-rating-label {
+            font-size: 1.02rem;
+            color: #374463;
+            margin-right: 5px;
+        }
+        .rating-input-stars {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin-right: 8px;
+        }
+        .rating-input-star {
+            width: 22px;
+            height: 22px;
+            fill: #e0e0e0;
+            cursor: pointer;
+            transition: fill 0.2s ease;
+        }
+        .rating-input-star.selected,
+        .rating-input-star:hover,
+        .rating-input-star.hovered {
+            fill: #ffc107;
+        }
+        .rating-submit-btn {
+            background: #21409a;
+            color: #fff;
+            border: none;
+            outline: none;
+            padding: 7px 18px;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background .14s cubic-bezier(.3,0,.62,1);
+        }
+        .rating-submit-btn:disabled {
+            background: #bbc3d6;
+            cursor: not-allowed;
+        }
+        .submit-success {
+            display: none;
+            margin-left: 7px;
+            color: #51be5b;
+            font-size: 1.01rem;
+            font-weight: 600;
+            vertical-align: middle;
+        }
+        .submit-success.visible {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <div class="ratings-widget-container" role="region" aria-label="User ratings summary">
+        <div class="ratings-header">
+            <span class="ratings-average" id="averageRating" aria-live="polite">4.6</span>
+            <div class="ratings-stars" aria-label="Average 4.6 out of 5 stars">
+                <!-- SVG stars: 4 full, 1 half -->
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                <svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                <!-- Half star -->
+                <svg class="star" viewBox="0 0 24 24">
+                    <defs>
+                        <linearGradient id="half-star-gradient">
+                            <stop offset="50%" stop-color="#ffc107"/>
+                            <stop offset="50%" stop-color="#e0e0e0"/>
+                        </linearGradient>
+                    </defs>
+                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="url(#half-star-gradient)" />
+                </svg>
+            </div>
+            <span class="ratings-count" id="ratingsCount">245 ratings</span>
+        </div>
+        <div class="ratings-progress">
+            <!-- 5 star -->
+            <div class="ratings-bar-row">
+                <span class="bar-label">5</span>
+                <div class="bar-outer"><div class="bar-inner" style="width: 67%;"></div></div>
+                <span class="bar-count">164</span>
+            </div>
+            <!-- 4 star -->
+            <div class="ratings-bar-row">
+                <span class="bar-label">4</span>
+                <div class="bar-outer"><div class="bar-inner" style="width: 21%;"></div></div>
+                <span class="bar-count">52</span>
+            </div>
+            <!-- 3 star -->
+            <div class="ratings-bar-row">
+                <span class="bar-label">3</span>
+                <div class="bar-outer"><div class="bar-inner" style="width: 8%;"></div></div>
+                <span class="bar-count">20</span>
+            </div>
+            <!-- 2 star -->
+            <div class="ratings-bar-row">
+                <span class="bar-label">2</span>
+                <div class="bar-outer"><div class="bar-inner" style="width: 2%;"></div></div>
+                <span class="bar-count">5</span>
+            </div>
+            <!-- 1 star -->
+            <div class="ratings-bar-row">
+                <span class="bar-label">1</span>
+                <div class="bar-outer"><div class="bar-inner" style="width: 2%;"></div></div>
+                <span class="bar-count">4</span>
+            </div>
+        </div>
+        <!-- Submit User Rating Section -->
+        <form class="submit-rating-section" id="submitRatingForm" title="Submit your rating" aria-label="Submit your rating" autocomplete="off">
+            <span class="submit-rating-label">Your rating:</span>
+            <div class="rating-input-stars" role="radiogroup" aria-label="Select your star rating">
+                <svg class="rating-input-star" data-value="1" viewBox="0 0 24 24" tabindex="0" aria-label="1 star"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                <svg class="rating-input-star" data-value="2" viewBox="0 0 24 24" tabindex="0" aria-label="2 stars"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                <svg class="rating-input-star" data-value="3" viewBox="0 0 24 24" tabindex="0" aria-label="3 stars"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                <svg class="rating-input-star" data-value="4" viewBox="0 0 24 24" tabindex="0" aria-label="4 stars"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                <svg class="rating-input-star" data-value="5" viewBox="0 0 24 24" tabindex="0" aria-label="5 stars"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            </div>
+            <button type="submit" class="rating-submit-btn" id="submitBtn" disabled>Submit</button>
+            <span class="submit-success" id="submitSuccessMsg">Submitted!</span>
+        </form>
+    </div>
+    <script>
+        // Interactive star rating input behavior
+        const starInputs = document.querySelectorAll('.rating-input-star');
+        let selectedRating = 0;
+        let hoverRating = 0;
+        const submitBtn = document.getElementById('submitBtn');
+        const form = document.getElementById('submitRatingForm');
+        const submitSuccessMsg = document.getElementById('submitSuccessMsg');
+
+        // Update stars visual based on current selected/hover state
+        function updateInputStars() {
+            starInputs.forEach((star, idx) => {
+                if (hoverRating) {
+                    if (idx < hoverRating) {
+                        star.classList.add("hovered");
+                    } else {
+                        star.classList.remove("hovered");
+                    }
+                } else {
+                    star.classList.remove("hovered");
+                }
+                if (idx < selectedRating) {
+                    star.classList.add("selected");
+                } else {
+                    star.classList.remove("selected");
+                }
+            });
+            submitBtn.disabled = selectedRating === 0;
+        }
+
+        // Mouse and keyboard events
+        starInputs.forEach((star, idx) => {
+            star.addEventListener('mouseenter', () => {
+                hoverRating = idx + 1;
+                updateInputStars();
+            });
+            star.addEventListener('mouseleave', () => {
+                hoverRating = 0;
+                updateInputStars();
+            });
+            star.addEventListener('click', () => {
+                selectedRating = idx + 1;
+                updateInputStars();
+            });
+            star.addEventListener('keydown', (e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                    selectedRating = idx + 1;
+                    updateInputStars();
+                }
+                if (e.key === "ArrowLeft" && selectedRating > 1) {
+                    selectedRating--;
+                    updateInputStars();
+                }
+                if (e.key === "ArrowRight" && selectedRating < 5) {
+                    selectedRating++;
+                    updateInputStars();
+                }
+            });
+        });
+
+        // Form submission (simulate)
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (selectedRating === 0) return;
+            submitBtn.disabled = true;
+            submitSuccessMsg.classList.add('visible');
+            // Reset after 2sec (simulate)
+            setTimeout(() => {
+                selectedRating = 0;
+                updateInputStars();
+                submitBtn.disabled = true;
+                submitSuccessMsg.classList.remove('visible');
+            }, 2000);
+        });
+
+        // Keyboard accessibility for rating group
+        document.querySelector('.rating-input-stars').addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft' && selectedRating > 1) {
+                selectedRating--;
+                updateInputStars();
+            }
+            if (e.key === 'ArrowRight' && selectedRating < 5) {
+                selectedRating++;
+                updateInputStars();
+            }
+        });
+
+        updateInputStars();
+    </script>
+    <!--
+    *****Response*****
+    Question 1: The widget sits at the top center of the viewport, inside a white rounded box with soft box-shadow and a 20px top margin. It features a large blue average rating (4.6), five vivid yellow stars (with partial star for half-ratings), and muted gray text for the ratings count. Rating bars for each star level use yellow gradients and soft backgrounds for clarity. The rating input uses large clickable gray/yellow stars and a prominent blue button. Colors are chosen for trust, high contrast, and familiar UX, enhancing visibility, feedback, and affordance.
+
+    Question 2: The widget appears persistently at the top of the page, visible for every product or as a fixed user interface for ratings summary and input, ensuring accessibility and immediate visibility to any visiting user.
+
+    Question 3: Users can view average product rating, see the distribution of ratings in color-coded bars, and submit their own ratings. Input is by clicking or keyboard controls. Users must select a star before submitting; submitting triggers a confirmation message and disables input briefly—providing feedback and preventing duplicate/invalid actions.
+    -->
+</html>

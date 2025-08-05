@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Products Component</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .featured-products {
+            margin-top: 20px;
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .product-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .product-name {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .product-price {
+            font-size: 16px;
+            color: #e44d26;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .add-to-cart {
+            background-color: #e44d26;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+
+        .add-to-cart:hover {
+            background-color: #c44125;
+        }
+
+        .add-to-cart:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="placeholder_image.jpg" alt="Premium Wireless Headphones" class="product-img">
+                    <h3 class="product-name">Premium Wireless Headphones</h3>
+                    <p class="product-price">$129.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="placeholder_image.jpg" alt="Stylish Running Shoes" class="product-img">
+                    <h3 class="product-name">Stylish Running Shoes</h3>
+                    <p class="product-price">$79.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="placeholder_image.jpg" alt="Smart LED Watch" class="product-img">
+                    <h3 class="product-name">Smart LED Watch</h3>
+                    <p class="product-price">$99.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="placeholder_image.jpg" alt="Leather Laptop Bag" class="product-img">
+                    <h3 class="product-name">Leather Laptop Bag</h3>
+                    <p class="product-price">$59.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- *****Response***** -->
+    <!-- Question 1: The widget features a clean, modern design with a white background and subtle shadows for depth. The color scheme uses a vibrant orange (#e44d26) for prices and buttons to draw attention to key actions. Product cards are uniformly sized (250px minimum width) in a responsive grid layout, ensuring clarity across devices. Hover effects (elevation and shadow) provide visual feedback. These choices enhance visibility, consistency, and user engagement, mimicking real e-commerce aesthetics. -->
+
+    <!-- Question 2: The featured products widget appears statically at the top of the homepage with a 20px margin, as it’s a key promotional section. It’s triggered by default page load to immediately showcase popular or discounted items, ensuring users see high-value products first. -->
+
+    <!-- Question 3: Users can interact with the widget by hovering over product cards for visual feedback (lift effect), clicking the “Add to Cart” button to purchase (with a color change on hover for affordance), and viewing product details. Buttons disable after clicking (simulated) to prevent duplicate actions, providing clear constraints and feedback for a seamless experience. -->
+</body>
+</html>

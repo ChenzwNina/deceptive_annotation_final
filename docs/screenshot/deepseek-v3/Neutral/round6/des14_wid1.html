@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Tracking Widget</title>
+    <style>
+        .tracking-widget {
+            font-family: 'Arial', sans-serif;
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background-color: #f9f9f9;
+        }
+        
+        .tracking-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .order-number {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .status-badge {
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        .progress-steps {
+            margin: 20px 0;
+        }
+        
+        .step {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+        
+        .step-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            color: #666;
+            font-size: 12px;
+        }
+        
+        .step.active .step-icon {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        .step.completed .step-icon {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        .step-info {
+            flex-grow: 1;
+        }
+        
+        .step-title {
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+        
+        .step-date {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .tracking-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        
+        .btn {
+            padding: 8px 15px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .btn-primary {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        .btn-secondary {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="tracking-widget">
+        <div class="tracking-header">
+            <div class="order-number">Order #123456</div>
+            <div class="status-badge">Shipped</div>
+        </div>
+        
+        <div class="progress-steps">
+            <div class="step completed">
+                <div class="step-icon">✓</div>
+                <div class="step-info">
+                    <div class="step-title">Order Placed</div>
+                    <div class="step-date">May 15, 2023</div>
+                </div>
+            </div>
+            
+            <div class="step completed">
+                <div class="step-icon">✓</div>
+                <div class="step-info">
+                    <div class="step-title">Processed</div>
+                    <div class="step-date">May 16, 2023</div>
+                </div>
+            </div>
+            
+            <div class="step active">
+                <div class="step-icon">3</div>
+                <div class="step-info">
+                    <div class="step-title">Shipped</div>
+                    <div class="step-date">May 18, 2023</div>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-icon">4</div>
+                <div class="step-info">
+                    <div class="step-title">Delivered</div>
+                    <div class="step-date">Estimated: May 20, 2023</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tracking-actions">
+            <button class="btn btn-secondary">Contact Support</button>
+            <button class="btn btn-primary">View Order Details</button>
+        </div>
+    </div>
+
+    <!-- *****Response*****
+    Question 1: The widget features a clean, card-like design with a light background (#f9f9f9) and subtle shadow for depth. It uses a green color (#4CAF50) for completed steps and active status, creating visual hierarchy. The layout is vertical with clear step progression, using icons (✓ for completed, numbers for upcoming) to enhance scannability. Font sizes range from 12px for dates to 18px for the order number. These choices prioritize clarity, visual hierarchy, and mobile responsiveness while maintaining a professional e-commerce aesthetic.
+
+    Question 2: The widget appears when a user clicks on "Track Order" from their account page or order confirmation email. It may also auto-display after checkout completion or when visiting a unique order tracking URL sent via email. Some sites might show it as a persistent element in the account dashboard for recent orders.
+
+    Question 3: Users can: 1) Scan the visual timeline to understand order progress, 2) Click "View Order Details" to see the full order, 3) Click "Contact Support" to initiate help requests, 4) Hover over steps for potential tooltips with more details (if implemented), and 5) On mobile, they might swipe horizontally if there are many steps. The widget is primarily informational but connects to deeper actions.
+    -->
+</html>

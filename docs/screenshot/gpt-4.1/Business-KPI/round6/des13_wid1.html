@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>E-Commerce Sign In Component</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      background: #f3f4f6;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    .signin-container {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 370px;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 6px 36px rgba(40,41,61,0.15);
+      padding: 32px 32px 24px 32px;
+      z-index: 1000;
+    }
+
+    .signin-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .signin-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      background: #e0e7ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 16px;
+    }
+    .signin-logo img {
+      width: 32px;
+      height: 32px;
+      display: block;
+    }
+
+    .signin-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #2d3748;
+    }
+
+    .signin-label {
+      display: block;
+      font-size: 1rem;
+      color: #374151;
+      margin-bottom: 3px;
+      margin-top: 14px;
+      font-weight: 500;
+    }
+
+    .signin-input {
+      width: 100%;
+      padding: 10px 13px;
+      border: 1px solid #d1d5db;
+      border-radius: 7px;
+      margin-bottom: 7px;
+      font-size: 1rem;
+      background: #f9fafb;
+      transition: border .2s;
+    }
+    .signin-input:focus {
+      border: 1.5px solid #6366f1;
+      outline: none;
+      background: #fff;
+    }
+
+    .signin-options {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      margin-top: -2px;
+    }
+    .signin-checkbox {
+      display: flex;
+      align-items: center;
+    }
+    .signin-checkbox input[type="checkbox"] {
+      transform: scale(1.2);
+      margin-right: 6px;
+      accent-color: #6366f1;
+    }
+    .signin-forgot {
+      font-size: 0.97rem;
+      color: #6366f1;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color .16s;
+    }
+    .signin-forgot:hover {
+      color: #4338ca;
+      text-decoration: underline;
+    }
+
+    .signin-btn {
+      width: 100%;
+      background: linear-gradient(90deg, #7c3aed 0%, #6366f1 100%);
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.13rem;
+      border: none;
+      border-radius: 7px;
+      padding: 13px 0;
+      cursor: pointer;
+      margin-bottom: 10px;
+      margin-top: 7px;
+      transition: background .19s;
+      box-shadow: 0 3px 12px rgba(99,102,241,0.06);
+    }
+    .signin-btn:hover, .signin-btn:focus {
+      background: linear-gradient(90deg, #6366f1 0%, #7c3aed 100%);
+    }
+
+    .signin-or {
+      text-align: center;
+      margin: 14px 0 13px 0;
+      font-size: 0.98rem;
+      color: #a1a1aa;
+      position: relative;
+    }
+    .signin-or:before, .signin-or:after {
+      content: "";
+      display: inline-block;
+      height: 1px;
+      width: 48px;
+      background: #e5e7eb;
+      vertical-align: middle;
+      margin: 0 11px;
+    }
+
+    .signin-socials {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+      justify-content: center;
+    }
+    .signin-social-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f4f4fb;
+      border: 1px solid #e0e7ff;
+      color: #6366f1;
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 7px;
+      padding: 8px 0;
+      cursor: pointer;
+      transition: background .13s, border-color .13s, color .13s;
+    }
+    .signin-social-btn:hover {
+      background: #e0e7ff;
+      color: #3730a3;
+      border-color: #a5b4fc;
+    }
+    .signin-social-btn img {
+      width: 19px;
+      height: 19px;
+      margin-right: 6px;
+    }
+
+    .signin-register {
+      text-align: center;
+      margin-top: 8px;
+      font-size: 1rem;
+      color: #6b7280;
+    }
+    .signin-register a {
+      color: #6366f1;
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 4px;
+      transition: color .17s;
+    }
+    .signin-register a:hover {
+      color: #4338ca;
+      text-decoration: underline;
+    }
+
+    .signin-trustbar {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-top: 20px;
+      justify-content: center;
+      font-size: 0.96rem;
+      color: #6366f1;
+    }
+    .signin-trustbar img {
+      width: 32px;
+      height: 14px;
+      opacity: 0.91;
+    }
+    @media (max-width:500px) {
+      .signin-container {
+        width: 95vw;
+        left: 2.5vw;
+        transform: none;
+        padding: 20px 8vw 16px 8vw;
+      }
+      .signin-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+      }
+      .signin-logo {
+        margin-right: 0;
+        margin-bottom: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="signin-container" aria-modal="true" role="dialog">
+    <div class="signin-header">
+      <div class="signin-logo"><img src="placeholder_image.jpg" alt="ShopSmart Logo" /></div>
+      <span class="signin-title">Sign in to your ShopSmart Account</span>
+    </div>
+    <form>
+      <label class="signin-label" for="signin-email">Email address</label>
+      <input type="email" autocomplete="username" id="signin-email" class="signin-input" placeholder="you@email.com" required>
+      
+      <label class="signin-label" for="signin-password">Password</label>
+      <input type="password" autocomplete="current-password" id="signin-password" class="signin-input" placeholder="Enter your password" required>
+      
+      <div class="signin-options">
+        <label class="signin-checkbox">
+          <input type="checkbox" id="remember-me" />
+          Remember me
+        </label>
+        <a href="#" class="signin-forgot">Forgot password?</a>
+      </div>
+      
+      <button type="submit" class="signin-btn">Sign In</button>
+    </form>
+    
+    <div class="signin-or">OR</div>
+    
+    <div class="signin-socials">
+      <button class="signin-social-btn">
+        <img src="placeholder_image.jpg" alt="Google Icon" />
+        Google
+      </button>
+      <button class="signin-social-btn">
+        <img src="placeholder_image.jpg" alt="Facebook Icon" />
+        Facebook
+      </button>
+    </div>
+    
+    <div class="signin-register">
+      New to ShopSmart?
+      <a href="#">Create an account</a>
+    </div>
+    <div class="signin-trustbar">
+      <img src="placeholder_image.jpg" alt="Norton Secure Checkout" title="Secure Checkout" />
+      <img src="placeholder_image.jpg" alt="Shopper Approved" title="Shopper Approved" />
+      <span>Trusted by 5M+ members</span>
+    </div>
+  </div>
+  
+  *****Response*****
+  <!--
+  4.1: The widget is a centered, card-style panel with a white background, rounded corners, and a soft drop shadow for prominence. At 370px wide, it's optimized for readability and focus. Primary color accents use a blue and purple gradient (#6366f1, #7c3aed), promoting trust and action. Key elements—a logo, large headline, two clear input fields, social sign-in buttons, and trust badges—are laid out vertically for mobile-friendliness. Spacing, gentle color contrasts, and strong CTA styling maximize usability and draw attention. Social proof and security cues boost conversion and minimize abandonment.
+
+  4.2: The widget is shown automatically to any user navigating to the website's sign-in page, or when a user clicks a "Sign In" link/button at the top navigation bar. It can also appear as a modal overlay triggered by checkout or exclusive-deal actions, inviting authentication before completing key actions.
+
+  4.3: Users can enter their email and password, opt to be remembered, recover a forgotten password via a link, or use Google or Facebook login. They can navigate to register a new account and are reassured by visible trust badges. All input fields are interactive and styled for accessibility; error handling and further guidance can be added as-needed for full interactivity in production.
+  -->
+</body>
+</html>

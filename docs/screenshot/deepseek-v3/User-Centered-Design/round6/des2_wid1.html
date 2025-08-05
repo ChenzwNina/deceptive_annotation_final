@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Category Navigation</title>
+    <style>
+        /* Main Navigation Styles */
+        .category-nav {
+            background-color: #f8f9fa;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .category-list {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 20px;
+        }
+        
+        .category-item {
+            position: relative;
+        }
+        
+        .category-link {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .category-link:hover {
+            background-color: #e9ecef;
+            color: #007bff;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 4px;
+            padding: 10px 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .category-item:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .dropdown-item {
+            padding: 8px 15px;
+        }
+        
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .category-list {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                padding: 15px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+            
+            .category-list.active {
+                display: flex;
+            }
+            
+            .dropdown-menu {
+                position: static;
+                box-shadow: none;
+                display: none;
+                padding-left: 15px;
+            }
+            
+            .category-item:hover .dropdown-menu {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="category-nav">
+        <div class="nav-container">
+            <button class="mobile-menu-btn">☰</button>
+            <ul class="category-list" id="categoryList">
+                <li class="category-item">
+                    <a href="#" class="category-link">Electronics</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="#">Smartphones</a></li>
+                        <li class="dropdown-item"><a href="#">Laptops</a></li>
+                        <li class="dropdown-item"><a href="#">TVs</a></li>
+                    </ul>
+                </li>
+                <li class="category-item">
+                    <a href="#" class="category-link">Clothing</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="#">Men</a></li>
+                        <li class="dropdown-item"><a href="#">Women</a></li>
+                        <li class="dropdown-item"><a href="#">Kids</a></li>
+                    </ul>
+                </li>
+                <li class="category-item">
+                    <a href="#" class="category-link">Home & Garden</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="#">Furniture</a></li>
+                        <li class="dropdown-item"><a href="#">Kitchen</a></li>
+                        <li class="dropdown-item"><a href="#">Decor</a></li>
+                    </ul>
+                </li>
+                <li class="category-item">
+                    <a href="#" class="category-link">Sports</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="#">Fitness</a></li>
+                        <li class="dropdown-item"><a href="#">Outdoor</a></li>
+                        <li class="dropdown-item"><a href="#">Team Sports</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <script>
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('categoryList').classList.toggle('active');
+        });
+    </script>
+
+    <!-- *****Response*****
+    Question 1: The widget features a horizontal navigation bar with a light gray background (#f8f9fa) and subtle shadow. Category links are dark gray (#333) with 600 weight font, turning blue (#007bff) on hover. Dropdown menus appear below categories with white background and shadow. On mobile, it collapses to a hamburger menu. These choices ensure readability, visual hierarchy, and responsiveness across devices while maintaining a clean, professional ecommerce aesthetic.
+
+    Question 2: The widget appears immediately as part of the page header. On desktop, dropdowns appear on hover. On mobile (<768px), the full menu appears when clicking the hamburger button (☰). This provides immediate access to categories while conserving space on smaller screens.
+
+    Question 3: Users can: 1) Hover over categories to see dropdown menus (desktop), 2) Click category links to navigate, 3) Click hamburger icon to toggle mobile menu, 4) Navigate subcategories in dropdowns. The interactions provide intuitive category exploration while maintaining clean visual design and responsive behavior across devices.
+    -->
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List Component</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #f4f5f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .product-list-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .product-list-container h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image-container {
+            position: relative;
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background-color: #e74c3c;
+            color: white;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: 700;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .badge-new {
+            background-color: #2ecc71;
+        }
+
+        .product-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .product-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            margin: 0 0 10px 0;
+            flex-grow: 1; /* Pushes price/button down */
+        }
+        
+        .product-rating {
+            margin-bottom: 10px;
+            color: #f39c12;
+            font-size: 14px;
+        }
+        
+        .product-price {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .current-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .original-price {
+            font-size: 14px;
+            color: #888;
+            text-decoration: line-through;
+        }
+        
+        .add-to-cart-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        
+        .add-to-cart-btn:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="product-list-container">
+        <h2>Trending Now: Explore Our Best-Sellers</h2>
+        <div class="product-grid">
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="placeholder_image.jpg" alt="All-Weather Tech Jacket" class="product-image">
+                    <span class="product-badge badge-new">New</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">All-Weather Tech Jacket</h3>
+                    <div class="product-rating">
+                        <span>★★★★☆</span>
+                        <span>(112)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">$129.99</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="placeholder_image.jpg" alt="Classic Leather Messenger Bag" class="product-image">
+                    <span class="product-badge">Sale</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Classic Leather Messenger Bag</h3>
+                    <div class="product-rating">
+                        <span>★★★★★</span>
+                        <span>(254)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">$89.99</span>
+                        <span class="original-price">$119.99</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="placeholder_image.jpg" alt="Urban Commuter Sneakers" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Urban Commuter Sneakers</h3>
+                    <div class="product-rating">
+                        <span>★★★★☆</span>
+                        <span>(88)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">$74.50</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="placeholder_image.jpg" alt="Smart Fitness Tracker Watch" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Smart Fitness Tracker Watch</h3>
+                    <div class="product-rating">
+                        <span>★★★★★</span>
+                        <span>(310)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">$99.00</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<!--*****Response*****
+
+### Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The component features a clean, responsive grid layout against a light grey (`#f4f5f7`) page background. Each product is presented on a white card with a subtle shadow, making it "pop." This separation helps users focus on individual items. The layout uses CSS Grid (`repeat(auto-fit, minmax(250px, 1fr))`), ensuring an optimal viewing experience on any device, which minimizes bounce rate.
+
+Colors are chosen for clarity and action. A bold blue (`#007bff`) is used for the "Add to Cart" button, creating a high-contrast call-to-action that stands out to maximize conversion rate. Sale badges are bright red (`#e74c3c`) to create urgency, while "New" badges are green (`#2ecc71`) to signify freshness. Star ratings use a familiar gold color for social proof. Typography is hierarchical, with a large, bold title and clear product names, guiding the user's eye and improving scannability. This entire visual strategy is designed to build trust, guide user action, and ultimately maximize sales.
+
+### Question 2: What triggers the appearance of this widget?
+
+This widget is a foundational component, not a pop-up, so its appearance is triggered by page load. It is strategically placed on key pages within the user journey to maximize its impact. For example, it would appear on the homepage, positioned below the main hero section, to immediately engage visitors with popular products and encourage deeper site exploration (increasing page views per visit).
+
+It would also appear on product detail pages under a heading like "You Might Also Like" to facilitate cross-selling and increase the average order size. On category pages, it could showcase featured or best-selling items within that category. This organic, contextual placement ensures the widget feels helpful rather than intrusive, contributing to a positive user experience and reducing the bounce rate by always providing a clear next step for the user.
+
+### Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have several intuitive interaction points designed to guide them through the conversion funnel.
+
+1.  **Hovering on a Product Card:** The card lifts with a subtle shadow effect. This provides immediate visual feedback that the item is interactive, encouraging user engagement and increasing time on site.
+2.  **Clicking the Product Image or Name:** This action navigates the user to the dedicated product detail page. This is a critical step for users seeking more information before purchase, and providing this easy access path helps to maximize page views and reduce friction.
+3.  **Viewing Social Proof:** Users can quickly scan the star ratings and review counts (e.g., "(112)"), which builds trust and confidence in the product, directly impacting the conversion rate.
+4.  **Clicking "Add to Cart":** This is the primary conversion action. Clicking the high-contrast blue button would ideally add the item to the cart without leaving the page (e.g., via an AJAX call). A visual confirmation, like the button changing to "Added ✓" or a mini-cart appearing, provides feedback and reduces friction, which helps to increase average order size and minimize shopping cart abandonment.
+*****Response*****-->
+</body>
+</html>

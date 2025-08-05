@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Filter Panel</title>
+    <style>
+        /* --- Global Styles & Font --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f8f9fa; /* A light grey background to make the component stand out */
+            margin: 0;
+            padding-top: 150px; /* Add padding to prevent content from being hidden behind the fixed filter panel */
+        }
+
+        /* --- Main Filter Panel Container --- */
+        .filter-panel-container {
+            position: fixed;
+            top: 20px;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            padding: 0 20px;
+        }
+
+        .filter-panel {
+            width: 100%;
+            max-width: 1100px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 16px 24px;
+        }
+        
+        /* --- Top Section: Filters and Actions --- */
+        .filter-main-controls {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .filter-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #555;
+            margin-right: 8px;
+        }
+
+        /* --- Individual Filter Dropdown --- */
+        .filter-group {
+            position: relative;
+        }
+
+        .filter-button {
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .filter-button:hover {
+            background-color: #f1f3f5;
+            border-color: #ced4da;
+        }
+        
+        .filter-button.active {
+            background-color: #e7f5ff;
+            border-color: #007bff;
+            color: #0056b3;
+        }
+
+        .filter-button .arrow {
+            border: solid #555;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            transition: transform 0.2s ease;
+        }
+        
+        .filter-button.active .arrow {
+             transform: rotate(-135deg);
+             margin-top: 4px;
+        }
+
+        .filter-dropdown {
+            display: none;
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            min-width: 240px;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            z-index: 1001;
+            padding: 8px;
+        }
+
+        .filter-dropdown.show {
+            display: block;
+        }
+
+        .filter-dropdown ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 250px;
+            overflow-y: auto;
+        }
+
+        .filter-dropdown li {
+            padding: 10px 12px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        .filter-dropdown li:hover {
+            background-color: #f1f3f5;
+        }
+
+        .filter-dropdown li label {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .filter-dropdown input[type="checkbox"] {
+            margin-right: 10px;
+            width: 16px;
+            height: 16px;
+            accent-color: #007bff;
+        }
+
+        .item-count {
+            color: #888;
+            font-size: 13px;
+            margin-left: auto;
+            padding-left: 10px;
+        }
+
+        .color-swatch {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        /* --- Action Buttons (Clear/Apply) --- */
+        .filter-actions {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        #clear-filters-btn {
+            font-size: 14px;
+            font-weight: 600;
+            color: #6c757d;
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        #clear-filters-btn:hover {
+            color: #333;
+        }
+        
+        #apply-filters-btn {
+            padding: 10px 24px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        #apply-filters-btn:hover {
+            background-color: #0056b3;
+        }
+        
+        /* --- Active Filters Section --- */
+        .active-filters-display {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #f1f3f5;
+        }
+        
+        .active-filter-tag {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #e7f5ff;
+            color: #0056b3;
+            padding: 4px 10px;
+            border-radius: 16px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        
+        .remove-tag-btn {
+            font-family: "Times New Roman", Times, serif;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="filter-panel-container">
+        <div class="filter-panel">
+            <div class="filter-main-controls">
+                <span class="filter-label">Filter By:</span>
+                
+                <!-- Size Filter -->
+                <div class="filter-group">
+                    <button class="filter-button" onclick="toggleDropdown('size-dropdown', this)">
+                        Size <span class="arrow"></span>
+                    </button>
+                    <div id="size-dropdown" class="filter-dropdown">
+                        <ul>
+                            <li><label><input type="checkbox"> 8 <span class="item-count">92</span></label></li>
+                            <li><label><input type="checkbox"> 8.5 <span class="item-count">115</span></label></li>
+                            <li><label><input type="checkbox"> 9 <span class="item-count">240</span></label></li>
+                            <li><label><input type="checkbox"> 9.5 <span class="item-count">288</span></label></li>
+                            <li><label><input type="checkbox"> 10 <span class="item-count">310</span></label></li>
+                            <li><label><input type="checkbox"> 10.5 <span class="item-count">150</span></label></li>
+                            <li><label><input type="checkbox"> 11 <span class="item-count">180</span></label></li>
+                            <li><label><input type="checkbox"> 12 <span class="item-count">75</span></label></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Color Filter -->
+                <div class="filter-group">
+                    <button class="filter-button" onclick="toggleDropdown('color-dropdown', this)">
+                        Color <span class="arrow"></span>
+                    </button>
+                    <div id="color-dropdown" class="filter-dropdown">
+                        <ul>
+                            <li><label><input type="checkbox"> <span class="color-swatch" style="background-color:#000000;"></span> Black <span class="item-count">512</span></label></li>
+                            <li><label><input type="checkbox"> <span class="color-swatch" style="background-color:#FFFFFF;"></span> White <span class="item-count">430</span></label></li>
+                            <li><label><input type="checkbox"> <span class="color-swatch" style="background-color:#0047AB;"></span> Royal Blue <span class="item-count">215</span></label></li>
+                            <li><label><input type="checkbox"> <span class="color-swatch" style="background-color:#DC143C;"></span> Crimson Red <span class="item-count">188</span></label></li>
+                            <li><label><input type="checkbox"> <span class="color-swatch" style="background-color:#cccccc;"></span> Grey <span class="item-count">350</span></label></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Brand Filter -->
+                <div class="filter-group">
+                    <button class="filter-button" onclick="toggleDropdown('brand-dropdown', this)">
+                        Brand <span class="arrow"></span>
+                    </button>
+                    <div id="brand-dropdown" class="filter-dropdown">
+                        <ul>
+                            <li><label><input type="checkbox"> FleetFoot <span class="item-count">650</span></label></li>
+                            <li><label><input type="checkbox"> Apex Runners <span class="item-count">420</span></label></li>
+                            <li><label><input type="checkbox"> TerraGlide <span class="item-count">380</span></label></li>
+                            <li><label><input type="checkbox"> Velocity <span class="item-count">210</span></label></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Price Filter -->
+                <div class="filter-group">
+                    <button class="filter-button" onclick="toggleDropdown('price-dropdown', this)">
+                        Price <span class="arrow"></span>
+                    </button>
+                    <div id="price-dropdown" class="filter-dropdown">
+                         <ul>
+                            <li><label><input type="checkbox"> $50 - $99 <span class="item-count">295</span></label></li>
+                            <li><label><input type="checkbox"> $100 - $149 <span class="item-count">841</span></label></li>
+                            <li><label><input type="checkbox"> $150 - $199 <span class="item-count">412</span></label></li>
+                            <li><label><input type="checkbox"> $200+ <span class="item-count">112</span></label></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="filter-actions">
+                    <button id="clear-filters-btn">Clear All</button>
+                    <button id="apply-filters-btn">Apply Filters</button>
+                </div>
+            </div>
+            
+            <div class="active-filters-display">
+                <div class="active-filter-tag">
+                    <span>Size: 10</span>
+                    <span class="remove-tag-btn">&times;</span>
+                </div>
+                <div class="active-filter-tag">
+                    <span>Brand: FleetFoot</span>
+                    <span class="remove-tag-btn">&times;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Simple script to toggle dropdown visibility and button active state
+        function toggleDropdown(dropdownId, buttonElement) {
+            const dropdown = document.getElementById(dropdownId);
+            const isVisible = dropdown.classList.contains('show');
+
+            // Close all other open dropdowns first
+            document.querySelectorAll('.filter-dropdown.show').forEach(openDropdown => {
+                if (openDropdown.id !== dropdownId) {
+                    openDropdown.classList.remove('show');
+                    // Also remove active class from their corresponding buttons
+                    openDropdown.previousElementSibling.classList.remove('active');
+                }
+            });
+
+            // Toggle the current dropdown and its button's active class
+            dropdown.classList.toggle('show');
+            buttonElement.classList.toggle('active');
+        }
+
+        // Close dropdowns if clicking outside of them
+        window.onclick = function(event) {
+            if (!event.target.matches('.filter-button, .filter-button *, .filter-dropdown, .filter-dropdown *')) {
+                document.querySelectorAll('.filter-dropdown.show').forEach(openDropdown => {
+                    openDropdown.classList.remove('show');
+                    openDropdown.previousElementSibling.classList.remove('active');
+                });
+            }
+        }
+    </script>
+    
+    <!--
+    *****Response*****
+    
+    4.1 Question: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+    
+    Answer: The component is a horizontal filter bar enclosed in a white, rounded-corner panel with a subtle box-shadow. This "card" design lifts it off the page, making it a clear, distinct tool for the user. The layout is clean and organized, with a "Filter By:" label followed by filter group buttons (Size, Color, etc.).
+    
+    Colors are intentionally minimalist: a neutral palette (#ffffff, #f8f9fa) for the panel and buttons ensures it doesn't compete with product images. The key accent color is a vibrant blue (#007bff), used exclusively for the primary "Apply Filters" button, selected states, and active filter tags. This strategic use of color draws the user's eye to the most important actions, maximizing conversion.
+    
+    Elements are sized for clarity and ease of use. Buttons have ample padding (8px 16px) and a legible 14px font size. The "Apply Filters" button is slightly larger and bolder to signify its importance. This user-friendly design reduces friction and bounce rate by making a complex task feel simple and intuitive.
+    
+    4.2 Question: What triggers the appearance of this widget?
+    
+    Answer: This filter panel is a fundamental part of the browsing experience, not a pop-up. It appears automatically and is persistently visible by default when a user navigates to a product listing page (e.g., a category page like "Men's Running Shoes" or a search results page). Because finding and narrowing down products is the primary goal on these pages, the filter panel must be immediately accessible without any user action. This approach minimizes the bounce rate, as it instantly provides users with the tools they need to engage with the site's offerings, preventing them from feeling overwhelmed by too many choices and leaving.
+    
+    4.3 Question: Can you describe the full range of interactions users can have with the widget?
+    
+    Answer: A user's interaction flow is designed to be intuitive and efficient:
+    
+    1.  **Open a Filter Group:** The user clicks on a filter button (e.g., "Size"), which opens a dropdown menu containing specific options. The button highlights and its arrow flips to indicate an active state.
+    2.  **Select Options:** Inside the dropdown, the user can select one or more options using checkboxes. Each option displays the number of available products, helping the user avoid zero-result dead ends.
+    3.  **Apply Selections:** After making selections, the user clicks the prominent blue "Apply Filters" button to refresh the product list with their chosen criteria.
+    4.  **View & Remove Active Filters:** Selected filters appear as "tags" in a dedicated area below the buttons. This gives users a clear summary of their current view. They can remove an individual filter by clicking the '×' on its tag, allowing for quick adjustments.
+    5.  **Reset All Filters:** The user can click the "Clear All" link to deselect all options and revert to the original, unfiltered product list, simplifying the process of starting a new search.
+    -->
+
+</body>
+</html>

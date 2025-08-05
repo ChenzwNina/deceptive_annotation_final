@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Cancellation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        .cancellation-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            padding: 30px;
+        }
+        
+        h2 {
+            color: #333;
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        
+        p {
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .reason-select {
+            width: 100%;
+            padding: 10px;
+            margin: 15px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .feedback {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            min-height: 80px;
+            font-family: inherit;
+        }
+        
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .cancel-btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .cancel-btn:hover {
+            background-color: #c0392b;
+        }
+        
+        .keep-btn {
+            background-color: #f5f5f5;
+            color: #333;
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .keep-btn:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="cancellation-container">
+        <h2>Cancel Membership</h2>
+        <p>We're sorry to see you go. Please let us know why you're canceling and how we could improve.</p>
+        
+        <label for="reason">Reason for cancellation:</label>
+        <select id="reason" class="reason-select">
+            <option value="">Select a reason...</option>
+            <option value="price">Too expensive</option>
+            <option value="features">Missing features I need</option>
+            <option value="usage">I don't use it enough</option>
+            <option value="service">Customer service issues</option>
+            <option value="other">Other</option>
+        </select>
+        
+        <label for="feedback">Additional feedback (optional):</label>
+        <textarea id="feedback" class="feedback" placeholder="What could we do better?"></textarea>
+        
+        <div class="button-group">
+            <button class="keep-btn">Keep Membership</button>
+            <button class="cancel-btn">Cancel Membership</button>
+        </div>
+    </div>
+
+    <!-- *****Response*****
+    Question 1: The widget has a clean, modern design with a white background and subtle shadow for depth. It uses a red cancel button for urgency/attention and a neutral keep button. Elements are sized for readability (16px base font) with ample padding. The layout is single-column for mobile-friendliness. These choices prioritize clarity, reduce cognitive load, and guide users through the cancellation flow while leaving room for feedback.
+
+    Question 2: The widget appears when a user navigates to account settings and selects "Cancel Membership" or clicks a similar cancellation link. It could also trigger from an automated email when a user attempts to cancel via email support.
+
+    Question 3: Users can: 1) Select a cancellation reason from a dropdown, 2) Provide optional written feedback, 3) Click "Cancel Membership" to confirm (would typically show a confirmation dialog), or 4) Click "Keep Membership" to abort cancellation. The interface includes hover states for buttons and form field interactions.
+    -->
+</html>

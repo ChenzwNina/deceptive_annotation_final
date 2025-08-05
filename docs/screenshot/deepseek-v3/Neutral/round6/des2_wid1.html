@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Category Navigation</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Navigation Component */
+        .category-nav {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .category-title {
+            font-size: 1.2rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .category-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+        
+        .category-item {
+            background-color: white;
+            border-radius: 4px;
+            padding: 0.6rem 1rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+        }
+        
+        .category-item:hover {
+            background-color: #3498db;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+        }
+        
+        .category-item.active {
+            background-color: #2980b9;
+            color: white;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="category-nav">
+        <div class="category-title">Shop by Category</div>
+        <ul class="category-list">
+            <li class="category-item active">All Products</li>
+            <li class="category-item">Electronics</li>
+            <li class="category-item">Clothing</li>
+            <li class="category-item">Home & Garden</li>
+            <li class="category-item">Beauty</li>
+            <li class="category-item">Sports</li>
+            <li class="category-item">Toys</li>
+            <li class="category-item">Books</li>
+        </ul>
+    </div>
+
+    <!-- *****Response***** 
+    Question 1: The widget features a clean, modern design with a light gray background (#f8f9fa) and white category cards. Category items use a blue color scheme (#3498db) on hover/active states for visual feedback. The layout uses flexbox for responsive wrapping of categories. I chose these colors for good contrast and accessibility, with subtle shadows and animations to enhance interactivity without being distracting. The font sizes (1.2rem title, 0.9rem items) ensure readability while maintaining a compact form.
+
+    Question 2: This navigation widget would typically appear as a persistent component on ecommerce category pages, or could appear as part of a mega-menu when users hover over the "Shop" navigation item. It might also appear in mobile views as an expandable accordion menu.
+
+    Question 3: Users can: 1) Click any category to filter products (active state shows selection), 2) Hover over items for visual feedback (color change and slight lift), 3) On mobile, potentially expand/collapse the menu. The design provides clear affordances that each item is clickable through hover effects and visual styling.
+    -->
+</body>
+</html>

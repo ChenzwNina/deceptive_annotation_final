@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deals Banner Component</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .deals-banner {
+            position: relative;
+            top: 20px;
+            width: 100%;
+            background: linear-gradient(90deg, #FF6F61, #FFB88C);
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .banner-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .deal-text {
+            font-size: 1.2em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .deal-timer {
+            font-size: 1.1em;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .cta-button {
+            background-color: white;
+            color: #FF6F61;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+        }
+
+        .close-btn {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-btn:hover {
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="deals-banner">
+        <div class="banner-content">
+            <span class="deal-text">Flash Sale: Up to 50% Off on Electronics!</span>
+            <span class="deal-timer">Ends in 12:34:56</span>
+            <a href="#shop-now" class="cta-button">Shop Now</a>
+        </div>
+        <button class="close-btn" onclick="this.parentElement.style.display='none';">×</button>
+    </div>
+</body>
+<!-- *****Response*****
+Question 1: The deals banner spans the full width of the viewport with a vibrant gradient background (coral to peach) to grab attention. White text ensures high contrast and readability. The layout centers content with a bold deal message (1.2em), a countdown timer for urgency (1.1em), and a prominent white CTA button with hover effects for interactivity. A subtle shadow adds depth. These choices prioritize visibility, urgency, and a modern, engaging aesthetic aligned with e-commerce trends.
+
+Question 2: The banner appears automatically at the top of the page upon loading, positioned 20px from the top. It is triggered by active promotions or flash sales set by the website's backend, ensuring users are immediately aware of time-sensitive offers without manual interaction.
+
+Question 3: Users can interact with the banner in two ways: clicking the "Shop Now" button to navigate to the deals page, providing clear feedback via a hover effect, and clicking the close button to dismiss the banner, which disappears instantly. These interactions are constrained to prevent misuse (e.g., no irrelevant clicks), ensuring efficient and satisfying task execution.
+***** -->
+</html>

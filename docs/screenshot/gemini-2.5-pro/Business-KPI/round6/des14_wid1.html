@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Tracking Component</title>
+    <style>
+        /* ---  Basic Setup --- */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Simulates a website background */
+            margin: 0;
+            padding: 0;
+            height: 200vh; /* To demonstrate sticky positioning */
+        }
+
+        /* --- Main Tracker Banner Container --- */
+        .order-tracker-banner {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 95%;
+            max-width: 850px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            z-index: 1000;
+            padding: 24px;
+            box-sizing: border-box;
+            border: 1px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        /* --- Banner Header --- */
+        .tracker-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .tracker-header h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0;
+        }
+        
+        .tracker-header .order-id {
+            font-size: 14px;
+            color: #555;
+            font-weight: 400;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            line-height: 1;
+            cursor: pointer;
+            color: #888;
+            padding: 0;
+        }
+        .close-btn:hover {
+            color: #333;
+        }
+
+        /* --- Core Tracking Information Section --- */
+        .tracking-core {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .item-preview {
+            flex-shrink: 0;
+        }
+
+        .item-preview img {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 1px solid #eee;
+        }
+        
+        .tracking-details {
+            width: 100%;
+        }
+        
+        .delivery-status {
+            font-size: 18px;
+            font-weight: 600;
+            color: #28a745; /* Green for positive status */
+            margin-bottom: 8px;
+        }
+        
+        .delivery-estimate {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 16px;
+        }
+        
+        /* --- Progress Bar --- */
+        .progress-bar {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+        
+        .progress-bar::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background-color: #e0e0e0;
+            transform: translateY(-50%);
+            z-index: -1;
+        }
+
+        .progress-bar .line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            height: 4px;
+            background-color: #007bff; /* Primary brand color */
+            transform: translateY(-50%);
+            width: 66%; /* Corresponds to the 3rd step being active */
+            z-index: -1;
+            transition: width 0.5s ease;
+        }
+
+        .progress-step {
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+        }
+
+        .progress-step .dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            border: 3px solid #fff;
+            margin: 0 auto 8px auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .progress-step.completed .dot, .progress-step.active .dot {
+            background-color: #007bff;
+        }
+        
+        .progress-step.active .dot {
+            transform: scale(1.2);
+        }
+
+        .progress-step.completed, .progress-step.active {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        /* --- Actions & Cross-Sell Section --- */
+        .tracker-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 20px;
+            gap: 20px;
+        }
+        
+        .cross-sell {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .cross-sell-title {
+            font-size: 14px;
+            color: #555;
+            font-weight: 600;
+        }
+        
+        .cross-sell-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+        }
+
+        .cross-sell-item:hover {
+            background-color: #e9ecef;
+        }
+        
+        .cross-sell-item img {
+            width: 40px;
+            height: 40px;
+            border-radius: 6px;
+            object-fit: cover;
+        }
+        
+        .cross-sell-item-name {
+            font-size: 13px;
+            color: #007bff;
+            font-weight: 600;
+        }
+        
+        .tracker-actions a {
+            padding: 10px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s ease-in-out;
+            border: 1px solid #007bff;
+            margin-left: 10px;
+        }
+        
+        .action-primary {
+            background-color: #007bff;
+            color: #fff;
+        }
+        
+        .action-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        
+        .action-secondary {
+            background-color: #fff;
+            color: #007bff;
+        }
+
+        .action-secondary:hover {
+            background-color: #f8f9fa;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .tracker-footer {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .cross-sell {
+                justify-content: center;
+                margin-bottom: 16px;
+            }
+            .tracker-actions {
+                display: flex;
+                justify-content: center;
+            }
+        }
+        @media (max-width: 600px) {
+            .tracking-core {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: center;
+            }
+            .item-preview {
+                align-self: center;
+            }
+            .tracking-details {
+                width: 100%;
+            }
+            .cross-sell {
+                flex-direction: column;
+                align-items: stretch;
+            }
+             .cross-sell-title {
+                text-align: center;
+                margin-bottom: 8px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="order-tracker-banner">
+        <div class="tracker-header">
+            <div>
+                <h2>Your order is on its way!</h2>
+                <span class="order-id">Order #US-8675309</span>
+            </div>
+            <button class="close-btn" aria-label="Close tracking banner">&times;</button>
+        </div>
+
+        <div class="tracking-core">
+            <div class="item-preview">
+                <img src="placeholder_image.jpg" alt="Waterproof Hiking Backpack">
+            </div>
+            <div class="tracking-details">
+                <div class="delivery-status">Out for Delivery</div>
+                <div class="delivery-estimate">Estimated Arrival: <strong>Today, May 24th by 8:00 PM</strong></div>
+                <div class="progress-bar">
+                    <div class="line"></div>
+                    <div class="progress-step completed">
+                        <div class="dot"></div>
+                        <span>Ordered</span>
+                    </div>
+                    <div class="progress-step completed">
+                        <div class="dot"></div>
+                        <span>Shipped</span>
+                    </div>
+                    <div class="progress-step active">
+                        <div class="dot"></div>
+                        <span>On its way</span>
+                    </div>
+                    <div class="progress-step">
+                        <div class="dot"></div>
+                        <span>Delivered</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tracker-footer">
+            <div class="cross-sell">
+                <span class="cross-sell-title">Goes well with:</span>
+                <a href="#" class="cross-sell-item">
+                    <img src="placeholder_image.jpg" alt="All-Weather Tent">
+                    <span class="cross-sell-item-name">All-Weather Tent</span>
+                </a>
+            </div>
+            <div class="tracker-actions">
+                <a href="#" class="action-secondary">View Order Details</a>
+                <a href="#" class="action-primary">Track on UPS</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- *****Response*****
+    
+    4.1 Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+    
+    The widget is a clean, modern banner positioned at the top of the viewport. It uses a professional color palette: a white background for clarity, a deep blue (#007bff) as the primary action color for buttons and progress indicators, and a vibrant green (#28a745) for the positive "Out for Delivery" status. Text is dark grey for high readability.
+    
+    The layout is structured with clear visual hierarchy. The largest text, "Your order is on its way!", immediately reassures the user. A visual progress bar provides an instant, easy-to-understand summary of the order's journey. An image of the purchased item reinforces the customer's purchase and builds excitement. The design uses generous spacing and rounded corners to feel friendly and uncluttered. These choices are made to build trust, reduce customer anxiety, and create a positive post-purchase experience, which is crucial for encouraging repeat business (maximizes returning visitors and future conversion rates).
+    
+    4.2 Question 2: What triggers the appearance of this widget?
+    
+    The primary trigger for this widget is a user visiting the website with a specific URL parameter, for instance, `?source=email_track_order&order_id=US-8675309`. This link would be included in "Your order has shipped!" email notifications. This ensures the user sees the relevant information immediately upon landing, fulfilling their intent and minimizing bounce rate.
+    
+    A secondary trigger could be for a logged-in user who has an active, in-transit order. Upon visiting the homepage or their account dashboard, the system would recognize their status and display the banner proactively. This provides a high-value, personalized experience that makes the user feel valued, strengthens brand loyalty, and encourages them to stay on the site longer.
+    
+    4.3 Question 3: Can you describe the full range of interactions users can have with the widget?
+    
+    Users have several key interactions designed to provide value and drive business goals:
+    1.  **View Status:** At a glance, the user can absorb the most critical information: the current delivery status, estimated arrival, and a visual progress bar.
+    2.  **Dismiss:** The user can click the '×' button to close the banner and continue browsing the site.
+    3.  **Drill-Down:** Clicking the "View Order Details" button navigates them to their full order history page for more comprehensive information, increasing page views.
+    4.  **External Tracking:** Clicking "Track on UPS" opens the carrier’s detailed tracking page in a new browser tab, providing transparency without navigating the user away from the e-commerce site.
+    5.  **Cross-Sell Engagement:** The user can click the "Goes well with" product suggestion. This navigates them to a related product page, aiming to increase the average order size through a follow-up purchase.
+    
+    -->
+</body>
+</html>

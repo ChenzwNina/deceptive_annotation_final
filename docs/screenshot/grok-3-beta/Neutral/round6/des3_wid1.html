@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Search Panel</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .search-panel {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 600px;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 25px;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .search-input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 20px;
+        }
+
+        .search-button {
+            background-color: #ff6f61;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 15px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-button:hover {
+            background-color: #e55a50;
+        }
+
+        .search-icon {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-panel">
+        <span class="search-icon">🔍</span>
+        <input type="text" class="search-input" placeholder="Search for products, brands, or categories...">
+        <button class="search-button">Search</button>
+    </div>
+
+    <!-- *****Response***** -->
+    <!-- Question 1: The search panel is a fixed component at the top of the viewport with a 20px margin. It features a clean white background with a subtle shadow for elevation, mimicking modern e-commerce designs. The width is responsive, maxing at 600px for readability, and centered using transform. The coral (#ff6f61) search button contrasts with the neutral background for visibility, with a hover effect for interactivity. Rounded corners (25px border-radius) provide a friendly, approachable look. The layout is flex-based for alignment, ensuring elements like the magnifying glass icon, input field, and button stay cohesive. These choices reflect usability and aesthetics common in e-commerce platforms like Amazon. -->
+
+    <!-- Question 2: The search panel is always visible at the top of the page as a persistent navigation tool, typical for e-commerce sites. It does not require a specific trigger to appear since quick access to search functionality is crucial for user experience in online shopping environments. -->
+
+    <!-- Question 3: Users can interact with the search panel by clicking into the input field to type queries, using keyboard input for search terms, and pressing Enter or clicking the 'Search' button to submit. The button’s hover effect provides visual feedback. Users may also visually note the placeholder text for guidance on searchable content like products or brands. -->
+</body>
+</html>

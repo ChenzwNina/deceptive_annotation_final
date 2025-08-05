@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shipping Options & Add-Ons Component</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f6f8fa;
+    }
+    .shipping-addons-container {
+      margin: 20px auto 0 auto;
+      max-width: 720px;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(51,64,101,0.10), 0 1.5px 6px 0 rgba(151,155,175,0.08);
+      display: flex;
+      flex-wrap: wrap;
+      padding: 28px 28px 22px 28px;
+      gap: 30px;
+    }
+
+    .shipping-section, .addon-section {
+      flex: 1 1 350px;
+      min-width: 280px;
+    }
+    .shipping-section {
+      border-right: 1px solid #EFF1F6;
+      padding-right: 30px;
+    }
+    .addon-section {
+      padding-left: 20px;
+    }
+    .section-title {
+      font-size: 1.12rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #23395d;
+    }
+    .shipping-options {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .shipping-option {
+      background: #f4f7fb;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      padding: 10px 12px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border 0.2s;
+      position: relative;
+    }
+    .shipping-option.selected, .shipping-option:hover {
+      border: 2px solid #0071E3;
+      background: #f0f8ff;
+    }
+    .shipping-radio {
+      accent-color: #0071E3;
+      margin-right: 14px;
+      margin-left: 2px;
+      transform: scale(1.15);
+    }
+    .shipping-info-main {
+      font-weight: 500;
+      color: #21313c;
+      display: block;
+      font-size: 1rem;
+    }
+    .shipping-info-desc {
+      font-size: 0.92rem;
+      color: #5c657a;
+    }
+    .shipping-cost {
+      margin-left: auto;
+      font-size: 1rem;
+      color: #1ea681;
+      font-weight: 600;
+    }
+
+    .addon-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .addon-item {
+      display: flex;
+      align-items: center;
+      background: #fafbfc;
+      border-radius: 8px;
+      border: 1.5px solid #e4e7ed;
+      padding: 10px 12px;
+      transition: background 0.2s, border 0.2s;
+      cursor: pointer;
+      position: relative;
+    }
+    .addon-item input[type="checkbox"] {
+      accent-color: #ffbe3a;
+      margin-right: 14px;
+      transform: scale(1.10);
+    }
+    .addon-label-main {
+      font-size: 0.98rem;
+      font-weight: 500;
+      color: #2e3a4e;
+    }
+    .addon-desc {
+      font-size: 0.9rem;
+      color: #8492a6;
+    }
+    .addon-price {
+      margin-left: auto;
+      font-size: 1rem;
+      color: #E06B2C;
+      font-weight: 600;
+      padding-left: 18px;
+    }
+
+    .shipping-promo {
+      background: linear-gradient(90deg, #f5f8ff 60%, #e5ffe8 100%);
+      color: #007d49;
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 7px 13px;
+      border-radius: 7px;
+      margin-top: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .promo-icon {
+      width: 22px;
+      height: 22px;
+      background: url('placeholder_image.jpg') center center/cover no-repeat;
+      border-radius: 50%;
+      background-color: #e6ffe4;
+      display: inline-block;
+    }
+    @media (max-width: 700px) {
+      .shipping-addons-container {
+        flex-direction: column;
+        gap: 14px;
+        padding: 14px 6vw;
+      }
+      .shipping-section {
+        border-right: none;
+        padding-right: 0;
+        border-bottom: 1px solid #EFF1F6;
+        padding-bottom: 18px;
+        margin-bottom: 8px;
+      }
+      .addon-section {
+        padding-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shipping-addons-container" style="margin-top:20px;">
+    <div class="shipping-section">
+      <div class="section-title">Choose Your Shipping Option</div>
+      <form class="shipping-options">
+        <label class="shipping-option selected">
+          <input class="shipping-radio" type="radio" name="shipping" checked>
+          <div>
+            <span class="shipping-info-main">Standard Shipping (3-5 business days)</span><br>
+            <span class="shipping-info-desc">Enjoy free delivery on orders over $49</span>
+          </div>
+          <span class="shipping-cost">$0</span>
+        </label>
+        <label class="shipping-option">
+          <input class="shipping-radio" type="radio" name="shipping">
+          <div>
+            <span class="shipping-info-main">Express Shipping (1-2 business days)</span><br>
+            <span class="shipping-info-desc">Order by 2pm for fastest delivery</span>
+          </div>
+          <span class="shipping-cost">$8.99</span>
+        </label>
+        <label class="shipping-option">
+          <input class="shipping-radio" type="radio" name="shipping">
+          <div>
+            <span class="shipping-info-main">Same-Day Delivery (Available in select areas)</span><br>
+            <span class="shipping-info-desc">Track your order in real-time</span>
+          </div>
+          <span class="shipping-cost">$15.00</span>
+        </label>
+      </form>
+      <div class="shipping-promo">
+        <span class="promo-icon"></span>
+        <span><b>Upgrade</b> to Express for only $4.99 with orders over $100!</span>
+      </div>
+    </div>
+    <div class="addon-section">
+      <div class="section-title">Enhance Your Order (Optional Add-Ons)</div>
+      <div class="addon-list">
+        <label class="addon-item">
+          <input type="checkbox">
+          <div>
+            <div class="addon-label-main">Gift Wrapping</div>
+            <div class="addon-desc">Add a personalized gift wrap & message</div>
+          </div>
+          <div class="addon-price">$3.99</div>
+        </label>
+        <label class="addon-item">
+          <input type="checkbox">
+          <div>
+            <div class="addon-label-main">Shipping Insurance</div>
+            <div class="addon-desc">Protect your order against loss or damage</div>
+          </div>
+          <div class="addon-price">$2.49</div>
+        </label>
+        <label class="addon-item">
+          <input type="checkbox">
+          <div>
+            <div class="addon-label-main">Eco-Friendly Packaging</div>
+            <div class="addon-desc">100% recyclable and minimalistic packaging</div>
+          </div>
+          <div class="addon-price">$0.99</div>
+        </label>
+      </div>
+    </div>
+  </div>
+
+
+<!-- *****Response*****
+4.1 Question 1: This widget is a horizontally split card at the top of the page, with a white, rounded background, subtle shadow, and organized sections. Soft blue and green accents dominate, reinforcing reliability and freshness, while orange and green highlights call out key actions. Shipping options appear as light cards with clear radio buttons, descriptions, and bold pricing; optional add-ons use checkboxes with price callouts. Spacing, modern font, and touch-friendly controls underpin usability and trust—key for conversions, lower cart abandonment, and up-sell.
+
+4.2 Question 2: The widget appears when a user proceeds to the checkout process or reviews their cart before payment—ideally as soon as a user may consider shipping or order customization options, prompting informed choices and potential add-on purchases.
+
+4.3 Question 3: Users select one shipping option (radio); further interactivity promotes an Express upgrade offer with contextual messaging. Optional add-ons (checkboxes) are easily toggled, giving engaging order customization without friction. Interactions update pricing and order summary downstream. Add-on/option selection highlights on hover/click, reinforcing action. All elements are device-friendly and can expand to show more details on mobile devices.
+-->
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Membership Signup Component</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f9fafa;
+    }
+
+    .membership-signup-container {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .membership-signup-widget {
+      display: flex;
+      align-items: center;
+      background: linear-gradient(90deg, #1161ee 0%, #39c9e7 100%);
+      box-shadow: 0 8px 24px rgba(44,62,80,0.07), 0 1.5px 4.5px rgba(44,62,80,0.05);
+      border-radius: 16px;
+      padding: 32px 40px;
+      max-width: 740px;
+      width: 90%;
+      color: #fff;
+      position: relative;
+    }
+
+    .membership-signup-img {
+      flex-shrink: 0;
+      width: 88px;
+      height: 88px;
+      margin-right: 28px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #fff;
+      background: #fff;
+    }
+
+    .membership-signup-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .membership-signup-title {
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+
+    .membership-signup-benefits {
+      font-size: 1.09rem;
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+
+    .membership-signup-benefits-list {
+      margin: 0 0 18px 0;
+      padding: 0 0 0 18px;
+      color: #e6f5fc;
+    }
+    .membership-signup-benefits-list li {
+      margin-bottom: 5px;
+      font-size: 1rem;
+    }
+
+    .membership-signup-offer {
+      display: inline-block;
+      background: #ffdf8a;
+      color: #1a2175;
+      border-radius: 5px;
+      font-weight: bold;
+      padding: 3px 10px;
+      font-size: 1.04rem;
+      margin-bottom: 17px;
+    }
+
+    .membership-signup-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .membership-signup-form input[type="email"] {
+      border: none;
+      border-radius: 6px;
+      padding: 11px 15px;
+      background: #fff;
+      color: #222e3a;
+      font-size: 1.05rem;
+      width: 220px;
+      outline: none;
+      transition: box-shadow 0.2s;
+    }
+    .membership-signup-form input[type="email"]:focus {
+      box-shadow: 0 0 0 2px #39c9e7;
+    }
+
+    .membership-signup-form button {
+      background: #e95032;
+      border: none;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: bold;
+      padding: 11px 26px;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(233, 80, 50, 0.10);
+      cursor: pointer;
+      transition: background 0.16s, transform 0.1s;
+    }
+    .membership-signup-form button:hover,
+    .membership-signup-form button:focus {
+      background: #c54022;
+      transform: translateY(-1px) scale(1.02);
+    }
+
+    .membership-signup-trust {
+      font-size: 0.95rem;
+      color: #ceedfa;
+      margin-top: 9px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      opacity: 0.95;
+    }
+
+    .membership-signup-trust i {
+      font-size: 1.1rem;
+      color: #f7e600;
+    }
+
+    @media (max-width: 650px) {
+      .membership-signup-widget {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px 10px;
+      }
+      .membership-signup-img {
+        margin: 0 0 18px 0;
+        width: 72px;
+        height: 72px;
+      }
+      .membership-signup-form {
+        flex-direction: column;
+        gap: 7px;
+      }
+      .membership-signup-benefits-list {
+        padding-left: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="membership-signup-container">
+    <div class="membership-signup-widget" role="region" aria-label="Sign up for Premium Membership">
+      <img src="placeholder_image.jpg" alt="Membership badge" class="membership-signup-img">
+      <div class="membership-signup-content">
+        <div class="membership-signup-title">Join ShopSmart+ Membership</div>
+        <div class="membership-signup-offer">Limited Time: Get 15% OFF Your First Month!</div>
+        <div class="membership-signup-benefits">
+          Become a member for exclusive rewards:
+          <ul class="membership-signup-benefits-list">
+            <li>Early access to sales and product drops</li>
+            <li>Free express shipping on all orders</li>
+            <li>Earn 2× loyalty reward points</li>
+            <li>Members-only coupons and deals</li>
+          </ul>
+        </div>
+        <form class="membership-signup-form" autocomplete="off" onsubmit="event.preventDefault();alert('Thank you for joining ShopSmart+!');">
+          <input type="email" name="email" placeholder="Enter your email" required>
+          <button type="submit">Sign Up Now</button>
+        </form>
+        <div class="membership-signup-trust">
+          <i>★</i>
+          50,000+ members &nbsp;|&nbsp; Cancel anytime
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- *****Response*****
+  4.1: The widget features a bold blue gradient background with white and gold accents. Key elements include a circular hero badge image, a large headline ("Join ShopSmart+ Membership"), a highlighted limited-time offer in a gold pill, and a checklist of membership benefits in clean, readable text. The signup input and bright orange call-to-action button are prominent and separate from content. Compact below 650px, it stays mobile-friendly. These choices ensure instant recognition, easy action, and convey valuable rewards, driving signups and conversions.
+  
+  4.2: This widget appears automatically at the top of the landing page and any high-traffic category pages, especially for users who are not logged in as members. This ensures maximum visibility to new and returning visitors likely to benefit from membership.
+  
+  4.3: Users can enter their email and submit the form to start the membership signup process. The highlighted offer and benefit checklist encourage exploration; the bright CTA encourages interaction. Upon completion, users receive feedback (eg. popup/modal, as with the sample alert). Interactive trust badges and highlighted perks invite further clicks. On smaller screens, all interactivity remains easy and touch-friendly.
+  -->
+</body>
+</html>

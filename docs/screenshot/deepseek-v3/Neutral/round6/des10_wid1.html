@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Membership Signup</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        .membership-widget {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            padding: 30px;
+        }
+        
+        .widget-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .widget-header h2 {
+            color: #2c3e50;
+            margin: 0 0 10px 0;
+        }
+        
+        .widget-header p {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin: 0;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .benefits {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #7f8c8d;
+        }
+        
+        .benefits ul {
+            padding-left: 20px;
+            margin: 10px 0 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="membership-widget">
+        <div class="widget-header">
+            <h2>Join Our Membership</h2>
+            <p>Unlock exclusive benefits and discounts</p>
+        </div>
+        
+        <form id="membershipForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Create Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <button type="submit" class="submit-btn">Sign Up Now</button>
+        </form>
+        
+        <div class="benefits">
+            <p>Members enjoy:</p>
+            <ul>
+                <li>10% off first purchase</li>
+                <li>Exclusive member-only deals</li>
+                <li>Early access to sales</li>
+                <li>Free shipping on orders over $50</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('membershipForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Form submission logic would go here
+            alert('Thank you for signing up! Check your email to confirm your membership.');
+        });
+    </script>
+
+    <!-- *****Response*****
+    Question 1: The widget features a clean, modern design with a white background and soft blue accent color for the button. It's 350px wide with ample padding (30px) and rounded corners (10px radius). Input fields are full-width with 12px padding for comfortable typing. The design prioritizes clarity with bold labels, sufficient spacing between elements, and a subtle shadow for depth. These choices enhance usability while maintaining visual appeal.
+
+    Question 2: This widget would typically appear when a user clicks a "Join Membership" or "Sign Up" button in the website header/navigation, or it might appear as a pop-up after a user has browsed several pages without signing up. It could also be triggered when a user attempts to checkout without an account.
+
+    Question 3: Users can: 1) Fill in form fields (name, email, password), 2) Submit the form by clicking the button or pressing Enter, 3) View the membership benefits list, and 4) Receive feedback upon submission. The form includes validation (required fields, email format checking) and shows a confirmation message when successfully submitted.
+    -->
+</html>

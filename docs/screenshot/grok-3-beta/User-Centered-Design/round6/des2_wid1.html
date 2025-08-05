@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Category Navigation</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .category-nav {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 20px;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        .category-list {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 30px;
+        }
+
+        .category-item {
+            position: relative;
+        }
+
+        .category-item a {
+            text-decoration: none;
+            color: #333333;
+            font-weight: 500;
+            font-size: 16px;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .category-item a:hover {
+            color: #ff6f61;
+        }
+
+        .category-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: #ff6f61;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        .category-item:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        @media (max-width: 768px) {
+            .category-list {
+                gap: 15px;
+            }
+
+            .category-item a {
+                font-size: 14px;
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="category-nav">
+        <ul class="category-list">
+            <li class="category-item"><a href="#electronics">Electronics</a></li>
+            <li class="category-item"><a href="#clothing">Clothing</a></li>
+            <li class="category-item"><a href="#home">Home & Garden</a></li>
+            <li class="category-item"><a href="#beauty">Beauty & Health</a></li>
+            <li class="category-item"><a href="#sports">Sports & Outdoors</a></li>
+            <li class="category-item"><a href="#books">Books & Media</a></li>
+        </ul>
+    </nav>
+</body>
+<!-- *****Response***** -->
+<!-- Question 1: The widget features a clean, white background with a subtle bottom border and shadow for depth, ensuring it stands out at the top of the page. Categories are displayed in a horizontal list, centered with equal spacing (30px gap on desktop, 15px on mobile), using a bold coral color (#ff6f61) for hover effects and underlines to provide feedback. Text is dark gray (#333333) for readability, with font sizes of 16px (desktop) and 14px (mobile) for accessibility. The fixed position with a 20px top margin ensures visibility. These choices promote a modern, uncluttered look consistent with e-commerce aesthetics, enhancing navigation efficiency. -->
+<!-- Question 2: The widget appears automatically on page load, positioned at the top of the viewport as a persistent navigation bar. It remains fixed during scrolling to ensure constant access to product categories without needing user action to trigger its visibility. -->
+<!-- Question 3: Users can interact by hovering over category links, triggering color changes and underlines for feedback. Clicking a link navigates to the respective category section. The design prevents invalid actions by offering only predefined categories, ensuring clear affordances through hover effects and consistent styling across items. -->
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Sign In</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .signin-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 350px;
+        }
+        
+        .signin-header {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+        
+        .signin-header h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        .signin-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .signin-button:hover {
+            background-color: #3367d6;
+        }
+        
+        .signin-footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .signin-footer a {
+            color: #4285f4;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="signin-container">
+        <div class="signin-header">
+            <h2>Sign In</h2>
+            <p>Access your account to continue shopping</p>
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="signin-button">Sign In</button>
+        </form>
+        <div class="signin-footer">
+            <p>Don't have an account? <a href="#">Create one</a></p>
+            <p><a href="#">Forgot password?</a></p>
+        </div>
+    </div>
+
+    <!-- *****Response*****
+    Question 1: The widget features a clean, modern design with a white container (350px wide) on a light gray background. It uses Google's blue (#4285f4) for the primary button, neutral grays for text (#333, #555, #666), and subtle shadows for depth. Input fields are full-width with 12px padding, and the sign-in button is prominent. These choices create visual hierarchy, ensure readability, and follow common e-commerce design patterns for familiarity.
+
+    Question 2: This widget would typically appear when a user clicks a "Sign In" link in the website header, when attempting to access account-specific features, or during checkout if not logged in. It could also appear as a modal overlay or on a dedicated sign-in page.
+
+    Question 3: Users can: 1) Enter email and password in the form fields, 2) Submit the form by clicking the button or pressing Enter, 3) Click "Create one" to register, or 4) Click "Forgot password" to reset credentials. Form validation ensures required fields are completed before submission. The button provides visual feedback on hover.
+    -->
+</html>

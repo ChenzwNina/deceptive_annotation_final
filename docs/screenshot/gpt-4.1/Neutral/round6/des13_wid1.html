@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign In Component - E-commerce</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #f7f8fa;
+    }
+    .signin-container {
+      width: 340px;
+      margin: 20px auto 0 auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08), 0 1.5px 3px rgba(0,0,0,0.03);
+      padding: 32px 32px 24px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .signin-logo {
+      width: 58px;
+      height: 58px;
+      border-radius: 7px;
+      margin-bottom: 18px;
+      object-fit: cover;
+      background-color: #e9ecf1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .signin-title {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #23272f;
+      margin-bottom: 6px;
+      margin-top: 0;
+      letter-spacing: 0.2px;
+      text-align: center;
+    }
+    .signin-desc {
+      font-size: 0.98rem;
+      color: #4C5873;
+      margin-bottom: 22px;
+      text-align: center;
+    }
+    .signin-form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .input-label {
+      font-size: 0.97rem;
+      margin-bottom: 6px;
+      color: #23272f;
+      font-weight: 500;
+      margin-top: 13px;
+    }
+    .input-field {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1.2px solid #dde2ea;
+      border-radius: 6px;
+      font-size: 1rem;
+      margin-bottom: 3px;
+      transition: border-color 0.2s;
+      background: #f7f8fa;
+    }
+    .input-field:focus {
+      border-color: #2776ff;
+      outline: none;
+      background: #fff;
+    }
+    .signin-options {
+      margin: 0 0 18px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.94rem;
+      color: #66729d;
+    }
+    .signin-options label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+    .signin-options input[type="checkbox"] {
+      margin-right: 5px;
+      accent-color: #2776ff;
+      width: 16px;
+      height: 16px;
+    }
+    .signin-forgot {
+      color: #2776ff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+    .signin-forgot:hover {
+      color: #194eab;
+      text-decoration: underline;
+    }
+    .signin-btn {
+      background: linear-gradient(90deg, #2776ff 0%, #538FFF 100%);
+      border: none;
+      border-radius: 7px;
+      padding: 12px 0;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1.07rem;
+      font-weight: 600;
+      box-shadow: 0 2.5px 7px rgba(38,82,170,0.08);
+      transition: background 0.16s, box-shadow 0.20s;
+      margin-top: 7px;
+      margin-bottom: 10px;
+      letter-spacing: 0.2px;
+    }
+    .signin-btn:hover {
+      background: linear-gradient(90deg, #1957cb 0%, #2776ff 100%);
+      box-shadow: 0 4px 16px rgba(38,82,170,0.14);
+    }
+    .signin-divider {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      color: #b1bbd7;
+      font-size: 0.97rem;
+      margin: 20px 0 14px 0;
+    }
+    .divider-line {
+      flex: 1;
+      height: 1px;
+      background: #e9edf7;
+      margin: 0 7px;
+    }
+    .signin-google {
+      width: 100%;
+      border: 1.3px solid #dde2ea;
+      border-radius: 7px;
+      padding: 10px 0;
+      background: #f7f8fa;
+      color: #23272f;
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.14s;
+    }
+    .signin-google:hover {
+      background: #e8effb;
+      border-color: #2776ff;
+    }
+    .google-icon {
+      width: 20px;
+      height: 20px;
+      background: url('placeholder_image.jpg') center/cover no-repeat;
+      border-radius: 50%;
+      background-color: #fff;
+      border: 1px solid #e7eaf1;
+    }
+    .signin-signup {
+      font-size: 0.97rem;
+      color: #7680a1;
+      text-align: center;
+      margin-top: 14px;
+    }
+    .signin-create {
+      color: #2776ff;
+      font-weight: 500;
+      text-decoration: none;
+      margin-left: 3px;
+      transition: color 0.14s;
+    }
+    .signin-create:hover {
+      color: #194eab;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 430px) {
+      .signin-container {
+        width: 96vw;
+        min-width: 0;
+        padding: 18px 7vw 18px 7vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="signin-container">
+    <img class="signin-logo" src="placeholder_image.jpg" alt="ShopifyPro Logo">
+    <h1 class="signin-title">Sign in to your ShopifyPro account</h1>
+    <div class="signin-desc">
+      Access exclusive deals, track orders, and manage your wishlist.
+    </div>
+    <form class="signin-form" autocomplete="on">
+      <label class="input-label" for="email">Email address</label>
+      <input class="input-field" type="email" id="email" name="email" placeholder="you@email.com" required>
+
+      <label class="input-label" for="password">Password</label>
+      <input class="input-field" type="password" id="password" name="password" placeholder="Enter your password" required>
+
+      <div class="signin-options">
+        <label>
+          <input type="checkbox" name="remember-me" id="remember-me">
+          Remember me
+        </label>
+        <a href="#" class="signin-forgot">Forgot password?</a>
+      </div>
+      <button type="submit" class="signin-btn">Sign In</button>
+    </form>
+    <div class="signin-divider"><span class="divider-line"></span>or<span class="divider-line"></span></div>
+    <button class="signin-google" type="button">
+      <div class="google-icon"></div>
+      Continue with Google
+    </button>
+    <div class="signin-signup">
+      New customer?
+      <a href="#" class="signin-create">Create your account</a>
+    </div>
+  </div>
+
+  <!--
+  *****Response*****
+  Question 1:
+  The widget is a centered, rounded sign-in panel with a soft white background, subtle shadow, and sleek blue accents. The title is bold and prominent, with a company logo at the top. Large input fields and an eye-catching blue gradient sign-in button offer clarity and easy interaction. Secondary actions (forgot password, Google sign-in, create account) are visually distinct but non-distracting. The component is 340px wide—a balanced size for clarity and modern design, and adapts on small screens. Design choices ensure a professional, trustworthy, and visually attractive presence consistent with popular e-commerce platforms.
+
+  Question 2:
+  The appearance of this widget is typically triggered when a user clicks "Sign In" or "My Account" in the main navigation, or when required to access account-only features (e.g., account dashboard, order history, wishlist, or checkout).
+
+  Question 3:
+  Users can enter their credentials and sign in, select "Remember me" for persistent login, use "Forgot password" for recovery, sign in with Google, or follow the "Create your account" link to register. They may also tab among inputs and submit the form with Enter. Hover effects guide interaction and indicate clickable actions. No real authentication is handled here; only UI is included.
+  -->
+</body>
+</html>

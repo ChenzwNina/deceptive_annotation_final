@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Options</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        .shipping-widget {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .shipping-header {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .option-group {
+            margin-bottom: 20px;
+        }
+        .option-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #444;
+        }
+        .option-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .option-item:hover {
+            border-color: #0066cc;
+            background-color: #f0f7ff;
+        }
+        .option-item.selected {
+            border-color: #0066cc;
+            background-color: #e6f2ff;
+        }
+        .option-radio {
+            margin-right: 12px;
+        }
+        .option-details {
+            flex-grow: 1;
+        }
+        .option-name {
+            font-weight: 500;
+        }
+        .option-price {
+            color: #0066cc;
+            font-weight: 600;
+        }
+        .option-description {
+            font-size: 13px;
+            color: #666;
+            margin-top: 3px;
+        }
+        .addon-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 8px;
+        }
+        .addon-checkbox {
+            margin-right: 12px;
+        }
+        .addon-label {
+            cursor: pointer;
+        }
+        .addon-price {
+            margin-left: auto;
+            color: #0066cc;
+            font-weight: 600;
+        }
+        .continue-btn {
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .continue-btn:hover {
+            background-color: #0052a3;
+        }
+    </style>
+</head>
+<body>
+    <div class="shipping-widget">
+        <div class="shipping-header">Shipping Options</div>
+        
+        <div class="option-group">
+            <div class="option-title">Choose a shipping method</div>
+            
+            <div class="option-item selected">
+                <input type="radio" class="option-radio" name="shipping" checked>
+                <div class="option-details">
+                    <div class="option-name">Standard Shipping</div>
+                    <div class="option-price">$4.99</div>
+                    <div class="option-description">Delivery in 3-5 business days</div>
+                </div>
+            </div>
+            
+            <div class="option-item">
+                <input type="radio" class="option-radio" name="shipping">
+                <div class="option-details">
+                    <div class="option-name">Express Shipping</div>
+                    <div class="option-price">$9.99</div>
+                    <div class="option-description">Delivery in 1-2 business days</div>
+                </div>
+            </div>
+            
+            <div class="option-item">
+                <input type="radio" class="option-radio" name="shipping">
+                <div class="option-details">
+                    <div class="option-name">Free Shipping</div>
+                    <div class="option-price">$0.00</div>
+                    <div class="option-description">Delivery in 5-7 business days</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="option-group">
+            <div class="option-title">Add-ons</div>
+            
+            <div class="addon-item">
+                <input type="checkbox" class="addon-checkbox" id="gift-wrap">
+                <label for="gift-wrap" class="addon-label">Gift Wrapping</label>
+                <div class="addon-price">$3.99</div>
+            </div>
+            
+            <div class="addon-item">
+                <input type="checkbox" class="addon-checkbox" id="insurance">
+                <label for="insurance" class="addon-label">Shipping Insurance</label>
+                <div class="addon-price">$2.49</div>
+            </div>
+            
+            <div class="addon-item">
+                <input type="checkbox" class="addon-checkbox" id="signature">
+                <label for="signature" class="addon-label">Signature Required</label>
+                <div class="addon-price">$1.99</div>
+            </div>
+        </div>
+        
+        <button class="continue-btn">Continue to Payment</button>
+    </div>
+
+    <!-- *****Response*****
+    Question 1: The widget has a clean, modern design with a white background and subtle shadow for depth. Shipping options are displayed as cards with blue accent colors when selected. I chose a card-based layout for clear visual separation of options, with hover states to indicate interactivity. Text sizes are hierarchical (18px for header, 16px for options) for easy scanning. Blue is used for prices and selected states as it conveys trust and is commonly associated with clickable elements in ecommerce.
+
+    Question 2: This widget would typically appear during checkout after the user enters their shipping address. It might be triggered automatically when the address is verified, or appear when the user clicks a "Continue to Shipping" button from the previous checkout step. The timing ensures shipping options are relevant to the user's location.
+
+    Question 3: Users can: 1) Select one shipping method by clicking radio buttons (visual feedback shows selection), 2) Toggle optional add-ons with checkboxes, 3) Hover over options to see highlight states, and 4) Click "Continue" to proceed. The widget provides immediate visual feedback for all interactions, with color changes and selection states helping users understand their choices.
+    -->
+</body>
+</html>

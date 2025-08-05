@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Search Panel</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f4f4f4; /* A neutral background to make the component stand out */
+            height: 200vh; /* Making body long enough to demonstrate fixed positioning */
+            margin: 0;
+            padding: 0;
+        }
+
+        .search-panel-container {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000; /* Ensures it stays on top of other content */
+            
+            width: 90%;
+            max-width: 800px; /* Limits width on larger screens for better aesthetics */
+            
+            display: flex;
+            align-items: stretch; /* Makes all items in the flex container the same height */
+
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth and separation from the page */
+            overflow: hidden; /* Ensures child elements conform to the border-radius */
+            border: 1px solid #e0e0e0;
+        }
+
+        .search-panel-form {
+            display: flex;
+            flex-grow: 1;
+        }
+
+        .category-selector select {
+            height: 100%;
+            padding: 0 20px;
+            border: none;
+            border-right: 1px solid #e0e0e0; /* Visual separator */
+            background-color: #f9f9f9; /* Slight off-white to differentiate from the input area */
+            font-size: 16px;
+            color: #333;
+            cursor: pointer;
+            outline: none;
+            -webkit-appearance: none; /* Removes default OS styling */
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23333'%3E%3Cpath d='M6 9L0 3h12z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            padding-right: 40px; /* Space for the custom arrow */
+        }
+        
+        .category-selector select:hover {
+            background-color: #f2f2f2;
+        }
+
+        .search-input-wrapper {
+            flex-grow: 1; /* Allows the input to take up available space */
+            display: flex;
+        }
+
+        .search-input-wrapper input[type="search"] {
+            width: 100%;
+            border: none;
+            padding: 15px 20px;
+            font-size: 16px;
+            color: #222;
+            outline: none;
+        }
+
+        .search-input-wrapper input[type="search"]::placeholder {
+            color: #999;
+            opacity: 1;
+        }
+        
+        /* Hides the default clear button in WebKit browsers */
+        .search-input-wrapper input[type="search"]::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+        }
+
+        .search-button {
+            padding: 0 25px;
+            border: none;
+            background-color: #FF6900; /* Bright, high-contrast CTA color to drive clicks */
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .search-button:hover {
+            background-color: #e65e00; /* A slightly darker shade on hover for feedback */
+        }
+
+        .search-button svg {
+            width: 22px;
+            height: 22px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .category-selector {
+                display: none; /* Hide category selector on small screens to save space */
+            }
+            .search-panel-container {
+                border-radius: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="search-panel-container">
+        <form action="/search" method="get" class="search-panel-form">
+            <div class="category-selector">
+                <select name="category" aria-label="Search category">
+                    <option value="all">All Categories</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="fashion-womens">Women's Fashion</option>
+                    <option value="fashion-mens">Men's Fashion</option>
+                    <option value="home-kitchen">Home & Kitchen</option>
+                    <option value="books-media">Books & Media</option>
+                    <option value="health-beauty">Health & Beauty</option>
+                    <option value="toys-games">Toys & Games</option>
+                </select>
+            </div>
+            <div class="search-input-wrapper">
+                <input 
+                    type="search" 
+                    name="q" 
+                    placeholder="Search for products, brands, and more..." 
+                    aria-label="Search for products" 
+                    autocomplete="off">
+            </div>
+            <button type="submit" class="search-button" aria-label="Submit search">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                </svg>
+            </button>
+        </form>
+    </div>
+
+<!-- *****Response***** -->
+<!--
+## Question 4.1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The search panel is a clean, modern, rectangular component fixed at the top of the screen. It features rounded corners and a subtle shadow, making it float above the page content.
+
+**Layout:** It uses a horizontal flexbox layout. From left to right: a category dropdown, a main search input field that occupies the most space, and a search button. This arrangement follows a natural user flow—refine, type, and submit. On screens narrower than 600px, the category dropdown is hidden to maximize space for the essential search input.
+
+**Colors:** The main container is white (#FFFFFF) for maximum clarity. The category dropdown has a light grey background (#f9f9f9) to visually distinguish it as a separate control. The call-to-action search button is a vibrant orange (#FF6900), a high-contrast color proven to draw the eye and encourage clicks, directly supporting sales and conversion goals.
+
+**Size:** The panel is large and prominent, with a height determined by its generous padding and 16px font size, ensuring readability and ease of use. This significant presence ensures users can find it immediately, minimizing bounce rate and encouraging site exploration.
+-->
+
+<!--
+## Question 4.2: What triggers the appearance of this widget?
+
+The appearance of this search panel is not triggered by a specific user action; it is a permanent, foundational element of the user interface. It loads by default with the page and remains fixed at the top of the viewport (`position: fixed`) as the user scrolls.
+
+This design choice is deliberate and crucial for maximizing usability and conversions. Search is a primary navigation method for high-intent users on e-commerce sites. By making the search panel persistently visible, we eliminate the friction of having to scroll back to the top of the page to find it. This constant accessibility encourages users to perform more searches, view more products, and spend more time on the site, directly contributing to higher page views per visit and reducing the likelihood of a user abandoning the site out of frustration from being unable to find what they want.
+-->
+
+<!--
+## Question 4.3: Can you describe the full range of interactions users can have with the widget?
+
+Users have several clear and intuitive interactions with the search panel, designed for a seamless experience.
+
+1.  **Category Selection:** The user can click on the "All Categories" dropdown on the left. This opens a list of predefined product categories. They can then select one, such as "Electronics," to narrow the scope of their search before even typing. Hovering over this dropdown provides subtle visual feedback.
+
+2.  **Text Input:** The user can click into the main input field and type their search query (e.g., "wireless headphones"). The large, clear placeholder text "Search for products, brands, and more..." prompts this action and disappears upon typing. The user can also clear their query from the input field.
+
+3.  **Search Submission:** To execute the search, the user has two options:
+    *   Click the prominent orange search button on the right. Hovering over this button changes its color slightly, signaling interactivity.
+    *   Press the "Enter" key on their keyboard after typing their query.
+
+These interactions form a simple, powerful, and standard user flow that requires no learning curve, thereby minimizing friction and encouraging immediate engagement.
+-->
+
+</body>
+</html>

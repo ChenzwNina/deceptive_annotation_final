@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Component</title>
+    <style>
+        /* Global styles for a realistic e-commerce feel */
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f4f4f4; /* A neutral background to make the component pop */
+            margin: 0;
+            padding: 0;
+            /* The following is just for demo purposes to show the component over content */
+            background-image: url('placeholder_image.jpg');
+            background-size: cover;
+            height: 200vh;
+        }
+
+        /* The main component wrapper that positions it at the top */
+        .signin-modal-overlay {
+            position: fixed; /* Stays in place even when scrolling */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Dark overlay to focus user attention */
+            display: flex;
+            justify-content: center; /* Horizontally centers the modal */
+            align-items: flex-start; /* Aligns modal to the top */
+            z-index: 1000;
+            overflow-y: auto; /* Allows scrolling if content overflows on small screens */
+        }
+
+        .signin-modal-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 420px;
+            margin-top: 20px; /* As per requirement */
+            margin-bottom: 20px;
+            position: relative;
+            padding: 40px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .signin-close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: 300;
+            color: #888;
+            cursor: pointer;
+            text-decoration: none;
+            line-height: 1;
+        }
+
+        .signin-close-btn:hover {
+            color: #333;
+        }
+
+        .signin-modal-container h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .signin-modal-container p.subtitle {
+            font-size: 16px;
+            color: #555;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        .signin-form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .signin-form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .signin-form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .signin-form-group input:focus {
+            outline: none;
+            border-color: #007bff; /* Highlight color on focus */
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+        }
+
+        .signin-options {
+            text-align: right;
+            margin-top: -10px;
+            margin-bottom: 25px;
+        }
+
+        .signin-options .forgot-password-link {
+            color: #007bff;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        
+        .forgot-password-link:hover {
+            text-decoration: underline;
+        }
+
+        .signin-cta-btn {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #ffffff;
+            background-color: #28a745; /* Green for positive action */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            letter-spacing: 0.5px;
+        }
+
+        .signin-cta-btn:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+
+        .create-account-prompt {
+            margin-top: 30px;
+            font-size: 15px;
+            color: #555;
+        }
+
+        .create-account-prompt .create-account-link {
+            color: #007bff;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .create-account-link:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="signin-modal-overlay">
+        <div class="signin-modal-container">
+            <a href="#" class="signin-close-btn" title="Close">&times;</a>
+            
+            <h1>Welcome Back!</h1>
+            <p class="subtitle">Sign in for faster checkout & to access your account.</p>
+
+            <form>
+                <div class="signin-form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="signin-form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="signin-options">
+                    <a href="#" class="forgot-password-link">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="signin-cta-btn">Sign In Securely</button>
+            </form>
+
+            <div class="create-account-prompt">
+                New to AuraCart? <a href="#" class="create-account-link">Create an account</a>
+            </div>
+        </div>
+    </div>
+
+<!--
+*****Response*****
+
+### Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The component is a modal dialog that appears over a dimmed, semi-transparent background, focusing the user's attention. The modal itself has a clean white background, soft rounded corners, and a subtle shadow, giving it a modern, layered feel.
+
+**Layout & Size:** The layout is a single, centered vertical column. It starts with a large, bold heading ("Welcome Back!") to immediately orient the user. Input fields are large with ample padding, making them easy to tap on mobile devices. A full-width call-to-action button at the bottom is impossible to miss. This clear hierarchy minimizes cognitive load and speeds up the sign-in process, directly supporting conversion rates.
+
+**Colors:** The color palette is intentionally simple and high-contrast. Text is a dark grey (#2c3e50) for excellent readability. The primary action button is a vibrant green (#28a745), a color associated with "Go" and success, which encourages clicks. Secondary links use a standard, trusted blue (#007bff). This color strategy draws the user's eye to the most important actions (Sign In, Create Account), maximizing the chance of a successful login or new registration, thereby reducing bounce rates.
+
+### Question 2: What triggers the appearance of this widget?
+
+The appearance of this sign-in modal is typically triggered by one of two user actions. The most common trigger is the user clicking on a "Sign In" or "My Account" link, usually located prominently in the website's main header. This is a direct, user-initiated action.
+
+Alternatively, the modal can be triggered automatically when a user attempts to access a protected area of the site without being authenticated. For example, if a guest user clicks on "My Orders," "Track Package," or tries to proceed to checkout with items in their cart, the system would interrupt their journey with this modal. This "just-in-time" approach is effective because it asks for a login at the precise moment the user understands its necessity, which can significantly reduce cart abandonment and user frustration. The goal is to make authentication a seamless part of the user's intended workflow rather than an upfront barrier.
+
+### Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have several clear, direct interaction pathways designed for efficiency and to prevent dead ends:
+
+1.  **Primary Action (Sign In):** The user can type their email and password into the respective input fields and click the prominent "Sign In Securely" button to submit their credentials and access their account.
+2.  **Dismissal:** If the user landed here by mistake or changed their mind, they can click the '×' icon in the top-right corner or click on the dark overlay area outside the modal to close it and return to the previous page. This prevents them from feeling trapped, reducing bounce rate.
+3.  **Password Recovery:** If the user has forgotten their password, they can click the "Forgot Password?" link. This would typically navigate them to a separate password reset page or open another modal for that specific process.
+4.  **New User Registration:** If a new user encounters the modal, they can click the "Create an account" link at the bottom. This diverts them to a registration form, ensuring the site can capture a new potential customer instead of losing them.
+5.  **Form Interaction:** Users receive immediate visual feedback when interacting with input fields, which highlight with a blue border on focus. This standard usability practice confirms to the user where they are typing.
+
+-->
+</body>
+</html>

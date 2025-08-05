@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Category Navigation</title>
+    <style>
+        /* Reset box-sizing */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f8f9fb;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .category-nav-container {
+            margin: 20px auto 0 auto;
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+            width: 100%;
+            max-width: 1200px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 18px rgba(34,34,34,0.08);
+            padding: 0 32px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            min-height: 80px;
+        }
+        .category-logo {
+            display: flex;
+            align-items: center;
+            margin-right: 24px;
+        }
+        .category-logo img {
+            height: 48px;
+            width: 48px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .category-nav-list {
+            display: flex;
+            gap: 18px;
+            flex: 1;
+            overflow-x: auto;
+        }
+        .category-nav-item {
+            text-decoration: none;
+            color: #212529;
+            font-weight: 500;
+            font-size: 1.04rem;
+            position: relative;
+            padding: 8px 20px;
+            border-radius: 20px;
+            transition: background .2s, color .2s;
+            background: linear-gradient(90deg, #f5f7fa 0%, #e3eefa 100%);
+        }
+        .category-nav-item:hover,
+        .category-nav-item.active {
+            background: linear-gradient(90deg, #1266f1 0%, #0b5ed7 95%);
+            color: #fff;
+            box-shadow: 0 2px 10px rgba(18,102,241,0.13);
+        }
+        .nav-action-buttons {
+            display: flex;
+            gap: 12px;
+            margin-left: auto;
+        }
+        .btn-view-all,
+        .btn-sale {
+            padding: 8px 18px;
+            font-size: 0.98rem;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 1px 5px rgba(34, 34, 34, 0.04);
+            transition: background .2s, color .2s;
+        }
+        .btn-view-all {
+            background: #f0f2fa;
+            color: #1266f1;
+        }
+        .btn-view-all:hover {
+            background: #dbeafe;
+            color: #063060;
+        }
+        .btn-sale {
+            background: linear-gradient(90deg, #ff7d4f 0%, #ff307a 97%);
+            color: #fff;
+            border: none;
+        }
+        .btn-sale:hover {
+            background: linear-gradient(90deg, #ff307a 0%, #ff7d4f 100%);
+            color: #fff;
+        }
+        @media (max-width: 800px) {
+            .category-nav-container {
+                padding: 0 12px;
+                gap: 8px;
+            }
+            .category-logo {
+                margin-right: 6px;
+            }
+            .category-logo img {
+                height: 36px;
+                width: 36px;
+            }
+            .category-nav-item {
+                font-size: 0.98rem;
+                padding: 8px 12px;
+            }
+            .btn-view-all, .btn-sale {
+                font-size: 0.92rem;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="category-nav-container">
+        <div class="category-logo">
+            <img src="placeholder_image.jpg" alt="Shop Logo">
+        </div>
+        <div class="category-nav-list">
+            <a href="/collections/new-arrivals" class="category-nav-item active">New Arrivals</a>
+            <a href="/collections/womens-fashion" class="category-nav-item">Women's Fashion</a>
+            <a href="/collections/mens-fashion" class="category-nav-item">Men's Fashion</a>
+            <a href="/collections/electronics" class="category-nav-item">Electronics</a>
+            <a href="/collections/home-living" class="category-nav-item">Home &amp; Living</a>
+            <a href="/collections/beauty" class="category-nav-item">Beauty</a>
+            <a href="/collections/sports" class="category-nav-item">Sports</a>
+            <a href="/collections/toys" class="category-nav-item">Toys</a>
+            <a href="/collections/gifts" class="category-nav-item">Gifts</a>
+            <a href="/collections/sale" class="category-nav-item" style="font-weight:700; color:#ff307a;">Sale</a>
+        </div>
+        <div class="nav-action-buttons">
+            <button class="btn-view-all" onclick="window.location.href='/collections/all'">View All Categories</button>
+            <button class="btn-sale" onclick="window.location.href='/collections/sale'">🔥 Today's Deals</button>
+        </div>
+    </nav>
+</body>
+<!--
+*****Response*****
+4.1: The widget is a horizontal navigation bar set in a white, rounded container with subtle shadow, placed with a 20px margin from the top. It uses blue (#1266f1) as a brand highlight, warm pinks for “Sale,” and soothing gradients for other categories. The category names are large for clickable targets; mobile responsiveness ensures usability on all devices. The logo at the left brands the nav bar, while action buttons (View All, Today's Deals) at right encourage users to discover more and shop sales, maximizing engagement and conversions.
+
+4.2: This widget appears at the very top of every main page (including homepage, category, and search pages) as soon as the visitor loads the site. Its sticky positioning keeps it visible as users scroll, ensuring constant access to category paths.
+
+4.3: Users can click any category name to view products within that category, with active highlights indicating selection. The “View All Categories” button navigates to a full category overview. The "Today's Deals" button takes the user to the sales collection, featuring compelling deals. Navigation is horizontal and scrollable for overflow on small screens, ensuring accessibility and quick discovery. The category nav increases time on site, product exposure, and simplifies the shopping journey.
+-->
+</html>

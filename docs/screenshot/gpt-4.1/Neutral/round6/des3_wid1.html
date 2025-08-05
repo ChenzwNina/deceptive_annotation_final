@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>E-commerce Search Panel Component</title>
+  <style>
+    .search-panel-container {
+      margin-top: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      z-index: 10;
+    }
+    .search-panel {
+      background: #ffffff;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      padding: 18px 30px 18px 20px;
+      max-width: 540px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .search-panel-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      object-fit: cover;
+      margin-right: 22px;
+      background: #f4f4f4;
+    }
+    .search-panel-form {
+      display: flex;
+      flex: 1 1 auto;
+      align-items: center;
+      position: relative;
+    }
+    .search-panel-input {
+      width: 100%;
+      padding: 12px 50px 12px 16px;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      font-size: 16px;
+      background: #fafafa;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .search-panel-input:focus {
+      border-color: #3983fa;
+      background: #fff;
+    }
+    .search-panel-submit {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      background: #3983fa;
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 5px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background 0.15s;
+      font-weight: 600;
+    }
+    .search-panel-submit:hover {
+      background: #2260c1;
+    }
+    .search-hint {
+      color: #888;
+      margin-left: 20px;
+      font-size: 14px;
+      flex-shrink: 0;
+      display: none;
+    }
+    @media (min-width: 700px) {
+      .search-hint {
+        display: block;
+      }
+    }
+    @media (max-width: 600px) {
+      .search-panel {
+        max-width: 100%;
+        padding: 12px 10px;
+      }
+      .search-panel-logo {
+        width: 32px;
+        height: 32px;
+        margin-right: 10px;
+      }
+    }
+  </style>
+</head>
+<body style="margin:0; background:#f4f7fa;">
+  <div class="search-panel-container">
+    <div class="search-panel">
+      <img src="placeholder_image.jpg" alt="Shop Logo" class="search-panel-logo">
+      <form class="search-panel-form" action="/search" method="GET" autocomplete="off">
+        <input class="search-panel-input" type="text" name="q" placeholder="Search for products, brands and categories…">
+        <button class="search-panel-submit" type="submit">
+          Search
+        </button>
+      </form>
+      <span class="search-hint">Popular: Wireless Headphones, iPhone 15, Air Fryer</span>
+    </div>
+  </div>
+</body>
+<!--
+*****Response*****
+Question 1: The widget is a clean, modern horizontal search bar with a white background, subtle box-shadow, and rounded corners, centered near the top of the viewport (20px margin). On the left, it features a shop logo placeholder image (40x40px), followed by a wide search field with soft gray background and light border that highlights blue when active. To the right of the input is a blue 'Search' button with white text and slight hover darkening. On wider screens, a hint below suggests popular searches in muted gray. The layout is compact yet prominent, drawing users to the primary search function, while remaining visually consistent with contemporary e-commerce UI trends.
+
+Question 2: This widget appears fixed at the top of the e-commerce website's home page, or on subsequent pages where a prominent product search is required. It is intended to always be visible to users upon page load, so they can immediately begin searching for products.
+
+Question 3: Users can interact with the widget by clicking on the input field to focus and type their search query. They can also submit their search using the "Search" button or by pressing Enter. The popular searches hint can guide users but is non-interactive. The logo can be adjusted to be clickable (e.g., home navigation) if needed. The panel is responsive, adjusting layout and size for smaller screens.
+-->
+</html>

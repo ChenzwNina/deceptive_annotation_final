@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Filter Panel</title>
+    <style>
+        /* --- Global Styles & Fonts --- */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f5f7; /* A neutral background to make the component pop */
+            color: #172B4D; /* Atlassian's dark blue/grey for text */
+            margin: 0;
+            padding: 0;
+            /* Added for demonstration purposes to show the panel over content */
+            height: 200vh; 
+        }
+
+        /* --- Main Filter Panel Container --- */
+        .filter-panel {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 300px;
+            max-height: calc(100vh - 40px);
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .filter-panel:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* --- Panel Header --- */
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            border-bottom: 1px solid #DFE1E6;
+            flex-shrink: 0;
+        }
+
+        .panel-header h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .panel-header .clear-all {
+            font-size: 14px;
+            font-weight: 500;
+            color: #007BFF;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .panel-header .clear-all:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        /* --- Panel Body & Scrolling --- */
+        .panel-body {
+            padding: 8px 20px;
+            overflow-y: auto;
+            flex-grow: 1;
+        }
+
+        /* Custom scrollbar for a polished look */
+        .panel-body::-webkit-scrollbar {
+            width: 6px;
+        }
+        .panel-body::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .panel-body::-webkit-scrollbar-thumb {
+            background: #DFE1E6;
+            border-radius: 3px;
+        }
+        .panel-body::-webkit-scrollbar-thumb:hover {
+            background: #C1C7D0;
+        }
+
+        /* --- Filter Sections (Accordion) --- */
+        .filter-section {
+            border-bottom: 1px solid #DFE1E6;
+            padding: 16px 0;
+        }
+
+        .filter-section:last-child {
+            border-bottom: none;
+        }
+
+        .filter-section details {
+            width: 100%;
+        }
+
+        .filter-section summary {
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none; /* Remove default marker */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.2s ease;
+        }
+        
+        .filter-section summary:hover {
+            color: #007BFF;
+        }
+
+        .filter-section summary::-webkit-details-marker {
+            display: none; /* Hide for Webkit browsers */
+        }
+        
+        /* Custom accordion arrow */
+        .filter-section summary::after {
+            content: '+';
+            font-size: 20px;
+            font-weight: 400;
+            color: #5E6C84;
+            transition: transform 0.3s ease;
+        }
+        
+        .filter-section details[open] > summary::after {
+            transform: rotate(45deg);
+        }
+
+        .filter-content {
+            padding-top: 12px;
+        }
+
+        /* --- Checkbox List (for Brand) --- */
+        .filter-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .filter-list li {
+            display: flex;
+            align-items: center;
+        }
+
+        .filter-list input[type="checkbox"] {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+            accent-color: #007BFF; /* Modern way to color checkboxes */
+            cursor: pointer;
+        }
+        
+        .filter-list label {
+            font-size: 14px;
+            color: #42526E;
+            cursor: pointer;
+        }
+
+        /* --- Price Range Slider --- */
+        .price-range {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .price-values {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #42526E;
+        }
+
+        .price-range input[type="range"] {
+            width: 100%;
+            cursor: pointer;
+            accent-color: #007BFF;
+        }
+
+        /* --- Color Swatches --- */
+        .color-swatches {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .color-swatch {
+            position: relative;
+        }
+
+        .color-swatch input[type="checkbox"] {
+            opacity: 0; /* Hide the checkbox */
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+        }
+
+        .color-swatch .swatch-ui {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 2px solid #DFE1E6;
+            display: block;
+            transition: all 0.2s ease;
+        }
+
+        /* Visual feedback on selection */
+        .color-swatch input[type="checkbox"]:checked + .swatch-ui {
+            border-color: #007BFF;
+            transform: scale(1.1);
+            box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #007BFF;
+        }
+
+        .color-swatch input[type="checkbox"]:focus + .swatch-ui {
+            box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #007BFF;
+        }
+
+        /* --- Size Buttons --- */
+        .size-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+            gap: 8px;
+        }
+
+        .size-option {
+            position: relative;
+        }
+
+        .size-option input[type="checkbox"] {
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .size-option .size-ui {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #DFE1E6;
+            border-radius: 4px;
+            padding: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        .size-option input[type="checkbox"]:checked + .size-ui {
+            background-color: #007BFF;
+            color: #ffffff;
+            border-color: #007BFF;
+        }
+
+        .size-option input[type="checkbox"]:focus + .size-ui {
+            border-color: #007BFF;
+            box-shadow: 0 0 0 2px #007BFF;
+        }
+
+        .size-option input[type="checkbox"]:hover + .size-ui {
+            border-color: #007BFF;
+        }
+
+
+        /* --- Panel Footer --- */
+        .panel-footer {
+            padding: 20px;
+            background-color: #ffffff;
+            border-top: 1px solid #DFE1E6;
+            flex-shrink: 0;
+        }
+
+        .apply-btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #ffffff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .apply-btn:hover {
+            background-color: #0069d9;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .apply-btn:active {
+            background-color: #0056b3;
+        }
+
+        .apply-btn:focus {
+            outline: 2px solid #007BFF;
+            outline-offset: 2px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="filter-panel" role="form" aria-labelledby="filter-panel-title">
+        <header class="panel-header">
+            <h3 id="filter-panel-title">Filter Results</h3>
+            <a href="#" class="clear-all">Clear All</a>
+        </header>
+
+        <div class="panel-body">
+            
+            <!-- Brand Filter -->
+            <div class="filter-section">
+                <details open>
+                    <summary>Brand</summary>
+                    <div class="filter-content">
+                        <ul class="filter-list">
+                            <li><input type="checkbox" id="brand1" name="brand" value="apex"><label for="brand1">Apex Athletics</label></li>
+                            <li><input type="checkbox" id="brand2" name="brand" value="terra" checked><label for="brand2">Terra Gear</label></li>
+                            <li><input type="checkbox" id="brand3" name="brand" value="urban"><label for="brand3">UrbanStride</label></li>
+                            <li><input type="checkbox" id="brand4" name="brand" value="aquaflow"><label for="brand4">AquaFlow</label></li>
+                            <li><input type="checkbox" id="brand5" name="brand" value="nomad"><label for="brand5">Nomad Supply Co.</label></li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+
+            <!-- Price Range Filter -->
+            <div class="filter-section">
+                <details open>
+                    <summary>Price Range</summary>
+                    <div class="filter-content">
+                        <div class="price-range">
+                            <div class="price-values">
+                                <span id="min-price">$50</span>
+                                <span id="max-price">$500+</span>
+                            </div>
+                            <input type="range" min="50" max="500" value="275" id="price-slider" aria-label="Price slider">
+                        </div>
+                    </div>
+                </details>
+            </div>
+            
+            <!-- Color Filter -->
+            <div class="filter-section">
+                <details open>
+                    <summary>Color</summary>
+                    <div class="filter-content">
+                        <div class="color-swatches">
+                            <div class="color-swatch">
+                                <input type="checkbox" id="color-black" name="color" value="black" checked>
+                                <label for="color-black" class="swatch-ui" style="background-color: #212121;" aria-label="Black"></label>
+                            </div>
+                            <div class="color-swatch">
+                                <input type="checkbox" id="color-white" name="color" value="white">
+                                <label for="color-white" class="swatch-ui" style="background-color: #FFFFFF;" aria-label="White"></label>
+                            </div>
+                            <div class="color-swatch">
+                                <input type="checkbox" id="color-blue" name="color" value="blue">
+                                <label for="color-blue" class="swatch-ui" style="background-color: #3498db;" aria-label="Blue"></label>
+                            </div>
+                            <div class="color-swatch">
+                                <input type="checkbox" id="color-red" name="color" value="red">
+                                <label for="color-red" class="swatch-ui" style="background-color: #e74c3c;" aria-label="Red"></label>
+                            </div>
+                            <div class="color-swatch">
+                                <input type="checkbox" id="color-green" name="color" value="green" checked>
+                                <label for="color-green" class="swatch-ui" style="background-color: #2ecc71;" aria-label="Green"></label>
+                            </div>
+                            <div class="color-swatch">
+                                <input type="checkbox" id="color-grey" name="color" value="grey">
+                                <label for="color-grey" class="swatch-ui" style="background-color: #95a5a6;" aria-label="Grey"></label>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            
+            <!-- Size Filter -->
+            <div class="filter-section">
+                <details>
+                    <summary>Size</summary>
+                    <div class="filter-content">
+                        <div class="size-options">
+                            <div class="size-option">
+                                <input type="checkbox" id="size-xs" name="size" value="xs"><label for="size-xs" class="size-ui">XS</label>
+                            </div>
+                            <div class="size-option">
+                                <input type="checkbox" id="size-s" name="size" value="s"><label for="size-s" class="size-ui">S</label>
+                            </div>
+                            <div class="size-option">
+                                <input type="checkbox" id="size-m" name="size" value="m" checked><label for="size-m" class="size-ui">M</label>
+                            </div>
+                            <div class="size-option">
+                                <input type="checkbox" id="size-l" name="size" value="l"><label for="size-l" class="size-ui">L</label>
+                            </div>
+                            <div class="size-option">
+                                <input type="checkbox" id="size-xl" name="size" value="xl"><label for="size-xl" class="size-ui">XL</label>
+                            </div>
+                            <div class="size-option">
+                                <input type="checkbox" id="size-xxl" name="size" value="xxl"><label for="size-xxl" class="size-ui">XXL</label>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <footer class="panel-footer">
+            <button class="apply-btn">Apply Filters</button>
+        </footer>
+    </div>
+    
+<!-- *****Response*****
+
+### Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The filter panel is a fixed-position card, 300 pixels wide, that sits on the top-left of the viewport. It has a clean, modern aesthetic with a white background (`#ffffff`), rounded corners, and a subtle box shadow to lift it off the page. The layout is a vertical stack: a header with the title "Filter Results", a scrollable body containing collapsible filter sections, and a footer with a prominent "Apply Filters" button.
+
+I chose a professional and neutral color palette, primarily using shades of grey for text and borders (`#172B4D`, `#DFE1E6`), with a vibrant blue (`#007BFF`) as the single accent color. This blue is used for all interactive elements like links, selected states, and the primary call-to-action button. This choice creates high visibility for functions and a consistent visual language. The typography uses the "Inter" font, which is highly readable on screens. The collapsible sections (`<details>`) manage complexity, ensuring the panel doesn't overwhelm users with too many options at once, thus supporting efficient task execution.
+
+### Question 2: What triggers the appearance of this widget?
+
+On a desktop or large tablet view, this filter panel is designed to be persistently visible. It appears automatically when a user navigates to a product category page or a search results page. It's a core part of the page layout, not a pop-up or modal that requires a user action to be triggered. This persistent visibility ensures that filtering functionality is always accessible and discoverable, following the design principle of high visibility of functions. While this specific implementation is for a desktop view, on a mobile device, its appearance would typically be triggered by the user tapping a dedicated "Filter" or "Refine" button to save screen real estate. The component would then slide into view as an overlay or a new screen.
+
+### Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users can interact with the widget in several ways to efficiently refine product results:
+
+1.  **Expand/Collapse Sections:** Users can click on the header of any filter category (e.g., "Brand", "Price Range") to show or hide its options, helping them focus on relevant criteria.
+2.  **Select/Deselect Options:** For categories like "Brand," users can click checkboxes to select one or more options. For "Color" and "Size," they interact with visually distinct swatches and buttons that function as checkboxes, providing clear affordances.
+3.  **Adjust Price:** A range slider allows users to define a specific price bracket by dragging the handle.
+4.  **Apply Filters:** Clicking the prominent blue "Apply Filters" button at the bottom submits their selections, which would then update the product grid on the main page.
+5.  **Clear Selections:** A "Clear All" link in the header allows users to instantly reset all chosen filters to their default state, providing an efficient way to start a new search.
+
+Each interaction provides immediate visual feedback, such as a checked box, a highlighted button, or a rotated accordion arrow, creating a satisfying and helpful user experience.
+
+*****Response***** -->
+</html>

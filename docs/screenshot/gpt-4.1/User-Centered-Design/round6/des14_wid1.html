@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Tracking Component</title>
+  <style>
+    body {
+      background: #f4f6f8;
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .order-tracking {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 5px 25px rgba(60,72,88,0.09);
+      width: 540px;
+      max-width: 96vw;
+      z-index: 2000;
+      padding: 28px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+    .order-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-bottom: 1px solid #eef1f4;
+      padding-bottom: 12px;
+    }
+    .order-img {
+      width: 64px;
+      height: 64px;
+      border-radius: 8px;
+      background: #f0f1f5;
+      object-fit: cover;
+    }
+    .order-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .order-number {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #24292f;
+    }
+    .order-date {
+      color: #777f8e;
+      font-size: 0.95rem;
+    }
+    .tracking-progress {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: 6px;
+    }
+    .tracking-step {
+      width: 20%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      z-index: 2;
+    }
+    .tracking-icon {
+      font-size: 1.35rem;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #e4e9f1;
+      color: #3154df;
+      margin-bottom: 6px;
+    }
+    .tracking-step.completed .tracking-icon {
+      background: #3154df;
+      color: #fff;
+      border: 2px solid #2240a3;
+    }
+    .tracking-step.current .tracking-icon {
+      background: #fff2db;
+      color: #f8a236;
+      border: 2px solid #f8a236;
+    }
+    .tracking-label {
+      font-size: 0.98rem;
+      text-align: center;
+      color: #444f5a;
+      margin-bottom: 2px;
+      font-weight: 500;
+    }
+    .tracking-date {
+      font-size: 0.88rem;
+      color: #939ba9;
+      text-align: center;
+    }
+    .tracking-bar {
+      position: absolute;
+      top: 16px;
+      left: 50%;
+      width: 100%;
+      height: 5px;
+      background: #e4e9f1;
+      z-index: 1;
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
+    .tracking-bar-fill {
+      position: absolute;
+      top: 16px;
+      left: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #3154df 60%, #e4e9f1);
+      border-radius: 3px;
+      z-index: 2;
+      transition: width 0.6s cubic-bezier(.42,0,.58,1.0);
+    }
+    .delivery-details {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #f7fafc;
+      padding: 14px 18px;
+      border-radius: 8px;
+      font-size: 1rem;
+      color: #273142;
+      gap: 18px;
+    }
+    .delivery-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .delivery-status {
+      font-weight: 600;
+      color: #3154df;
+    }
+    .track-btn {
+      background: #3154df;
+      color: #fff;
+      border: none;
+      padding: 9px 24px;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-left: 12px;
+      font-weight: 500;
+      transition: background 0.18s;
+      outline: none;
+    }
+    .track-btn:hover,
+    .track-btn:focus {
+      background: #2240a3;
+    }
+    /* Constraints: Hide button if order is delivered */
+    .track-btn[disabled],
+    .track-btn.disabled {
+      background: #bfc6df !important;
+      color: #f2f2f2 !important;
+      cursor: not-allowed;
+      pointer-events: none;
+      opacity: .7;
+    }
+    @media (max-width: 650px) {
+      .order-tracking { width: 99vw; padding: 16px 6vw;}
+      .order-header { gap: 10px;}
+      .order-img { width: 48px; height: 48px;}
+      .delivery-details { flex-direction: column; align-items: flex-start; font-size: 1rem;}
+      .track-btn { width: 100%; margin-left: 0;}
+    }
+  </style>
+</head>
+<body>
+  <div class="order-tracking" role="region" aria-label="Order Tracking Details">
+    <div class="order-header">
+      <img class="order-img" src="placeholder_image.jpg" alt="Product Image">
+      <div class="order-info">
+        <span class="order-number">Order #12273821</span>
+        <span class="order-date">Placed on June 14, 2024</span>
+        <span style="font-size:0.95rem; color:#3154df; margin-top:4px;">Delivery to: 928 Market St, San Francisco</span>
+      </div>
+    </div>
+    <div style="position: relative; min-height: 72px;">
+      <div class="tracking-bar"></div>
+      <div class="tracking-bar-fill" style="width: 58%;"></div>
+      <div class="tracking-progress">
+        <div class="tracking-step completed">
+          <div class="tracking-icon" title="Order Placed">&#10003;</div>
+          <span class="tracking-label">Placed</span>
+          <span class="tracking-date">Jun 14</span>
+        </div>
+        <div class="tracking-step completed">
+          <div class="tracking-icon" title="Order Confirmed">&#128230;</div>
+          <span class="tracking-label">Confirmed</span>
+          <span class="tracking-date">Jun 14</span>
+        </div>
+        <div class="tracking-step current">
+          <div class="tracking-icon" title="Order Shipped">&#128230;</div>
+          <span class="tracking-label">Shipped</span>
+          <span class="tracking-date">Jun 15</span>
+        </div>
+        <div class="tracking-step">
+          <div class="tracking-icon" title="Out for Delivery">&#128667;</div>
+          <span class="tracking-label">Out for Delivery</span>
+          <span class="tracking-date">—</span>
+        </div>
+        <div class="tracking-step">
+          <div class="tracking-icon" title="Delivered">&#127873;</div>
+          <span class="tracking-label">Delivered</span>
+          <span class="tracking-date">—</span>
+        </div>
+      </div>
+    </div>
+    <div class="delivery-details">
+      <div class="delivery-info">
+        <span>Estimated Delivery:</span>
+        <span class="delivery-status">June 17, 2024</span>
+      </div>
+      <button class="track-btn" aria-label="Track Package">Track Package</button>
+    </div>
+  </div>
+  <!-- 
+    *****Response*****
+    Question 1: 
+    The widget is a horizontally-oriented panel, width 540px, floating at the top center with rounded corners and shadow. It uses a white background to ensure clarity. The main row displays the order image, info, and address. A progress bar with five trackable steps (Placed, Confirmed, Shipped, Out for Delivery, Delivered) uses color coding for completed (blue), current (amber), and upcoming (gray). Below, delivery details and a “Track Package” button are present. Colors are high-contrast blue/amber for feedback, muted gray for secondary info. All clickable/interactive elements show visual affordance and feedback by style changes on hover/focus/disable. Layout is spacious, with responsive resizing on mobile.
+
+    Question 2: 
+    This widget appears immediately after the user places an order or when they visit their order history/track order page, ensuring they always have quick access to the latest order’s tracking status.
+
+    Question 3: 
+    Users can: 
+    - View order number, product image, address, order date.
+    - Comprehend tracking progress visually and textually.
+    - See delivery estimates and, unless delivered, click “Track Package” to go to the courier’s tracking portal.
+    The “Track Package” button is disabled when the order is fully delivered, preventing unnecessary action. The UI visually highlights the current step, and each icon supports tooltips for accessibility.
+  -->
+</body>
+</html>

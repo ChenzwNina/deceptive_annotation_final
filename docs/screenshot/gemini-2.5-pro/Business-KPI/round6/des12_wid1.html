@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account Component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* --- Base Styles --- */
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #f4f5f7; /* A neutral background to make the component pop */
+            margin: 0;
+            padding: 40px 20px;
+            color: #333;
+        }
+
+        /* --- Component Styles --- */
+        .signup-overlay {
+            /* This dark overlay focuses user attention on the modal */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: flex-start; /* Aligns modal to the top */
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .signup-container {
+            /* The main component positioned at the top of the viewport */
+            position: relative;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 800px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            overflow: hidden; /* Ensures the border-radius is respected by children */
+            animation: slideDown 0.5s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .signup-visual {
+            /* The left-side image panel to make the component visually appealing */
+            flex-basis: 45%;
+            background: url('placeholder_image.jpg') center center/cover no-repeat;
+            min-height: 550px;
+        }
+
+        .signup-content {
+            /* The right-side form panel */
+            flex-basis: 55%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #999;
+            cursor: pointer;
+            text-decoration: none;
+            line-height: 1;
+        }
+        .close-btn:hover {
+            color: #333;
+        }
+
+        .signup-content h2 {
+            /* The main headline, designed to grab attention and state the primary benefit */
+            font-size: 28px;
+            font-weight: 900; /* Extra bold for impact */
+            color: #1a1a1a;
+            margin: 0 0 10px 0;
+        }
+
+        .signup-content p.subtitle {
+            /* Sub-headline text listing secondary benefits */
+            font-size: 16px;
+            color: #555;
+            margin: 0 0 30px 0;
+            line-height: 1.5;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 8px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+        }
+
+        .cta-button {
+            /* The primary Call-To-Action button, designed for high visibility and clicks */
+            width: 100%;
+            padding: 15px;
+            background-color: #28a745; /* Green for positive action and conversion */
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-top: 10px;
+        }
+
+        .cta-button:hover {
+            background-color: #218838; /* Darker green on hover */
+            transform: translateY(-2px);
+        }
+
+        .terms-text {
+            font-size: 12px;
+            color: #777;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .terms-text a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .terms-text a:hover {
+            text-decoration: underline;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .login-link a {
+            color: #007bff;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .signup-visual {
+                display: none; /* Hide image on smaller screens to save space */
+            }
+            .signup-content {
+                flex-basis: 100%;
+            }
+            .signup-container {
+                flex-direction: column;
+                margin-top: 20px;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- This div represents some background content of the e-commerce site -->
+    <div>
+        <h1>Welcome to AuraHome</h1>
+        <p>Discover curated collections for a beautiful home.</p>
+    </div>
+
+    <!-- START: Account Creation Component -->
+    <div class="signup-overlay">
+        <div class="signup-container">
+            <a href="#" class="close-btn">&times;</a>
+            <div class="signup-visual">
+                <!-- Background image is set in CSS -->
+            </div>
+            <div class="signup-content">
+                <h2>Create Your Account & Get 15% Off</h2>
+                <p class="subtitle">Join the AuraHome family for faster checkout, order tracking, and exclusive members-only deals!</p>
+
+                <form>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="e.g., Jane Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="e.g., jane.doe@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Create a strong password" required>
+                    </div>
+
+                    <button type="submit" class="cta-button">Claim My 15% Discount</button>
+                </form>
+
+                <div class="login-link">
+                    Already a member? <a href="#">Sign In</a>
+                </div>
+
+                <div class="terms-text">
+                    By creating an account, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: Account Creation Component -->
+
+
+<!-- *****Response*****
+Question 4.1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The component is a large, modal pop-up that appears over a dimmed site background, immediately focusing the user's attention. It has a two-column layout: the left 45% is a visually appealing lifestyle image (`placeholder_image.jpg`), and the right 55% contains the form. This split-design is chosen to be both engaging and functional.
+
+Colors are intentionally selected for trust and action. The background is a clean white with dark grey text for high readability. The primary Call-to-Action (CTA) button ("Claim My 15% Discount") is a vibrant, confident green (#28a745) to maximize click-through rates and signify a positive action (Rule 3.2, 3.4). Input fields have a subtle blue highlight on focus, providing clear user feedback.
+
+The main headline ("Create Your Account & Get 15% Off") is large and extra-bold to immediately communicate the core value proposition, directly tying account creation to a monetary incentive to maximize sales (Rule 3.1). The form is minimal, asking for only essential information to reduce friction and minimize abandonment (Rule 3.8).
+*****Response*****
+Question 4.2: What triggers the appearance of this widget?
+
+The appearance of this widget should be strategically timed to maximize conversion without causing annoyance, thereby minimizing bounce rate (Rule 3.9). The primary trigger is a direct user action, such as clicking a "Create Account" or "Sign Up" button in the website's header or footer.
+
+A secondary, proactive trigger can be implemented for engaged users. For example, the modal could appear after a user has:
+1.  Attempted to use an account-only feature, like "Save to Wishlist."
+2.  Added two or more items to their shopping cart, presenting the 15% discount as an immediate incentive to complete the purchase.
+3.  Spent a significant amount of time on the site (e.g., 90 seconds) or viewed multiple product pages (e.g., 4+ pages).
+
+This "engaged-user" approach ensures the offer is presented to visitors who have already shown interest, making them more receptive and increasing the likelihood of conversion (Rule 3.2) and continued site engagement (Rule 3.5). It avoids interrupting a user's initial discovery phase.
+*****Response*****
+Question 4.3: Can you describe the full range of interactions users can have with the widget?
+
+Users have several clear and intuitive interaction paths designed to be user-friendly and reduce frustration.
+
+1.  **Form Input:** Users can click into the "Full Name," "Email," and "Password" fields to type their information. The fields have clear labels and placeholder text to guide them. On focus, the input border highlights, providing visual feedback.
+
+2.  **Submission:** The primary interaction is clicking the large, green CTA button ("Claim My 15% Discount") to submit the form and create their account. A hover effect (darker color, slight lift) signals its interactivity.
+
+3.  **Dismissal:** To avoid trapping the user, they can easily close the widget in two ways: by clicking the '×' icon in the top-right corner or by clicking on the dark, semi-transparent overlay surrounding the modal. This is a critical feature to prevent user frustration and site abandonment (Rule 3.8).
+
+4.  **Navigation:** If a user already has an account, they can click the "Sign In" link to be redirected to the login form. They can also click the "Terms of Service" and "Privacy Policy" links to view those pages, which builds trust and transparency.
+-->
+</body>
+</html>

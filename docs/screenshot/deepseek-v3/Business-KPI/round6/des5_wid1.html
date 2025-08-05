@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Product Filter</title>
+    <style>
+        .filter-panel {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 280px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .filter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .filter-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .filter-section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 12px;
+            color: #444;
+        }
+        
+        .filter-option {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .filter-option input {
+            margin-right: 10px;
+        }
+        
+        .filter-option label {
+            font-size: 14px;
+            color: #555;
+            cursor: pointer;
+        }
+        
+        .price-range {
+            width: 100%;
+            margin: 15px 0;
+        }
+        
+        .price-inputs {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .price-inputs input {
+            width: 45%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .apply-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        
+        .apply-btn:hover {
+            background-color: #0069d9;
+        }
+    </style>
+</head>
+<body>
+    <div class="filter-panel">
+        <div class="filter-header">
+            <div class="filter-title">Filter Products</div>
+            <button class="clear-btn">Clear all</button>
+        </div>
+        
+        <div class="filter-section">
+            <div class="section-title">Categories</div>
+            <div class="filter-option">
+                <input type="checkbox" id="category1">
+                <label for="category1">Electronics</label>
+            </div>
+            <div class="filter-option">
+                <input type="checkbox" id="category2">
+                <label for="category2">Clothing</label>
+            </div>
+            <div class="filter-option">
+                <input type="checkbox" id="category3">
+                <label for="category3">Home & Garden</label>
+            </div>
+        </div>
+        
+        <div class="filter-section">
+            <div class="section-title">Price Range</div>
+            <input type="range" class="price-range" min="0" max="1000" step="10">
+            <div class="price-inputs">
+                <input type="number" placeholder="Min" min="0">
+                <input type="number" placeholder="Max" max="1000">
+            </div>
+        </div>
+        
+        <div class="filter-section">
+            <div class="section-title">Brand</div>
+            <div class="filter-option">
+                <input type="checkbox" id="brand1">
+                <label for="brand1">Brand A</label>
+            </div>
+            <div class="filter-option">
+                <input type="checkbox" id="brand2">
+                <label for="brand2">Brand B</label>
+            </div>
+            <div class="filter-option">
+                <input type="checkbox" id="brand3">
+                <label for="brand3">Brand C</label>
+            </div>
+        </div>
+        
+        <button class="apply-btn">Apply Filters</button>
+    </div>
+
+    <!-- *****Response*****
+    Question 1: The widget has a clean, modern design with a light gray background (#f8f9fa) and subtle shadow for depth. It's 280px wide with ample padding (20px) and rounded corners (8px). Section titles are bold (16px) with options in smaller text (14px). Checkboxes are aligned with labels, and the price range includes a slider and numeric inputs. The "Apply" button is blue (#007bff) for visibility. These choices prioritize readability, usability, and visual hierarchy while maintaining a neutral aesthetic that fits most ecommerce sites.
+
+    Question 2: This widget would typically appear when a user clicks a "Filter" button on a product listing page or automatically on desktop views where space permits. On mobile, it might appear as a modal overlay triggered by a filter icon tap.
+
+    Question 3: Users can: 1) Check/uncheck category/brand options, 2) Adjust price range via slider or direct input, 3) Clear all selections with "Clear all", and 4) Apply filters with the "Apply" button. The widget provides immediate visual feedback for all interactions (checked states, slider movement, input validation).
+    -->
+</body>
+</html>

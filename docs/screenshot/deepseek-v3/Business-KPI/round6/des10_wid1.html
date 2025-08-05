@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Membership Signup</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        .membership-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            padding: 30px;
+        }
+        
+        .membership-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .membership-header h2 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .membership-header p {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .benefits-list {
+            margin-top: 25px;
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+        
+        .benefits-list li {
+            margin-bottom: 8px;
+            list-style-type: none;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .benefits-list li:before {
+            content: "✓";
+            color: #27ae60;
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="membership-container">
+        <div class="membership-header">
+            <h2>Join Our Membership</h2>
+            <p>Unlock exclusive benefits and discounts</p>
+        </div>
+        
+        <form id="membershipForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required minlength="8">
+            </div>
+            
+            <button type="submit" class="submit-btn">Sign Up</button>
+        </form>
+        
+        <ul class="benefits-list">
+            <li>Exclusive member-only discounts</li>
+            <li>Early access to sales</li>
+            <li>Free shipping on all orders</li>
+            <li>Personalized recommendations</li>
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById('membershipForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for signing up! A confirmation email has been sent.');
+            this.reset();
+        });
+    </script>
+
+    <!-- *****Response*****
+    Question 1: The widget features a clean, modern design with a white background and subtle shadow for depth. It uses a blue color scheme (#3498db) for the primary button, which creates a strong call-to-action. The form inputs have ample padding (12px) for comfortable interaction, and the rounded corners (5-10px) make the component feel friendly. The typography uses a sans-serif font with appropriate hierarchy (larger headings, smaller body text). These choices create a professional yet approachable look that builds trust while maintaining usability.
+
+    Question 2: This widget would typically appear when a user clicks a "Join Membership" or "Sign Up" button in the website header/navigation, or it might appear as a popup after a user has browsed the site for a certain period. It could also be shown during checkout as an upsell opportunity when non-members are making a purchase.
+
+    Question 3: Users can: 1) Fill in form fields (name, email, password) with validation, 2) Submit the form (triggering confirmation), 3) View the membership benefits list, and 4) Close the widget (though this functionality would need to be added based on implementation context). The form provides immediate feedback with field highlighting on focus and validation for required fields and password length.
+    -->
+</body>
+</html>

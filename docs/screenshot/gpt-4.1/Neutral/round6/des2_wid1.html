@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Category Navigation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fafafa;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .category-nav-container {
+      margin-top: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      z-index: 100;
+    }
+    .category-nav {
+      background: #ffffff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      padding: 0 32px;
+      min-width: 720px;
+      max-width: 1140px;
+      overflow-x: auto;
+      scrollbar-width: none; /* Firefox */
+    }
+    .category-nav::-webkit-scrollbar {
+      display: none;
+    }
+    .category-link {
+      display: flex;
+      align-items: center;
+      color: #232323;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 16px 20px;
+      border-radius: 6px;
+      transition: background 0.13s, color 0.13s;
+      margin-right: 8px;
+      position: relative;
+    }
+    .category-link:last-child {
+      margin-right: 0;
+    }
+    .category-link:hover,
+    .category-link.active {
+      background: #387CFE;
+      color: #fff;
+    }
+    .category-icon {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+      margin-right: 10px;
+      border-radius: 50%;
+      background: #f2f6ff;
+      padding: 3px;
+      transition: background 0.13s;
+    }
+    .category-link:hover .category-icon,
+    .category-link.active .category-icon {
+      background: #ffffff33;
+    }
+  </style>
+</head>
+<body>
+  <div class="category-nav-container">
+    <nav class="category-nav" aria-label="Product Categories">
+      <a href="/category/electronics" class="category-link active">
+        <img src="placeholder_image.jpg" alt="Electronics" class="category-icon">
+        Electronics
+      </a>
+      <a href="/category/fashion" class="category-link">
+        <img src="placeholder_image.jpg" alt="Fashion" class="category-icon">
+        Fashion
+      </a>
+      <a href="/category/home-garden" class="category-link">
+        <img src="placeholder_image.jpg" alt="Home &amp; Garden" class="category-icon">
+        Home &amp; Garden
+      </a>
+      <a href="/category/beauty" class="category-link">
+        <img src="placeholder_image.jpg" alt="Beauty" class="category-icon">
+        Beauty
+      </a>
+      <a href="/category/sports" class="category-link">
+        <img src="placeholder_image.jpg" alt="Sports" class="category-icon">
+        Sports
+      </a>
+      <a href="/category/toys" class="category-link">
+        <img src="placeholder_image.jpg" alt="Toys" class="category-icon">
+        Toys
+      </a>
+      <a href="/category/groceries" class="category-link">
+        <img src="placeholder_image.jpg" alt="Groceries" class="category-icon">
+        Groceries
+      </a>
+      <a href="/category/automotive" class="category-link">
+        <img src="placeholder_image.jpg" alt="Automotive" class="category-icon">
+        Automotive
+      </a>
+    </nav>
+  </div>
+
+  <!--
+  *****Response*****
+  Question 1: The widget appears as a modern horizontal navigation bar with a white background and a subtle shadow, positioned at the top of the page with a 20-pixel margin. Each category link features a circular icon (using "placeholder_image.jpg"), bold label, ample spacing, and gentle hover/active effects (blue background, white text) for clarity and accessibility. Font sizes are set for readability, and layout is responsive for a large product range. These choices create a visually clear, familiar e-commerce navigation.
+
+  Question 2: The widget is triggered on all pages where product category browsing is needed—typically the homepage, category indexes, or even in sticky headers, always present to let users jump between major product categories efficiently.
+
+  Question 3: Users can scroll horizontally if categories overflow, click or tap on any category to navigate (highlighting the current category as "active"), and experience visual feedback on hover (background and icon highlight). Screen readers can use the nav/aria-label for accessibility. No further interactivity is present unless additional scripting is added for popovers or subcategories.
+
+  -->
+</html>

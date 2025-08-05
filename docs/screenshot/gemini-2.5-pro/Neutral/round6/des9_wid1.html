@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping and Add-ons Component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #f4f5f7; /* A light grey to make the component stand out */
+            color: #333;
+            margin: 0;
+            padding: 40px; /* To see the component against the body */
+        }
+
+        .shipping-addons-widget {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 380px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            padding: 24px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .widget-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .widget-header h2 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a202c;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .success-icon {
+            color: #28a745;
+            font-size: 20px;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #a0aec0;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0;
+        }
+
+        .close-btn:hover {
+            color: #4a5568;
+        }
+
+        .product-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background-color: #f9fafb;
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        .product-info img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .product-details {
+            flex-grow: 1;
+        }
+
+        .product-details p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .product-name {
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .product-price {
+            font-weight: 700;
+            color: #1a202c;
+            font-size: 16px;
+            margin-top: 4px;
+        }
+        
+        .section-divider {
+            border: 0;
+            border-top: 1px solid #e2e8f0;
+            margin: 0;
+        }
+
+        .options-group h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .option-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        
+        .option-item:has(input:checked) {
+            border-color: #3182ce;
+            box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.2);
+        }
+
+        .option-item:hover {
+            border-color: #a0aec0;
+        }
+        
+        .option-item input[type="radio"],
+        .option-item input[type="checkbox"] {
+            margin-right: 12px;
+            accent-color: #3182ce;
+            width: 16px;
+            height: 16px;
+        }
+
+        .option-label {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+        }
+
+        .option-label span {
+            font-size: 14px;
+            color: #4a5568;
+        }
+
+        .option-label .price {
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .btn-primary {
+            background-color: #2d3748;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background-color: #1a202c;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #2d3748;
+            font-weight: 600;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #edf2f7;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="shipping-addons-widget">
+        <div class="widget-header">
+            <h2><span class="success-icon">✔</span> Added to Cart!</h2>
+            <button class="close-btn" aria-label="Close">&times;</button>
+        </div>
+
+        <div class="product-info">
+            <img src="placeholder_image.jpg" alt="AEROLUX™ Performance Running Shoes">
+            <div class="product-details">
+                <p class="product-name">AEROLUX™ Performance Running Shoes</p>
+                <p class="product-price">$129.99</p>
+            </div>
+        </div>
+        
+        <hr class="section-divider">
+
+        <div class="options-group">
+            <h3>Choose a Shipping Method</h3>
+            <label class="option-item">
+                <input type="radio" name="shipping" value="standard" checked>
+                <div class="option-label">
+                    <span>Standard (5-7 days)</span>
+                    <span class="price">Free</span>
+                </div>
+            </label>
+            <label class="option-item">
+                <input type="radio" name="shipping" value="expedited">
+                <div class="option-label">
+                    <span>Expedited (2-3 days)</span>
+                    <span class="price">$9.99</span>
+                </div>
+            </label>
+        </div>
+
+        <div class="options-group">
+            <h3>Optional Add-ons</h3>
+            <label class="option-item">
+                <input type="checkbox" name="addon" value="giftwrap">
+                <div class="option-label">
+                    <span>Add Premium Gift Wrapping</span>
+                    <span class="price">$4.99</span>
+                </div>
+            </label>
+            <label class="option-item">
+                <input type="checkbox" name="addon" value="protection">
+                <div class="option-label">
+                    <span>2-Year Damage Protection</span>
+                    <span class="price">$19.99</span>
+                </div>
+            </label>
+        </div>
+
+        <div class="cta-buttons">
+            <button class="btn btn-primary">Proceed to Checkout</button>
+            <button class="btn btn-secondary">Continue Shopping</button>
+        </div>
+    </div>
+
+<!--
+*****Response*****
+### Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The component is a clean, modern card-style widget with a white background, rounded corners, and a subtle shadow, making it float above the main page content. It's positioned at the top-right of the viewport for high visibility without being intrusive.
+
+The color palette is minimalist and professional: dark gray (`#2d3748`) for primary text and buttons, a slightly lighter gray for secondary text, and a strong green (`#28a745`) for the success confirmation icon. The selected radio/checkbox options are highlighted with a calm blue (`#3182ce`) border.
+
+The layout is single-column, using Flexbox for organized alignment and consistent spacing. Typography is hierarchical, with a bold `18px` header, `16px` subheadings, and `14px` body text using the 'Inter' sans-serif font for excellent readability. These choices are designed to build trust, create a seamless user experience, and clearly present upsell opportunities (shipping, add-ons) without causing friction, guiding the user confidently toward checkout.
+
+### Question 2: What triggers the appearance of this widget?
+
+The appearance of this widget is typically triggered by a specific user action that signals high purchase intent: clicking the "Add to Cart" or "Buy Now" button on a product detail page or a product listing.
+
+This event-driven trigger is strategic. Displaying the widget at this exact moment serves two key purposes. First, it provides immediate visual feedback that their action was successful, confirming the item is in their cart. Second, it capitalizes on the user's peak interest to present relevant upsells, such as faster shipping or protection plans. It acts as a transitional element, bridging the gap between product selection and the final checkout process.
+
+### Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have several clear and direct interactions with this widget, designed to guide them through post-addition choices efficiently.
+
+1.  **Selection of Options:** Users can select a single shipping method via radio buttons (e.g., Standard or Expedited). They can also choose one or more optional add-ons using checkboxes (e.g., Gift Wrapping, Protection Plan). Selecting an option provides immediate visual feedback as the item's border highlights in blue.
+2.  **Primary Action:** Clicking the primary "Proceed to Checkout" button will advance the user to the next stage of the purchasing funnel, typically the full cart or checkout page.
+3.  **Secondary Action:** Clicking the "Continue Shopping" button will dismiss the widget and allow the user to remain on their current page to browse other products.
+4.  **Dismissal:** Users can click the '×' icon in the top-right corner to close the widget, effectively dismissing the immediate upsell opportunity and confirmation, similar to the "Continue Shopping" action.
+
+-->
+</body>
+</html>

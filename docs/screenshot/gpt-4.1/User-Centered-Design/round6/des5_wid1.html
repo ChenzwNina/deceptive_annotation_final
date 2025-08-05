@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>E-Commerce Product Filter Panel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #f4f6f8;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .filter-panel-container {
+      position: fixed;
+      top: 20px;
+      left: 0;
+      width: 100vw;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      pointer-events: none; /* Prevent mouse events outside panel */
+    }
+    .filter-panel {
+      pointer-events: auto;
+      background: #fff;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      border-radius: 10px;
+      padding: 22px 34px;
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+      min-width: 780px;
+      max-width: 1100px;
+      width: 90vw;
+    }
+    .filter-group {
+      min-width: 140px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .filter-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 5px;
+      letter-spacing: 0.2px;
+    }
+    .filter-options {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .filter-checkbox {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.98rem;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .filter-checkbox input[type="checkbox"] {
+      accent-color: #1976d2;
+      width: 16px;
+      height: 16px;
+      border-radius: 3px;
+    }
+    .filter-range-inputs {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 3px;
+    }
+    .range-field {
+      width: 64px;
+      background: #f2f2f3;
+      border: 1px solid #d1d6dc;
+      border-radius: 3px;
+      padding: 4px 7px;
+      font-size: 0.98rem;
+      transition: border 0.2s;
+    }
+    .range-field:focus {
+      outline: none;
+      border: 1.7px solid #1976d2;
+    }
+    .filter-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-left: auto;
+    }
+    .apply-btn {
+      background: #1976d2;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 8px 25px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.18s;
+      box-shadow: 0 2px 12px rgba(25,118,210,0.09);
+    }
+    .apply-btn:disabled {
+      background: #95b0d4;
+      cursor: not-allowed;
+    }
+    .reset-link {
+      background: none;
+      border: none;
+      font-size: 0.98rem;
+      color: #1976d2;
+      text-align: left;
+      text-decoration: underline;
+      cursor: pointer;
+      padding: 0;
+      margin-top: -5px;
+    }
+    /* Feedback */
+    .filter-feedback {
+      color: #388e3c;
+      margin-top: 9px;
+      font-size: 0.95rem;
+      display: none;
+      font-weight: 500;
+    }
+    .filter-feedback.active {
+      display: block;
+    }
+    @media (max-width: 950px) {
+      .filter-panel {
+        flex-wrap: wrap;
+        gap: 24px 12px;
+        min-width: unset;
+        width: 97vw;
+        padding: 18px 8px 18px 18px;
+      }
+    }
+    @media (max-width: 600px) {
+      .filter-panel {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+        width: 100vw;
+        min-width: unset;
+        padding: 12px 4vw;
+      }
+      .filter-footer {
+        margin-left: 0;
+        flex-direction: row;
+        gap: 13px;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="filter-panel-container">
+    <form class="filter-panel" id="product-filters" autocomplete="off">
+      <!-- CATEGORY FILTER -->
+      <div class="filter-group">
+        <label class="filter-title" for="category-all">Category</label>
+        <div class="filter-options" id="category-options">
+          <label class="filter-checkbox">
+            <input type="checkbox" id="category-all" name="category" value="all" checked disabled>
+            All Categories
+          </label>
+          <label class="filter-checkbox">
+            <input type="checkbox" name="category" value="electronics">
+            Electronics
+          </label>
+          <label class="filter-checkbox">
+            <input type="checkbox" name="category" value="fashion">
+            Fashion
+          </label>
+          <label class="filter-checkbox">
+            <input type="checkbox" name="category" value="home">
+            Home & Living
+          </label>
+          <label class="filter-checkbox">
+            <input type="checkbox" name="category" value="beauty">
+            Beauty
+          </label>
+        </div>
+      </div>
+
+      <!-- PRICE FILTER -->
+      <div class="filter-group">
+        <label class="filter-title" for="price-min">Price Range</label>
+        <div class="filter-range-inputs">
+          <input class="range-field" type="number" id="price-min" min="0" max="10000" step="1" placeholder="Min" aria-label="Min price">
+          <span>-</span>
+          <input class="range-field" type="number" id="price-max" min="0" max="10000" step="1" placeholder="Max" aria-label="Max price">
+        </div>
+      </div>
+
+      <!-- RATING FILTER -->
+      <div class="filter-group">
+        <label class="filter-title">Customer Rating</label>
+        <div class="filter-options">
+          <label class="filter-checkbox">
+            <input type="checkbox" name="rating" value="4">
+            ★★★★☆ & Up
+          </label>
+          <label class="filter-checkbox">
+            <input type="checkbox" name="rating" value="3">
+            ★★★☆☆ & Up
+          </label>
+          <label class="filter-checkbox">
+            <input type="checkbox" name="rating" value="2">
+            ★★☆☆☆ & Up
+          </label>
+          <label class="filter-checkbox">
+            <input type="checkbox" name="rating" value="1">
+            ★☆☆☆☆ & Up
+          </label>
+        </div>
+      </div>
+
+      <!-- AVAILABILITY FILTER -->
+      <div class="filter-group">
+        <label class="filter-title">Availability</label>
+        <div class="filter-options">
+          <label class="filter-checkbox">
+            <input type="checkbox" name="availability" value="in-stock" checked>
+            In Stock
+          </label>
+          <label class="filter-checkbox">
+            <input type="checkbox" name="availability" value="out-of-stock">
+            Out of Stock
+          </label>
+        </div>
+      </div>
+
+      <!-- APPLY AND RESET BUTTON -->
+      <div class="filter-footer">
+        <button type="submit" class="apply-btn" id="apply-btn">Apply Filters</button>
+        <button type="button" class="reset-link" id="reset-btn">Clear All</button>
+        <span class="filter-feedback" id="filter-success">Filters applied</span>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // Constraint: If user enters min price > max price, don't allow form submit
+    const productFilters = document.getElementById('product-filters');
+    const minPrice = document.getElementById('price-min');
+    const maxPrice = document.getElementById('price-max');
+    const applyBtn = document.getElementById('apply-btn');
+    const resetBtn = document.getElementById('reset-btn');
+    const filterFeedback = document.getElementById('filter-success');
+    // Dummy implementation: clear fields on reset
+    resetBtn.addEventListener('click', () => {
+      Array.from(productFilters.querySelectorAll('input[type="checkbox"]:not([disabled])')).forEach(c => c.checked = false);
+      productFilters.querySelector('input[name="availability"][value="in-stock"]').checked = true;
+      minPrice.value = '';
+      maxPrice.value = '';
+      // Remain with All Categories checked and disabled
+      showFeedback("Filters reset");
+    });
+
+    // Visual feedback on apply
+    function showFeedback(msg) {
+      filterFeedback.textContent = msg;
+      filterFeedback.classList.add('active');
+      setTimeout(() => filterFeedback.classList.remove('active'), 1200);
+    }
+
+    // Simple constraint: don't allow min > max or negative min/max; can't apply if both fields have bad values
+    function validatePrice() {
+      const mn = minPrice.value.trim() === "" ? null : parseInt(minPrice.value, 10);
+      const mx = maxPrice.value.trim() === "" ? null : parseInt(maxPrice.value, 10);
+      if ((mn !== null && mn < 0) || (mx !== null && mx < 0)) return false;
+      if (mn !== null && mx !== null && mn > mx) return false;
+      return true;
+    }
+    minPrice.addEventListener('input', () => {
+      applyBtn.disabled = !validatePrice();
+      minPrice.setCustomValidity(validatePrice() ? "" : "Invalid price range");
+    });
+    maxPrice.addEventListener('input', () => {
+      applyBtn.disabled = !validatePrice();
+      maxPrice.setCustomValidity(validatePrice() ? "" : "Invalid price range");
+    });
+    productFilters.addEventListener('submit', e => {
+      e.preventDefault();
+      if (!validatePrice()) {
+        showFeedback("Invalid price range");
+        return;
+      }
+      showFeedback("Filters applied");
+      // Conceptually, here the product grid would be updated via fetch/ajax
+    });
+  </script>
+
+  <!--
+  *****Response*****
+
+  Question 1:
+  The widget is a horizontal, card-like panel fixed at the top of the viewport with a 20px margin. It features a crisp white background, rounded corners, and a gentle drop shadow to visually separate from the page. The panel contains clearly separated filter groups (Category, Price Range, Rating, Availability) with bold section titles and legible, consistent options. Main action buttons ("Apply Filters" in blue, "Clear All" as a link) are at the right. All controls are spaced for easy tapping/clicking. Blue accent color (#1976d2) ensures clear visibility and interactive feedback, echoing modern e-commerce UI themes.
+
+  Question 2:
+  This widget is always visible, fixed to the top of the viewport upon entering the product listing page or any page where product filtering is available. It is designed for immediate access, so users can filter items at any time.
+
+  Question 3:
+  Users can:
+  - Check/uncheck categories, customer rating, and availability checkboxes (except All Categories, which is preselected and non-editable for clarity).
+  - Enter price min/max (with validation; "Apply Filters" disables if range is invalid).
+  - Click "Apply Filters" to submit and see feedback ("Filters applied").
+  - Click "Clear All" to reset all checkboxes and price fields (feedback: "Filters reset").
+  Visual feedback is provided for both actions and validation errors, aiding fast and error-free filtering.
+
+  -->
+</body>
+</html>

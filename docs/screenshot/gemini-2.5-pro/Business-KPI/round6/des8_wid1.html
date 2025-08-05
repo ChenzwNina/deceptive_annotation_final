@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Component</title>
+    <style>
+        /* CSS Reset and Body Styling */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* A neutral background to make the component pop */
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Main Widget Container */
+        .cart-widget {
+            position: fixed; /* Positions the widget relative to the viewport */
+            top: 20px;
+            right: 20px;
+            width: 380px;
+            max-height: calc(100vh - 40px); /* Ensures it doesn't overflow the viewport */
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 1000;
+        }
+
+        /* Widget Header */
+        .cart-widget__header {
+            padding: 20px 24px;
+            border-bottom: 1px solid #eaeaef;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-widget__title {
+            font-size: 1.25rem; /* 20px */
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .cart-widget__close-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem; /* 24px */
+            cursor: pointer;
+            color: #888;
+            transition: color 0.2s ease;
+        }
+        
+        .cart-widget__close-btn:hover {
+            color: #333;
+        }
+
+        /* Product List Area */
+        .cart-widget__items {
+            padding: 8px 24px;
+            overflow-y: auto; /* Enables scrolling for many items */
+            flex-grow: 1;
+        }
+
+        /* Individual Product Item */
+        .cart-item {
+            display: flex;
+            align-items: center;
+            padding: 16px 0;
+            border-bottom: 1px solid #eaeaef;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .cart-item__image {
+            width: 64px;
+            height: 64px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 16px;
+        }
+
+        .cart-item__details {
+            flex-grow: 1;
+        }
+
+        .cart-item__name {
+            font-size: 1rem; /* 16px */
+            font-weight: 600;
+            display: block;
+            margin-bottom: 4px;
+            color: #1a1a1a;
+        }
+
+        .cart-item__meta {
+            font-size: 0.875rem; /* 14px */
+            color: #666;
+            margin-bottom: 8px;
+        }
+        
+        .cart-item__actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .cart-item__quantity-selector {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        .cart-item__quantity-btn {
+            background: none;
+            border: none;
+            padding: 4px 10px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: #555;
+        }
+        
+        .cart-item__quantity-value {
+            font-size: 1rem;
+            padding: 0 8px;
+            font-weight: 600;
+        }
+
+        .cart-item__price {
+            font-size: 1rem; /* 16px */
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        
+        .cart-item__remove {
+            font-size: 0.8rem;
+            color: #888;
+            cursor: pointer;
+            text-decoration: underline;
+            margin-left: 10px;
+        }
+        .cart-item__remove:hover {
+            color: #d9534f;
+        }
+
+        /* Widget Footer */
+        .cart-widget__footer {
+            padding: 20px 24px;
+            background-color: #f9f9fb;
+            border-top: 1px solid #eaeaef;
+        }
+        
+        /* Free Shipping Progress Bar */
+        .shipping-progress {
+            margin-bottom: 16px;
+        }
+
+        .shipping-progress__text {
+            font-size: 0.875rem; /* 14px */
+            color: #28a745; /* Green for positive reinforcement */
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        
+        .shipping-progress__bar {
+            width: 100%;
+            height: 8px;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .shipping-progress__bar-fill {
+            width: 100%; /* Shows 100% because user has met threshold */
+            height: 100%;
+            background-color: #28a745;
+            border-radius: 4px;
+        }
+        
+        /* Subtotal and Summary */
+        .cart-summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .cart-summary__label {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .cart-summary__value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+        
+        /* Call to Action Buttons */
+        .cart-widget__cta {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .cart-widget__cta--primary {
+            background-color: #007bff; /* Vibrant blue for primary action */
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        .cart-widget__cta--primary:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+        }
+
+        .cart-widget__cta--secondary {
+            background-color: transparent;
+            color: #007bff;
+            font-weight: 600;
+        }
+
+        .cart-widget__cta--secondary:hover {
+            background-color: #e7f1ff;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="cart-widget">
+        <header class="cart-widget__header">
+            <h2 class="cart-widget__title">Your Cart (2 items)</h2>
+            <button class="cart-widget__close-btn" aria-label="Close cart">&times;</button>
+        </header>
+
+        <section class="cart-widget__items">
+            <!-- Item 1 -->
+            <div class="cart-item">
+                <img src="placeholder_image.jpg" alt="Organic Cotton Hoodie" class="cart-item__image">
+                <div class="cart-item__details">
+                    <span class="cart-item__name">Eco-Comfort Organic Cotton Hoodie</span>
+                    <div class="cart-item__meta">Size: M / Color: Heather Grey</div>
+                    <div class="cart-item__actions">
+                         <div class="cart-item__quantity-selector">
+                            <button class="cart-item__quantity-btn">-</button>
+                            <span class="cart-item__quantity-value">1</span>
+                            <button class="cart-item__quantity-btn">+</button>
+                        </div>
+                        <span class="cart-item__price">$65.00</span>
+                    </div>
+                </div>
+                 <div class="cart-item__remove">Remove</div>
+            </div>
+            <!-- Item 2 -->
+            <div class="cart-item">
+                <img src="placeholder_image.jpg" alt="Adventure Backpack" class="cart-item__image">
+                <div class="cart-item__details">
+                    <span class="cart-item__name">All-Day Adventure Backpack</span>
+                     <div class="cart-item__meta">Color: Midnight Black</div>
+                    <div class="cart-item__actions">
+                        <div class="cart-item__quantity-selector">
+                            <button class="cart-item__quantity-btn">-</button>
+                            <span class="cart-item__quantity-value">1</span>
+                            <button class="cart-item__quantity-btn">+</button>
+                        </div>
+                        <span class="cart-item__price">$89.99</span>
+                    </div>
+                </div>
+                <div class="cart-item__remove">Remove</div>
+            </div>
+        </section>
+
+        <footer class="cart-widget__footer">
+            <div class="shipping-progress">
+                <p class="shipping-progress__text">
+                    🎉 Congrats! You've qualified for FREE Shipping!
+                </p>
+                <div class="shipping-progress__bar">
+                    <div class="shipping-progress__bar-fill"></div>
+                </div>
+            </div>
+            <div class="cart-summary">
+                <span class="cart-summary__label">Subtotal</span>
+                <span class="cart-summary__value">$154.99</span>
+            </div>
+            <a href="#" class="cart-widget__cta cart-widget__cta--primary">
+                Proceed to Checkout
+            </a>
+            <a href="#" class="cart-widget__cta cart-widget__cta--secondary">
+                Continue Shopping
+            </a>
+        </footer>
+    </div>
+    
+<!-- *****Response*****
+    
+4.1 Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a vertical panel with a fixed width of 380px, positioned on the top-right of the screen. It has a clean, modern aesthetic with rounded corners and a subtle drop shadow for depth. 
+
+The layout is structured into three distinct sections: a header, a scrollable item list, and a footer. 
+- **Colors:** The primary color scheme is white (#FFFFFF) for the background and dark grey (#1a1a1a) for text, ensuring high readability. The main call-to-action button, "Proceed to Checkout," is a vibrant blue (#007bff) to draw the user's eye and encourage clicks. Positive reinforcement, like the free shipping message, uses green (#28a745).
+- **Sizing:** A clear visual hierarchy is established with a large title (20px), standard product text (16px), and smaller metadata (14px). Generous padding (24px) creates a spacious, uncluttered feel.
+
+These choices are deliberate. The clean layout minimizes cognitive load, making it easy for users to review their items. The high-contrast CTA directly targets conversion rate (Rule 3.2). The free shipping progress bar gamifies the experience, encouraging a larger order size (Rule 3.3). This design builds trust and reduces friction, directly addressing the goal of minimizing cart abandonment (Rule 3.8).
+
+4.2 Question 2: What triggers the appearance of this widget?
+
+The primary trigger for this widget's appearance is a direct user action: clicking on a shopping cart icon, which is universally understood and located in the website's main navigation header. This user-initiated approach is crucial as it is non-intrusive and respects the user's browsing flow, which helps minimize bounce rate (Rule 3.9). The user decides when they want to review their cart, making the interaction expected and welcome.
+
+A secondary trigger could be implemented to briefly show the cart after a user adds an item, providing immediate visual confirmation that the action was successful. However, this pop-up should automatically dismiss after a few seconds to avoid disrupting the shopping experience. The main, persistent appearance of the widget should always be controlled by the user clicking the cart icon. This ensures the design maximizes user control and minimizes potential annoyance.
+
+4.3 Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have a comprehensive set of interactions designed to be intuitive and efficient, supporting the goal of a frictionless checkout process.
+1.  **Open/Close:** Users click the main site's cart icon to open the widget and can close it by clicking the '×' button.
+2.  **Review Items:** They can scroll through a clear list of products, each showing an image, name, selected options (like size/color), and price.
+3.  **Adjust Quantity:** "+" and "-" buttons next to each item allow for instant quantity adjustments without leaving the page.
+4.  **Remove Item:** A "Remove" link next to each item offers a simple way to delete products from the cart.
+5.  **Proceed to Checkout:** The primary, high-visibility "Proceed to Checkout" button takes them to the next step in the sales funnel, maximizing conversion (Rule 3.2).
+6.  **Continue Shopping:** A secondary link allows users to close the widget and seamlessly return to browsing, which helps increase time on site and page views per visit (Rules 3.5, 3.6).
+7.  **Monitor Progress:** The free shipping progress bar provides real-time feedback, encouraging users to add more items to reach the threshold, thus increasing average order size (Rule 3.3).
+
+-->
+</body>
+</html>

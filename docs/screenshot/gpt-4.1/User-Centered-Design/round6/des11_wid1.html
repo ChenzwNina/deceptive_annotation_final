@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cancel Membership Component</title>
+  <style>
+    body {
+      background: #f5f6fa;
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    .cancel-membership-container {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      width: 420px;
+      max-width: 95vw;
+      padding: 32px 28px 24px 28px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cancel-membership-header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .cancel-membership-header img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #f8e7e7;
+      border: 2px solid #fccaca;
+      object-fit: cover;
+    }
+
+    .cancel-membership-title {
+      font-weight: 600;
+      font-size: 1.3rem;
+      color: #33374d;
+      flex: 1;
+    }
+
+    .cancel-membership-body {
+      color: #434a67;
+      font-size: 1rem;
+      margin-bottom: 24px;
+      text-align: left;
+      width: 100%;
+    }
+
+    .cancel-options {
+      width: 100%;
+      margin-bottom: 18px;
+    }
+
+    .cancel-options label {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      color: #383d4f;
+      transition: color 0.18s;
+      padding: 6px 0;
+    }
+
+    .cancel-options input[type="radio"] {
+      accent-color: #e84118;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .cancel-feedback {
+      width: 100%;
+      margin-bottom: 22px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cancel-feedback label {
+      font-size: 0.95rem;
+      margin-bottom: 5px;
+      color: #49506b;
+    }
+
+    .cancel-feedback textarea {
+      border-radius: 6px;
+      border: 1px solid #cad3e2;
+      padding: 10px;
+      resize: vertical;
+      min-height: 36px;
+      font-size: 1rem;
+      font-family: inherit;
+      outline: none;
+      transition: border 0.18s;
+    }
+
+    .cancel-feedback textarea:focus {
+      border: 1.5px solid #e84118;
+    }
+
+    .actions {
+      display: flex;
+      gap: 14px;
+      width: 100%;
+      justify-content: flex-end;
+    }
+
+    .action-btn {
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: background 0.18s, color 0.18s;
+    }
+
+    .cancel-btn {
+      background: #e84118;
+      color: #fff;
+      outline: none;
+      border: none;
+    }
+
+    .cancel-btn:disabled {
+      background: #faa8a0;
+      color: #fff;
+      cursor: not-allowed;
+    }
+
+    .keep-btn {
+      background: #f0f0f0;
+      color: #444;
+      border: 1px solid #e0e3ef;
+    }
+
+    /* Feedback on action: confirmation */
+    .cancel-success {
+      padding: 18px 0 10px 0;
+      text-align: center;
+      color: #257a3e;
+      font-size: 1.08rem;
+      font-weight: 500;
+      display: none;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="cancel-membership-container" id="cancelWidget" role="dialog" aria-modal="true" aria-labelledby="membershipCancelTitle">
+    <div class="cancel-membership-header">
+      <img src="placeholder_image.jpg" alt="Membership Icon" aria-hidden="true" />
+      <span class="cancel-membership-title" id="membershipCancelTitle">Cancel Your Membership</span>
+    </div>
+    <div class="cancel-membership-body">
+      Are you sure you want to cancel your PrimePlus Membership? You'll lose:
+      <ul style="margin-top:6px; margin-bottom: 0.6em; padding-left: 1.25em; color: #876;">
+        <li>Free express shipping</li>
+        <li>Exclusive member discounts</li>
+        <li>Early access to sales events</li>
+      </ul>
+      Please let us know your reason for cancelling:
+    </div>
+    <form id="cancelForm" autocomplete="off">
+      <div class="cancel-options">
+        <label>
+          <input type="radio" name="reason" value="Too expensive" required>
+          Membership is too expensive
+        </label>
+        <label>
+          <input type="radio" name="reason" value="Not using benefits">
+          I do not use the benefits
+        </label>
+        <label>
+          <input type="radio" name="reason" value="Found better alternative">
+          Found a better alternative
+        </label>
+        <label>
+          <input type="radio" name="reason" value="Other">
+          Other
+        </label>
+      </div>
+      <div class="cancel-feedback">
+        <label for="feedbackMsg">Additional feedback (optional):</label>
+        <textarea id="feedbackMsg" name="feedbackMsg" maxlength="240" placeholder="Tell us how we can improve your experience"></textarea>
+      </div>
+      <div class="actions">
+        <button class="action-btn keep-btn" type="button" id="keepMembershipBtn">Keep My Membership</button>
+        <button class="action-btn cancel-btn" type="submit" id="cancelMembershipBtn" disabled>Confirm Cancel</button>
+      </div>
+      <div class="cancel-success" id="cancelSuccessMsg">
+        Your membership has been cancelled.<br>
+        We're sorry to see you go!
+      </div>
+    </form>
+  </div>
+  <script>
+    // Enable cancel button only when a reason is selected
+    const form = document.getElementById('cancelForm');
+    const reasonRadios = Array.from(form.elements['reason']);
+    const cancelBtn = document.getElementById('cancelMembershipBtn');
+    reasonRadios.forEach(radio => {
+      radio.addEventListener('change', () => {
+        cancelBtn.disabled = !reasonRadios.some(r => r.checked);
+      });
+    });
+
+    // Handle cancel (submit)
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      cancelBtn.disabled = true;
+      document.querySelector('.actions').style.display = 'none';
+      document.querySelector('.cancel-options').style.display = 'none';
+      document.querySelector('.cancel-feedback').style.display = 'none';
+      document.querySelector('.cancel-membership-body').style.display = 'none';
+      document.getElementById('cancelSuccessMsg').style.display = 'block';
+    });
+
+    // Handle keep membership (close widget)
+    document.getElementById('keepMembershipBtn').addEventListener('click', function(){
+      document.getElementById('cancelWidget').style.display = 'none';
+    });
+  </script>
+  <!--
+  *****Response*****
+
+  Question 1:
+  The widget is a fixed, centered dialog with a white background, soft box-shadow, and 12px rounded corners, creating a card-like appearance. A membership icon (placeholder) and strong title are at the top, followed by clear, concise text and a bullet list of lost benefits. User choices are presented via radio buttons, with a "Confirm Cancel" (red, strong affordance) and "Keep My Membership" (neutral gray) actions. On successful completion, a green confirmation message appears. The compact, vertically structured layout promotes clarity and quick navigation. Accessible color contrasts and large touch targets ensure usability.
+
+  Question 2:
+  This widget is triggered when a user elects to cancel their membership via a relevant section on their account/dashboard page, such as clicking a "Cancel Membership" button or link. It appears as a modal overlay at the top, drawing user attention.
+
+  Question 3:
+  Users can: view the consequences of cancelling, select a cancellation reason (required, using radio buttons), optionally enter feedback, choose "Keep My Membership" to dismiss/close the widget, or click "Confirm Cancel" (enabled only if a reason is selected) to complete cancellation—resulting in a success message, disabling further actions, and hiding form fields.
+  -->
+</body>
+</html>

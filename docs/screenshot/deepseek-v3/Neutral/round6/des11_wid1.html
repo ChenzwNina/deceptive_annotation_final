@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Cancellation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        .cancellation-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            padding: 30px;
+        }
+        
+        h2 {
+            color: #333;
+            margin-top: 0;
+            font-size: 24px;
+        }
+        
+        p {
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        
+        .reason-select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            min-height: 100px;
+            resize: vertical;
+            font-family: inherit;
+            margin-bottom: 20px;
+        }
+        
+        .button-group {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .cancel-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+        }
+        
+        .cancel-btn:hover {
+            background-color: #d32f2f;
+        }
+        
+        .keep-btn {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            color: #333;
+        }
+        
+        .keep-btn:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="cancellation-container">
+        <h2>Cancel Membership</h2>
+        <p>We're sorry to see you go. Please let us know why you're canceling and how we could improve.</p>
+        
+        <label for="reason">Reason for cancellation:</label>
+        <select id="reason" class="reason-select">
+            <option value="">Select a reason...</option>
+            <option value="price">Too expensive</option>
+            <option value="features">Missing features I need</option>
+            <option value="usage">Not using it enough</option>
+            <option value="service">Customer service issues</option>
+            <option value="other">Other reason</option>
+        </select>
+        
+        <label for="feedback">Additional feedback (optional):</label>
+        <textarea id="feedback" placeholder="Please share any additional feedback..."></textarea>
+        
+        <div class="button-group">
+            <button class="keep-btn">Keep Membership</button>
+            <button class="cancel-btn">Cancel Membership</button>
+        </div>
+    </div>
+
+    <!-- *****Response*****
+    Question 1: The widget features a clean, centered white card (400px wide) with soft shadows for depth. It uses a red cancellation button for urgency/attention, balanced with a neutral "keep" button. Text is dark gray for readability with a 24px heading. The layout is linear with clear hierarchy: heading → description → dropdown → textarea → buttons. This design ensures clarity while minimizing cognitive load during an important decision.
+
+    Question 2: The widget appears when a user clicks "Cancel Membership" in their account settings. It could also trigger when downgrading from a paid plan or after multiple failed payment attempts, serving as a last confirmation step with feedback collection.
+
+    Question 3: Users can: 1) Select a cancellation reason from a dropdown, 2) Provide optional text feedback, 3) Confirm cancellation (red button), or 4) Abort the process (gray button). The textarea expands vertically if needed. Hover states on buttons provide visual feedback. All interactions maintain the user's current context without page reloads.
+    -->
+</html>

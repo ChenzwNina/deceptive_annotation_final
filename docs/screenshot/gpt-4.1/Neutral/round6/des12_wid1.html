@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Account - E-Commerce</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #f6f7fb;
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    .signup-container {
+      position: fixed;
+      top: 20px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      z-index: 100;
+    }
+
+    .signup-widget {
+      background: #fff;
+      padding: 32px 36px 28px 36px;
+      border-radius: 12px;
+      box-shadow: 0 6px 32px rgba(60,80,120,0.12), 0 1.5px 4px rgba(0,0,0,0.04);
+      width: 360px;
+      max-width: 92vw;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .signup-title {
+      font-size: 1.45rem;
+      color: #222e3a;
+      text-align: center;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .signup-desc {
+      font-size: 1.05rem;
+      color: #58627a;
+      margin-bottom: 2px;
+      text-align: center;
+    }
+    .signup-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+    .form-label {
+      font-size: 1rem;
+      color: #304060;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+    .form-input {
+      padding: 9px 12px;
+      border: 1.5px solid #d2d8e3;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border 0.2s;
+    }
+    .form-input:focus {
+      border-color: #3a70f7;
+      outline: none;
+      background: #fafdff;
+    }
+    .signup-btn {
+      background-color: #1976d2;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: background 0.18s;
+    }
+    .signup-btn:hover {
+      background: #1251a3;
+    }
+    .signup-separator {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #aab4cb;
+      font-size: 0.9rem;
+      gap: 10px;
+      margin: 12px 0 4px 0;
+    }
+    .signup-separator::before,
+    .signup-separator::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #e2e6f0;
+    }
+    .social-signup {
+      display: flex;
+      gap: 12px;
+      margin: 0 auto;
+      justify-content: center;
+    }
+    .social-btn {
+      background: #f4f6fb;
+      border: 1.2px solid #d4d8e3;
+      border-radius: 5px;
+      padding: 8px 14px;
+      color: #222;
+      font-size: 0.98rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      transition: border 0.18s, background 0.18s;
+    }
+    .social-btn:hover {
+      border-color: #b7c4e0;
+      background: #e1ecfb;
+    }
+
+    .have-account {
+      text-align: center;
+      font-size: 0.97rem;
+      margin-top: 8px;
+    }
+    .login-link {
+      color: #1976d2;
+      text-decoration: none;
+      font-weight: 500;
+      transition: text-decoration 0.18s;
+    }
+    .login-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 500px) {
+      .signup-widget {
+        padding: 20px 10px 16px 10px;
+        border-radius: 0 0 10px 10px;
+      }
+      .signup-container {
+        top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <div class="signup-widget">
+      <div class="signup-title">Create your ShopEase Account</div>
+      <div class="signup-desc">Join ShopEase to track your orders, save your favorite items, and get exclusive offers!</div>
+      <form class="signup-form">
+        <div class="form-group">
+          <label class="form-label" for="name">Full Name</label>
+          <input class="form-input" type="text" id="name" name="name" autocomplete="name" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">Email Address</label>
+          <input class="form-input" type="email" id="email" name="email" autocomplete="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="password">Password</label>
+          <input class="form-input" type="password" id="password" name="password" placeholder="Create a password" required>
+        </div>
+        <button type="submit" class="signup-btn">Create Account</button>
+      </form>
+      <div class="signup-separator">or sign up with</div>
+      <div class="social-signup">
+        <button class="social-btn"><img src="placeholder_image.jpg" width="18" height="18" style="border-radius:2px;"> Google</button>
+        <button class="social-btn"><img src="placeholder_image.jpg" width="18" height="18" style="border-radius:2px;"> Facebook</button>
+      </div>
+      <div class="have-account">
+        Already have an account?
+        <a href="#" class="login-link">Log in</a>
+      </div>
+    </div>
+  </div>
+  <!--
+  *****Response*****
+  Question 1:
+  The widget is a centered, fixed panel with a white background, rounded corners, and a subtle shadow for depth. Primary blue is used for buttons and accent text, providing a trustworthy, modern e-commerce feel. Form fields are generously spaced and easy to read. The layout is single-column for clarity and mobile-friendliness. The width (360px) balances size and space on common screens. Social sign-ups include icon placeholders and soft button backgrounds.
+
+  Question 2:
+  This widget should appear when users choose to sign up or create a new account on the e-commerce website, usually accessed via a “Create Account” or “Register” button in the site header or a checkout prompt.
+
+  Question 3:
+  Users can fill in name, email, and password, and submit the form to create an account. They can also use quick sign-up via Google or Facebook buttons. There is a link to switch to the login (if they already have an account). Each input provides focus states for accessibility, and form submission can be hooked to validation or AJAX as needed.
+  -->
+</body>
+</html>

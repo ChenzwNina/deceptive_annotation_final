@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Category Navigation</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .category-nav {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+            position: fixed;
+            top: 20px;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .category-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 30px;
+        }
+
+        .category-item {
+            position: relative;
+        }
+
+        .category-item a {
+            text-decoration: none;
+            color: #333333;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .category-item a:hover {
+            color: #ff6f61;
+        }
+
+        .category-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: #ff6f61;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        .category-item:hover::after {
+            width: 100%;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="category-nav">
+        <div class="nav-container">
+            <ul class="category-list">
+                <li class="category-item"><a href="#electronics">Electronics</a></li>
+                <li class="category-item"><a href="#clothing">Clothing</a></li>
+                <li class="category-item"><a href="#home">Home & Garden</a></li>
+                <li class="category-item"><a href="#beauty">Beauty</a></li>
+                <li class="category-item"><a href="#sports">Sports & Outdoors</a></li>
+                <li class="category-item"><a href="#books">Books</a></li>
+            </ul>
+        </div>
+    </nav>
+</body>
+<!-- *****Response*****
+Question 1: The widget features a clean, modern design with a white background (#ffffff) and subtle shadow for depth. Categories are displayed in a horizontal list, centered within a 1200px container for optimal readability. Text is dark gray (#333333) for contrast, turning coral (#ff6f61) on hover with an animated underline effect for interactivity. Font size (16px) and spacing (30px gaps) ensure clarity. These choices mimic e-commerce sites like Amazon, prioritizing usability and visual hierarchy.
+
+Question 2: This widget appears statically at the top of the page (20px margin) as a fixed navigation bar, visible on page load across all pages of the e-commerce site. It remains persistent while scrolling, ensuring easy access to product categories at any time.
+
+Question 3: Users can interact with the widget by hovering over category links, triggering a color change and underline animation for visual feedback. Clicking a link navigates to the respective category page (placeholders like #electronics used here). The fixed positioning allows constant access without scrolling, enhancing user experience and site navigation.
+-->
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cancel Membership Component</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f5f7fa;
+    }
+    .cancel-membership-container {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+      padding: 32px 40px 24px 40px;
+      width: 410px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      animation: fadeDown 0.4s cubic-bezier(.26,.53,.74,1.48);
+    }
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translate(-50%, -40px);}
+      to { opacity: 1; transform: translate(-50%, 0);}
+    }
+    .cancel-header {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 18px;
+    }
+    .cancel-header img {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: #eee;
+      margin-right: 16px;
+    }
+    .cancel-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: #222;
+    }
+    .cancel-desc {
+      color: #444;
+      font-size: 1rem;
+      margin-bottom: 16px;
+      line-height: 1.5;
+      width: 100%;
+    }
+    .cancel-options {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .reason-label {
+      font-size: 0.97rem;
+      color: #333;
+      font-weight: 500;
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+    .cancel-select {
+      width: 100%;
+      padding: 7px 12px;
+      font-size: 1rem;
+      border: 1px solid #d5dbe2;
+      border-radius: 6px;
+      background: #f8fafc;
+      margin-bottom: 8px;
+      appearance: none;
+    }
+    .cancel-actions {
+      width: 100%;
+      display: flex;
+      gap: 14px;
+      justify-content: flex-end;
+    }
+    .cancel-btn, .close-btn {
+      padding: 9px 22px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.18s, color 0.18s;
+    }
+    .cancel-btn {
+      background: #e02929;
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(224,41,41,0.09);
+    }
+    .cancel-btn:hover {
+      background: #b11d1d;
+    }
+    .close-btn {
+      background: #e8ecf1;
+      color: #3a4657;
+    }
+    .close-btn:hover {
+      background: #c8d0db;
+    }
+    .cancel-footer {
+      margin-top: 15px;
+      font-size: 0.94rem;
+      color: #828b98;
+    }
+    @media (max-width: 520px) {
+      .cancel-membership-container {
+        width: 95vw;
+        padding: 22px 10px 16px 10px;
+      }
+      .cancel-header img {
+        width: 32px;
+        height: 32px;
+        margin-right: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cancel-membership-container" role="dialog" aria-labelledby="cancelTitle">
+    <div class="cancel-header">
+      <img src="placeholder_image.jpg" alt="Membership Logo" />
+      <div class="cancel-title" id="cancelTitle">
+        Cancel Your Prime Membership
+      </div>
+    </div>
+    <div class="cancel-desc">
+      We're sorry to see you go! If you cancel your Prime Membership, you will lose access to free shipping, exclusive deals, and member-only events.<br><br>
+      Please let us know why you're cancelling:
+    </div>
+    <div class="cancel-options">
+      <label for="cancel-reason" class="reason-label">Reason for Cancellation</label>
+      <select id="cancel-reason" class="cancel-select">
+        <option value="" selected disabled>Select a reason</option>
+        <option value="cost">Too expensive</option>
+        <option value="value">Not enough value for me</option>
+        <option value="service">Customer service issues</option>
+        <option value="benefits">Did not use the benefits</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="cancel-actions">
+      <button class="cancel-btn">Cancel Membership</button>
+      <button class="close-btn">Keep Membership</button>
+    </div>
+    <div class="cancel-footer">
+      Your membership will remain active until the end of your current billing cycle.<br>
+      <a href="#" style="color:#596cdf; text-decoration:underline;">Learn more about cancellation policy</a>
+    </div>
+  </div>
+  
+  <!-- 
+  *****Response*****
+  Question 1:
+  The widget displays as a white rounded card with a subtle drop-shadow, 410px wide, vertically stacked with a 32px padding and 20px from the viewport top.  
+  Main elements: a header including an image (membership logo) and title in large, bold text; a concise description; a dropdown for cancellation reason with label; two side-by-side buttons for “Cancel Membership” (bold red) and “Keep Membership” (neutral grey); and a subdued footer note with a link.  
+  Color choices (red for action, blue link, soft backgrounds) ensure urgency but clarity/approachability. Padding and layout match top e-commerce standards.
+
+  Question 2:
+  This cancel membership widget typically appears when a user navigates to manage their account/membership settings and clicks the “Cancel Membership” button, or via a dedicated "Membership" area. It may also trigger as a modal overlay or as a card near the top of the account page.
+
+  Question 3:
+  Users can: (1) select a cancellation reason from the dropdown (required for cancellation); (2) click “Cancel Membership” to submit the request; (3) click “Keep Membership” to dismiss the component/close without changes; (4) click the help link in the footer for more info. Typically, successful cancellation or action would show a confirmation or close the dialog.
+  -->
+</body>
+</html>

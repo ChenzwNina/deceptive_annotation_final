@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Product Filter</title>
+    <style>
+        .filter-panel {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            width: 280px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .filter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .filter-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .reset-btn {
+            background: none;
+            border: none;
+            color: #0066cc;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .filter-section {
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 12px;
+            color: #444;
+        }
+        
+        .filter-options {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .filter-option {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .filter-option input {
+            margin-right: 10px;
+        }
+        
+        .filter-option label {
+            font-size: 14px;
+            color: #555;
+            cursor: pointer;
+        }
+        
+        .price-range {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .price-range input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .apply-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .apply-btn:hover {
+            background-color: #0052a3;
+        }
+    </style>
+</head>
+<body>
+    <div class="filter-panel">
+        <div class="filter-header">
+            <h3 class="filter-title">Filters</h3>
+            <button class="reset-btn">Reset All</button>
+        </div>
+        
+        <div class="filter-section">
+            <h4 class="section-title">Categories</h4>
+            <ul class="filter-options">
+                <li class="filter-option">
+                    <input type="checkbox" id="category-electronics">
+                    <label for="category-electronics">Electronics</label>
+                </li>
+                <li class="filter-option">
+                    <input type="checkbox" id="category-clothing">
+                    <label for="category-clothing">Clothing</label>
+                </li>
+                <li class="filter-option">
+                    <input type="checkbox" id="category-home">
+                    <label for="category-home">Home & Kitchen</label>
+                </li>
+                <li class="filter-option">
+                    <input type="checkbox" id="category-books">
+                    <label for="category-books">Books</label>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="filter-section">
+            <h4 class="section-title">Price Range</h4>
+            <div class="price-range">
+                <input type="number" placeholder="Min" min="0">
+                <input type="number" placeholder="Max" min="0">
+            </div>
+        </div>
+        
+        <div class="filter-section">
+            <h4 class="section-title">Rating</h4>
+            <ul class="filter-options">
+                <li class="filter-option">
+                    <input type="checkbox" id="rating-5">
+                    <label for="rating-5">★★★★★ & Up</label>
+                </li>
+                <li class="filter-option">
+                    <input type="checkbox" id="rating-4">
+                    <label for="rating-4">★★★★ & Up</label>
+                </li>
+                <li class="filter-option">
+                    <input type="checkbox" id="rating-3">
+                    <label for="rating-3">★★★ & Up</label>
+                </li>
+            </ul>
+        </div>
+        
+        <button class="apply-btn">Apply Filters</button>
+    </div>
+
+    <!-- *****Response*****
+    Question 1: The widget features a clean, minimalist design with a light gray background (#f8f9fa) and subtle shadow for depth. It's 280px wide with ample padding (20px) for readability. Section titles use darker text (#333, #444) for hierarchy, while options use softer gray (#555) for less visual weight. Checkboxes are standard size with proper spacing. The "Apply" button uses blue (#0066cc) for visibility. These choices create a professional, accessible interface that doesn't overwhelm users while clearly presenting filtering options.
+
+    Question 2: This widget would typically appear either permanently in a sidebar layout for desktop views, or as a collapsible panel triggered by a "Filter" button on mobile views. It could also appear when users click a filter icon in the product listing header, especially on tablet/mobile interfaces where screen space is limited.
+
+    Question 3: Users can: 1) Select/deselect category checkboxes, 2) Set price ranges via number inputs, 3) Filter by minimum rating, 4) Reset all filters with the "Reset All" button, and 5) Apply their selections with the "Apply Filters" button. The design allows for multiple simultaneous filters across different categories, with visual feedback through checkbox states and input fields.
+    -->
+</body>
+</html>

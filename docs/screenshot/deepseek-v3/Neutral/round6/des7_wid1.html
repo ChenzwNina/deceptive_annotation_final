@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Ratings Widget</title>
+    <style>
+        .ratings-widget {
+            font-family: 'Arial', sans-serif;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background-color: #ffffff;
+        }
+        .ratings-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .average-rating {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-right: 15px;
+        }
+        .stars {
+            color: #FFD700;
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        .rating-count {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .rating-bar {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+        }
+        .star-label {
+            width: 80px;
+            color: #333;
+        }
+        .bar-container {
+            flex-grow: 1;
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin: 0 10px;
+        }
+        .bar {
+            height: 100%;
+            border-radius: 5px;
+            background-color: #FFA500;
+        }
+        .percentage {
+            width: 40px;
+            text-align: right;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="ratings-widget">
+        <div class="ratings-header">
+            <div class="average-rating">4.7</div>
+            <div>
+                <div class="stars">★★★★★</div>
+                <div class="rating-count">Based on 128 reviews</div>
+            </div>
+        </div>
+        
+        <div class="rating-bar">
+            <div class="star-label">5 stars</div>
+            <div class="bar-container">
+                <div class="bar" style="width: 85%"></div>
+            </div>
+            <div class="percentage">85%</div>
+        </div>
+        
+        <div class="rating-bar">
+            <div class="star-label">4 stars</div>
+            <div class="bar-container">
+                <div class="bar" style="width: 10%"></div>
+            </div>
+            <div class="percentage">10%</div>
+        </div>
+        
+        <div class="rating-bar">
+            <div class="star-label">3 stars</div>
+            <div class="bar-container">
+                <div class="bar" style="width: 3%"></div>
+            </div>
+            <div class="percentage">3%</div>
+        </div>
+        
+        <div class="rating-bar">
+            <div class="star-label">2 stars</div>
+            <div class="bar-container">
+                <div class="bar" style="width: 1%"></div>
+            </div>
+            <div class="percentage">1%</div>
+        </div>
+        
+        <div class="rating-bar">
+            <div class="star-label">1 star</div>
+            <div class="bar-container">
+                <div class="bar" style="width: 1%"></div>
+            </div>
+            <div class="percentage">1%</div>
+        </div>
+    </div>
+
+    <!--*****Response*****
+    Question 1: The widget features a clean, modern design with a white background and subtle shadow. It displays the average rating (4.7) in large bold text, accompanied by gold stars and total review count. Below are horizontal bars showing rating distribution, with orange progress bars on light gray backgrounds. The design choices prioritize readability and visual hierarchy, using color contrast to highlight important information while maintaining a professional e-commerce aesthetic.
+
+    Question 2: This widget would typically appear on a product page, triggered when the page loads to display aggregated customer ratings. It might also appear in a modal when users click a "See Reviews" button or as a hover effect on product cards.
+
+    Question 3: Users can: 1) View the average rating and total reviews at a glance, 2) Scan the distribution of ratings via the bar chart, 3) Click on specific star ratings to filter reviews (if implemented), and 4) Potentially click a "Write Review" button (not shown in this example) to add their own rating.
+    -->
+</body>
+</html>

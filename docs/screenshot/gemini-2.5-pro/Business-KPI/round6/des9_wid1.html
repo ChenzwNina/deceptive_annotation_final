@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping & Add-ons Component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f4f5f7;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* The main widget container positioned at the top of the viewport */
+        .shipping-addons-widget {
+            max-width: 600px;
+            margin: 20px auto 0 auto; /* 20px margin from the top, centered horizontally */
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            padding: 24px 30px;
+            border: 1px solid #e1e4e8;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Widget Header */
+        .widget-header {
+            margin-bottom: 24px;
+            text-align: left;
+        }
+
+        .widget-header h2 {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0;
+            color: #1a1a1a;
+        }
+
+        /* Section dividers for clarity */
+        hr.section-divider {
+            border: 0;
+            height: 1px;
+            background-color: #e1e4e8;
+            margin: 28px 0;
+        }
+
+        /* Shipping Options Styling */
+        .shipping-options .option, .optional-addons .option {
+            display: flex;
+            align-items: center;
+            padding: 18px;
+            border: 2px solid #e1e4e8;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .shipping-options .option:hover, .optional-addons .option:hover {
+            border-color: #007aff;
+        }
+        
+        /* Custom radio button and checkbox */
+        .option input[type="radio"], .option input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ccc;
+            border-radius: 50%; /* Makes radio buttons round */
+            margin-right: 18px;
+            flex-shrink: 0;
+            display: grid;
+            place-content: center;
+            transition: border-color 0.2s ease;
+        }
+
+        .option input[type="checkbox"] {
+            border-radius: 4px; /* Makes checkboxes square */
+        }
+        
+        .option input[type="radio"]::before, .option input[type="checkbox"]::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #007aff;
+            transform: scale(0);
+            transition: 0.15s transform ease-in-out;
+        }
+        
+        .option input[type="checkbox"]::before {
+            border-radius: 2px;
+            clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+            transform: scale(0);
+            background-color: white; /* Hide until checked */
+        }
+
+        .option input[type="radio"]:checked, .option input[type="checkbox"]:checked {
+            background-color: #007aff;
+            border-color: #007aff;
+        }
+
+        .option input[type="radio"]:checked::before, .option input[type="checkbox"]:checked::before {
+            transform: scale(1);
+        }
+
+        /* Highlighting selected option */
+        .shipping-options input[type="radio"]:checked + .option-details,
+        .optional-addons input[type="checkbox"]:checked + .option-details {
+            /* This is a sibling selector, so input must come before details in HTML */
+        }
+
+        .shipping-options .option.selected, .optional-addons .option.selected {
+            border-color: #007aff;
+            box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.2);
+        }
+        
+        .option-details {
+            flex-grow: 1;
+        }
+
+        .option-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1a1a1a;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .option-description {
+            font-size: 14px;
+            color: #6a737d;
+            margin-top: 4px;
+        }
+
+        .option-price {
+            font-weight: 700;
+        }
+
+        .free-shipping-tag {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="shipping-addons-widget">
+        <div class="widget-header">
+            <h2>Shipping & Optional Extras</h2>
+        </div>
+
+        <div class="shipping-options">
+            <label class="option selected" onclick="updateSelection(this, 'shipping')">
+                <input type="radio" name="shipping" value="standard" checked>
+                <div class="option-details">
+                    <div class="option-title">
+                        <span>Standard Shipping</span>
+                        <span class="option-price">FREE</span>
+                    </div>
+                    <p class="option-description">Estimated delivery: 5-7 business days</p>
+                </div>
+            </label>
+
+            <label class="option" onclick="updateSelection(this, 'shipping')">
+                <input type="radio" name="shipping" value="express">
+                <div class="option-details">
+                    <div class="option-title">
+                        <span>Express Delivery</span>
+                        <span class="option-price">$12.99</span>
+                    </div>
+                    <p class="option-description">Estimated delivery: 2-3 business days</p>
+                </div>
+            </label>
+        </div>
+
+        <hr class="section-divider">
+
+        <div class="optional-addons">
+            <label class="option" onclick="updateSelection(this, 'addon')">
+                <input type="checkbox" name="addons" value="giftwrap">
+                <div class="option-details">
+                    <div class="option-title">
+                        <span>Add Premium Gift Wrapping</span>
+                        <span class="option-price">$4.99</span>
+                    </div>
+                    <p class="option-description">Perfect for presents! Includes a custom note.</p>
+                </div>
+            </label>
+
+            <label class="option" onclick="updateSelection(this, 'addon')">
+                <input type="checkbox" name="addons" value="insurance">
+                <div class="option-details">
+                    <div class="option-title">
+                        <span>Shipping Insurance for Peace of Mind</span>
+                        <span class="option-price">$2.99</span>
+                    </div>
+                    <p class="option-description">Covers your order against loss or damage in transit.</p>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <script>
+        function updateSelection(labelElement, type) {
+            if (type === 'shipping') {
+                // Remove 'selected' class from all shipping options
+                document.querySelectorAll('.shipping-options .option').forEach(el => {
+                    el.classList.remove('selected');
+                });
+            } else if (type === 'addon') {
+                // Toggle 'selected' for checkboxes
+                if (labelElement.classList.contains('selected')) {
+                    labelElement.classList.remove('selected');
+                } else {
+                    labelElement.classList.add('selected');
+                }
+                return; // Exit early for addons
+            }
+            
+            // Add 'selected' class to the clicked element for radio buttons
+            labelElement.classList.add('selected');
+        }
+    </script>
+
+<!--
+*****Response*****
+4.1 Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a clean, card-style component with a white background, soft corners, and a subtle shadow to make it "float" above the page. It’s positioned with a 20px top margin for prominence. The layout is structured into two clear sections: "Shipping" and "Optional Extras," separated by a fine horizontal line.
+
+Colors: The palette is minimalistic and trust-inspiring. A neutral white background (#FFFFFF) with dark grey text (#333) ensures high readability. The primary interactive color is a trustworthy blue (#007AFF), used for highlighting selected options. Critically, to maximize conversion, "FREE" shipping is not just text but is visually emphasized, implicitly guiding users to the most conversion-friendly choice.
+
+Elements: Font sizes are hierarchical, with a large, bold heading (22px) and clear option titles (16px). Interactive options are large, touch-friendly clickable areas. These choices reduce cognitive load and friction, which directly helps minimize cart abandonment (Rule 3.8) and maximize the conversion rate (Rule 3.2). The professional, uncluttered design builds trust and encourages users to complete their purchase.
+
+4.2 Question 2: What triggers the appearance of this widget?
+
+This widget is a core part of the e-commerce checkout flow. Its appearance is triggered when a user proceeds to the shipping stage of their purchase, typically after they have filled out their delivery address. At this point, the website's backend has calculated the available shipping methods and costs based on the customer’s location and cart contents. The widget is then dynamically populated with these personalized options. It serves as a dedicated step to confirm shipping preferences and consider valuable add-ons before moving to the final payment stage. This focused approach prevents overwhelming the user with too many decisions at once, a key strategy for minimizing shopping cart abandonment (Rule 3.8). It keeps the user engaged in a clear, linear process, maximizing their time on site (Rule 3.5) in a productive way.
+
+4.3 Question 3: Can you describe the full range of interactions users can have with the widget?
+
+User interactions are designed to be intuitive and efficient to maximize conversion and minimize friction.
+
+1.  **Selection:** Users can select one shipping method from a list. Clicking anywhere on an option's container selects the corresponding radio button, visually highlighting the entire option with a blue border and shadow. This large-target interaction is mobile-friendly and improves usability.
+
+2.  **Upselling:** Users can choose to add optional extras, like gift wrapping or insurance, by clicking the checkbox options. These are independent choices that can be toggled on or off. This interaction is designed to seamlessly increase the average order size (Rule 3.3).
+
+3.  **Visual Feedback:** Hovering over any option subtly changes its border color, indicating it's clickable. The selected state is persistent and unambiguous.
+
+4.  **Information Discovery:** Users can quickly scan option titles, prices, and descriptions to make an informed choice. The content is crafted to highlight value ("Peace of Mind," "Perfect for presents!"), which aids in decision-making and helps maximize revenue (Rule 3.1).
+-->
+</body>
+</html>

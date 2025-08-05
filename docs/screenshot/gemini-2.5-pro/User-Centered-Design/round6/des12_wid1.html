@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account Component</title>
+    <style>
+        /* Global Styles & Font Import */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --primary-color: #007bff;
+            --primary-hover-color: #0056b3;
+            --secondary-text-color: #6c757d;
+            --border-color: #ced4da;
+            --background-color: #ffffff;
+            --overlay-background: rgba(0, 0, 0, 0.6);
+            --success-color: #28a745;
+            --error-color: #dc3545;
+            --disabled-color: #cdd2d8;
+            --disabled-text-color: #9fa5ac;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa; /* A light grey to make the component pop */
+            margin: 0;
+            padding: 0;
+            color: #212529;
+        }
+
+        /* Modal Overlay & Positioning */
+        .signup-modal-overlay {
+            position: fixed; /* Using fixed to position relative to the viewport */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--overlay-background);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Aligns content to the top */
+            padding-top: 20px; /* Provides the 20px margin from the top of the viewport */
+            z-index: 1000;
+            opacity: 0;
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+
+        .signup-modal-content {
+            background-color: var(--background-color);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 420px;
+            padding: 32px;
+            position: relative;
+            transform: translateY(-20px);
+            animation: slideDown 0.4s ease-out forwards;
+            box-sizing: border-box;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        @keyframes slideDown {
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Close Button */
+        .close-btn {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: none;
+            border: none;
+            font-size: 28px;
+            color: var(--secondary-text-color);
+            cursor: pointer;
+            padding: 0;
+            line-height: 1;
+            transition: color 0.2s ease;
+        }
+
+        .close-btn:hover {
+            color: #343a40;
+        }
+        
+        /* Header */
+        .signup-header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .signup-header h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 0 8px 0;
+        }
+
+        .signup-header p {
+            font-size: 15px;
+            color: var(--secondary-text-color);
+            margin: 0;
+        }
+
+        /* Form Layout & Elements */
+        .form-row {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .form-group label {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .form-group input {
+            padding: 12px 16px;
+            font-size: 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .form-group input::placeholder {
+            color: #adb5bd;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+        }
+
+        /* Password Specifics */
+        .password-group {
+            position: relative;
+        }
+        
+        .password-group input {
+            padding-right: 45px; /* Space for the toggle icon */
+        }
+        
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 41px; /* Aligns with the input field */
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--secondary-text-color);
+        }
+
+        #password-help {
+            font-size: 12px;
+            color: var(--secondary-text-color);
+            margin-top: 6px;
+        }
+
+        /* Terms and Conditions */
+        .terms-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .terms-group input[type="checkbox"] {
+            margin-right: 10px;
+            width: 16px;
+            height: 16px;
+            accent-color: var(--primary-color);
+            cursor: pointer;
+        }
+
+        .terms-group label {
+            font-size: 13px;
+            color: var(--secondary-text-color);
+        }
+        
+        .terms-group a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .terms-group a:hover {
+            text-decoration: underline;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--background-color);
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--primary-hover-color);
+            transform: translateY(-1px);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .submit-btn:disabled {
+            background-color: var(--disabled-color);
+            color: var(--disabled-text-color);
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Login Redirect */
+        .login-redirect {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: var(--secondary-text-color);
+        }
+
+        .login-redirect a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .login-redirect a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Success Message */
+        .success-message {
+            display: none; /* Initially hidden */
+            text-align: center;
+            padding: 20px;
+            background-color: #e9f7ef;
+            color: var(--success-color);
+            border: 1px solid #a3e9a4;
+            border-radius: 8px;
+        }
+        .success-message h3 {
+            margin: 0 0 10px 0;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="signup-modal-overlay" id="signupModal">
+        <div class="signup-modal-content">
+            <button class="close-btn" title="Close" onclick="closeModal()">&times;</button>
+            
+            <div id="signup-form-container">
+                <div class="signup-header">
+                    <h2>Create Your Account</h2>
+                    <p>Join us to get exclusive deals and a faster checkout.</p>
+                </div>
+    
+                <form id="signupForm" onsubmit="handleFormSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="e.g., Jane" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="e.g., Doe" required>
+                        </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+    
+                    <div class="form-group" style="margin-top: 20px;">
+                        <label for="password">Password</label>
+                        <div class="password-group">
+                            <input type="password" id="password" name="password" placeholder="Create a strong password" required minlength="8">
+                            <button type="button" class="password-toggle" onclick="togglePasswordVisibility()">
+                                <!-- SVG Icon for visibility -->
+                                <svg id="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            </button>
+                        </div>
+                        <p id="password-help">Must be at least 8 characters long.</p>
+                    </div>
+    
+                    <div class="terms-group">
+                        <input type="checkbox" id="terms" name="terms" required onchange="validateForm()">
+                        <label for="terms">I agree to the <a href="#" target="_blank">Terms of Service</a> and <a href="#" target="_blank">Privacy Policy</a>.</label>
+                    </div>
+    
+                    <button type="submit" class="submit-btn" id="submitBtn" disabled>Create My Account</button>
+                </form>
+                
+                <div class="login-redirect">
+                    Already have an account? <a href="#">Log In</a>
+                </div>
+            </div>
+
+            <div class="success-message" id="successMessage">
+                <h3>Welcome aboard!</h3>
+                <p>Your account has been created successfully. We're redirecting you to your dashboard...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const passwordInput = document.getElementById('password');
+        const eyeIcon = document.getElementById('eye-icon');
+        const termsCheckbox = document.getElementById('terms');
+        const submitButton = document.getElementById('submitBtn');
+
+        function togglePasswordVisibility() {
+            const isPassword = passwordInput.type === 'password';
+            passwordInput.type = isPassword ? 'text' : 'password';
+            // Simple toggle for icon visual, in a real app you'd swap SVGs
+            eyeIcon.style.opacity = isPassword ? '1' : '0.5';
+        }
+        
+        function validateForm() {
+            // This is a simple client-side check. Real validation should be on the server.
+            // The button is disabled if the terms checkbox is not checked.
+            if (termsCheckbox.checked) {
+                submitButton.disabled = false;
+            } else {
+                submitButton.disabled = true;
+            }
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent actual form submission
+            const signupFormContainer = document.getElementById('signup-form-container');
+            const successMessage = document.getElementById('successMessage');
+
+            // Hide the form and show the success message
+            signupFormContainer.style.display = 'none';
+            successMessage.style.display = 'block';
+
+            // You can add a redirect or further actions here
+            console.log("Form submitted successfully!");
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('signupModal');
+            modal.style.display = 'none';
+        }
+    </script>
+
+<!-- *****Response*****
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The "Create Account" component is a modal dialog that appears centered horizontally with a 20px margin from the top of the viewport. It has a clean, modern aesthetic with rounded corners and a subtle box shadow, making it feel layered above the main content.
+
+Colors: The color scheme is professional and trustworthy. A primary blue (`#007bff`) is used for the main call-to-action button and links, which draws the user's attention to key actions. Neutral grays are used for secondary text (`#6c757d`) and borders (`#ced4da`) to create a clear visual hierarchy without overwhelming the user. A green (`#28a745`) is reserved for the success message to provide positive feedback.
+
+Layout & Sizing: The layout is a single column for simplicity and mobile-friendliness, with the "First Name" and "Last Name" fields placed side-by-side to save vertical space. Form inputs are large with 12px padding and a 16px font size for readability and easy clicking. Labels are placed above inputs, which is a common and highly usable pattern. The overall width is constrained to 420px to ensure it remains easy to scan and digest on larger screens.
+
+Question 2: What triggers the appearance of this widget?
+
+This "Create Account" widget is designed as a modal dialog, meaning it appears as an overlay on top of the existing page content. Its appearance is triggered by a direct user action. The most common trigger would be the user clicking on a "Create Account" or "Sign Up" button, typically located in the website's main header or navigation bar. This ensures the component is shown only when the user explicitly expresses intent to register, avoiding intrusive interruptions. Alternatively, it could be triggered for a first-time guest user who attempts to access a feature reserved for registered members, such as saving an item to a wishlist or proceeding to checkout. The semi-transparent black overlay darkens the background, focusing the user's full attention on the task of signing up.
+
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have a comprehensive and guided set of interactions with the widget. They can:
+1.  **Input Data**: Click into any form field (First Name, Last Name, Email, Password) to start typing. The focused field is highlighted with a blue border and shadow, providing clear visual feedback.
+2.  **Toggle Password Visibility**: Click the eye icon within the password field to switch between viewing the password as text or dots, helping prevent typos.
+3.  **Agree to Terms**: Check the "I agree..." checkbox. This is a required action; the "Create My Account" button remains disabled until this box is checked, preventing accidental submission without consent.
+4.  **Submit the Form**: Click the "Create My Account" button (once enabled) to submit their details. Upon successful submission, the form hides and a "Welcome aboard!" success message appears.
+5.  **Navigate Away**: Click the "Log In" link if they already have an account, redirecting them to the login page. They can also click the '×' icon in the top-right corner to close the modal and return to the main website at any time.
+*****Response***** -->
+</html>

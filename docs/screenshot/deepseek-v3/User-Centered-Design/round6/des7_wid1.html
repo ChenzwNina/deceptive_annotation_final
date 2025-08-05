@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Ratings Widget</title>
+    <style>
+        .ratings-widget {
+            font-family: 'Arial', sans-serif;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background-color: #ffffff;
+        }
+        .ratings-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .average-rating {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin-right: 15px;
+        }
+        .stars {
+            color: #FFD700;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .rating-count {
+            color: #666;
+            font-size: 14px;
+        }
+        .rating-bar {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+        }
+        .star-label {
+            width: 70px;
+            color: #666;
+        }
+        .bar-container {
+            flex-grow: 1;
+            height: 10px;
+            background-color: #eee;
+            border-radius: 5px;
+            margin: 0 10px;
+        }
+        .bar {
+            height: 100%;
+            background-color: #FFD700;
+            border-radius: 5px;
+        }
+        .percentage {
+            width: 40px;
+            color: #666;
+            font-size: 14px;
+        }
+        .write-review {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .review-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .review-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="ratings-widget">
+        <div class="ratings-header">
+            <div class="average-rating">4.7</div>
+            <div>
+                <div class="stars">★★★★★</div>
+                <div class="rating-count">Based on 128 reviews</div>
+            </div>
+        </div>
+        
+        <div class="rating-bar">
+            <div class="star-label">5 stars</div>
+            <div class="bar-container">
+                <div class="bar" style="width: 75%;"></div>
+            </div>
+            <div class="percentage">75%</div>
+        </div>
+        
+        <div class="rating-bar">
+            <div class="star-label">4 stars</div>
+            <div class="bar-container">
+                <div class="bar" style="width: 15%;"></div>
+            </div>
+            <div class="percentage">15%</div>
+        </div>
+        
+        <div class="rating-bar">
+            <div class="star-label">3 stars</div>
+            <div class="bar-container">
+                <div class="bar" style="width: 7%;"></div>
+            </div>
+            <div class="percentage">7%</div>
+        </div>
+        
+        <div class="rating-bar">
+            <div class="star-label">2 stars</div>
+            <div class="bar-container">
+                <div class="bar" style="width: 2%;"></div>
+            </div>
+            <div class="percentage">2%</div>
+        </div>
+        
+        <div class="rating-bar">
+            <div class="star-label">1 star</div>
+            <div class="bar-container">
+                <div class="bar" style="width: 1%;"></div>
+            </div>
+            <div class="percentage">1%</div>
+        </div>
+        
+        <div class="write-review">
+            <button class="review-btn">Write a Review</button>
+        </div>
+    </div>
+
+    <!-- *****Response*****
+    Question 1: The widget features a clean, modern design with a white background and subtle shadow. It displays the average rating (4.7) in large bold text, gold stars for visual appeal, and a breakdown of ratings by percentage. The design uses a neutral color palette with gold accents to highlight important elements while maintaining readability. The layout is organized hierarchically to guide users from the overall rating to detailed breakdowns, ending with a clear call-to-action button.
+
+    Question 2: This widget would typically appear on a product page, either immediately visible or triggered when a user clicks a "See Reviews" button. It might also appear in a popup when hovering over a product's star rating in search results or category pages.
+
+    Question 3: Users can view the average rating and distribution of ratings. They can click the "Write a Review" button to submit their own rating and review. The widget could be expanded to allow filtering reviews by star rating (clicking on a star bar), sorting reviews, or viewing individual reviews in more detail.
+    -->
+</body>
+</html>

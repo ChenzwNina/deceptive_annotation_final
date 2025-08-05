@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Products Component</title>
+    <style>
+        /* --- Global Styles & Fonts --- */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f5f7; /* Light gray background to make the component pop */
+            margin: 0;
+            padding: 0;
+            color: #172B4D; /* A dark, soft blue-black for better readability than pure black */
+        }
+
+        /* --- Main Component Wrapper --- */
+        .featured-products-wrapper {
+            position: relative; /* Positioned relative to the viewport */
+            top: 20px; /* 20px margin from the top as requested */
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 20px; /* Padding for smaller screen sizes */
+            box-sizing: border-box;
+        }
+
+        .featured-products-wrapper h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            text-align: center; /* Centered title to draw attention */
+        }
+
+        /* --- Horizontal Scrolling Container --- */
+        .products-container {
+            display: flex;
+            overflow-x: auto; /* Enables horizontal scrolling */
+            padding-bottom: 20px; /* Space for scrollbar without cutting off shadow */
+            gap: 24px; /* Space between product cards */
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+            scrollbar-width: thin; /* Firefox scrollbar styling */
+            scrollbar-color: #c1c7d0 #f4f5f7; /* Scrollbar thumb and track */
+        }
+
+        /* --- Webkit Scrollbar Styling --- */
+        .products-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .products-container::-webkit-scrollbar-track {
+            background: #f4f5f7;
+            border-radius: 4px;
+        }
+
+        .products-container::-webkit-scrollbar-thumb {
+            background-color: #c1c7d0;
+            border-radius: 4px;
+        }
+        .products-container::-webkit-scrollbar-thumb:hover {
+            background-color: #a5adba;
+        }
+
+        /* --- Individual Product Card --- */
+        .product-card {
+            flex: 0 0 280px; /* Prevents cards from shrinking, sets a fixed base width */
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(23, 43, 77, 0.08); /* Soft, professional shadow */
+            overflow: hidden; /* Keeps image corners rounded */
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+            text-decoration: none; /* Removes underline from link wrapper */
+            color: inherit;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px); /* Lifts the card on hover to indicate interactivity */
+            box-shadow: 0 8px 20px rgba(23, 43, 77, 0.12); /* A more pronounced shadow on hover */
+        }
+
+        .product-image-container {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            background-color: #e9e9e9;
+        }
+
+        .product-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures image covers the area without distortion */
+        }
+
+        .sale-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background-color: #DE350B; /* A bold red for urgency and attention */
+            color: #ffffff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .product-info {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1; /* Allows this section to grow, pushing the CTA to the bottom */
+        }
+
+        .product-category {
+            font-size: 12px;
+            font-weight: 500;
+            color: #6B778C; /* Muted color for secondary information */
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+
+        .product-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            margin-top: 8px;
+            color: #FFAB00; /* Gold color for stars */
+            font-size: 16px;
+        }
+
+        .rating-count {
+            font-size: 12px;
+            color: #6B778C;
+            margin-left: 6px;
+        }
+
+        .product-price-container {
+            margin-top: auto; /* Pushes the price and CTA to the bottom of the card */
+            padding-top: 16px; /* Space above the price */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-price {
+            font-size: 20px;
+            font-weight: 700;
+            color: #0065FF; /* Using brand's primary blue for price to stand out */
+        }
+
+        .product-price .old-price {
+            font-size: 14px;
+            font-weight: 400;
+            color: #6B778C;
+            text-decoration: line-through;
+            margin-left: 8px;
+        }
+
+        .add-to-cart-btn {
+            background-color: #0065FF; /* A vibrant, high-contrast color for the primary CTA */
+            color: #ffffff;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #0052CC; /* Darker shade on hover for feedback */
+            transform: scale(1.05); /* Slight grow effect */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="featured-products-wrapper">
+        <h2>Curated For You: This Week's Top Picks</h2>
+        <div class="products-container">
+
+            <!-- Product Card 1 -->
+            <a href="#product1" class="product-card">
+                <div class="product-image-container">
+                    <img src="placeholder_image.jpg" alt="Aura Smart Lamp">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Smart Home</span>
+                    <h3 class="product-name">Aura Smart Lamp</h3>
+                    <div class="product-rating">
+                        <span>★★★★☆</span>
+                        <span class="rating-count">(1,284)</span>
+                    </div>
+                    <div class="product-price-container">
+                        <span class="product-price">$89.99</span>
+                        <button class="add-to-cart-btn" onclick="event.preventDefault(); alert('Aura Smart Lamp added to cart!');">Add to Cart</button>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Product Card 2: On Sale -->
+            <a href="#product2" class="product-card">
+                <div class="product-image-container">
+                    <img src="placeholder_image.jpg" alt="Flow ANC Headphones">
+                    <span class="sale-badge">25% OFF</span>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Audio</span>
+                    <h3 class="product-name">Flow ANC Headphones</h3>
+                    <div class="product-rating">
+                        <span>★★★★★</span>
+                        <span class="rating-count">(3,450)</span>
+                    </div>
+                    <div class="product-price-container">
+                        <span class="product-price">$149.99 <span class="old-price">$199.99</span></span>
+                        <button class="add-to-cart-btn" onclick="event.preventDefault(); alert('Flow ANC Headphones added to cart!');">Add to Cart</button>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Product Card 3 -->
+            <a href="#product3" class="product-card">
+                <div class="product-image-container">
+                    <img src="placeholder_image.jpg" alt="Nomad Tech Messenger">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Travel Gear</span>
+                    <h3 class="product-name">Nomad Tech Messenger</h3>
+                    <div class="product-rating">
+                        <span>★★★★☆</span>
+                        <span class="rating-count">(972)</span>
+                    </div>
+                    <div class="product-price-container">
+                        <span class="product-price">$120.00</span>
+                        <button class="add-to-cart-btn" onclick="event.preventDefault(); alert('Nomad Tech Messenger added to cart!');">Add to Cart</button>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Product Card 4 -->
+            <a href="#product4" class="product-card">
+                <div class="product-image-container">
+                    <img src="placeholder_image.jpg" alt="Terra Smart Garden">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Home & Kitchen</span>
+                    <h3 class="product-name">Terra Smart Garden</h3>
+                    <div class="product-rating">
+                        <span>★★★★★</span>
+                        <span class="rating-count">(2,115)</span>
+                    </div>
+                    <div class="product-price-container">
+                        <span class="product-price">$175.50</span>
+                        <button class="add-to-cart-btn" onclick="event.preventDefault(); alert('Terra Smart Garden added to cart!');">Add to Cart</button>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Product Card 5 -->
+            <a href="#product5" class="product-card">
+                <div class="product-image-container">
+                    <img src="placeholder_image.jpg" alt="Chrono-Shift E-Ink Watch">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Wearables</span>
+                    <h3 class="product-name">Chrono-Shift E-Ink Watch</h3>
+                    <div class="product-rating">
+                        <span>★★★★☆</span>
+                        <span class="rating-count">(856)</span>
+                    </div>
+                    <div class="product-price-container">
+                        <span class="product-price">$229.00</span>
+                        <button class="add-to-cart-btn" onclick="event.preventDefault(); alert('Chrono-Shift Watch added to cart!');">Add to Cart</button>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+<!--*****Response*****-->
+<!--
+4.1 Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The component features a clean, modern aesthetic designed to build trust and drive sales. The layout is a horizontally scrolling carousel of product cards set against a light grey page background, making the white cards stand out. Each card is 280px wide, providing ample space for a large, high-quality product image (250px tall) to capture attention.
+
+The color scheme uses a soft, dark blue-black for text for optimal readability. The primary call-to-action color is a vibrant blue (#0065FF), used for the "Add to Cart" button and the price to draw the user's eye and maximize conversions (Rule 3.2). For sale items, a high-contrast red badge creates urgency, aiming to increase sales velocity (Rule 3.1).
+
+A clear visual hierarchy is established with a large main title, followed by bold product names, and smaller text for secondary info like category and ratings. Social proof is built using star ratings and review counts, which helps minimize bounce rate by quickly establishing product credibility (Rule 3.9). The overall design feels professional and engaging, encouraging users to explore the products.
+-->
+<!--
+4.2 Question 2: What triggers the appearance of this widget?
+
+The appearance of this widget is not triggered by a specific user action like a click or scroll event. Instead, it is a static component that is designed to be an integral part of a key landing page, such as the homepage or a major category page. It loads along with the rest of the page's content.
+
+Its prominent placement, positioned 20 pixels from the top of the viewport, ensures it is one of the first elements a user sees upon arrival. This strategy is intentional to immediately engage visitors with attractive, curated products, thereby minimizing the site's bounce rate (Rule 3.9). By presenting compelling options upfront, it encourages users to start their shopping journey immediately, maximizing page views and time on site (Rules 3.5, 3.6). The goal is to capture interest from the very first moment, rather than waiting for the user to discover products on their own.
+-->
+<!--
+4.3 Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have several intuitive interaction points designed to encourage exploration and purchase.
+
+1.  **Scrolling:** Users can scroll horizontally through the product list using their mouse wheel, trackpad, or by dragging the custom-styled scrollbar. On touch devices, they can swipe left and right. This interaction is designed to maximize engagement and page views per visit by revealing more products without navigating away (Rule 3.5, 3.6).
+
+2.  **Hovering:** When a user hovers their mouse over a product card, it lifts slightly and its shadow becomes more pronounced. This subtle animation provides visual feedback, signifying that the card is a clickable element. This helps guide the user and improves usability.
+
+3.  **Navigation:** Clicking anywhere on the product card (the image, title, etc.), except for the "Add to Cart" button, will navigate the user to that product's detailed description page. This allows interested customers to learn more before buying.
+
+4.  **Add to Cart:** Clicking the prominent blue "Add to Cart" button directly adds the item to the user's shopping cart. In this demo, it triggers a confirmation alert. This provides a low-friction path to purchase, directly supporting conversion rate and sales goals (Rule 3.1, 3.2).
+-->
+</body>
+</html>
