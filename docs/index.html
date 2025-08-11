@@ -14,7 +14,7 @@
         function fetchCompletedPairs() {
             // Code to fetch the list of completed pairs and render the link to the next video
             const name = document.getElementById('name').value;
-            fetch(`https://rate.chenziwei0499.workers.dev/getCompleted`, {
+            fetch(`https://annotation.chenziwei0499.workers.dev/getCompleted`, {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
