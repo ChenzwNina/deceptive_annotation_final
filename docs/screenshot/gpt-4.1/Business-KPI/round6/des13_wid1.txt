@@ -1,0 +1,7 @@
+<!--
+  4.1: The widget is a centered, card-style panel with a white background, rounded corners, and a soft drop shadow for prominence. At 370px wide, it's optimized for readability and focus. Primary color accents use a blue and purple gradient (#6366f1, #7c3aed), promoting trust and action. Key elements—a logo, large headline, two clear input fields, social sign-in buttons, and trust badges—are laid out vertically for mobile-friendliness. Spacing, gentle color contrasts, and strong CTA styling maximize usability and draw attention. Social proof and security cues boost conversion and minimize abandonment.
+
+  4.2: The widget is shown automatically to any user navigating to the website's sign-in page, or when a user clicks a "Sign In" link/button at the top navigation bar. It can also appear as a modal overlay triggered by checkout or exclusive-deal actions, inviting authentication before completing key actions.
+
+  4.3: Users can enter their email and password, opt to be remembered, recover a forgotten password via a link, or use Google or Facebook login. They can navigate to register a new account and are reassured by visible trust badges. All input fields are interactive and styled for accessibility; error handling and further guidance can be added as-needed for full interactivity in production.
+  -->
