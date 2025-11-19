@@ -1,0 +1,7 @@
+Question 1: The widget features a vibrant gradient banner (red to orange) with white text for high visibility. It uses a horizontal layout with deal items in semi-transparent containers that hover slightly when interacted with. The design choices prioritize attention-grabbing colors while maintaining readability through sufficient contrast and spacing. The gradient creates visual interest, while the rounded containers and subtle animations provide a modern, engaging feel that aligns with ecommerce urgency and excitement.
+
+    Question 2: The banner appears automatically when the page loads, positioned at the top of the website for immediate visibility. It's designed to capture user attention upon arrival without requiring any user action. The automatic appearance ensures all visitors see the current promotions, maximizing exposure for time-sensitive deals and special offers that might influence purchasing decisions early in the browsing experience.
+
+    Question 3: Users can hover over individual deal items to see a subtle lift animation, click on any deal to navigate to relevant product pages (though navigation functionality would need implementation), and close the banner permanently using the X button in the top-right corner. The banner also automatically disappears after 10 seconds with a smooth fade-out transition, providing a non-intrusive experience while ensuring the information is available long enough to be noticed.
+    -->
+</body>

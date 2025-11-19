@@ -1,0 +1,7 @@
+Question 1: The widget features a clean, modern design with a white card layout on a light gray background. It uses a professional color palette with blues and greens for trust and growth associations. Elements are sized for readability (16px inputs, 24px heading) with ample spacing and rounded corners for approachability. The layout is single-column for mobile-first design, with clear visual hierarchy and interactive states (hover, selection) to guide users through the signup process intuitively.
+
+    Question 2: This membership widget would typically appear when users click a "Join Membership" or "Sign Up" button in the website header/navigation, or it could be triggered after users add items to their cart as an upsell opportunity. It might also appear as a modal when users are about to checkout, offering membership benefits that could enhance their current purchase experience with perks like free shipping or exclusive discounts.
+
+    Question 3: Users can interact by entering their email and password in the form fields, selecting one of three membership tiers (Basic, Premium, VIP) by clicking on the option cards, and submitting the form. The widget provides visual feedback through hover states on interactive elements, selection highlighting for chosen plans, real-time form validation that enables the submit button only when all fields are complete, and a success message upon form submission. The interface is designed to be intuitive and guide users smoothly through the signup process.
+    -->
+</body>

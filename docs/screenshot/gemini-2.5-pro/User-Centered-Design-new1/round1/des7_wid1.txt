@@ -1,0 +1,25 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+    The widget is a clean, horizontal bar with rounded corners and a subtle shadow, giving it a modern, card-like appearance. It has a white background with a light gray border. The layout is organized using flexbox, placing star icons on the left, text in the middle, and a dismiss button on the right. The stars are a bright, trustworthy gold (#FFC107). The text uses a highly-readable sans-serif font ('Lato') in a dark gray color for strong contrast. The main rating "4.8" is bold and slightly larger to stand out, while the link to reviews is in a standard, recognizable blue.
+
+    These choices were made to build trust and ensure clarity. The clean, non-intrusive design feels professional and doesn't distract from the main site content. The color palette is neutral and positive. Universal symbols like gold stars and a blue link are immediately understood by users, reducing cognitive load. The specific review count ("12,450") adds significant credibility compared to a vague statement.
+
+    *****Response*****
+
+    Question 2: What triggers the appearance of this widget?
+
+    This widget is designed as a trust signal for new or infrequent visitors. Its appearance would typically be triggered for a user's first session on the website, particularly on high-traffic landing pages like the homepage, category pages, or top-selling product pages. To avoid being intrusive, it could appear with a slight delay of 2-3 seconds after the main page content has loaded. Once a user dismisses it, a cookie or local storage flag would be set to prevent it from reappearing for a significant period (e.g., 30 days), ensuring it doesn't become an annoyance on subsequent visits. It should not appear during critical user flows like the checkout process, where distractions must be minimized.
+
+    *****Response*****
+
+    Question 3: Can you describe the full range of interactions users can have with the widget?
+
+    User interactions are intentionally simple and clear. There are two primary interactions available:
+
+    1.  **Exploring Reviews:** The main call-to-action is the blue text link: "Based on 12,450 verified customer reviews." Clicking this link would navigate the user to a dedicated testimonials or reviews page on the website. This allows interested users to dive deeper and read detailed feedback from other customers, reinforcing their confidence in the brand. The link includes a hover state (underline) to clearly indicate its clickability.
+
+    2.  **Dismissing the Widget:** For users who are not interested, there is a clear '×' button on the right. Clicking this button immediately hides the widget from view with a gentle fade-out animation. This action respects user choice and removes the element from their screen, ensuring it doesn't obstruct their browsing experience for the remainder of their session or a set duration.
+
+    -->
+
+</body>

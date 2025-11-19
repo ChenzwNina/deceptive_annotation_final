@@ -1,0 +1,7 @@
+Question 1: The widget features a vibrant gradient background (red to orange) with white text for high contrast and visual appeal. It uses a centered layout with deal items arranged horizontally, each containing large percentage text (32px) for emphasis, descriptive text (14px), and prominent call-to-action buttons. The design choices prioritize attention-grabbing colors, clear hierarchy, and mobile-responsive layout to maximize visibility and conversion rates while maintaining professional aesthetics.
+
+Question 2: The banner appears automatically when the page loads, triggered by the window's load event listener. This ensures immediate visibility to users upon arrival, capturing attention at the optimal moment when they're most engaged with the website. The automatic display strategy helps promote deals without requiring user action to discover them.
+
+Question 3: Users can interact by clicking "Shop Now" buttons to navigate to relevant product categories, clicking the close button (×) to dismiss the banner permanently, and hovering over buttons for visual feedback (lift effect). The banner is also responsive - on smaller screens, deal items stack vertically. All interactions provide immediate visual feedback to enhance user experience and guide toward conversion actions.
+-->
+</body>

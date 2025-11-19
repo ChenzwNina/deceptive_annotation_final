@@ -1,0 +1,21 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a sleek, horizontal banner with rounded corners that spans most of the screen width. It features a blue gradient background (#4A90E2 to #357ABD) with crisp white text for high readability. The layout, managed by flexbox, places the promotional text and a call-to-action (CTA) button on the left/center, and a subtle close button ('×') on the far right. The main text is a readable 16px, while the white CTA button has bold, blue text, making it the primary focal point.
+
+These design choices were made to be visually appealing without being disruptive. The blue color scheme evokes trust and professionalism. The clear visual hierarchy guides the user from the offer to the action. The rounded corners and subtle shadow give it a modern, "floating" appearance that integrates well with contemporary web designs, ensuring it catches the eye but doesn't feel aggressive.
+*****Response*****
+Question 2: What triggers the appearance of this widget?
+
+The appearance of this widget is primarily triggered by a page load event. It is designed to appear as soon as a user lands on a key page of the website, such as the homepage, a category page, or a specific product landing page. This ensures that the promotion is one of the first things a visitor sees, maximizing its visibility. To avoid being intrusive to returning users within the same session, its display could be controlled by a session cookie; once dismissed, it would not reappear until the next visit. For special campaigns, it could also be triggered by other events like scroll depth or exit intent, but the primary trigger is the initial page view.
+*****Response*****
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have three clear and distinct interactions with the widget:
+
+1.  **Engage:** The user can click the "View Deals" button. This is the primary, desired action. It would navigate the user to a dedicated page showcasing all the items included in the "Mid-Season Sale," allowing them to immediately act on the promotion.
+
+2.  **Dismiss:** The user can click the '×' button on the right. This action provides user control by immediately and permanently hiding the banner for their current browsing session. This respects the user's focus if they are not interested in the offer.
+
+3.  **Ignore:** The user can choose to do nothing. The banner is fixed at the top of the viewport but doesn't block the main content. This allows the user to continue scrolling and browsing the site unhindered, while the banner remains as a persistent, non-intrusive reminder of the ongoing sale.
+-->
+</body>

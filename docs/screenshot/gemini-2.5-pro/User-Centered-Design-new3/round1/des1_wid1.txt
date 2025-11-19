@@ -1,0 +1,24 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+    The widget is a clean, rectangular banner with rounded corners, positioned horizontally near the top of the page. Its layout is organized and spacious, using flexbox to align content. On the left, a "discount tag" icon sits next to a heading and sub-text. On the right, there is a prominent "Shop Deals" button and a subtle 'X' to close.
+
+    The color palette is intentionally calm. A soft teal (`#e6f4f1`) background is easy on the eyes, while dark slate text (`#2c3e50`) ensures high contrast and readability (Rule 3.5). The call-to-action button uses a slightly stronger teal (`#00796b`) to draw attention without creating alarm. These choices avoid aggressive sales colors like bright red or yellow, which can cause anxiety. This helps users feel calm and in control (Rule 3.12) and fosters trust by appearing professional and not overly desperate (Rule 3.6). The generous padding and clear hierarchy make the information easy to digest quickly.
+    *****Response*****
+    Question 2: What triggers the appearance of this widget?
+
+    The appearance of this widget is designed to be helpful rather than intrusive. It would typically be triggered once per user session when they first land on a high-intent page, such as the homepage or a main category page. It should not appear during critical user flows like the checkout process, as that could distract and harm their economic interest by causing cart abandonment (Rule 3.1).
+
+    To respect user autonomy and create a predictable experience (Rule 3.7, 3.6), the widget's appearance would be controlled by a browser cookie or session storage. Once a user dismisses the banner by clicking the close button, a flag is set to prevent it from reappearing for a significant duration (e.g., 24 hours or for the rest of the session). This ensures the user’s choice is respected and they are not repeatedly bothered by the same promotion, which would undermine their sense of control.
+    *****Response*****
+    Question 3: Can you describe the full range of interactions users can have with the widget?
+
+    Users have three clear, simple interaction paths, designed to support their autonomy and ensure informed choice (Rule 3.7, 3.8).
+
+    1.  **Engage:** The primary interaction is clicking the "Shop Deals" button. This action would navigate the user directly to a curated page displaying all the sale items mentioned in the banner. The button's label is unambiguous, ensuring the system behaves as expected and building user trust (Rule 3.6).
+
+    2.  **Dismiss:** The user can click the '×' button to close the banner. This is a critical feature for user control. This action immediately and smoothly removes the banner from view for their current session, respecting their decision to not engage with the offer. This preserves their focus on their original task.
+
+    3.  **Ignore:** The user can choose to do nothing. The banner's calm design and fixed position allow it to be present without being disruptive. Users can scroll past it and continue interacting with the main site content unimpeded. This lack of forced interaction empowers users and helps them feel in control (Rule 3.12).
+    -->
+
+</body>

@@ -1,0 +1,26 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a clean, card-style component that floats at the top-center of the screen. It has a soft white background with a subtle shadow to lift it off the page. The layout is structured vertically: a light grey header with the title and order number, a main body with the delivery status, a visual progress bar, and a scrollable list of detailed updates.
+
+Colors are chosen for clarity and emotional response. A calming blue (#007bff) indicates the "active" stage, while a reassuring green (#28a745) signifies "completed" stages. Text colors have high contrast for readability (#212529 on white).
+
+The most important information, "Arriving Tomorrow," is given the largest font size to be immediately scannable. The progress bar provides a quick, at-a-glance understanding of the shipment's journey. These choices are made to help the user feel calm, informed, and in control, reducing the anxiety often associated with waiting for an order.
+
+*****Response*****
+Question 2: What triggers the appearance of this widget?
+
+This widget would typically be triggered by a direct user action, ensuring it appears only when requested. The most common triggers would be:
+1.  Clicking a "Track Order" button or link from their personal "Order History" page on the e-commerce website.
+2.  Clicking a tracking link from a shipping confirmation email, which would lead them to the website where this widget would immediately appear as an overlay.
+
+This approach respects user autonomy by not appearing unexpectedly. It provides a quick, focused view of the tracking information without requiring a full page load, which keeps the user's experience fluid and prevents them from losing their context on the site. This makes the interaction feel efficient and less disruptive.
+
+*****Response*****
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+User interactions are intentionally simple and focused to avoid overwhelming them. The full range of interactions includes:
+1.  **Viewing:** The primary interaction is to read and comprehend the tracking information. The visual hierarchy guides the user from the high-level summary (delivery date) to the mid-level progress (progress bar) and finally to the granular details (shipment history).
+2.  **Scrolling:** If the shipment history is extensive, the user can scroll vertically within the "Shipment History" section to view all past events. This is handled by an independent scrollbar, so the main page remains static.
+3.  **Closing:** The user has full control to dismiss the widget at any time by clicking the prominent "×" button in the top-right corner. This action closes the overlay and returns them to their previous view on the website, reinforcing their sense of control and autonomy.
+-->
+</body>

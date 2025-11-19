@@ -1,0 +1,23 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a sleek, rectangular banner with rounded corners, positioned horizontally at the top of the viewport. It features a dark charcoal-blue background (#1a202c), creating a premium feel and ensuring high contrast with the white and light-gray text. The layout is organized from left to right: a prominent gold star icon (#f6e05e), a heading ("Become an Aura Insider") in a bold, 20px font, a descriptive paragraph in a smaller 14px font, an email input field, and a "Join Now" call-to-action button. The button uses the same gold color as the icon to draw attention. A subtle '×' dismisses the banner.
+
+These design choices are intended to create a look that is both professional and trustworthy. The dark theme feels modern and less intrusive than a bright banner, while the gold accents add a touch of exclusivity, fitting for a membership offer. The clear visual hierarchy guides the user's eye from the value proposition to the action, making the sign-up process intuitive and quick.
+
+*****Response*****
+Question 2: What triggers the appearance of this widget?
+
+The appearance of this widget is best triggered by user engagement, rather than immediately on page load, to avoid being disruptive. An ideal trigger would be a combination of time and action. For example, the banner could appear after a user has been actively browsing the site for 20-30 seconds or after they have scrolled down 50% of a key page like the homepage or a product category page. Another effective trigger is exit-intent, where the banner appears when the user's cursor moves towards the top of the browser window to close the tab. This approach targets users who have shown interest in the content but might be leaving, providing a final opportunity to capture their interest with a valuable offer without interrupting their initial browsing experience.
+
+*****Response*****
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have three primary and distinct interactions with this widget:
+
+1.  **Sign Up:** The main intended action is for the user to type their email address into the input field and click the "Join Now" button. This action submits their information, typically resulting in the banner disappearing and being replaced by a brief "Thank You" or success confirmation message.
+
+2.  **Dismiss:** If the user is not interested, they can click the '×' button in the top-right corner. This is a clear, non-deceptive way to close the widget. Upon clicking, the banner should be hidden for the remainder of the user's session (or longer, using a cookie) to respect their decision and provide a good user experience.
+
+3.  **Ignore:** The user can also choose to simply ignore the banner. Since it is fixed at the top of the viewport but only takes up a small amount of vertical space, they can continue to scroll and interact with the main page content below it without obstruction.
+-->
+</body>

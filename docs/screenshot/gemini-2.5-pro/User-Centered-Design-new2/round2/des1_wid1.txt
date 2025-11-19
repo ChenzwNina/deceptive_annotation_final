@@ -1,0 +1,18 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a clean, rectangular banner positioned 20px from the top of the screen and centered horizontally. It has a light teal background (#E0F2F1) with high-contrast dark teal text (#004D40) for excellent readability, following accessibility best practices. The layout is managed by flexbox, which aligns the text content on the left and a prominent call-to-action (CTA) button and close icon on the right. The CTA button has a vibrant, darker teal background (#00796B) to draw attention without being aggressive. The font is 'Lato', a clear sans-serif. These choices create a professional, trustworthy appearance that is noticeable but doesn't disrupt the user's focus. On smaller screens, the elements stack vertically to maintain usability.
+
+*****Response*****
+Question 2: What triggers the appearance of this widget?
+
+The appearance of this widget is triggered by a page load event. When a user navigates to a relevant page, such as the homepage or a main category page, the banner appears along with the rest of the content. This approach is simple, predictable, and respects the user's flow. It does not rely on intrusive triggers like scroll depth, exit intent, or timed delays, which can frustrate users and make interactions more difficult than necessary (violating rule 3.2). The banner presents its information immediately and transparently, allowing the user to decide how to interact with it from the moment the page is usable.
+
+*****Response*****
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have three clear and direct interactions with the widget:
+1.  **Engage with the offer:** The user can click the "Shop the Sale" button. This is the primary affirmative action, which navigates them directly to the page featuring the sale items. This interaction is designed to be seamless.
+2.  **Dismiss the banner:** The user can click the '×' button to close the banner. This action removes the banner from view for the remainder of their session, respecting their decision to ignore the offer (adhering to rule 3.3). The button is clearly visible and easy to click.
+3.  **Ignore the banner:** The user can choose to do nothing. Since the banner is positioned at the top and does not obstruct main page content, they can scroll past it and continue their browsing journey unimpeded. The widget remains visible but passive.
+-->
+</body>

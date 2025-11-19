@@ -1,0 +1,17 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The search widget is a clean, rectangular panel with soft, rounded corners and a subtle shadow, giving it a modern, floating appearance. Its layout is a horizontal arrangement of three elements: a category dropdown on the left, a large text input field in the middle, and a prominent search button on the right. The color scheme is minimalistic and high-contrast, using a white background, dark gray text for readability, and a vibrant, accessible blue for the primary call-to-action search button. The input field is intentionally the largest element to signify it as the primary point of interaction.
+
+These design choices are made to create a familiar and intuitive user experience. The horizontal flow follows natural reading patterns. The clean look minimizes distraction, and the prominent blue button clearly indicates the final action, guiding the user efficiently through the process of searching for a product.
+
+*****Response*****
+Question 2: What triggers the appearance of this widget?
+
+The appearance of this search panel is not triggered by a specific user action. It is a persistent, core component of the user interface. It is designed to be visible by default as soon as key pages of the e-commerce website load, such as the homepage, category pages, and product listings. Its fixed position at the top of the viewport ensures it remains constantly visible and accessible, even as the user scrolls down the page. This design choice prioritizes the search functionality, acknowledging it as a primary and essential tool for users to navigate the site and discover products quickly and easily.
+
+*****Response*****
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users can interact with the widget in several ways to perform a search. First, they can click the dropdown menu on the left to select a specific product category, which narrows the scope of their search. Next, they can click into the main text field and type their search query, such as a product name or brand. To execute the search, they can either click the blue search button with the magnifying glass icon or simply press the 'Enter' key on their keyboard while the text field is active. The widget also provides visual feedback: the search button darkens on hover, and any active element (the dropdown or input field) receives a distinct blue outline, improving usability and accessibility.
+-->
+</body>

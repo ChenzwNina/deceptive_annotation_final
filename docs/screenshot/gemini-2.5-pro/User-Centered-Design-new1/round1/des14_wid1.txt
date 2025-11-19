@@ -1,0 +1,31 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is designed as a clean, self-contained card with rounded corners and a subtle shadow, giving it a modern, elevated appearance. The layout is horizontal, with a clear visual hierarchy. A header contains the order number, followed by a prominent estimated delivery date. The core is a four-step progress bar, visually representing the order's journey from left to right.
+
+Colors are chosen for clarity and user experience: a calming green signifies completed steps, a vibrant blue indicates the current active step, and a neutral gray represents future steps. This color-coding is intuitive and provides status information at a glance. Text is a highly readable dark gray on a white background. Font sizes are varied to guide the user's eye from the most important information (delivery date, status) to secondary details (timestamps, tracking number). These choices prioritize clarity, build trust, and reduce user anxiety by presenting tracking information in a simple, digestible format.
+
+*****Response*****
+Question 2: What triggers the appearance of this widget?
+
+This widget is not triggered by an unexpected event like a pop-up or a notification banner. Its appearance is initiated by a direct user action. It is designed to be a static, core component on a dedicated page within the e-commerce website's user account section.
+
+A user would typically encounter this widget after:
+1. Logging into their account and navigating to a "My Orders" or "Order History" page, then clicking on a specific order to see its status.
+2. Clicking a direct "Track Your Package" link from a shipping confirmation email, which would lead them to this dedicated tracking page.
+
+This approach is user-centric and non-deceptive, as the component only appears when the user has explicitly sought out this information, ensuring it is a helpful tool rather than an interruption.
+
+*****Response*****
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+User interactions with the widget are designed to be straightforward and informative, focusing on providing details without complexity.
+
+1.  **Information Consumption:** The primary interaction is passive viewing. The user can immediately see the order number, estimated delivery date, and the current stage of the delivery process without any clicks.
+
+2.  **Hovering for Feedback:** When a user hovers their mouse over any of the status dots in the progress bar, the dot scales up slightly. This provides subtle visual feedback, confirming the element is interactive and drawing attention to that specific stage.
+
+3.  **Accessing Carrier Tracking:** The tracking number in the footer is a hyperlink. Clicking it would, in a real application, either take the user directly to the carrier's (e.g., Express Logistics) official tracking page with the number pre-filled or copy the number to their clipboard.
+
+4.  **Navigating to Order Details:** The "View Order Details" button is a clear call-to-action. Clicking this button navigates the user to a more comprehensive page detailing the purchased items, shipping address, and billing information.
+-->
+</body>
