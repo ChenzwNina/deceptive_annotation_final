@@ -1,0 +1,24 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+    The widget is a clean, horizontally-oriented banner that is centered at the top of the viewport. It has a white background with a subtle shadow and rounded corners, making it appear distinct and elevated from the main page content. The layout uses flexbox: on the left is a square 80x80px product image for quick recognition. The central area contains the tracking information, with a bold, dark blue primary status ("Your order is out for delivery!"), followed by smaller, grey text for the order number and product name. Below this is a visual progress bar with four steps, using a strong blue to indicate completed stages and a lighter grey for future steps. On the far right is a simple, clear '×' close button.
+
+    This design was chosen for clarity and trust. The neutral color palette with a single, positive accent color (blue) feels professional and doesn't create unnecessary urgency. The hierarchy of text sizes guides the user's eye to the most important information first. The progress bar provides an immediate visual understanding of the order's journey without requiring the user to read extensively.
+
+
+    Question 2: What triggers the appearance of this widget?
+
+    The appearance of this widget is triggered when a user who is logged in (or identified via a cookie from a previous session) visits the website, and the status of their most recent order has been updated to a key milestone since their last visit. For example, it would appear when the order status changes from "Shipped" to "Out for Delivery." The system would set a flag associated with the user's session. Upon page load, the website checks for this flag. If present, the widget is displayed. To avoid being intrusive, it would only be shown once per status update and would be hidden for the remainder of the session after the user closes it. This ensures the notification is timely, relevant, and not a persistent annoyance.
+
+
+    Question 3: Can you describe the full range of interactions users can have with the widget?
+
+    User interactions with this widget are designed to be simple, direct, and helpful, adhering to non-manipulative design principles. The primary interactions are:
+
+    1.  **Information Consumption:** The user's main interaction is to passively read the information provided. The widget clearly presents the current order status and visual progress, allowing the user to get a quick update at a glance.
+
+    2.  **Dismissal:** The user can click the '×' button in the top-right corner to permanently close the widget for their current session. This is a clear and easy action, ensuring the user has full control over their interface.
+
+    3.  **Navigation to Details:** The user can click on the hyperlinked order number (e.g., "#UK789-456123"). This action navigates them to the full, detailed order tracking page where they can see more granular information, such as carrier details, a tracking number, and a complete history of their order's movements. This provides an optional path to more information without forcing the user or cluttering the primary widget.
+
+    -->
+</body>
