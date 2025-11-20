@@ -1,7 +1,0 @@
-Question 1: The widget features a vibrant gradient background (red to orange) with white text for high contrast and visibility. It uses a clean, centered layout with deal items displayed in a flex container for responsiveness. The design choices prioritize attention-grabbing colors while maintaining readability. Large percentage numbers (28px) emphasize savings, and the glass-morphism effect on deal cards adds modern appeal. The rounded corners and subtle shadows create a polished, friendly appearance that aligns with ecommerce trust-building.
-
-Question 2: The banner appears automatically when the page loads, triggered by the DOMContentLoaded event with a 500ms delay for smooth user experience. This ensures visitors immediately see current promotions without requiring any action. The timing allows the main page content to load first, preventing the banner from disrupting initial page rendering while still capturing early attention.
-
-Question 3: Users can click the close button (X) to dismiss the banner permanently. They can click individual deal items to potentially view more details (extensible functionality). The main "Shop Now" CTA button redirects to the products page. The banner is also responsive - on smaller screens, deal items stack vertically. Hover effects on buttons provide visual feedback, enhancing interactivity and guiding user actions toward conversion.
--->
-</body>

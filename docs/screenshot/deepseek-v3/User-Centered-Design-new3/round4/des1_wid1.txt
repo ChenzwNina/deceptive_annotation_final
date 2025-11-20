@@ -1,0 +1,7 @@
+Question 1: The widget features a vibrant gradient background (red to orange) with white text for high contrast and urgency. It uses a clean, centered layout with deal items arranged horizontally. Each deal card has a semi-transparent background with blur effect for modern aesthetics. The design choices prioritize attention-grabbing colors, clear hierarchy with varying font sizes, and responsive layout that works on different screen sizes. The warm color scheme creates excitement while maintaining readability.
+
+    Question 2: The banner appears automatically 1 second after the page loads, giving users time to orient themselves before the promotional content appears. This delayed trigger ensures the banner doesn't interfere with initial page rendering while still capturing attention early in the user's browsing session. The timing is optimized to balance user experience with promotional visibility.
+
+    Question 3: Users can close the banner using the "×" button in the top-right corner. They can click individual deal items to potentially navigate to specific category pages (though this would require additional implementation). The main "SHOP NOW" button redirects users to a dedicated deals page. On hover, the CTA button provides visual feedback with color change and slight upward movement. The banner is also responsive and adapts to different screen sizes.
+    -->
+</body>

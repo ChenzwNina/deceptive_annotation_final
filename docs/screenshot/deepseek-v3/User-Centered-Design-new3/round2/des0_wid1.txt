@@ -1,0 +1,7 @@
+Question 1: The widget features a clean, modern design with a white background for product cards against a light gray section background. Cards use a responsive grid layout that adapts to screen size. I chose a maximum width of 1200px for optimal readability on large screens. Colors include professional blues and reds for CTAs and sale badges, with sufficient white space for visual hierarchy. The design prioritizes clarity and ease of scanning with consistent card sizing, clear typography hierarchy, and subtle hover effects to enhance user engagement.
+
+Question 2: This featured products widget appears automatically when users land on the homepage or a main category page. It's designed to be immediately visible without requiring user interaction to trigger its appearance. The component loads as part of the initial page render, positioned prominently to showcase key products and drive conversions from the moment users enter the site.
+
+Question 3: Users can hover over product cards to see elevation effects, click "Add to Cart" buttons to purchase items directly, and click anywhere on product cards (potentially to view detailed product pages). The responsive grid adapts to different screen sizes, and sale badges highlight discounted items. The interactions are designed to be intuitive - visual feedback on hover indicates clickable elements, and clear CTAs guide users toward conversion actions while maintaining a clean, uncluttered interface.
+-->
+</body>

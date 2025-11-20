@@ -1,0 +1,7 @@
+Question 1: The widget features a gradient purple background with white text for high contrast and visual appeal. Deal items use semi-transparent cards with hover effects (lift animation and background lightening) to create depth. Percentage discounts are large (32px) and yellow for emphasis, while CTAs are red to stand out. The layout is responsive with flexbox, ensuring proper spacing and mobile compatibility. These choices create an eye-catching, modern design that guides user attention to key offers.
+
+    Question 2: The banner appears automatically 1 second after page load with a smooth fade-in transition. This timing allows users to first see the main page content before being presented with promotional offers, balancing user experience with marketing goals. The delayed appearance prevents overwhelming users immediately while still ensuring high visibility for the deals section.
+
+    Question 3: Users can: 1) Click "Shop Now" buttons to navigate to specific deal categories, 2) Close the banner permanently using the "×" button in the top-right corner, 3) Hover over individual deal cards to see interactive feedback (lift animation and background change), and 4) On mobile devices, tap interactions work similarly to hover effects. The banner is also responsive and adapts to different screen sizes.
+    -->
+</body>

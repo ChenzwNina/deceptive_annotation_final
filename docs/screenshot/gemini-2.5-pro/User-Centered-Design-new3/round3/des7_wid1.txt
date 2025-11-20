@@ -1,0 +1,15 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a clean, rectangular card with rounded corners and a subtle shadow, making it appear to float over the main content. It has a white background (#ffffff) for clarity. The primary text is a dark gray (#111827) for high readability, with a lighter gray for secondary information. The stars are a warm gold color (#f59e0b) to feel positive and familiar. The main "Write a review" button uses a trustworthy blue (#2563eb). The layout is organized vertically with generous spacing. At the top is a header, followed by a large summary rating (e.g., "4.8"), a breakdown of ratings with progress bars, and a clear call-to-action button at the bottom. These choices create a calm, professional, and trustworthy feel. The clean layout and clear typography ensure users can absorb the information quickly and without feeling overwhelmed, fostering a sense of control.
+
+*****Response*****
+Question 2: What triggers the appearance of this widget?
+
+The appearance of this widget should be triggered by a user's demonstrated interest in a specific product. A suitable trigger would be when the user scrolls down on a product detail page, past the initial product images and price. This action implies the user is moving from initial consideration to deeper evaluation. Triggering it on scroll prevents it from being an immediate distraction upon page load. This respects the user's initial focus and provides helpful social proof at the exact moment they are likely seeking it. It feels helpful rather than intrusive, which supports user autonomy and helps them feel in control of their information discovery process. Another option could be a small, static tab on the side of the screen that, when clicked, reveals this full widget.
+
+*****Response*****
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have three main interactions with the widget, designed to provide information and control. First is passive consumption: the user can read the overall average rating, see the total number of reviews, and scan the percentage breakdown for each star level to quickly gauge customer satisfaction. Second is active engagement: the user can click the "Write a review" button. This action would navigate them to a dedicated page or open a modal form where they could contribute their own feedback, respecting their desire to participate. Third is dismissal: the user can click the '×' close button in the top right corner. This action would hide the widget, giving the user complete control over their browsing interface and ensuring the component does not become a persistent annoyance. Each interaction is clear and predictable, fostering user trust and a sense of calm.
+-->
+</body>

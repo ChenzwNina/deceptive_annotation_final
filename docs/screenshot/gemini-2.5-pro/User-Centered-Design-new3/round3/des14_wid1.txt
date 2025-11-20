@@ -1,0 +1,18 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a clean, rectangular card with rounded corners and a soft shadow, making it float gently above the main page content. It uses a professional and calming color palette: a white background for clarity, dark grey for primary text to ensure readability, and a trustworthy blue (#0d6efd) as an accent for key information like the current status and progress bar. The layout is structured logically from top to bottom: a clear header, item details, current status, a visual progress bar, and a final call-to-action button. Font sizes create a visual hierarchy, with the main status ("In Transit") and header being prominent. These choices were made to help users feel calm and in control (Rule 3.12). The clear, uncluttered presentation of information fosters trust (Rule 3.6) and enables users to succeed in their goal of quickly understanding their order's status (Rule 3.5).
+
+*****Response*****
+Question 2: What triggers the appearance of this widget?
+
+The appearance of this widget is triggered contextually when a user with a recently shipped order visits the website, specifically on high-traffic pages like the homepage or their account dashboard. It would not appear on every single page visit to avoid being intrusive. The system would check the user's recent order history upon page load. If an order's status has been updated to "Shipped" or "In Transit" within a specific timeframe (e.g., the last 7 days), the widget animates into view from the top. This proactive approach provides timely and relevant information without requiring the user to actively search for it, supporting their goal of tracking their purchase efficiently (Rule 3.5) and fostering trust through helpful communication (Rule 3.6).
+
+*****Response*****
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have three primary interactions with the widget, designed to provide both information and control:
+1.  **Viewing:** The main interaction is passive. The user can immediately see the most critical information—what the item is, the current status, and the estimated arrival date—without any clicks, fulfilling their immediate need for an update.
+2.  **Dismissing:** The user can click the '×' button in the top-right corner. This action immediately closes the widget, giving the user full control over their browsing experience. This respects their autonomy and ensures the component does not become an annoyance (Rules 3.7 & 3.12).
+3.  **Drilling Down:** The user can click the "View Full Tracking Details" button. This is the main call to action and would navigate them to a dedicated, more comprehensive tracking page with a map view, detailed shipping history, and carrier information. This allows users to seek more information if they choose, supporting their autonomy and need for detailed information.
+-->
+</body>

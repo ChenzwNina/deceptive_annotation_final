@@ -1,0 +1,22 @@
+4.1 Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a clean, rectangular panel with soft, rounded corners, centered horizontally 20px from the top of the viewport. It has a subtle drop shadow to lift it off the page content. The color scheme is neutral and professional: a white background provides high contrast, dark grey is used for text, and a vibrant blue (#007bff) is reserved for the primary action—the search button—to draw the user's eye.
+
+The layout is structured logically. A large search input field is at the top, immediately accessible. Below it, "Recent Searches" and "Trending Now" sections use pill-shaped tags for quick, clickable suggestions. This design is spacious and uncluttered, preventing cognitive overload. These choices are based on established e-commerce design patterns, creating a familiar, intuitive, and trustworthy user experience that focuses on helping the user find what they need efficiently without distractions.
+
+*****Response*****
+4.2 Question 2: What triggers the appearance of this widget?
+
+The appearance of this widget is triggered when a user clicks or taps on the main search bar, which is typically located in the static header of the e-commerce website. Instead of just allowing typing in a small bar, this action expands the search functionality into this larger, more helpful panel. This is a common and expected interaction pattern. It provides an enhanced search experience (with history and suggestions) without navigating the user away from their current page, thus keeping the context of their shopping journey intact until they are ready to commit to a search.
+
+*****Response*****
+4.3 Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have several clear and direct interactions with this search panel:
+
+1.  **Typing a Query:** The primary interaction is typing a search term into the main input field. The field has a clear placeholder to guide them.
+2.  **Submitting a Search:** Users can submit their query in two ways: by clicking the blue search icon button or by pressing the "Enter" key on their keyboard.
+3.  **Using Suggestions:** Users can click on any of the pill-shaped tags under "Recent Searches" or "Trending Now." This action will immediately execute a search for that specific term, saving them from typing.
+4.  **Closing the Panel:** If the user decides not to search, they can close the panel by clicking the 'X' icon in the top-right corner. This would hide the panel and return them to their previous view of the website. The panel would also close automatically after a search is submitted.
+-->
+</body>

@@ -1,0 +1,7 @@
+Question 1: The widget features a clean, modern design with a light gray background (#f8f9fa) and rounded corners for approachability. The color scheme uses blue (#2c5aa0) for key elements and gold (#ffc107) for stars, creating visual hierarchy. Large, bold numbers (4.7) immediately convey the overall rating, while progress bars show rating distribution. The layout is organized with clear sections: overall rating, distribution bars, and individual reviews. These choices prioritize readability, trust-building through visual clarity, and mobile responsiveness.
+
+    Question 2: This widget appears automatically on product detail pages when users scroll to the ratings section. It can also be triggered by clicking "View Ratings" buttons or tabs on the product page. For products with no reviews, it may show a prompt encouraging users to be the first to rate. The widget loads immediately with the page content to provide transparent social proof without requiring additional user actions.
+
+    Question 3: Users can interact with the widget by: 1) Reading individual reviews in expandable cards, 2) Clicking "Load More Reviews" to see additional feedback, 3) Hovering over rating bars to see exact percentages, 4) Filtering reviews by star rating (clicking on specific star levels), 5) Sorting reviews by date or helpfulness, and 6) Clicking "Helpful" buttons on individual reviews. Some implementations may allow users to submit their own ratings directly from this widget.
+    -->
+</body>

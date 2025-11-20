@@ -1,0 +1,7 @@
+Question 1: The widget features a gradient purple background (#667eea to #764ba2) with white text for high contrast. It uses a centered layout with 28px bold title and three deal cards in a flex container. Each card has semi-transparent white background with blur effect, yellow percentage indicators (32px), and red CTA buttons. The design choices prioritize visual hierarchy - large percentages grab attention, gradient background creates premium feel, and glassmorphism cards add modern depth while maintaining readability.
+
+Question 2: The banner appears automatically after a 1-second delay when the page loads, using JavaScript setTimeout. This gives users time to orient themselves before the promotional content appears. The smooth fade-in transition (opacity change over 0.5 seconds) prevents jarring sudden appearances and provides a polished user experience that doesn't interrupt initial page viewing.
+
+Question 3: Users can: 1) Click "Shop Now" buttons to navigate to respective deal categories 2) Close the banner permanently using the "×" button in the top-right corner 3) Hover over CTA buttons for visual feedback (color darkening and slight lift animation) 4) View multiple deals simultaneously in the responsive layout that adapts to different screen sizes. The interactions are designed to be intuitive while providing clear visual feedback for all actions.
+-->
+</body>

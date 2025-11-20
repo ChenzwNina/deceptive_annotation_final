@@ -1,0 +1,24 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+    The widget is a sleek, rectangular banner with rounded corners that spans most of the viewport width. It features a vibrant blue-to-teal gradient background, creating a modern and energetic feel appropriate for a sale. The text is white for high contrast and readability, set at a standard 16px font size with the main deal in bold. The layout uses flexbox to center a promotional message and a "Shop Deals" call-to-action button, ensuring a balanced look. On the far right, a subtle '×' close button is available. A soft box-shadow lifts the banner off the page, giving it prominence.
+
+    These choices are made to be eye-catching without being intrusive. The gradient is visually appealing, the high-contrast text ensures accessibility, and the rounded corners and shadow align with contemporary web design trends, fostering a sense of professionalism and trust. The explicit close button respects user autonomy, avoiding a "locked-in" feeling.
+    
+    *****Response*****
+    Question 2: What triggers the appearance of this widget?
+    
+    This widget is designed to appear automatically when a user lands on key pages of the e-commerce website, such as the homepage, category pages, or relevant product pages. Its appearance is triggered by the page load event. To ensure a good user experience and avoid being repetitive, its visibility would typically be controlled by browser cookies or session storage. For example, once a user dismisses the banner by clicking the close button, a cookie would be set to prevent it from reappearing for a defined period (e.g., 24 hours) or for the remainder of their browsing session. This ensures the promotion is visible to new and returning visitors without becoming an annoyance to users who have already acknowledged it.
+    
+    *****Response*****
+    Question 3: Can you describe the full range of interactions users can have with the widget?
+
+    Users have three primary interactions with this banner:
+
+    1.  **Navigation:** The main interaction is clicking the "Shop Deals" button. This is a clear call-to-action that would navigate the user directly to a dedicated landing page or product category page featuring all items included in the "Summer Getaway Sale."
+
+    2.  **Dismissal:** Users can click the '×' button on the right side of the banner. This action would hide the banner from their view, allowing them to browse the website without the banner present. This interaction respects the user's control over their interface.
+
+    3.  **Visual Feedback (Micro-interaction):** On a desktop device with a mouse, hovering over the "Shop Deals" button causes it to slightly increase in size and its background color to lighten. Hovering over the close button increases its opacity. These subtle hover effects provide immediate visual feedback, confirming that the elements are interactive and improving the user experience.
+    -->
+
+</body>

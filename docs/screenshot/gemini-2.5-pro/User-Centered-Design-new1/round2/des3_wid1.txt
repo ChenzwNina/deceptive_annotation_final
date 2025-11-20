@@ -1,0 +1,25 @@
+## Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+    The widget is a clean, modern, horizontal search bar centered at the top of the viewport. It has a white background (#ffffff) with soft, rounded corners and a subtle box-shadow, giving it a floating effect over the page content. 
+    
+    The layout is a three-part structure. On the left is a category dropdown with a light grey background (#f4f5f7) to visually differentiate it as a separate control. In the middle is the main search input field, which takes up the most space. On the right is a vibrant blue (#007bff) search button containing a white magnifying glass icon.
+    
+    These choices are intentional. The layout is familiar to e-commerce users, reducing cognitive load. The color scheme creates a clear visual hierarchy: blue for the primary call-to-action, grey for the secondary control, and white for the input area, guiding the user's focus. The generous padding and readable font size (16px) ensure the component is accessible and easy to use on both desktop and mobile devices.
+
+    ## Question 2: What triggers the appearance of this widget?
+
+    This search panel is a persistent, primary navigation element. Its appearance is not triggered by a specific user action; instead, it is always visible at the top of the viewport as soon as the page loads. It uses `position: fixed` in CSS, which means it remains in the same position even when the user scrolls down the page. This design choice ensures that the search functionality—a critical feature for navigating an e-commerce site—is immediately and constantly accessible to the user, regardless of where they are on the site. This promotes user engagement and helps customers find products more efficiently without having to scroll back to the top of the page.
+
+    ## Question 3: Can you describe the full range of interactions users can have with the widget?
+
+    Users can interact with the widget in a complete, linear flow:
+    
+    1.  **Category Filtering (Optional):** The user can click the "All Categories" dropdown on the left. This opens a list of product categories (e.g., Electronics, Apparel). Selecting one will scope their subsequent search to that specific department, allowing for more relevant results.
+    
+    2.  **Query Input:** The user can click inside the large central text field and type their search query, such as "ergonomic office chair" or "women's running shoes." The placeholder text guides them on what to search for.
+    
+    3.  **Search Submission:** To execute the search, the user has two options: they can either click the blue search button with the magnifying glass icon or simply press the "Enter" key on their keyboard after typing in the input field.
+    
+    4.  **Visual Feedback:** Hovering the mouse over the category dropdown and the search button provides visual cues (a pointer cursor and a slight color change on the button) to indicate that these elements are interactive.
+    -->
+</body>

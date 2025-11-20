@@ -1,0 +1,7 @@
+Question 1: The widget features a vibrant gradient background (red to orange) with white text for high contrast and visual appeal. It uses a centered layout with deal cards arranged horizontally, featuring semi-transparent backgrounds with blur effects for modern aesthetics. The design choices prioritize attention-grabbing colors while maintaining readability. Button styling uses white backgrounds with accent colors to create clear call-to-action elements. The overall size is substantial enough to be noticeable without overwhelming the page content.
+
+Question 2: The banner appears automatically when the page loads, triggered by the DOMContentLoaded event with a 500ms delay to ensure smooth rendering. This immediate appearance ensures maximum visibility for time-sensitive deals. The banner remains visible until manually closed by the user, allowing them to engage with the content at their own pace while ensuring the promotional message is delivered effectively.
+
+Question 3: Users can interact with the widget in several ways: clicking the close button (×) to dismiss the banner permanently, clicking any of the "Shop Now," "Learn More," or "Explore" buttons to navigate to relevant product pages or promotional sections, and hovering over buttons to see hover effects (color changes and subtle animations). The banner is also responsive and adapts to different screen sizes through flex-wrap functionality.
+-->
+</body>

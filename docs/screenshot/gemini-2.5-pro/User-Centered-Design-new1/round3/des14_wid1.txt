@@ -1,0 +1,35 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a clean, card-style component with a white background, rounded corners, and a subtle shadow, making it stand out against a light gray page background. The layout is structured with generous padding and clear visual sections for the header, current status, progress bar, and history.
+
+Colors: The palette is primarily neutral (whites, grays, and dark text) to ensure readability and a professional feel. A vibrant, reassuring green (#10b981) is used for the "Out for Delivery" status and the progress bar to provide a clear, positive visual cue about the order's advancement. A friendly blue (#2563eb) is used for actionable links and buttons, adhering to common web conventions.
+
+Elements & Layout: A strong typographic hierarchy is used, with the largest text for the main status ("Out for Delivery") to give users the most important information first. The progress bar is a key visual element, using distinct icons and labels to communicate each stage of the delivery process. The layout is built with flexbox for robust alignment and responsiveness. These choices are made to create a calming, informative, and trustworthy user experience, reducing customer anxiety about their package's location.
+
+*****Response*****
+Question 2: What triggers the appearance of this widget?
+
+This widget is designed to be the primary content on a dedicated order tracking page. Its appearance is triggered by direct user action, ensuring it is shown only when the user explicitly requests this information. There are two primary triggers:
+
+1.  **Clicking a tracking link:** The most common trigger would be the user clicking a "Track Your Order" link from a shipping confirmation email. This link would navigate them directly to a unique URL for their specific order, where this component would be displayed.
+
+2.  **Navigating from their account:** A logged-in user could navigate to their "My Account" or "Order History" section on the website. From a list of past orders, they could click on a specific order to view its status, which would then load the page containing this tracking component.
+
+This approach is user-initiated, making it an expected and helpful interface rather than an intrusive or unsolicited pop-up.
+
+*****Response*****
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+User interactions are focused on information gathering and navigation, designed to be simple and efficient. The full range includes:
+
+1.  **Viewing Status at a Glance:** The primary interaction is passive observation. Users can immediately see the most current status ("Out for Delivery"), the estimated delivery date, and a visual representation of the overall progress via the multi-step progress bar.
+
+2.  **Reviewing History:** Users can scan the chronological "Tracking History" list to understand the detailed journey of their package, including locations and timestamps for each scan.
+
+3.  **Navigating to Order Details:** Users can click the "View Order Details" link in the header. This would take them to a different page showing the full order summary, including products purchased, pricing, and billing/shipping addresses.
+
+4.  **External Carrier Tracking:** Users can click the "Track on UPS" button. This is an external link that would open the UPS website in a new tab, potentially pre-populated with the tracking number, for the most detailed, real-time carrier information.
+
+5.  **Copying Tracking Number:** The tracking number itself is selectable text, allowing users to easily highlight and copy it to their clipboard for use elsewhere.
+-->
+</body>

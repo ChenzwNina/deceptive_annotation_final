@@ -1,0 +1,15 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a compact, rectangular card with rounded corners, positioned at the top-right of the screen. It has a clean, white background and a subtle drop shadow to lift it off the page. The layout uses flexbox: a 70x70 pixel product image is on the left, with all textual content neatly stacked to its right. The color palette is intentionally neutral (white, greys, and black for text) to ensure it blends with any e-commerce design. The only vibrant color is a golden yellow (#FFC107) for the five-star rating, which immediately draws the eye and communicates a positive sentiment. This minimalist design is chosen to be trustworthy and professional. It provides valuable social proof without distracting from the main shopping experience.
+
+*****Response*****
+Question 2: What triggers the appearance of this widget?
+
+The appearance of this widget should be triggered by user behavior that indicates engagement or interest, without being disruptive. An ideal trigger would be after a user has been on a specific product or category page for a short duration, such as 7-10 seconds. Alternatively, it could appear after the user has scrolled a certain percentage down the page (e.g., 50%). This timing ensures the user has had a moment to acclimate to the page content before this element appears. To avoid being intrusive or annoying, the widget should appear with a gentle fade-in animation and should only be shown once per user session.
+
+*****Response*****
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+User interaction is intentionally simple and direct to respect the user's browsing experience. The primary and only intended interaction is dismissing the widget. This is accomplished by clicking the clearly visible "×" button in the top-right corner. The button has a hover effect to provide feedback that it is clickable. The rest of the widget, including the image and text, is not clickable. This design choice prevents accidental navigation away from the user's current page, which could be a frustrating experience. The widget's sole purpose is to briefly convey trust-building information (social proof) and then be easily dismissed.
+-->
+</body>

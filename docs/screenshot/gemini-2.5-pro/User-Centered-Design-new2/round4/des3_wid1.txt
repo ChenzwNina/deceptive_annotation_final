@@ -1,0 +1,25 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The search panel is a clean, rectangular component with rounded corners, positioned horizontally and centered at the top of the viewport. It features a neutral color palette: a white background (#ffffff), light gray borders (#cccccc), and dark gray text (#333333) for high readability. The primary action button (Search) uses a clear, accessible blue (#007bff) to draw attention without being aggressive.
+
+The layout, managed by flexbox, consists of three parts from left to right: a category selection dropdown, a large text input field that occupies the most space, and a search button with an icon. This left-to-right flow is intuitive for most users. The font size is set to a legible 16px. These design choices prioritize clarity, usability, and a trustworthy aesthetic. The clean design reduces cognitive load, making the search function obvious and easy to use, while focus states provide clear visual feedback during interaction.
+*****Response*****
+Question 2: What triggers the appearance of this widget?
+
+This search panel is designed to be a persistent, core element of the user interface on key pages of the e-commerce site, such as the homepage, category pages, and product listing pages. Therefore, its appearance is not triggered by a specific user action like a click. Instead, it is immediately visible upon page load.
+
+This choice is based on the principle of making essential functions easily accessible. For many users, particularly those who arrive with a specific product in mind, search is the primary mode of navigation. By keeping the search panel persistently visible at the top of the viewport, the design removes a step (e.g., clicking a search icon to reveal the bar) and ensures this critical functionality is always just one click away, regardless of how far the user has scrolled down the page.
+*****Response*****
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+The user's interaction with the search panel is direct and follows established web conventions, ensuring a predictable and efficient experience. The full range of interactions includes:
+
+1.  **Typing a Search Query:** The user can click into the main text field and type the name of a product, brand, or keyword.
+2.  **Refining by Category:** The user can click the "All Departments" dropdown on the left to reveal a list of categories. They can then select one to narrow the scope of their search before submitting.
+3.  **Submitting the Search:** The user has two ways to submit their query:
+    *   Clicking the blue search button containing the magnifying glass icon.
+    *   Pressing the "Enter" key on their keyboard while the text input field is active.
+4.  **Selecting and Clearing Text:** Standard text input interactions like selecting, copying, pasting, and deleting text within the search field are fully supported.
+-->
+
+</body>

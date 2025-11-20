@@ -1,0 +1,22 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+    The component is a clean, rectangular banner with rounded corners, designed to feel modern and trustworthy. It uses a calm color palette: a white background, dark grey text for high readability, and shades of blue. The icon has a light blue background with a darker blue star, and the main call-to-action button uses a confident, deep blue to draw attention without causing alarm. The layout is a horizontal flexbox on larger screens, with a prominent star icon on the left, followed by the text and form fields. On smaller screens, it stacks vertically to ensure usability. This design was chosen to foster user trust and a sense of calm. The clear hierarchy, legible sans-serif font ('Inter'), and generous whitespace prevent information overload, helping all users succeed in understanding the offer. The non-aggressive colors and professional layout avoid pressuring the user, supporting their autonomy and making them feel in control.
+
+    Question 2: What triggers the appearance of this widget?
+
+    The appearance of this widget is triggered by user engagement rather than immediate page load. This respects the user's initial browsing flow and autonomy. Ideal triggers would be:
+    1.  **Scroll Depth:** The banner appears after the user has scrolled down 50% of a page, indicating they are invested in the content.
+    2.  **Page Views:** It could appear on the user's second or third page view within a session. This signals a deeper interest in the website's offerings.
+    3.  **Time on Site:** The banner might show after a user has spent a specific amount of time on the site, such as 45 seconds.
+    These user-initiated triggers make the offer feel less like an intrusive advertisement and more like a relevant suggestion, fostering a sense of control and reducing user annoyance. It avoids disrupting a user's primary task upon arrival, which protects their well-being and supports their goals.
+
+    Question 3: Can you describe the full range of interactions users can have with the widget?
+
+    The user has a full and transparent range of interactions, designed to support their autonomy and ensure informed consent.
+    1.  **Dismiss:** The most prominent interaction, aside from signing up, is the ability to close the banner using the 'X' button in the top-right corner. This action is immediate and empowers the user to reject the offer without friction.
+    2.  **Inform:** Users can read the clear, benefit-oriented text. They can also click the distinct links for the "Terms of Service" and "Privacy Policy" to fully inform themselves before committing.
+    3.  **Engage:** If interested, the user can type their email into the clearly labeled input field. The field provides a visual focus state, guiding the user.
+    4.  **Consent:** The user can click the "Join for Free" button, which is an unambiguous, affirmative action to sign up.
+    5.  **Ignore:** Since it's a banner and not a modal, users can simply ignore it and continue browsing the page content below, maintaining their workflow.
+    -->
+</body>

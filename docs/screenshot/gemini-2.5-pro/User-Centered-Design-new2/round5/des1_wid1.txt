@@ -1,0 +1,25 @@
+## Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+    The widget is a rectangular banner with rounded corners, positioned horizontally near the top of the page. It features a soft, light teal background (#E6F3F2) with dark, high-contrast text (#1A3B39) for excellent readability. The layout uses Flexbox to align content: promotional text is on the left, while a "Shop Now" button and a close button are on the right. The "Shop Now" button has a darker teal background (#007A70) with white text, making it a clear call-to-action. The close button is a simple '×' symbol, styled to be easily clickable but visually secondary to the main action.
+
+    These design choices are intentional. The calming color palette builds trust and avoids creating a sense of alarm or urgency often found in dark patterns. The clear visual hierarchy guides the user's attention from the offer to the primary action, while the easily accessible close button respects their choice to ignore the promotion, adhering to user-centric design principles. On smaller screens, the elements stack vertically for a better mobile experience.
+    -->
+    <!-- *****Response*****
+    ## Question 2: What triggers the appearance of this widget?
+
+    The appearance of this widget is not triggered by a specific user action but by business-defined conditions. It would typically appear automatically for users upon visiting key pages of the website, such as the homepage, category pages, or product pages, during a specific promotional period (e.g., for a "Weekend Special").
+
+    To respect the user experience, the banner should only appear once per session. After a user dismisses it by clicking the close button, it should not reappear during that same visit. This behavior would be managed using session storage or a short-term cookie in a real-world implementation. This ensures the promotion is visible to users without becoming a persistent annoyance, striking a balance between business goals and user convenience. The trigger is passive and based on the context of the visit, not a manipulative prompt based on user behavior like exit intent.
+    -->
+    <!-- *****Response*****
+    ## Question 3: Can you describe the full range of interactions users can have with the widget?
+
+    Users have three straightforward and predictable interactions with the banner:
+
+    1.  **Primary Action:** Users can click the "Shop Now" button. This is the main call-to-action, and it would navigate them directly to a relevant page, such as a "New Arrivals" category or a general product listing page where they can take advantage of the advertised deal. This provides a direct path to engage with the offer.
+
+    2.  **Dismissal:** Users can click the '×' close button. This action immediately and permanently removes the banner from view for the duration of their current session. There are no secondary confirmation pop-ups or attempts to dissuade the user from closing it. This interaction respects the user's intent to ignore the promotion.
+
+    3.  **No Interaction:** Users can simply ignore the banner and continue to scroll and interact with the rest of the website's content. The banner's fixed position keeps it in view but does not block or obscure other page elements, allowing users to proceed with their original task unimpeded.
+    -->
+</body>

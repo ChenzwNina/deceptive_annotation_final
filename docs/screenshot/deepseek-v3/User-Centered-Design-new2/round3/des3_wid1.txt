@@ -1,0 +1,7 @@
+Question 1: The widget features a modern gradient background (purple to blue) with clean white text for high contrast and readability. It uses a centered layout with ample padding (30px) and rounded corners (12px) for a soft, approachable feel. The search input is large (15px padding, 16px font) for easy interaction, while the search button uses a contrasting coral color to draw attention. Filter dropdowns are evenly spaced and responsive. These design choices prioritize user experience through clear visual hierarchy, accessibility, and mobile-friendly responsive design.
+
+    Question 2: This search widget appears prominently at the top of product listing pages or as a persistent element in the website header. It may also appear as a modal overlay when users click a search icon on mobile devices. The widget is always visible on search-focused pages but could be triggered by clicking a search icon on content-heavy pages where screen space is limited.
+
+    Question 3: Users can type search queries in the input field and submit by pressing Enter or clicking the search button. They can filter results by category, price range, and sort order using dropdown menus. Recent search tags are clickable for quick access to previous searches. The search button provides hover effects for feedback, and the input field shows focus states. All interactions are keyboard-accessible and touch-friendly for mobile users, with clear visual feedback for every action.
+    -->
+</body>

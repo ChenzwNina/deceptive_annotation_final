@@ -1,0 +1,23 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+Answer: The widget is a clean, rectangular panel that floats 20px from the top of the viewport, centered horizontally. It has a soft white background with a subtle shadow and border, making it feel distinct from the page content. The color palette is intentionally calm, using a dark, desaturated blue-black for text to ensure high contrast and readability (WCAG AA compliant), and a slightly off-white for the input field. A gentle blue is used for focus states and link hovers, providing clear interaction feedback without being jarring.
+
+The layout is spacious and organized. The main element is a large, 50px-high search input field with a 16px font size, making it easy to see and use on both desktop and mobile. Below it, a "Popular Searches" section displays clickable tags in a light grey, rounded container. This uncluttered, minimalist design is chosen to reduce cognitive load, helping users feel in control and focused on their task of searching, which aligns with principles of enabling user success and maintaining a calm interface.
+
+*****Response*****
+Question 2: What triggers the appearance of this widget?
+
+Answer: This search panel is designed to appear as an overlay when a user clicks on a search icon or button, typically located in the main header or navigation bar of the website. This interaction pattern is common and intuitive for users. Upon clicking the trigger, the main page content might dim slightly (though not implemented here, it's a common pattern for overlays) and this search panel appears at the top. This focused state temporarily removes other distractions from the viewport, signaling to the user that the application is now dedicated to their search query. This method supports user autonomy by making search a deliberate, user-initiated action rather than a persistent, space-consuming element on the page.
+
+*****Response*****
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Answer: Users have several clear and predictable interactions with the widget, designed to give them full control. They can:
+1.  **Type a query:** The primary interaction is typing into the large search input field.
+2.  **Submit a search:** Users can submit their query by either pressing the 'Enter' key on their keyboard or by clicking the magnifying glass icon inside the input field.
+3.  **Use a suggestion:** They can click on any of the "Popular Searches" tags below the search bar to instantly search for that specific term.
+4.  **Close the panel:** Users have two ways to dismiss the search panel. They can click the prominent 'X' icon at the top-right corner or, in a full implementation, they could typically click anywhere on the dimmed background outside of the panel.
+
+These interactions are designed to be reliable and behave as expected, fostering user trust. The clear options to engage with or dismiss the panel ensure the user always feels in control of their experience.
+-->
+</body>

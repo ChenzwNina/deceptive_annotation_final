@@ -1,0 +1,19 @@
+* Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The component is a clean, rectangular banner that sits horizontally centered at the top of the viewport. It has a white background with a subtle shadow and rounded corners, making it appear modern and distinct from the page content. The color palette is professional and minimalist: dark blue-gray text (#172b4d) for high readability, a slightly lighter gray for descriptive text (#42526e), and a vibrant, accessible blue (#0052cc) for the primary "Join for Free" button to draw attention. The layout is organized with a clear hierarchy: a bold title, descriptive text, a bulleted list of benefits with green checkmarks, and finally, the email input field and button. The close button ('×') is placed on the right, clearly visible but unobtrusive. These choices create a trustworthy, non-intrusive, and easy-to-understand interface that clearly communicates its value without overwhelming the user.
+
+* Question 2: What triggers the appearance of this widget?
+
+The appearance of this widget should be triggered by user engagement rather than immediately on page load, which can be disruptive. A good trigger would be when a user scrolls 50% down a product or category page. This indicates they have a genuine interest in the site's offerings and are more likely to be receptive to a membership offer. An alternative trigger could be after the user has navigated to their second or third page on the site. This "behavioral" triggering approach respects the user's initial browsing experience and presents the offer at a moment when its value proposition (e.g., free shipping, discounts) is most relevant, making it feel helpful rather than intrusive.
+
+* Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have four primary interactions with the widget, designed to provide them with complete control over their experience.
+1.  **Sign Up**: The user can type their email address into the input field and click the "Join for Free" button. This is the primary positive action, which would submit their email to the membership list.
+2.  **Dismiss**: The user can click the '×' button on the top right corner to immediately and permanently close the widget for their current session. This action is simple, immediate, and uses a universally understood icon.
+3.  **Information Review**: Users can simply read the text and benefits to understand the offer without taking any immediate action. The component provides all necessary information upfront.
+4.  **Ignore**: The user can choose to completely ignore the banner and continue scrolling and interacting with the main page content below it. The widget is designed to be present but not block or impede interaction with the rest of the website.
+
+-->
+
+</body>

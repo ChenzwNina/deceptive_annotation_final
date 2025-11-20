@@ -1,0 +1,24 @@
+### Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The component is a clean, modern card with a white background (`#ffffff`) and soft shadows, making it stand out against a light grey (`#f4f5f7`) page body. The layout is organized for clarity: a header contains the main title and the overall rating summary, followed by a graphical breakdown of ratings, and finally a list of individual reviews.
+
+Key colors include a trustworthy blue (`#007bff`) for the "Write a review" call-to-action, a vibrant gold (`#FFC107`) for stars and progress bars to draw attention to ratings, and a reassuring green (`#28a745`) for the "Verified Purchase" badge. Text is a highly readable dark grey (`#333`) on white.
+
+Typography establishes a clear hierarchy: the average rating ("4.8") is the largest element, followed by the main title ("Customer Reviews"), then review titles, and finally body text. This structure guides the user from a general summary to specific details, creating a calm, controlled, and informative experience that fosters trust.
+
+### Question 2: What triggers the appearance of this widget?
+
+This widget is a permanent, static component of a product detail page. Its appearance is not triggered by a specific user action like a click or hover. Instead, it loads as part of the page's content. A user would typically find this component by navigating to a product's page and scrolling down, usually positioned below the primary purchase section (which includes product images, price, and the "Add to Cart" button). Its purpose is to provide social proof and detailed feedback to help users make an informed decision before they commit to a purchase. It is an integral part of the product information architecture, not a temporary or conditional element.
+
+### Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have several key interactions designed to help them gather information and contribute.
+
+1.  **Reading and Scanning:** The primary interaction is consuming the information. Users can quickly scan the overall average rating, visually assess the distribution through the progress bars, and read individual reviews to understand the nuances of other customers' experiences.
+
+2.  **Writing a Review:** Users can click the "Write a Review" button. This action would typically navigate them to a new page or open a modal window containing a form where they can submit their own rating, title, and detailed comments about the product.
+
+3.  **Rating Helpfulness:** On each individual review, users can click the "Helpful" button. This is a form of micro-interaction that provides feedback to the system and other users, signaling that a particular review was valuable. It helps surface the most useful content, fostering a sense of community and mutual aid among customers.
+
+-->
+</body>

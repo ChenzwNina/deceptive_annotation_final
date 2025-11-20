@@ -1,0 +1,11 @@
+*   **Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?**
+    The component is a clean, wide banner with a white background and a subtle shadow, making it float above the page content. It features a prominent title, "Discover Our Best-Sellers," followed by a responsive grid of four product cards. Each card has a square image area, product name, category, and price. The color palette is neutral (whites, greys, dark text) to ensure products stand out. A calm blue (#3498db) is used for the "Add to Cart" button to create a clear, trustworthy call-to-action. The layout is spacious and organized to feel professional and easy to browse, avoiding a cluttered or high-pressure sales environment. This design focuses user attention on the products themselves without being distracting.
+
+*   **Question 2: What triggers the appearance of this widget?**
+    This widget is a static component, not a dynamic pop-up. Its appearance is triggered by the user loading a key page of the website, most commonly the homepage. It is designed to be an integral part of the page layout, positioned near the top to immediately engage visitors by showcasing popular or curated items. It serves as an entry point for product discovery as soon as the user lands on the site, rather than interrupting their browsing journey after a specific action or time delay. This approach is non-intrusive and respects the user's control over their browsing experience.
+
+*   **Question 3: Can you describe the full range of interactions users can have with the widget?**
+    Users have several clear and direct interaction points with the widget. First, they can visually scan the products. Hovering the cursor over any product card will cause it to lift slightly with an enhanced shadow, providing visual feedback that it is an interactive element. Clicking on the product's image, title, or info area (which are all wrapped in a single link) navigates the user to that specific product's detail page for more information. Finally, the user can click the distinct "Add to Cart" button at the bottom of each card, which would typically add the item to their shopping cart, often with a visual confirmation like an updated cart icon elsewhere on the page.
+*****Response*****
+-->
+</body>

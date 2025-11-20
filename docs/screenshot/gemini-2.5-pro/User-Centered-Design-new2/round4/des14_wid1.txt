@@ -1,0 +1,28 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+    
+    The widget is a clean, rectangular card with rounded corners, centered horizontally and positioned 20px from the top of the screen. It uses a neutral color palette: a white background for the main content, light gray (#f4f5f7) for secondary sections, and a dark, legible text color (#172B4D). The key accent color is a calm, trustworthy blue (#0065FF), used for the current status and completed progress steps. This blue instills confidence and highlights important information.
+    
+    The layout is structured for clarity. A clear header contains the title and order number. Below, a visual progress bar with four distinct steps (Order Placed, Shipped, In Transit, Delivered) gives an at-a-glance status update. Completed steps are filled with the blue accent and a checkmark. Detailed updates are listed chronologically below. Font sizes are hierarchical, with the main status being the largest. These choices are made to present information clearly and efficiently, building user trust without causing alarm or confusion, thereby adhering to rule 3.1.
+    
+    *****Response*****
+    
+    Question 2: What triggers the appearance of this widget?
+    
+    The appearance of this widget is triggered by a direct and intentional user action, ensuring it is never intrusive. The most common trigger would be the user clicking a "Track Order" button or link. This link could be located in a post-purchase email notification, on their "My Orders" page within their account dashboard, or from a notification icon in the website's main header.
+    
+    This user-initiated approach is crucial for respecting the user's focus and current task. It avoids unexpected interruptions like an automatic pop-up, which could be frustrating. By requiring the user to explicitly request this information, the design adheres to rules 3.2 and 3.5, which state that an interaction should not be made unnecessarily difficult or force users into an action. It puts the user in complete control of when and how they access their order details.
+    
+    *****Response*****
+    
+    Question 3: Can you describe the full range of interactions users can have with the widget?
+    
+    The user interactions are designed to be simple, predictable, and empowering. The full range includes:
+    
+    1.  **Viewing Information:** The primary interaction is passive consumption of information. The user can quickly scan the estimated delivery date, view the visual progress bar to understand the current stage, and read the detailed, time-stamped history of their package's journey.
+    
+    2.  **Dismissing the Widget:** A prominent close button (an '×' symbol) is located in the top-right corner. A single click on this button will immediately close the widget, allowing the user to return to their previous task without any friction. This respects rule 3.3 by not dissuading a user from taking an action they want.
+    
+    3.  **Navigating to More Details:** A clearly labeled link, "View Full Order Details," is provided in the widget's footer. Clicking this link navigates the user to a dedicated page with more comprehensive order information, such as item details, shipping address, and payment summary. This provides an optional path for more engagement without forcing it.
+    -->
+
+</body>

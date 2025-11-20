@@ -1,0 +1,7 @@
+Question 1: The widget features a clean, modern design with a white background and blue accents (#4299e1). It measures 350px wide with 20px padding, containing a search input (12px padding), two filter dropdowns in a grid layout, and a prominent search button. The design uses a card-like appearance with subtle shadows and rounded corners (8px radius) for a friendly, approachable feel. These choices prioritize usability - sufficient white space prevents crowding, high contrast ensures readability, and the blue color scheme maintains brand consistency while drawing attention to interactive elements.
+
+Question 2: The widget appears when users click the floating circular search button (50x50px) positioned in the top-right corner of the screen. This button features a magnifying glass icon and remains persistently available. The widget can be dismissed by clicking either the "×" close button in the header or by clicking the trigger button again. This toggle functionality provides quick access while maintaining screen real estate when not needed.
+
+Question 3: Users can: 1) Type search queries in the text input field, 2) Filter results by category using the first dropdown, 3) Narrow by price range via the second dropdown, 4) Execute searches by clicking the search button or pressing Enter, and 5) Close the widget using the header's close button. The input field features focus states with blue border highlighting, and the search button includes hover effects for visual feedback. All interactions are designed to be intuitive and accessible.
+-->
+</body>

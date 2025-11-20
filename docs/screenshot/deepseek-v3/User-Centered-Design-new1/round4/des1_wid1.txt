@@ -1,0 +1,7 @@
+Question 1: The widget features a vibrant gradient background (#ff6b6b to #4ecdc4) with white text for high contrast and visibility. It uses a centered layout with deal items arranged horizontally, each containing percentage discounts, descriptions, and clickable coupon codes. The design choices prioritize attention-grabbing colors, clear hierarchy with varying font sizes (28px title, 32px percentages), and interactive elements with hover effects. The glass-morphism effect on deal items adds modern appeal while maintaining readability.
+
+Question 2: The widget appears automatically when the page loads, positioned prominently at the top of the viewport. It could also be triggered by user actions like visiting specific product pages, spending extended time on the site, or based on user behavior patterns. The immediate visibility ensures maximum exposure to current promotions without requiring user initiation.
+
+Question 3: Users can: 1) Click coupon codes to automatically copy them to clipboard with visual feedback; 2) Close the banner permanently using the X button; 3) View real-time countdown timer creating urgency; 4) Hover over elements for interactive feedback (scale effects). The interactions are designed to be intuitive while driving conversion through easy code access and clear time sensitivity.
+-->
+</body>

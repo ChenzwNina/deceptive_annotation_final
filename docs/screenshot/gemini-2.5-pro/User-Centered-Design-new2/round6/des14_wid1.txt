@@ -1,0 +1,28 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+    
+    The widget has a clean, modern design with a neutral color palette. It uses a white background with a light grey border and a subtle box shadow, making it float cleanly above the main page content. The text is a dark grey (#1c2a38) for high readability. Key information, like the current status and the progress bar, is highlighted with a calm, trustworthy blue (#007bff), while the primary call-to-action button is a clear, actionable green (#28a745).
+    
+    The layout is organized and scannable. A header contains the main title and a clearly visible close button. The body uses flexbox to align a 60x60px product image next to its name and order number. Below this, a visual progress bar provides an immediate understanding of the shipment's status. These choices prioritize clarity and user trust. The design presents all necessary information upfront without being cluttered, ensuring users can quickly grasp their order's status and decide their next action without confusion.
+
+    *****Response*****
+    
+    Question 2: What triggers the appearance of this widget?
+    
+    This widget is designed to appear contextually as a helpful, proactive notification. It would be triggered for a logged-in user who has a recent order that has just been shipped or has updated its tracking status. The ideal trigger event is when the user navigates to a relevant, non-disruptive page, such as the e-commerce homepage, their main account dashboard, or the "My Orders" list page. 
+    
+    It should not appear on pages where it could obstruct a critical user flow, like during the checkout process for a *new* order. Triggering it upon a change in status ensures the information is timely and valuable. This approach respects the user's attention by providing relevant updates without being an intrusive pop-up that interrupts their current task.
+
+    *****Response*****
+    
+    Question 3: Can you describe the full range of interactions users can have with the widget?
+    
+    The user has two clear and simple interactions with the widget, designed for clarity and control.
+    
+    1.  **View Details:** The primary interaction is clicking the green "View Full Order Details" button. This action navigates the user to a dedicated page with comprehensive tracking information, including a map, carrier details, and a full history of the package's journey. This is the main affirmative action for users who want more information.
+    
+    2.  **Dismiss:** The secondary interaction is to close the widget. The user can click the '×' icon in the top-right corner. This action dismisses the notification, allowing the user to continue browsing the site without interruption. This button is easy to find and use, ensuring the user is never trapped or forced to engage with the widget if they don't want to.
+    
+    There are no hidden interactions, and both options are presented with equal clarity, empowering the user to choose their next step.
+
+    -->
+</body>

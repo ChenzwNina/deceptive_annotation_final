@@ -1,0 +1,7 @@
+Question 1: The widget features a clean, modern design with a white background (#ffffff) and subtle shadow for depth. Progress steps use color coding: gray for pending (#e0e0e0), blue for active (#3498db), and green for completed (#27ae60). The layout uses a horizontal progress bar with circular step indicators (32px diameter) and clear typography hierarchy (24px header, 12px labels). These choices ensure visual clarity, intuitive status understanding, and mobile responsiveness while maintaining professional aesthetics that build trust.
+
+Question 2: The widget appears when users access their order history from their account dashboard or click "Track Order" from order confirmation emails. It can also be triggered by entering order number and email verification on the tracking page. The component loads automatically when navigating to dedicated order tracking pages, providing immediate visibility of order status without additional user action beyond initial access.
+
+Question 3: Users can view current order status through the visual progress bar and detailed information section. They can copy tracking numbers by selecting text, though no explicit copy button is provided. The widget supports responsive viewing across devices, automatically adjusting layout. While primarily informational, it enables users to monitor delivery progress and estimated timelines. Future enhancements could include interactive elements like delivery notifications or carrier website links.
+-->
+</body>

@@ -1,0 +1,20 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a clean, horizontal banner with rounded corners, positioned 20 pixels from the top of the screen. It features a soft, light teal background (#E0F2F1) with dark, highly readable text (#1A2E35). The layout, managed by flexbox, places the promotional text on the left, a prominent call-to-action (CTA) button in the center-right, and a subtle close 'X' button on the far right. The main headline is bold and slightly larger than the descriptive paragraph below it, creating a clear information hierarchy. The CTA button uses a darker, contrasting teal (#00796B) to stand out as the primary interactive element.
+
+These design choices were made to be inviting and non-intrusive. The soft color palette is pleasant and avoids the aggressive, high-urgency feel of typical red or yellow banners. The clear layout allows users to quickly understand the offer and decide whether to engage or dismiss it, respecting their browsing experience and building trust.
+
+Question 2: What triggers the appearance of this widget?
+
+The appearance of this widget is not triggered by a specific user action. Instead, it loads automatically for visitors upon arriving on key pages of the website, such as the homepage, category pages, and popular product pages. It is designed as a sitewide promotional announcement intended to inform all users of a current sale event. To ensure it is not a persistent annoyance, its visibility should be managed using session storage or a cookie. Once a user closes the banner by clicking the 'X' button, it should not reappear for the remainder of that browsing session, respecting the user's explicit action to dismiss it.
+
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have two primary interactions with the widget, both designed to be clear and predictable:
+
+1.  **Engage with the Offer:** The main interaction is clicking the "Shop The Sale" button. This action navigates the user directly to a dedicated landing page that displays all products included in the promotion. This creates a seamless and relevant user journey, immediately connecting the user's interest with the corresponding items and removing any friction in finding the deal.
+
+2.  **Dismiss the Banner:** The second interaction is clicking the '×' (close) button. This action immediately removes the banner from the viewport, allowing the user to continue their browsing session without interruption. This provides users with full control over their interface, which is a core principle of user-friendly, non-deceptive design. No other part of the banner, including the text, is clickable to prevent accidental navigation.
+
+-->
+</body>

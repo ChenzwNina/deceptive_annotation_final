@@ -1,0 +1,7 @@
+Question 1: The widget features a vibrant purple gradient background with white text for high contrast and visibility. Deal items are displayed in semi-transparent cards with large percentage numbers (32px) for immediate impact. The layout uses flexbox for responsive arrangement, with a prominent CTA button in coral red to draw attention. These design choices create visual hierarchy, ensure readability, and use color psychology to convey urgency and excitement while maintaining professional aesthetics.
+
+    Question 2: The banner appears automatically after a 1-second delay upon page load, giving users time to orient themselves before the promotional content is displayed. This timing strategy balances immediate visibility with user experience, preventing the banner from feeling intrusive while ensuring it captures attention during the initial browsing session.
+
+    Question 3: Users can close the banner using the '×' button in the top-right corner. They can view individual deal categories by examining the percentage-off cards, and click the main "Shop All Deals" CTA button to access all promotions. The button features hover effects with color changes and subtle animations for better interactivity feedback. The banner is also responsive and adapts to different screen sizes.
+    -->
+</body>

@@ -1,0 +1,20 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a clean, horizontal bar with rounded corners and a subtle shadow, making it feel modern and distinct from the page content below. Its layout is organized from left to right: a small product image, the main tracking information, and action buttons. The color palette is intentionally calm and professional. A white background with dark grey text (#212529) ensures high readability (Rule 3.5). The primary action button uses a standard blue (#007bff) to draw attention, while the progress bar is a reassuring green (#28a745), a color universally associated with success and progress. This entire design is meant to provide clear, scannable information without causing alarm or confusion, helping users feel calm and in control (Rule 3.12) by presenting expected information reliably (Rule 3.6). Elements are well-spaced to avoid a cluttered feeling, and the component is responsive, adapting to a vertical layout on smaller screens.
+
+Question 2: What triggers the appearance of this widget?
+
+The appearance of this widget is triggered when a user, who has recently placed an order, visits the website and there has been a significant update to their order's shipping status. For example, it would appear when the status changes to "Shipped" or "Out for Delivery." It is designed to be a proactive, helpful notification rather than something the user must actively seek. To respect the user's autonomy and prevent annoyance (Rule 3.7), the widget should only appear once per significant status change. Once the user dismisses it using the close button, it should not reappear during that session for the same status update. This ensures the information is timely and relevant without becoming a persistent interruption, which fosters user trust (Rule 3.6).
+
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have three main interactions with the widget, designed for clarity and control (Rule 3.12).
+
+1.  **Passive Information Consumption:** The primary purpose is to quickly inform. Users can see the order status, estimated arrival, and a visual progress bar at a glance without any clicks. The clear information hierarchy supports this passive, efficient interaction.
+
+2.  **Primary Action:** Clicking the "Track Package" button. This is the main call-to-action, taking the user to a more detailed order tracking page where they can see specific shipping milestones, carrier information, and their full order details. This supports user autonomy by providing an easy path to more information (Rule 3.7).
+
+3.  **Dismissal:** Clicking the "X" (close) button. This action immediately and smoothly removes the widget from view for the current session, giving the user full control over their interface. This is crucial for preserving a sense of calm and preventing the system from feeling intrusive. All interactive elements provide clear hover and focus states for accessibility and feedback.
+*****Response***** -->
+
+</body>

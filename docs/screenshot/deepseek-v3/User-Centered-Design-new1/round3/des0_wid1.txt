@@ -1,0 +1,7 @@
+Question 1: The widget features a clean, modern design with a white background and blue accent colors. Product cards use a grid layout with subtle shadows and rounded corners for a premium feel. I chose a responsive grid that adapts to different screen sizes, with cards that lift on hover to indicate interactivity. The color scheme uses professional blues and reds for pricing/sale badges to draw attention to key elements while maintaining readability and visual hierarchy.
+
+    Question 2: This featured products widget appears automatically when users land on the homepage or main product category pages. It's designed to be a permanent section showcasing curated products, not triggered by specific user actions. The widget loads with the page content to immediately highlight popular or promotional items and encourage exploration of the product catalog.
+
+    Question 3: Users can hover over product cards to see elevation effects, click product images to view detailed product pages, click "Add to Cart" buttons to add items directly to their shopping cart, and view sale badges highlighting discounted items. The grid layout is responsive, allowing users to view products comfortably on any device. Each interaction provides visual feedback through color changes and animations to confirm user actions.
+    -->
+</body>

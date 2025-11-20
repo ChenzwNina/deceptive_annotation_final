@@ -1,0 +1,26 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a clean, rectangular card with rounded corners, positioned centrally at the top of the viewport. It has a white background with a subtle shadow, making it float above the page content. The layout is organized into three horizontal sections. The top section contains a bold, prominent heading ("Your order is on its way!") and a smaller order number. The middle section features a four-step visual progress bar. The bottom section highlights the current status in green ("Out for Delivery") and the estimated arrival time, alongside a clear blue "Track Package" button.
+
+These design choices are made for clarity and trust. The spacious, organized layout prevents cognitive overload. The color green is used for progress and status to create a positive association, while a standard, accessible blue is used for the primary action button. The clear visual hierarchy, with larger fonts for important information, ensures users can grasp the key details at a glance without any ambiguity.
+
+
+*****Response*****
+Question 2: What triggers the appearance of this widget?
+
+The appearance of this widget is triggered when a logged-in user with a recent order in the "shipped" or "out for delivery" status visits the website. The system would check the user's order history upon their arrival, typically on a high-traffic page like the homepage or their account dashboard. To avoid being intrusive, the widget would not appear on every page load. Instead, it would be shown once per session or until the user dismisses it. This trigger mechanism ensures the information is timely and relevant, providing a proactive update to the user without them needing to manually search for their order status. It is an informational tool, not a persistent banner, so it should only appear when there is new or relevant tracking information to share.
+
+
+*****Response*****
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have two simple and direct interactions with the widget.
+
+1. **View Tracking Details:** The primary interaction is clicking the "Track Package" button. This action navigates the user away from the current page to a dedicated, more comprehensive order tracking page. This page would provide a detailed log of the package's journey, a map view, and carrier information. The button is clearly labeled to set this expectation.
+
+2. **Dismiss the Widget:** The secondary interaction is clicking the "×" (close) button located at the top-right corner. This immediately and permanently removes the widget from view for the duration of the user's current session. This action allows users who are not interested in the update to easily dismiss it and continue with their intended task on the website without interruption.
+
+There are no other required or hidden interactions; the widget is designed to be purely informational and easy to manage.
+
+-->
+</body>

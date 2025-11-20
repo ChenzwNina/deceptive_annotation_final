@@ -1,0 +1,22 @@
+### Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget has a clean, modern design with a white background, a light gray border, and subtle shadows, making it stand out on a typical e-commerce page. It uses a two-column layout. The left column prominently features a large, bold overall score (e.g., "4.7"), a visual representation with five stars, and the total number of ratings. The right column provides a detailed breakdown with horizontal progress bars for each star level (5-star down to 1-star).
+
+The primary color for ratings elements like stars and progress bars is a warm gold (#FFC107), a color universally associated with quality and awards. Text is a highly readable dark gray. This clear, data-rich layout is chosen to build trust and provide information at a glance. The left side offers a quick summary for users in a hurry, while the right side gives a nuanced view of the rating distribution for more cautious buyers.
+
+### Question 2: What triggers the appearance of this widget?
+
+This widget is a static component of a product detail page and is not triggered by a specific user action like a click or hover. It loads along with the rest of the page content as soon as a user navigates to a product's page. Its typical placement is "above the fold"—usually directly below the product title and above the price or product configuration options. This prominent positioning ensures that social proof, a critical factor in purchasing decisions, is one of the first things a potential customer sees, helping them quickly assess product quality without needing to scroll.
+
+### Question 3: Can you describe the full range of interactions users can have with the widget?
+
+User interaction with this widget is primarily informational but includes clear calls-to-action. The full range of interactions includes:
+
+1.  **Information Consumption:** The main interaction is for users to visually scan and read the overall score, star rating, total review count, and the detailed percentage breakdown to inform their purchase decision.
+
+2.  **Navigating to All Reviews:** Users can click the "Read all reviews" button. This action would typically scroll the user down to a more comprehensive review section on the same page, allowing them to read individual text reviews and filter them.
+
+3.  **Contributing a Review:** Users can click the "Write a customer review" button. This would usually trigger a modal window with a form to submit their own star rating and written feedback, or navigate them to a separate review submission page. This encourages user engagement and the generation of new reviews.
+-->
+
+</body>

@@ -1,0 +1,22 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a clean, rectangular card with rounded corners and a subtle shadow, making it appear to float above the main page content. Its background is white, with dark gray text for high readability. The primary accent color is a professional, calming blue (#007BFF), used for the progress bar and links to draw attention to interactive elements. A reassuring green is used for the delivery date to signal a positive outcome.
+
+The layout is organized for quick scanning. A clear header contains the main message and a close button. Below, product information is on the left, while the key delivery date is aligned to the right. A prominent visual progress bar horizontally spans the widget, showing four distinct stages. This visual representation is more intuitive than text alone. These choices were made to create a trustworthy, uncluttered, and calm user experience, providing essential information without causing anxiety or confusion, thereby helping the user feel in control.
+
+*****Response*****
+Question 2: What triggers the appearance of this widget?
+
+The most appropriate trigger for this widget is when a logged-in user visits the website after their order’s status has changed to a significant new state, such as "Shipped" or "Out for Delivery". The component would appear automatically once per session following such an update to proactively inform the user of the progress. This avoids spamming the user on every visit. Alternatively, it could be triggered manually by the user clicking a persistent "Track My Order" icon or link in the site's main navigation header. The automatic, one-time appearance is user-centric, offering valuable, timely information without requiring the user to actively seek it out, while still being easily dismissible to respect their autonomy.
+
+*****Response*****
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have four primary interactions with the widget, designed to provide information and control without being overwhelming:
+
+1.  **Passive Viewing:** The main purpose is for the user to quickly glance and absorb the key information: the order status, the item they ordered, and the estimated delivery date.
+2.  **Dismissing:** The user has full control to close the widget at any time by clicking the prominent '×' button in the top-right corner. This action removes the component from view for the remainder of their session, allowing them to focus on browsing the site.
+3.  **Drilling Down for Details:** The user can click the "View Order Details" link. This is a clear call to action that navigates them to a more comprehensive, dedicated order tracking page within their account, which would contain detailed shipping history and carrier information.
+4.  **Hovering (Micro-interaction):** Links and the close button exhibit a subtle background color change on hover, providing visual feedback that these elements are interactive and clickable, which enhances usability and user confidence.
+-->
+</body>

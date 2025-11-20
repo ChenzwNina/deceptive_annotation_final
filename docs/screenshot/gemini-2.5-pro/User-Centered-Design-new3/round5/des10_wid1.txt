@@ -1,0 +1,26 @@
+### Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a clean, card-style modal with a maximum width of 480px, ensuring it's legible and not overwhelming. It uses a calming and trustworthy color palette: a deep teal (`#005A5B`) for the primary brand color, a very light teal (`#F0F5F5`) for the header background, and dark gray (`#2D3748`) for text, which ensures high contrast and readability. The layout is vertically structured with generous padding (24-32px) for a spacious feel. It's organized into a header with a clear title, a body listing benefits with icons, and a simple three-field form.
+
+These choices are deliberate. The calm color scheme and uncluttered layout help users feel in control and reduce cognitive load (Rule 3.12). Using a single "Full Name" field instead of separate first/last name fields respects diverse naming conventions and avoids bias (Rule 3.4). The clear, hierarchical typography and prominent benefits list ensure the user is fully informed about the value proposition before committing, supporting informed consent (Rule 3.8). The entire design aims to be professional and reliable to foster user trust (Rule 3.6).
+
+### Question 2: What triggers the appearance of this widget?
+
+The widget is triggered by user engagement, not on initial page load. It appears after a user has demonstrated a level of interest, for example, after they have viewed three different product pages or have added an item to their shopping cart. This approach respects the user's initial browsing experience and avoids being intrusive. It is specifically designed *not* to appear on the final checkout page, as this could interrupt a critical task and feel like a high-pressure tactic. This delayed, context-aware trigger respects user autonomy and ensures the offer is presented when it is most relevant, not when it is most disruptive (Rule 3.7). Once dismissed by the user, it will not reappear during the same browser session.
+
+### Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have a clear and limited set of interactions designed for simplicity and control:
+
+1.  **Dismissal:** The primary non-committal action is to close the widget by clicking the prominent 'X' icon in the top-right corner. This action is simple and immediately removes the widget, respecting the user's choice to not engage (Rule 3.7).
+
+2.  **Information Gathering:** Users can click the links for "Terms of Service" and "Privacy Policy." These links open in a new tab, allowing users to review the legal information without losing their place, which is crucial for informed consent (Rule 3.8).
+
+3.  **Form Interaction:** Users can fill in the "Full Name," "Email Address," and "Create Password" fields. The form provides clear labels and placeholders. Standard browser validation would offer feedback on input like an invalid email format, helping all users to succeed (Rule 3.5).
+
+4.  **Consent:** The user must explicitly check the box to agree to the terms. This is not pre-checked, preserving the user's agency and ensuring active consent (Rule 3.9).
+
+5.  **Submission:** The final action is clicking the "Join for $49.99/year" button. The button's text is descriptive, clearly stating the action and the associated cost to prevent any misunderstanding.
+
+-->
+</body>

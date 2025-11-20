@@ -1,0 +1,20 @@
+<!-- Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices? -->
+    <!--
+    The widget is a rectangular banner positioned horizontally near the top of the screen. It features a soft, light blue background (#eaf5ff) with a slightly darker blue border, which feels welcoming and trustworthy without being distracting. The text is a dark, desaturated blue (#2c3e50) for excellent readability against the light background. The layout uses flexbox to align the informational text to the left and a clearly visible '×' close button to the right. The banner has rounded corners and a subtle box-shadow, giving it a modern, clean appearance that lifts it slightly from the page content. These choices were made to create a component that is noticeable but not aggressive. The colors are calm, and the layout is simple and intuitive, ensuring the user can quickly understand the message and decide how to interact without feeling overwhelmed or manipulated.
+    -->
+
+    <!-- Question 2: What triggers the appearance of this widget? -->
+    <!--
+    The appearance of this widget is triggered passively when a user first lands on a relevant entry page of the website, such as the homepage or a major category page. It is designed to appear once per user session to avoid repeated annoyance. This trigger is non-intrusive; it does not interrupt a user's task, block content, or appear based on exit-intent or other behaviors that can feel manipulative. The goal is to present a helpful piece of information to the user upon their arrival, when they are most likely to be receptive to learning about current promotions, rather than forcing it upon them at an inconvenient moment.
+    -->
+
+    <!-- Question 3: Can you describe the full range of interactions users can have with the widget? -->
+    <!--
+    User interactions are designed to be simple, clear, and predictable. There are two possible interactions:
+
+    1.  **Engage with the Offer:** The user can click the "Shop Now" link within the banner. This action will navigate them directly to the page featuring the advertised seasonal savings, allowing them to easily explore the deals mentioned. The link is styled as a conventional web link (underlined, colored blue) to clearly communicate its function.
+
+    2.  **Dismiss the Banner:** The user can click the '×' icon on the right side of the banner. This action immediately closes the banner and removes it from view for the remainder of their session. This interaction is straightforward and respects the user's choice to ignore the promotion without requiring extra steps or confirmations. There are no other hidden actions or consequences associated with the widget.
+    -->
+
+</body>

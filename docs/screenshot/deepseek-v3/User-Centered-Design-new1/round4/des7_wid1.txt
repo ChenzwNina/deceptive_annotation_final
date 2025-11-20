@@ -1,0 +1,7 @@
+Question 1: The widget features a clean, modern design with a light gray background (#f8f9fa) and subtle shadow for depth. The average rating (4.5) is prominently displayed in large blue text (2.5rem) to draw attention. Star ratings use gold color (#ffc107) for visual appeal. Rating bars show distribution with green fills (#4CAF50) against light gray containers, making percentages easy to scan. The layout is organized hierarchically with clear visual separation between sections. These design choices prioritize readability, trust-building through professional aesthetics, and quick comprehension of rating data.
+
+Question 2: This widget appears automatically on product detail pages when users browse specific items. It loads immediately with the page content as it's an integral part of the product information. The widget is always visible in the product description section, typically positioned near the price and product specifications to help customers make informed purchasing decisions based on peer feedback.
+
+Question 3: Users can interact with the widget by: 1) Reading detailed reviews and ratings, 2) Scanning the visual rating distribution bars to understand consensus, 3) Viewing multiple user reviews with timestamps, 4) Potentially filtering reviews by rating (if expanded functionality), and 5) In a full implementation, users could submit their own ratings and reviews through an adjacent form. The widget provides both high-level overview and detailed customer feedback in an easily digestible format.
+-->
+</body>

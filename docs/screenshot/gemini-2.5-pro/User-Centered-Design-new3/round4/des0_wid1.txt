@@ -1,0 +1,22 @@
+### Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The component is a clean, rectangular banner positioned 20px from the top of the page. It has a soft, light-grey background (`#F8F9FA`) with rounded corners and a subtle shadow, giving it a gentle "lift." Inside, a clear heading, "This Week's Highlights," is aligned left, while a dismiss button (`×`) is on the right. Below this, four product cards are arranged horizontally in a flexbox layout. Each card has a white background, a product image, a title, a price in a calm blue (`#007BFF`), and a matching blue "View Details" button.
+
+These choices are made to help users feel calm and in control (Rule 3.12). The neutral color palette is non-aggressive. The clear, hierarchical layout enables users to succeed in understanding the content quickly (Rule 3.5). The call-to-action "View Details" instead of "Buy Now" supports informed consent (Rule 3.8) by setting clear expectations about the next step, fostering trust and respecting user autonomy.
+
+### Question 2: What triggers the appearance of this widget?
+
+The appearance of this widget is triggered contextually, not aggressively. It is designed to appear on key discovery pages, such as the homepage, for new or returning visitors. It is not triggered by disruptive user actions like exit-intent (moving the cursor to close the tab) or after a set time delay, as those methods can create anxiety and undermine a user's sense of control (violating Rule 3.12). By presenting it as a static, helpful part of the page upon arrival, the system behaves reliably and as an expected part of the e-commerce experience (Rule 3.6), guiding users without pressuring them. The goal is to assist discovery, not to coerce a sale.
+
+### Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have a complete and clear range of interactions, designed to support their autonomy (Rule 3.7).
+
+1.  **Exploration:** The primary interaction is to browse the products. A user can hover over a product card, which provides visual feedback (a slight lift effect), and then click the "View Details" button. This action clearly communicates their intent to learn more and navigates them to the respective product page, embodying the principle of informed consent (Rule 3.8).
+
+2.  **Dismissal:** Users can click the '×' close button in the top-right corner. This action immediately and permanently (for the session) removes the banner, respecting their choice to not engage. This gives them direct control over their interface, helping them feel calm and in command (Rule 3.12).
+
+3.  **Ignoring:** The widget doesn't block the rest of the page content. A user can choose to completely ignore it and simply scroll down the page to continue their browsing journey. This passive interaction is vital, as it allows users to proceed without forced engagement.
+
+*****Response***** -->
+</body>

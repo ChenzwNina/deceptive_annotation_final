@@ -1,0 +1,7 @@
+Question 1: The widget features a modern gradient background (purple to blue) with white text for high contrast and readability. It uses a horizontal progress bar with circular indicators showing order stages, sized for clear visibility on all devices. The design employs a card-like container with rounded corners and subtle shadows for depth. Color coding (green for completed steps) provides intuitive status understanding. The layout is clean and hierarchical, guiding users through information naturally from order status to details to actions.
+
+Question 2: The widget appears when users click "Track Order" from their order history page, order confirmation email, or account dashboard. It can also be triggered by entering an order number in a tracking field on the website's footer or header. Some implementations may automatically display the widget after purchase completion or when users return to the site with active orders in progress.
+
+Question 3: Users can hover over progress steps to see detailed timestamps, click action buttons to view full order details or contact support, copy the tracking number by clicking it, and refresh the status manually. The widget may also include expandable sections for shipping addresses, product details, and delivery notes. On mobile, users can swipe through the progress timeline and tap any element for more information.
+-->
+</body>

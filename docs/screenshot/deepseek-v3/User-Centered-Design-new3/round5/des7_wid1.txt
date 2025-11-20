@@ -1,0 +1,7 @@
+Question 1: The widget features a clean, modern design with a light gray background (#f8f9fa) and subtle shadow for depth. The layout includes a prominent average rating (32px blue text), gold stars for visual appeal, and horizontal bars showing rating distribution. I chose these colors for accessibility and professional appearance - blue conveys trust, gold represents quality, and neutral grays ensure readability. The card-based design with rounded corners and adequate spacing creates an organized, scannable interface that builds customer confidence.
+
+Question 2: This ratings widget appears automatically on product detail pages when users browse items in the ecommerce store. It loads immediately with the product information, providing social proof and helping customers make informed purchasing decisions. The widget is always visible in the product information section, typically positioned near the price and product description to maximize visibility and impact on conversion rates.
+
+Question 3: Users can view the overall rating distribution through visual bars, read individual customer reviews with star ratings and dates, and scroll through multiple reviews if available. While this specific implementation is read-only, in a full implementation users could typically sort reviews by date or rating, filter by star level, click to read more reviews in a popup/modal, and potentially submit their own ratings and reviews through a separate submission form.
+-->
+</body>

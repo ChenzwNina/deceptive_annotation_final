@@ -1,0 +1,7 @@
+Question 1: The widget features a gradient purple background with white text for high contrast and visual appeal. Deal items are displayed in horizontally arranged cards with semi-transparent backgrounds and blur effects for modern aesthetics. Large percentage numbers (32px) in gold draw attention to savings, while smaller descriptive text (16px) provides context. The layout uses flexbox for responsive design, ensuring proper spacing and readability across devices. These choices create an eye-catching yet professional appearance that encourages user engagement.
+
+    Question 2: The banner appears automatically when the page loads, triggered by the DOMContentLoaded event in JavaScript. This ensures the deals are immediately visible to users upon visiting the website, maximizing exposure without requiring any user action. The automatic display helps capture attention early in the user journey and promotes current promotions effectively.
+
+    Question 3: Users can interact with the widget in three ways: 1) Clicking the close button (×) in the top-right corner to dismiss the banner entirely. 2) Clicking on any coupon code to automatically copy it to their clipboard, with a confirmation alert showing the copied code. 3) Hovering over coupon codes to see a visual feedback effect (background lightening). These interactions provide clear functionality while maintaining a clean, intuitive user experience.
+    -->
+</body>

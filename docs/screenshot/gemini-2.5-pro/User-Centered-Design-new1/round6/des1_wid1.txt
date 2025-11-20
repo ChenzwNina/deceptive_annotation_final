@@ -1,0 +1,26 @@
+### Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The banner is a rectangular bar positioned at the top of the viewport with a 20-pixel margin, giving it a modern "floating" appearance. It features a vibrant indigo-to-purple gradient background, which is eye-catching and conveys energy appropriate for a sale. The text is white for high contrast and readability. The layout is managed by flexbox, centering the promotional text and call-to-action link, with a subtle "×" close button on the far right.
+
+These choices are intentional. The fixed positioning ensures the deal is always visible without disrupting the user's browsing flow. The gradient and bold, white text are designed to attract attention immediately. The layout is a standard, intuitive pattern that users recognize, making the primary call-to-action ("Shop The Deals") and the dismiss option clear and easy to access, ensuring a user-friendly and non-deceptive experience. On mobile, it adapts to a full-width bar at the very top, a more common and screen-efficient pattern for smaller devices.
+
+*****Response*****
+### Question 2: What triggers the appearance of this widget?
+
+The primary trigger for this widget's appearance is the page load event. When a user navigates to a relevant page on the e-commerce site—typically the homepage, category pages, or any major landing page—the banner animates into view. This ensures that the promotion is one of the first things a visitor sees, maximizing its visibility and impact.
+
+This trigger is immediate and not dependent on user actions like scrolling or clicking. The goal is to proactively inform all visitors about timely deals without being intrusive. In a more advanced implementation, its appearance could be further controlled by session logic, for instance, showing it only once per session to avoid fatiguing returning users, or targeting it specifically to new visitors to encourage their first purchase.
+
+*****Response*****
+### Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have two direct interactions and one passive one with the widget:
+
+1.  **Clicking the Call-to-Action (CTA):** The primary and desired interaction is clicking the "Shop The Deals" link. This action would navigate the user directly to the main sales page, where they can browse all the products included in the promotion. This provides a seamless path from awareness to engagement.
+
+2.  **Dismissing the Banner:** Users can click the "×" button on the right to close the banner. This action immediately removes the component from view, giving users full control over their interface. In a real-world application, this click would typically set a cookie or use local storage to ensure the banner does not reappear for the remainder of the user's session, respecting their choice.
+
+3.  **Ignoring the Banner:** A user can also choose to ignore the banner. Since it is positioned at the top and does not obstruct main page content, they can continue to scroll and interact with the rest of the website without hindrance. The banner remains as a persistent, non-intrusive reminder of the ongoing sale.
+-->
+
+</body>

@@ -1,0 +1,21 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a sleek, horizontal banner with rounded corners. It has a deep navy blue background (#2c3e50) with high-contrast white text for excellent readability. The key part of the offer, "Up to 30% Off," is highlighted in a vibrant blue (#3498db) to draw attention without being aggressive. The layout uses flexbox to neatly align the main promotional text on the left/center, a call-to-action button ("Shop The Deals") to the right, and a subtle close icon ('X') at the far right. This layout is intuitive and follows common web patterns. The design choices prioritize clarity and a premium feel. The trustworthy blue palette avoids the alarmist red/yellow often used for sales, which can create undue pressure. The button is prominent but doesn't visually overwhelm the option to close the banner, ensuring a balanced and user-respecting interface.
+
+*****Response*****
+Question 2: What triggers the appearance of this widget?
+
+The appearance of this widget is triggered by the page load event. When a user navigates to a relevant page on the e-commerce site, such as the homepage or a main category page, the banner is rendered and displayed at the top of the viewport. It appears immediately without any delay or animation that might obscure the main page content. This approach is chosen because the banner contains important, site-wide information about a current promotion that is beneficial for the user to see upon arrival. It is not triggered by user inaction (like a pop-up) or scrolling, as those methods can be interruptive. It presents itself as a static, helpful piece of the website's interface rather than an intrusive advertisement.
+
+*****Response*****
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have three clear and simple interaction paths with the widget:
+
+1.  **Engage with the offer:** The user can click on either the main text area or the "Shop The Deals" button. Both actions will navigate them directly to the landing page featuring all the items included in the promotion. This provides a large, accessible click target to explore the sale.
+
+2.  **Dismiss the banner:** If the user is not interested in the offer, they can click the 'X' icon on the far right. This action will immediately and smoothly hide the banner, allowing the user to reclaim the full screen space. The dismissal is persistent for their session, respecting their choice not to see the banner again.
+
+3.  **Ignore the banner:** The user can choose to do nothing. Since the banner is fixed to the top and does not obstruct core website functionality, they can scroll down the page and continue their shopping journey without ever interacting with it. The banner remains available should they change their mind later.
+-->
+</body>

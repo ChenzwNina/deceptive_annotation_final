@@ -1,0 +1,16 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+    The component is a rectangular banner with rounded corners, positioned horizontally near the top of the screen. It features a deep navy blue background (#002347) with crisp white text for high readability. The layout, managed by flexbox, places the descriptive text on the left, a call-to-action button on the right, and a close icon at the far right. The call-to-action button uses a warm, muted gold color (#D4A017) to attract attention without creating alarm. Text size is set to a readable 16px. These choices create a professional, calm, and trustworthy appearance. The sophisticated color palette avoids the aggressive red/yellow often used in high-pressure sales, helping users feel in control and not manipulated, which aligns with design rules for fostering trust and ensuring user comfort. A subtle box-shadow lifts the banner slightly, integrating it smoothly with the page. On mobile, the layout stacks vertically for better readability on narrow screens.
+
+    Question 2: What triggers the appearance of this widget?
+
+    The banner is designed to appear automatically on page load. It is not triggered by a specific user action like scrolling or hovering. This is a common and predictable behavior for site-wide announcements, ensuring that the information is presented upfront without surprising the user. The banner would typically be configured to show on key entry pages like the homepage, category pages, or all pages, depending on the scope of the sale. To respect the user's space, it would also be configured to be dismissible and not reappear during the same browsing session after being closed, using a cookie or session storage. This predictable pattern fosters trust by ensuring the system behaves as expected and is not intrusive.
+
+    Question 3: Can you describe the full range of interactions users can have with the widget?
+
+    Users have three clear and distinct interaction paths with the banner, supporting their autonomy:
+    1.  **Engage:** The primary interaction is clicking the "Shop Now" button. This action navigates the user directly to the page featuring the sale items. The button has a clear hover and focus state, providing visual feedback that it is an interactive element.
+    2.  **Dismiss:** Users who are not interested can click the '×' close button. This action immediately removes the banner from their view for the remainder of their session, giving them full control over their browsing experience and interface. The button is accessible, with a clear ARIA label for screen readers.
+    3.  **Ignore:** The user can choose to do nothing. The banner is designed to be noticeable but not obstructive, allowing them to scroll past it and continue interacting with the main page content without interference. This passive option is crucial for a calm and user-controlled experience.
+    -->
+</body>

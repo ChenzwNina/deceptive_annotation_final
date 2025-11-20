@@ -1,0 +1,30 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+    The widget is a clean, centered card that floats at the top of the viewport. It has a white background (#ffffff) with a subtle shadow, giving it depth and separating it from the page content. The layout is a single, centered column, which creates a clear visual flow from the headline to the call-to-action button. 
+
+    Colors: The primary text is a dark grey (#2c3e50), ensuring high readability. The main call-to-action button uses this same dark grey for its background, creating a strong visual anchor. A standard blue (#007bff) is used for links and the input field's focus state, a universally understood color for interactivity.
+
+    Elements: The headline ("Join Our Insider Program") is large and bold (26px) to grab attention. The main descriptive paragraph is a comfortable size (16px) for reading. The input field and button are large and easy to click, with rounded corners (8px) for a modern, friendly feel. These choices create a professional, trustworthy, and user-friendly design that encourages sign-ups without feeling aggressive.
+    
+    *****Response*****
+    
+    Question 2: What triggers the appearance of this widget?
+    
+    To avoid disrupting the user's initial browsing experience, this widget should not appear immediately upon page load. A respectful and effective trigger would be based on user engagement. My recommendation is a scroll-based trigger: the widget appears after the user has scrolled 50% down the page. This timing indicates that the user is invested in the content and is more likely to be receptive to a membership offer. An alternative, equally valid trigger could be a time-delay, where the widget appears after the user has spent 15-20 seconds on a specific page, such as a product category or item page. This ensures the offer is presented to engaged potential customers rather than casual, bouncing visitors. Exit-intent triggers are not used here to avoid a feeling of manipulation as the user tries to leave.
+    
+    *****Response*****
+    
+    Question 3: Can you describe the full range of interactions users can have with the widget?
+    
+    Users have a few clear and direct interactions with this widget, designed for simplicity and control.
+
+    1.  **Primary Interaction (Sign-up):** The user can click inside the input field to type their email address. They can then click the prominent "Get 15% Off Now" button to submit their information and join the membership program.
+
+    2.  **Dismissal:** If the user is not interested, they can click the '×' icon in the top-right corner to close the widget and continue browsing without interruption. This is a crucial, non-deceptive pattern that respects user choice.
+
+    3.  **Micro-interactions:** The widget provides visual feedback. Hovering over the submit button changes its background color and lifts it slightly, indicating it's clickable. When the user clicks into the email field, a blue border appears, showing it's the active element.
+
+    4.  **Informational Interaction:** The user can click the "Terms of Service" link in the disclaimer text at the bottom to open a new page or modal with more information, ensuring transparency.
+
+    *****Response***** -->
+</body>

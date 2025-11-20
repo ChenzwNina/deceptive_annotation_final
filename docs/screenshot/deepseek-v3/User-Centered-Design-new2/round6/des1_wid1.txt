@@ -1,0 +1,7 @@
+Question 1: The widget features a vibrant gradient background (#ff6b6b to #4ecdc4) for visual appeal, with white text for contrast. It uses a centered layout with deal items arranged horizontally (wrapping on mobile). Each deal card has semi-transparent white backgrounds with blur effects for modern glassmorphism design. Large percentage numbers (32px) grab attention, while descriptive text (14px) provides context. The design choices prioritize visibility, modern aesthetics, and clear hierarchy to effectively communicate deals while maintaining visual appeal.
+
+Question 2: The banner appears automatically when the page loads, triggered by the window's load event listener. This ensures users see the deals immediately upon visiting the website without requiring any user action. The timing is strategic to capture attention at the optimal moment when users are first engaging with the site, maximizing visibility and potential conversion opportunities from the initial page view.
+
+Question 3: Users can close the banner using the X button in the top-right corner. They can click "Shop Now" buttons on individual deal items, which would redirect them to relevant category pages (currently shows alerts for demonstration). The buttons feature hover effects with subtle animations (lift and shadow changes) for better interactivity feedback. The layout is responsive, adapting to different screen sizes by wrapping deal items vertically on smaller screens.
+-->
+</body>

@@ -1,0 +1,18 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+    
+    The widget is a sleek, rectangular banner with rounded corners, positioned horizontally near the top of the screen. It features a calming blue gradient background (#79BAEC to #5A99D1) with crisp white text for high readability. The layout, managed by flexbox, places the main message and call-to-action on the left and a close button on the far right. The main headline ("Flash Sale Frenzy!") is a bold 20px, with a smaller 14px sub-headline below it, creating a clear visual hierarchy. The "Shop Deals" call-to-action button is a contrasting bright orange (#FFA500) to draw the user's eye. These choices are intentional: the professional blue builds trust, the high-contrast text ensures accessibility, the standard layout is intuitive, and the prominent orange CTA guides the user towards the desired action without being aggressive. A subtle box-shadow lifts the banner off the page, giving it a modern, layered feel.
+    
+    *****Response*****
+    
+    Question 2: What triggers the appearance of this widget?
+    
+    The appearance of this widget is typically triggered automatically by the page load event when a user first lands on a key page of the e-commerce site, such as the homepage, a category page, or a product details page. Its display is conditional and managed by the website's backend or content management system. It will only appear if there is an active, site-wide promotional campaign running. If no major deals are currently available, the banner would not be rendered. This ensures the message is always timely and relevant to the user's visit, preventing the display of outdated or irrelevant information. Once dismissed by the user, it would typically be hidden for the remainder of their session to respect their choice.
+    
+    *****Response*****
+    
+    Question 3: Can you describe the full range of interactions users can have with the widget?
+
+    Users have two primary interactions with the widget. The first and main interaction is clicking the "Shop Deals" button. This action navigates the user away from their current page to a dedicated landing page that displays all products included in the promotional sale. This provides a direct and seamless path to conversion. The second interaction is clicking the '×' close button on the right. This is a dismissive action that immediately removes the banner from the viewport for the duration of the user's session, allowing them an unobstructed view of the page content. This respects user autonomy and prevents the banner from becoming an annoyance. Hovering over the "Shop Deals" and close buttons provides subtle visual feedback (a color change or slight lift), indicating that these elements are interactive. The non-button areas of the banner are not clickable to prevent accidental navigation.
+    
+    -->
+</body>

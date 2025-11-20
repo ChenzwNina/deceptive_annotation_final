@@ -1,0 +1,17 @@
+4.1 Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The component is a sleek, rectangular banner positioned 20 pixels from the top of the screen. It features a dark navy blue background (#2c3e50) with crisp white text for high readability. The layout, managed by flexbox, places the promotional text on the left, a call-to-action (CTA) button in the middle, and a dismiss button on the right. The main text is a standard 1rem (16px), while the CTA button is a slightly smaller 0.9rem. The CTA button has a warm gold color (#f1c40f) to draw the user's eye without being alarming. The banner and button both have soft, rounded corners and a subtle drop shadow, giving them a modern, clean appearance that feels integrated with the page. These choices are made to create a professional, trustworthy, and non-intrusive banner. The colors provide excellent contrast (passing accessibility standards), and the clear hierarchy guides the user's attention from the offer to the action, making it effective but respectful of the user's experience.
+
+4.2 Question 2: What triggers the appearance of this widget?
+
+The appearance of this widget is typically triggered by the page load event. As soon as a user navigates to a relevant page, such as the homepage, a product category page, or a specific landing page for a campaign, the banner would appear. The goal is to present the offer to the user immediately as they begin their shopping session. To avoid being intrusive or repetitive, its appearance would be controlled by session logic. For instance, it would show once per user session. Once the user dismisses it by clicking the close button, a session cookie would be set to prevent it from reappearing as they navigate to other pages on the website during that same visit. This ensures the message is delivered without causing user frustration.
+
+4.3 Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have three primary interactions with the banner:
+1.  **Engage:** The user can click the "Shop Now" call-to-action button. This is the primary positive interaction, which would navigate them directly to a page relevant to the offer, such as a "new arrivals" category, a specific sales collection, or a page with all items that qualify for the free shipping promotion.
+2.  **Dismiss:** The user can click the '×' button on the right. This is a dismissive action that would immediately remove the banner from the viewport for the remainder of their session. This respects the user's desire to decline the offer and focus on their original task without interruption.
+3.  **Ignore:** The user can choose to take no action. The banner is designed to be noticeable but not obstructive (it doesn't block content or prevent scrolling). Therefore, a user can simply scroll past it and continue browsing the website as they normally would, leaving the banner visible at the top of the screen.
+-->
+
+</body>

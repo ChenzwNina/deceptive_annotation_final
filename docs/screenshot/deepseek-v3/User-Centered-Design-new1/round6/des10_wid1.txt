@@ -1,0 +1,7 @@
+Question 1: The widget features a clean, modern design with a white background (#ffffff) and subtle shadows for depth. Primary colors include blue (#3498db) for interactive elements and green (#27ae60) for pricing. The layout uses a single-column design with ample spacing (40px padding) and rounded corners (12px border-radius) for approachability. Text sizes are hierarchical (28px for header, 16px for body) ensuring readability. These choices create a professional, trustworthy appearance that aligns with ecommerce standards while maintaining visual appeal and user comfort.
+
+Question 2: The widget appears as a standalone component on a dedicated membership page or as a modal overlay triggered by user actions such as clicking "Join Membership" links, completing purchases, or visiting specific landing pages. It could also appear as an exit-intent popup when users attempt to leave the site without signing up, or after they've browsed membership benefits for a certain duration.
+
+Question 3: Users can interact by: 1) Entering personal information in form fields with real-time validation, 2) Clicking to select between membership tiers with visual feedback, 3) Submitting the form which triggers success confirmation, 4) Reading terms and conditions via clickable links, and 5) Hovering over elements for visual cues (button color changes, border highlights). The widget provides immediate feedback through border color changes on focus and selection states, ensuring intuitive navigation.
+-->
+</body>

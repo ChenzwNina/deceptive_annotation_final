@@ -1,0 +1,7 @@
+Question 1: The widget features a vibrant gradient background (red to teal) with white text for high contrast and visibility. Deal items are displayed in cards with semi-transparent backgrounds and blur effects for modern aesthetics. The layout uses flexbox for responsive arrangement across devices. Large percentage numbers (32px) immediately grab attention, while smaller descriptive text provides context. The design choices prioritize visual hierarchy, brand alignment, and mobile responsiveness to maximize engagement without overwhelming users.
+
+Question 2: The banner appears automatically after a 1-second delay following page load, giving users time to orient themselves before the promotional content displays. This timing strikes a balance between immediate visibility and avoiding intrusive pop-up behavior that might frustrate users. The delayed appearance ensures the main page content loads first while still capturing attention for the promotional offers.
+
+Question 3: Users can interact with the widget in three ways: clicking "Shop Now" buttons redirects to relevant product categories; clicking the close button (×) dismisses the banner entirely; and hovering over buttons triggers subtle animations (lift effect on "Shop Now", opacity change on close button). The banner is also responsive, adapting its layout on different screen sizes. These interactions provide clear call-to-actions while maintaining user control over the promotional experience.
+-->
+</body>

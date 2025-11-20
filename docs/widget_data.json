@@ -7810,5 +7810,1265 @@
         "Condition": "User-Centered-Design-new3",
         "Description": "a component that displays order tracking details",
         "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round1/des14_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round2/des14_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round2/des10_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round2/des0_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round2/des1_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round2/des0_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round2/des14_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round2/des0_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new3/round2/des1_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round2/des14_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round2/des7_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round2/des0_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round2/des10_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round2/des1_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round2/des7_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round2/des14_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round2/des3_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new3/round2/des3_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round2/des1_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round2/des10_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round2/des14_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round2/des3_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new3/round2/des14_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round2/des10_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round2/des10_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round2/des0_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round2/des1_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new3/round2/des0_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new3/round2/des10_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round2/des3_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round2/des7_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round2/des7_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new3/round2/des7_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round2/des1_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round2/des3_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round2/des3_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round2/des7_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round3/des0_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round3/des3_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round3/des10_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round3/des1_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round3/des0_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round3/des7_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round3/des14_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round3/des3_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round3/des3_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round3/des1_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round3/des3_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round3/des10_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round3/des1_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round3/des10_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round3/des14_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round3/des0_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round3/des10_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round3/des0_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round3/des14_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round3/des0_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round3/des3_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round3/des14_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round3/des1_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round3/des7_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round3/des10_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round3/des3_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round3/des1_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round3/des1_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round3/des14_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round3/des10_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round3/des14_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round3/des7_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round3/des7_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round3/des7_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round3/des7_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round3/des0_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new3/round4/des3_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round4/des0_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round4/des3_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round4/des3_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round4/des14_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round4/des0_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round4/des1_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round4/des3_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round4/des0_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round4/des1_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round4/des0_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round4/des1_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round4/des10_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new3/round4/des7_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round4/des1_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round4/des14_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round4/des7_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round4/des14_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new3/round4/des14_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round4/des1_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round4/des3_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round4/des14_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new3/round4/des10_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new3/round4/des1_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round4/des0_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round4/des14_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round4/des10_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round4/des7_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round4/des10_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round4/des7_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round4/des7_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new3/round4/des0_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round4/des7_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round4/des10_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round4/des3_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round4/des10_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round5/des14_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round5/des7_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round5/des7_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new3/round5/des10_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round5/des0_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round5/des0_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new3/round5/des14_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round5/des10_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round5/des1_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round5/des7_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round5/des3_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new3/round5/des3_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round5/des3_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round5/des1_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new3/round5/des0_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round5/des7_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round5/des10_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round5/des1_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round5/des10_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round5/des0_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round5/des14_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round5/des7_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round5/des14_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round5/des1_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round5/des3_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round5/des3_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round5/des10_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round5/des14_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round5/des0_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round5/des14_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round5/des3_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new3/round5/des7_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new3/round5/des1_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round5/des0_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round5/des1_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round5/des10_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round6/des1_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round6/des10_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round6/des0_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round6/des14_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round6/des7_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new1/round6/des3_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round6/des3_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round6/des0_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round6/des14_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round6/des10_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round6/des7_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new2/round6/des1_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round6/des10_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round6/des1_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round6/des7_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round6/des3_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round6/des14_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "deepseek-v3",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/deepseek-v3/User-Centered-Design-new3/round6/des0_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round6/des14_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round6/des7_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round6/des0_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round6/des1_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round6/des10_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new1",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new1/round6/des3_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round6/des10_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round6/des1_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round6/des14_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round6/des7_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round6/des0_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new2",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new2/round6/des3_wid1.png"
+    },
+    {
+        "Description_number": 7,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays user ratings",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new3/round6/des7_wid1.png"
+    },
+    {
+        "Description_number": 1,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays a banner with current deals",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new3/round6/des1_wid1.png"
+    },
+    {
+        "Description_number": 0,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays featured products",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new3/round6/des0_wid1.png"
+    },
+    {
+        "Description_number": 3,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays a search panel",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new3/round6/des3_wid1.png"
+    },
+    {
+        "Description_number": 14,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that displays order tracking details",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new3/round6/des14_wid1.png"
+    },
+    {
+        "Description_number": 10,
+        "Model": "gemini-2.5-pro",
+        "Condition": "User-Centered-Design-new3",
+        "Description": "a component that allows users to sign up for a membership",
+        "screenshot_location": "https://raw.githubusercontent.com/ChenzwNina/deceptive_annotation_final/refs/heads/main/docs/screenshot/gemini-2.5-pro/User-Centered-Design-new3/round6/des10_wid1.png"
     }
 ]

@@ -1,0 +1,7 @@
+Question 1: The widget features a vibrant purple gradient background with white text for high contrast and visibility. Deal items are displayed in semi-transparent cards with a blur effect, creating depth. The 50% OFF text uses bright yellow for emphasis. I chose these colors to create urgency and excitement while maintaining readability. The layout uses flexbox for responsive arrangement, with larger fonts for key information and adequate spacing for clarity.
+
+Question 2: The banner appears automatically when the page loads, triggered by the window's load event. This ensures users see the deals immediately upon visiting the site. The timing is strategic - appearing after the page content loads to avoid disrupting the initial page rendering while still capturing attention early in the user's browsing session.
+
+Question 3: Users can close the banner using the X button in the top-right corner. They can click individual deal items for more details (though not implemented here), and the main CTA "SHOP NOW" button redirects to the deals page. The banner also includes hover effects on interactive elements - buttons scale up and change color on hover, providing visual feedback to enhance user experience.
+-->
+</body>

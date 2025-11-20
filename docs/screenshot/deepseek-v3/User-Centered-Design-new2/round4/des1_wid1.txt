@@ -1,0 +1,7 @@
+Question 1: The widget features a gradient purple background (#667eea to #764ba2) for visual appeal, with white text for high contrast. It uses a horizontal layout with the deal content on the left, countdown timer in the center, and close button on the right. The title is bold 1.5em, description is 1em, and timer is 1.1em in a semi-transparent rounded container. These choices create urgency (timer), hierarchy (size differences), and accessibility (high contrast) while maintaining a modern, professional appearance that aligns with ecommerce design standards.
+
+    Question 2: The widget appears automatically when the page loads, triggered by the HTML rendering process. In a production environment, this could be enhanced with conditions like showing only to new visitors, during specific hours, or based on user behavior. The appearance is immediate upon page load without requiring any user action, making it an attention-grabbing element that promotes current deals proactively.
+
+    Question 3: Users can: 1) Close the banner permanently using the "×" button, which hides the widget. 2) Click "View All Deals" link to navigate to the deals page (currently shows an alert). 3) View the real-time countdown timer that creates urgency. 4) The banner remains visible until manually closed, allowing users to reference the deal information throughout their shopping session. The interactions are designed to be intuitive with clear visual feedback on hover states.
+    -->
+</body>

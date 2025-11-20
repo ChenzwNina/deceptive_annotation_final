@@ -1,0 +1,21 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The ratings widget is a clean, rectangular component with rounded corners and a soft shadow, giving it a modern, card-like appearance. The layout is structured logically: a main header, a two-part summary section, and a list of individual reviews. The color palette is intentionally calm and professional. A neutral white background (#ffffff) with dark grey text (#212529) ensures high readability. The primary accent color is a trustworthy blue (#007bff) for the "Write a Review" button, while a pleasant gold (#ffc107) is used for rating stars. 
+
+These choices were made to help users feel calm and in control (Rule #12). The clear, hierarchical layout and high-contrast typography enable all users to succeed in understanding the information (Rule #5). The transparent summary, which includes a visual breakdown of all rating levels, avoids bias by not hiding negative feedback, thereby fostering user trust (Rule #4, #6). The overall design is informative rather than persuasive, respecting the user's autonomy in their purchasing decision (Rule #7).
+*****Response*****
+Question 2: What triggers the appearance of this widget?
+
+This component is designed as a core part of a product detail page, not as a pop-up or temporary notification. Its appearance is triggered by a user navigating to a product's page and scrolling down to the section dedicated to social proof and customer feedback. Typically, this would be located below the main product description, specifications, and image gallery. This placement is intentional and respects the user's flow. It doesn't interrupt their initial product evaluation but is readily available when they are ready to consider other customers' experiences. This predictable behavior fosters trust and ensures the system behaves as expected, without sudden, intrusive elements that could make the user feel out of control (Rule #6, #12). The widget is a destination, not an interruption, supporting an informed and non-coercive user journey.
+*****Response*****
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have several clear, purposeful interactions available to them, designed to support their autonomy and information-gathering needs.
+
+1.  **Reading (Passive):** The primary interaction is reading the overall rating summary, the distribution of stars, and the individual review entries to form an opinion.
+2.  **Sorting:** The user can click the "Sort by:" dropdown menu. This allows them to re-order the reviews based on criteria like "Most Recent," "Most Helpful," "Highest Rating," or "Lowest Rating." This feature is crucial for user autonomy, allowing them to explore data from different perspectives and avoid confirmation bias (Rule #7, #4).
+3.  **Initiating a Review:** Clicking the "Write a Review" button will navigate them to a form or open a modal where they can contribute their own feedback, empowering them to share their experience (Rule #9).
+4.  **Standard UI Interactions:** Users can hover over buttons and the select menu to receive visual feedback, and use keyboard navigation to access these interactive elements, ensuring the component is accessible to all users (Rule #5).
+-->
+
+</body>

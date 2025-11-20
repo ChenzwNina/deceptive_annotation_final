@@ -1,0 +1,7 @@
+Question 1: The widget features a modern gradient background (#667eea to #764ba2) with white text for high contrast and readability. It has a centered layout with a large search input (600px max-width) and prominent search button in coral red (#ff6b6b) to draw attention. Filter dropdowns are equally spaced with rounded corners (8px radius) for a soft, approachable feel. The design uses ample padding (30px) and shadows for depth, creating an inviting, professional appearance that aligns with ecommerce trust-building while maintaining excellent usability.
+
+Question 2: This search widget appears prominently at the top of product listing pages or as a persistent element in the website header. It's immediately visible when users land on the site or navigate to search-related pages. The widget may also appear in modal overlays when users click a search icon in the navigation bar. Its placement ensures it's always accessible when users need to find products, serving as the primary discovery tool throughout the shopping experience.
+
+Question 3: Users can type search queries in the input field and submit via Enter key or the search button. They can filter results by category, price range, and sort options using dropdown menus. Recent search tags allow one-click searching of previous terms. The search button provides hover effects with color changes and subtle animations. All interactive elements have clear visual feedback, and the layout is fully responsive, adapting to different screen sizes while maintaining all functionality.
+-->
+</body>

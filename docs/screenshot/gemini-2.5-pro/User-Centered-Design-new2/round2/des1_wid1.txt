@@ -1,18 +1,14 @@
-Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+*   Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
 
-The widget is a clean, rectangular banner positioned 20px from the top of the screen and centered horizontally. It has a light teal background (#E0F2F1) with high-contrast dark teal text (#004D40) for excellent readability, following accessibility best practices. The layout is managed by flexbox, which aligns the text content on the left and a prominent call-to-action (CTA) button and close icon on the right. The CTA button has a vibrant, darker teal background (#00796B) to draw attention without being aggressive. The font is 'Lato', a clear sans-serif. These choices create a professional, trustworthy appearance that is noticeable but doesn't disrupt the user's focus. On smaller screens, the elements stack vertically to maintain usability.
+The deals banner is a rectangular component with soft, rounded corners positioned horizontally near the top of the page. It features a deep teal background (#005f73) with high-contrast white text for excellent readability. The layout, managed by flexbox, places the promotional text on the left and a clear '×' close button on the right. Next to the text is a call-to-action button in a vibrant orange (#ee9b00), which stands out invitingly against the teal. The text is a readable 16px, and the button is slightly smaller at 14px with a bold weight. These choices create a professional, trustworthy aesthetic that is noticeable without being disruptive. The colors are accessible, and the layout is clean and intuitive, ensuring users can quickly understand the offer and decide how to interact.
 
-*****Response*****
-Question 2: What triggers the appearance of this widget?
+*   Question 2: What triggers the appearance of this widget?
 
-The appearance of this widget is triggered by a page load event. When a user navigates to a relevant page, such as the homepage or a main category page, the banner appears along with the rest of the content. This approach is simple, predictable, and respects the user's flow. It does not rely on intrusive triggers like scroll depth, exit intent, or timed delays, which can frustrate users and make interactions more difficult than necessary (violating rule 3.2). The banner presents its information immediately and transparently, allowing the user to decide how to interact with it from the moment the page is usable.
+The appearance of this widget is triggered by the page load event. It is designed to be a persistent, site-wide banner that informs all visitors of current promotions as soon as they arrive on a key page, such as the homepage or a main category page. The trigger is not based on user behavior like scroll depth or time on page. This direct approach is chosen to be transparent and upfront with the offer, ensuring that important information is not hidden or delayed (Rule 3.1). It respects the user's attention by presenting the information immediately, allowing them to either engage with it or dismiss it without being interrupted later in their browsing session.
 
-*****Response*****
-Question 3: Can you describe the full range of interactions users can have with the widget?
+*   Question 3: Can you describe the full range of interactions users can have with the widget?
 
-Users have three clear and direct interactions with the widget:
-1.  **Engage with the offer:** The user can click the "Shop the Sale" button. This is the primary affirmative action, which navigates them directly to the page featuring the sale items. This interaction is designed to be seamless.
-2.  **Dismiss the banner:** The user can click the '×' button to close the banner. This action removes the banner from view for the remainder of their session, respecting their decision to ignore the offer (adhering to rule 3.3). The button is clearly visible and easy to click.
-3.  **Ignore the banner:** The user can choose to do nothing. Since the banner is positioned at the top and does not obstruct main page content, they can scroll past it and continue their browsing journey unimpeded. The widget remains visible but passive.
+Users have two clear and distinct interactions with the widget. First, they can click the "Shop Deals" button. This is the primary, positive action, which navigates them directly to a page displaying all the items included in the sale. Second, users can click the '×' close button. This action immediately and permanently (for the session) dismisses the banner, allowing them to continue browsing without the banner present. The banner background and text areas are not clickable to prevent accidental navigation. Both interaction points (the button and the close icon) have clear hover and focus states for visual feedback and accessibility. This limited and predictable set of interactions makes the component easy to use and ensures users are always in control (Rules 3.2 and 3.3).
 -->
+
 </body>

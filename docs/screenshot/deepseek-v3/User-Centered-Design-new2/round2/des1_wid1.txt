@@ -1,0 +1,7 @@
+Question 1: The widget features a vibrant gradient background (red to teal) with white text for high contrast and visual appeal. It uses large, bold typography (28px title, 32px percentages) to grab attention, with deal items arranged in a horizontal flex layout. The design choices prioritize visibility and urgency - bright colors and large text create excitement, while the gradient and glass-morphism effects add modern sophistication. The layout ensures all deals are equally prominent and easily scannable.
+
+    Question 2: The banner appears automatically when the page finishes loading, triggered by the window's load event listener. This ensures users see the promotions immediately upon visiting the site without requiring any action. The automatic appearance maximizes exposure and ensures the deals are part of the initial user experience, catching attention before users begin browsing products.
+
+    Question 3: Users can click the "SHOP NOW" button to navigate to the products page, click individual deal items for more details (expandable functionality), hover over elements for visual feedback (button lift effect, color changes), and close the banner entirely using the X button in the top-right corner. The hover effects provide interactive feedback, while the close button gives users control over their viewing experience.
+    -->
+</body>

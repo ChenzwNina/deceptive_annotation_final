@@ -1,0 +1,20 @@
+### Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The component is a clean, rectangular banner with rounded corners, centered horizontally and fixed 20 pixels from the top of the viewport. It features a soft white background with a subtle shadow, making it float gently above the page content without being aggressive. 
+
+The layout is a three-part flexbox design: a blue "verified" shield icon on the left, the main text content in the center, and a dismiss button on the right. The color palette is intentionally calm and professional: a trustworthy blue for the icon, a warm gold for the rating stars, and dark grey for primary text, with a lighter grey for the secondary review count. This builds user trust and avoids alarm (Rule 3.12, 3.6). Text sizes are hierarchical, with a clear title, a prominent star rating, and a smaller, contextual review count. This structured layout makes the information easy to parse at a glance, helping all users succeed (Rule 3.5).
+
+### Question 2: What triggers the appearance of this widget?
+
+The appearance of this widget is best triggered contextually to build trust without being intrusive. A primary trigger would be when a new or unauthenticated user first lands on a major landing page, like the homepage or a high-traffic product category page. In this scenario, the banner serves as a form of social proof, immediately establishing the brand's credibility by highlighting positive feedback from thousands of other customers. This fosters trust early in the user's journey (Rule 3.6). It should appear once per session to avoid annoying the user, thus supporting their autonomy and ensuring they feel in control of their browsing experience (Rule 3.7, 3.12). Another potential trigger could be when a user scrolls down on a product page, reinforcing the product's quality.
+
+### Question 3: Can you describe the full range of interactions users can have with the widget?
+
+The user interactions are intentionally simple and direct to provide clarity and control. There are two main interactions:
+
+1.  **Reading:** The primary purpose is informational. The user can quickly absorb the average rating, see the star visualization, and understand the large volume of reviews it's based on. The component is passive and does not demand an action, allowing the user to simply acknowledge it and continue browsing. This respects the user's focus and autonomy (Rule 3.7).
+
+2.  **Dismissing:** The user has complete control to close the widget by clicking the '×' button. This action immediately removes the banner from the viewport. This is a critical feature to ensure the design is not coercive and respects the user's desire for an uncluttered interface (Rule 3.12). For a good user experience, this action would ideally set a browser cookie or session storage item to prevent the banner from reappearing for a set period, further respecting the user's choice.
+-->
+
+</body>

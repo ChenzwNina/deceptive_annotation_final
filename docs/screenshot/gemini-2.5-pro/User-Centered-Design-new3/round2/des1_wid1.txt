@@ -1,0 +1,20 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a clean, rectangular banner with rounded corners, positioned 20 pixels from the top of the screen. Its layout is horizontal, using flexbox to align a small product image on the left, text in the center, a call-to-action button, and a close button on the right. The color palette is intentionally calm, featuring a muted teal background (#E6F4F1) with dark blue text for high readability. The "Shop The Sale" button uses a stronger, solid teal (#006B5D) to draw attention without creating anxiety. These choices are made to help users feel calm and in control (Rule 3.12). The design is unobtrusive and professional, which fosters user trust (Rule 3.6) by presenting information clearly and without high-pressure tactics often seen in deal banners. On smaller screens, the layout stacks vertically for better readability.
+
+*****Response*****
+Question 2: What triggers the appearance of this widget?
+
+The appearance of this widget is triggered by a page load. When a user navigates to a key page on the website, such as the homepage or a main category page, the banner animates smoothly into view from the top. This approach ensures that all users are informed of current promotions as soon as they arrive, which supports the principle of enabling all users to succeed (Rule 3.5) by giving them equal access to savings opportunities. It is not triggered by intrusive actions like scroll depth or exit intent, as those can disrupt the user's flow and undermine their sense of control (Rule 3.12). It is a transparent, site-wide announcement rather than a targeted, personalized pop-up, which respects user privacy and avoids potential bias (Rule 3.3, 3.4).
+
+*****Response*****
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have three clear and distinct interaction options with this widget, designed to support their autonomy (Rule 3.7):
+
+1.  **Engage:** The user can click the "Shop The Sale" button. This is the primary affirmative action, which navigates them directly to a page displaying all the items included in the promotion. This helps them achieve their shopping goals efficiently (Rule 3.5).
+2.  **Dismiss:** The user can click the "×" close button. This action immediately and permanently (for the session) removes the banner from view, allowing the user to focus on other tasks. This is a critical feature for ensuring the user feels in control of their experience (Rule 3.12).
+3.  **Ignore:** The user can choose to do nothing. The banner is designed to be noticeable but not disruptive, allowing users to scroll past it and continue their browsing journey without interference. This respects their immediate goals and preserves their sense of agency (Rule 3.9).
+
+-->
+</body>

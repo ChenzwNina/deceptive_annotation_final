@@ -1,0 +1,7 @@
+Question 1: The widget features a clean, modern design with a white background (#ffffff) and subtle shadow for depth. It uses a blue primary color (#3498db) for active steps and green (#27ae60) for completed steps, creating intuitive visual hierarchy. The layout includes a centered header, horizontal progress tracker with circular indicators, and organized detail sections. Font sizes range from 12px for labels to 24px for headers, ensuring readability. These design choices prioritize clarity, visual hierarchy, and mobile responsiveness while maintaining a professional e-commerce aesthetic.
+
+Question 2: This widget appears when users access their order history page, click "Track Order" from order confirmation emails, or enter their order number and email in the tracking section of the website. It can also be triggered from customer account dashboards or order confirmation pages. The widget loads automatically when users navigate to dedicated tracking URLs sent via email or SMS notifications.
+
+Question 3: Users can view their order progress through the visual step tracker, check detailed shipping information, and see estimated delivery dates. Interactive elements include clickable help links for support, shipping FAQ, and return policy. On mobile devices, users can swipe horizontally through tracking steps. The widget may also feature real-time updates with refresh capabilities, package location maps (if integrated), and options to share tracking information via email or social media.
+-->
+</body>

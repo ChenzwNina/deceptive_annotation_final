@@ -1,0 +1,24 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a rectangular banner that is horizontally centered near the top of the screen. It has a soft, light-blue background (#e3f2fd) with dark blue text (#1c3d5a) for high contrast and readability. The layout uses flexbox to neatly arrange three elements: the informational text on the left, a prominent call-to-action button in the middle, and a dismiss button on the far right. The main text is a standard 16px size. The call-to-action button is a solid, accessible blue (#0d6efd) to clearly signify an interactive element.
+
+These design choices were made to create a calm and trustworthy user experience. The soft color palette is noticeable without being alarming, avoiding user anxiety. The clear, logical layout and high-contrast text ensure the information is easy to understand, enabling all users to succeed. The prominent dismiss button empowers users, giving them full control over their interface and supporting their autonomy, which helps foster a sense of calm and control.
+
+*****Response*****
+Question 2: What triggers the appearance of this widget?
+
+The banner is designed to appear automatically on page load when a user starts a new session or visits the site for the first time. The trigger is conditioned on the promotion being active and the user not having previously dismissed the banner. To respect user autonomy and avoid causing annoyance, the banner should not reappear on subsequent page loads within the same session after a user has clicked the close button. This behavior would typically be managed using a session cookie or a browser's sessionStorage to "remember" the user's choice to dismiss the promotion, ensuring the system behaves reliably and as the user expects.
+
+*****Response*****
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have three primary interactions with the banner, designed to support informed consent and user autonomy:
+
+1.  **Passive Viewing:** The user can simply read the banner to become aware of the ongoing promotion without taking any action. The banner's fixed, non-intrusive position allows them to continue browsing the rest of the site unimpeded.
+
+2.  **Engaging with the Offer:** The user can click the "Shop the Sale" button. This action will navigate them directly to a dedicated page featuring all the products included in the promotional event, fulfilling the expectation set by the banner text.
+
+3.  **Dismissing the Banner:** The user can click the '×' (close) button. This action immediately removes the banner from their view for the remainder of their session. This provides users with ultimate control over their browsing experience, ensuring the interface does not feel coercive and helps them feel calm and in control.
+-->
+
+</body>

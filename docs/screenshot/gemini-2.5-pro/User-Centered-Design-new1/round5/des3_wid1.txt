@@ -1,0 +1,17 @@
+* Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a clean, rectangular panel that floats 20 pixels from the top of the screen, centered horizontally. It has a soft white background (`#FFFFFF`), rounded corners, and a subtle box-shadow that lifts it off the page content. The color scheme is minimalistic, using dark grey (`#343A40`) for text and a vibrant blue (`#007BFF`) as the primary accent for the search button and product prices, ensuring high contrast and clear calls-to-action.
+
+The layout is organized vertically. At the top is a large, prominent search bar designed to be the main focus. Below it are two sections: "Trending Searches," which displays clickable tags in light grey, and "Popular Right Now," a grid of four featured products with images, names, and prices. This clean, structured layout and professional color palette are chosen to feel trustworthy and user-friendly, reducing cognitive load and guiding the user's attention from the primary search action to helpful discovery options.
+
+* Question 2: What triggers the appearance of this widget?
+
+The appearance of this widget is typically triggered by a user action in the main website header. The user would click on a search icon (magnifying glass) or a static, less prominent search bar located in the header navigation. Upon clicking, any underlying page content might be overlaid with a semi-transparent dark layer to reduce distraction, and this search panel would animate into view (e.g., a smooth fade-in and slide-down from the top). Crucially, the text input field within the panel would be automatically focused, allowing the user to begin typing their query immediately without needing an additional click. This creates a seamless and efficient user experience, moving the user from intent to action with minimal friction.
+
+* Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have several ways to interact with the search panel. The primary interaction is typing a query into the large search input field and either pressing the 'Enter' key or clicking the blue search button to submit. This would close the panel and navigate them to a search results page. 
+
+For discovery, users can click on any of the "Trending Searches" tags, which would act as a shortcut to a search results page for that term. Similarly, clicking on any of the product cards in the "Popular Right Now" grid will navigate them directly to that specific product's detail page. Finally, to dismiss the panel without performing a search, the user can click the 'X' icon in the top-right corner. Clicking outside the panel area on the page overlay would also serve as a common and intuitive way to close it.
+-->
+</body>

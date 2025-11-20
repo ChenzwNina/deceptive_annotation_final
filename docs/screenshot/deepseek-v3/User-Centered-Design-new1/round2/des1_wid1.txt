@@ -1,0 +1,7 @@
+Question 1: The widget features a vibrant purple gradient background with white text for high contrast and visibility. Deal items are displayed in semi-transparent cards with blurred backgrounds for a modern glassmorphism effect. Large percentage numbers (32px) immediately grab attention, while descriptive text is smaller (14px) for hierarchy. The layout uses flexbox for responsive arrangement, and the CTA button employs a contrasting coral color to stand out. These design choices create visual hierarchy, ensure readability, and use color psychology to convey urgency and excitement.
+
+    Question 2: The banner appears automatically when the page finishes loading, triggered by the window's load event. This ensures the deals are immediately visible to users upon arrival without requiring any user action. The timing is strategic - appearing after the main content loads prevents disrupting the initial page viewing experience while still capturing attention early in the user session.
+
+    Question 3: Users can: 1) Close the banner permanently using the X button in the top-right corner. 2) Click the "SHOP NOW" CTA button to navigate to the deals page (simulated with an alert in this demo). 3) View multiple deal options presented in separate cards. 4) Experience hover effects on interactive elements (button color change and lift animation). The interactions are designed to be intuitive while providing clear exit options for users not interested in the offers.
+    -->
+</body>

@@ -1,0 +1,23 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a clean, white rectangular card with rounded corners and a subtle shadow, making it float above the page content. It has a two-column layout on wider screens. The left column displays the product name, a large numerical average rating (e.g., "4.6"), and a visual representation with five stars. The right column provides a detailed breakdown with progress bars for each star level (5-star down to 1-star) and a prominent blue "Write a Review" button.
+
+The color palette is minimalist and professional: a white background for clarity, dark grey text for readability, a vibrant gold (#FFC107) for stars and progress bars to draw attention to positive sentiment, and a contrasting blue (#007bff) for the primary call-to-action button. This design builds trust and credibility by being transparent and easy to understand. The layout provides both a quick summary for scannable information and a detailed view for users who want more context, mimicking patterns seen on major e-commerce platforms.
+
+*****Response*****
+Question 2: What triggers the appearance of this widget?
+
+The ideal trigger for this widget would be contextual and user-centric, avoiding random pop-ups. A highly effective trigger is when a logged-in user, who has previously purchased the "Classic Leather Backpack", revisits that specific product page. The system recognizes the prior purchase and displays the widget at the top of the viewport to gently prompt them for a review. This timing is relevant and helpful, as the user is already re-engaging with the product. An alternative trigger could be a user clicking a "See Ratings" link on the page, which would then fix this detailed summary to the top for easy reference while they continue to browse the product details below.
+
+*****Response*****
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have three primary interactions with this widget:
+
+1.  **Information Consumption:** The main purpose is for users to quickly view and understand the product's rating. They can see the overall average score, the visual star rating, and the detailed percentage breakdown for each star level, allowing for a comprehensive assessment of customer feedback at a glance.
+
+2.  **Action - Writing a Review:** The most significant interaction is clicking the blue "Write a Review" button. This is the primary call-to-action and would typically trigger a modal window with a review submission form or navigate the user to a dedicated review page where they can rate the product and leave comments.
+
+3.  **Dismissal:** Users can click the '×' (close) button located at the top-right corner. This action immediately removes the widget from the viewport, giving the user full control over their browsing experience and ensuring the component is not obtrusive.
+-->
+</body>

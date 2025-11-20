@@ -1,0 +1,21 @@
+### Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The component is a sleek, wide banner positioned 20 pixels from the top of the screen. It has a dark, sophisticated background with a subtle gradient from a dark slate blue (#2c3e50) to a slightly lighter shade, conveying a sense of premium quality. The text is white for high contrast and readability. The primary call-to-action button, "Join Now", uses a vibrant teal color (#1abc9c) to draw the user's eye and encourage clicks.
+
+On larger screens, the layout is horizontal, with the descriptive text and benefits on the left and the email signup form on the right, creating an efficient use of space. On screens narrower than 850px, the elements stack vertically to ensure readability and usability on mobile devices. The banner has rounded corners and a soft drop shadow, which helps it appear layered on top of the page content without being harsh. These choices create a modern, trustworthy, and non-intrusive design that clearly communicates value.
+
+### Question 2: What triggers the appearance of this widget?
+
+This widget is designed to appear based on user engagement rather than immediately upon page load, which can be intrusive. The ideal trigger would be a combination of factors to target users who are genuinely interested. For example, it could appear after the user has been on the site for 10-15 seconds, or once they have scrolled past 50% of the page content. Another effective trigger is "exit intent," where the banner appears when the user's cursor moves towards the browser's close button. This approach respects the user's initial browsing experience and presents the membership offer at a moment when they have shown interest or are about to leave, providing a reason to stay and engage further. For this static demonstration, the widget is visible by default.
+
+### Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have three primary interactions with this widget:
+
+1.  **Sign Up (Primary Action):** The main interaction is to sign up for the membership. A user can type their email address into the input field and click the "Join Now" button. This action would typically submit the form to a server, subscribe the user to the membership program, and potentially trigger a confirmation email. The input field includes a placeholder and is a required `email` type for basic validation.
+
+2.  **Dismiss (Secondary Action):** If the user is not interested, they can click the '×' button located in the top-right corner. This action immediately hides the banner from view, allowing the user to continue browsing without obstruction. In a real-world application, this action would set a cookie or use local storage to prevent the banner from reappearing for the remainder of the user's session or for a set period.
+
+3.  **Ignore (Passive Action):** Since the widget is a non-modal banner, it doesn't block the content underneath. Users can choose to simply ignore it and continue scrolling and interacting with the rest of the website as usual.
+-->
+</body>

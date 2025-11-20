@@ -1,0 +1,29 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a clean, rectangular card with rounded corners, centered at the top of the viewport. It uses a calm and trustworthy color palette: a white background, dark grey text for high readability, and a reassuring green for the progress bar to indicate positive movement. An accent blue is used for links to signify interactivity.
+
+The layout is structured logically. A prominent header immediately tells the user the order's main status and estimated delivery date. Below this, a visual progress bar provides a quick, at-a-glance understanding of the delivery journey. The specific item being tracked is shown with an image to help the user immediately recognize their order.
+
+These choices are made to help users feel calm and in control (Rule 3.12). The clear hierarchy and simple language ensure all users can succeed in understanding their order status (Rule 3.5), while the honest, clear presentation of information fosters trust (Rule 3.6). The overall design avoids unnecessary clutter, focusing solely on the information the user needs.
+
+*****Response*****
+Question 2: What triggers the appearance of this widget?
+
+The appearance of this widget is triggered contextually to be helpful, not intrusive. It appears when a logged-in user, who has a recent order with an "shipped" or "out for delivery" status, visits a main page of the website, such as the homepage or their account dashboard.
+
+This trigger mechanism is designed to respect the user's autonomy and attention (Rule 3.7). It does not appear as a disruptive pop-up during a critical task like checkout. Instead, it surfaces proactively in a relevant context where the user is likely seeking general information. By appearing only for active, recent orders, it provides timely information that serves the user's immediate interest in their purchase, thus fostering trust and reliability (Rule 3.6). It will not appear for completed orders or for users without recent purchases, ensuring the component is always relevant and never spammy.
+
+*****Response*****
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have four primary interactions with the widget, designed to provide information and control without overwhelming them:
+
+1.  **Passive Information Consumption:** The main purpose is for the user to quickly view and understand their order's status, estimated delivery, and contents without needing to click anything.
+
+2.  **Dismissal:** The user can click the '×' button at any time to close the widget. This is a critical feature that respects the user's control over their interface and supports their autonomy (Rule 3.7). The widget should not reappear during the same session after being dismissed.
+
+3.  **External Tracking:** Users can click on the tracking number link (e.g., "UPS 1Z987..."). This will open a new tab to the carrier's official tracking page, providing transparency and allowing them to see more granular details. This fosters trust by linking to an authoritative source (Rule 3.6).
+
+4.  **Internal Navigation:** Users can click the "View Order Details" link to navigate to the full order history page on the website. This allows them to see complete details like billing, shipping address, and other items from the same order.
+-->
+</body>

@@ -1,0 +1,27 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a clean, card-style component with a white background, rounded corners, and a subtle shadow, giving it a modern, layered appearance. The layout is structured logically: a header with the title "Customer Reviews" and a close button, a summary section, a detailed rating breakdown, and a call-to-action footer. 
+
+The most prominent element is the large, bold "4.7" overall rating, immediately drawing the user's attention to the key information. The color palette is minimal and professional: dark text for high contrast and readability, a conventional gold (#FFC107) for stars and progress bars, and a calm blue (#007bff) for the "Write a Review" button to signify a primary, constructive action.
+
+These choices are made to build trust and ensure clarity. The clean layout and conventional color scheme make the data easy to understand at a glance, presenting information transparently without manipulative visual tricks. The focus is on presenting factual data in a neutral, user-friendly manner.
+*****Response***** -->
+<!-- *****Response*****
+Question 2: What triggers the appearance of this widget?
+
+The appearance of this widget is triggered contextually to be helpful rather than intrusive. A common and effective trigger would be when a user navigates to a specific product detail page. It would appear shortly after the page loads, providing immediate social proof and an overview of customer sentiment, which are crucial factors in a purchasing decision.
+
+Alternatively, for a user who has recently purchased the product, the widget could be triggered upon their return to that product page. In this scenario, its primary purpose shifts from providing information to encouraging a review, serving as a timely and relevant reminder. The key principle is to display the widget when the user's attention is already on the product, making the rating information both relevant and valuable at that specific moment.
+*****Response***** -->
+<!-- *****Response*****
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+User interactions with this widget are intentionally simple, direct, and transparent. The full range of interactions includes:
+
+1.  **Viewing Information (Passive Interaction):** The primary purpose is informational. Users can instantly see the overall average rating, the total number of ratings, and a visual breakdown of how many reviews fall into each star category (1 through 5). This allows them to quickly assess product feedback without needing to click or scroll.
+
+2.  **Initiating a Review:** Users can click the "Write a Review" button. This is a clear, single-purpose call-to-action that would navigate them directly to a review submission form on the page or open a modal for writing their review. This interaction is designed to be straightforward, without any intermediate steps.
+
+3.  **Dismissing the Widget:** Users can click the '×' button in the top-right corner. This allows them to close the widget if they find it distracting or have already absorbed the information. This action respects the user's control over their interface and ensures the component does not become a persistent obstruction.
+*****Response***** -->
+</body>

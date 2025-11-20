@@ -1,0 +1,25 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a clean, modern search panel that is horizontally centered and fixed 20 pixels from the top of the viewport. It has a white background, rounded corners, and a subtle shadow, making it float visually above the page content.
+
+The layout uses flexbox to create a unified input group consisting of three parts: a category dropdown, a search field, and a search button. The dropdown has a light gray background to distinguish it from the main input field. The search field is the largest element, taking up the available space to provide an ample typing area. The search button is a vibrant blue, a common choice for primary actions, which draws the user's eye and clearly indicates its function.
+
+These choices are made for clarity, usability, and modern aesthetics. The clean design minimizes distractions, the clear color hierarchy guides the user's interaction from refining their search (optional) to typing and submitting, and the fixed positioning ensures this essential function is always accessible.
+
+*****Response*****
+Question 2: What triggers the appearance of this widget?
+
+This search panel is a persistent, core component of the website's user interface. Its appearance is not triggered by a specific user action. Instead, it is present by default when the page loads. It's an integral part of the site's header or global navigation, designed to be immediately and constantly available to the user as they browse the e-commerce site. This immediate availability is crucial because searching is a primary method for users to find products. Making it a permanent fixture removes friction and allows users to initiate a search from any page without needing to navigate elsewhere first.
+
+*****Response*****
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have several clear and direct ways to interact with the search panel:
+
+1.  **Typing a Query:** The primary interaction is clicking into the main input field (which displays "Search for products, brands, and more") and typing a search term.
+2.  **Submitting the Search:** After typing, a user can submit the search in two standard ways: by pressing the "Enter" key on their keyboard or by clicking the blue search button containing the magnifying glass icon.
+3.  **Category Filtering (Optional):** Before or after typing a query, the user can click the "All Categories" dropdown on the left. This reveals a list of product categories (e.g., Electronics, Fashion). They can then click on a specific category to refine their search, ensuring the results will be limited to that selection.
+
+These interactions are intuitive and follow established web conventions, making the component easy for anyone to use without a learning curve.
+-->
+</body>

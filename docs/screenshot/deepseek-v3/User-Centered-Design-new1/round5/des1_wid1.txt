@@ -1,0 +1,7 @@
+Question 1: The widget features a vibrant gradient banner (red to orange) with white text for high visibility. It uses a horizontal layout with deal items spaced evenly, responsive design for mobile, and includes visual elements like badges and countdown timer. The design choices prioritize urgency (red colors), readability (clear typography), and mobile-friendliness to capture attention across all devices while maintaining professional aesthetics.
+
+    Question 2: The banner appears automatically when the page loads, triggered by the DOM content loading. It's designed as a persistent header component that displays immediately to capture user attention with current promotions without requiring any user action to initiate its appearance.
+
+    Question 3: Users can view multiple deal highlights, see a real-time countdown timer, and close the banner permanently using the X button. The banner is responsive - on mobile devices, items stack vertically. The countdown updates every second, creating dynamic engagement. Closing the banner removes it from view for the current session.
+    -->
+</body>

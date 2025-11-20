@@ -1,0 +1,26 @@
+### Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a clean, rectangular card with rounded corners, a soft shadow, and a white background, making it stand out against page content. It's positioned at the top center of the screen.
+
+**Colors:** The primary color palette is neutral (white, greys, and dark text for readability) with a trustworthy blue (#3b82f6) used as an accent for calls-to-action, completed progress steps, and an icon background. A success green is used for the current status text to provide quick positive feedback. This palette is professional and builds user confidence.
+
+**Size & Layout:** The layout uses a clear visual hierarchy. A header contains a large title ("Your order is on its way!") and a smaller order number. The main content features a four-step visual progress bar with circular nodes, which is more intuitive than text alone. Elements are spaced generously using padding and flexbox for a balanced, uncluttered look. The component is responsive, adapting its text size and padding for smaller screens.
+
+**Design Rationale:** The design prioritizes clarity and immediate understanding. Key information like status and ETA is prominent. The visual progress bar allows users to grasp their order's journey at a glance without feeling overwhelmed. The overall aesthetic is modern and clean, designed to integrate seamlessly into a contemporary e-commerce site.
+
+### Question 2: What triggers the appearance of this widget?
+
+The appearance of this widget is triggered contextually for a logged-in user who has a recent order in an active state (specifically, "Processing" or "Shipped"). When the user visits the website, the system checks their account status. If a recent order falls within these criteria, the widget is rendered and displayed. It would not appear for new visitors, users who are not logged in, or users whose most recent orders are either still pending payment or already delivered. This ensures the information is timely, relevant, and helpful, rather than a persistent, irrelevant distraction. After being manually closed by the user, it should not reappear during the same browser session.
+
+### Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have three primary interactions with the widget, catering to different levels of engagement:
+
+1.  **Passive Information Consumption:** The user can instantly see the most critical order information at a glance: the current status ("Shipped"), the estimated arrival date, and a visual representation of the order's progress. This requires no clicks and provides immediate value.
+
+2.  **Deeper Engagement:** The user can click the "View Order Details" button. This action navigates them away from the current page to a dedicated, more comprehensive order tracking page. This page would offer detailed shipping information, a map view of the package's location, and a full order summary.
+
+3.  **Dismissal:** If the user has seen the information and wishes to remove the widget to have an unobstructed view of the website, they can click the "×" (close) button. This action dismisses the widget for their current session, providing them full control over their browsing experience without being persistently interrupted.
+-->
+
+</body>

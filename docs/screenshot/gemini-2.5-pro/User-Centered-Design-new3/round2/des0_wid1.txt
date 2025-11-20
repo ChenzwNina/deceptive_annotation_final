@@ -1,0 +1,28 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+    The widget is a clean, wide banner with rounded corners, positioned centrally at the top of the screen. It has a soft white background with a subtle shadow, making it float gently above the page content. The color palette is intentionally calm and neutral, using black and dark gray for text and a friendly, trustworthy blue for the prices to draw attention without creating urgency. The layout is organized and spacious, with a clear heading and four product cards arranged in a grid. Each card features a large square image, a concise product name (16px), and a prominent price (18px).
+
+    These choices are made to help users feel calm and in control (Rule 3.12). The non-intrusive design respects the user's focus, presenting information clearly without high-pressure sales tactics. The organized layout and readable typography ensure the component is accessible and easy to understand, enabling all users to succeed (Rule 3.5). The entire design fosters trust by being professional, clear, and predictable (Rule 3.6).
+
+    *****Response*****
+
+    Question 2: What triggers the appearance of this widget?
+    
+    This widget is designed to appear for a returning user once per session. It would be triggered after the user has shown gentle engagement with the site, for example, after they have scrolled down the page at least 500 pixels or after they have been on the current page for 10 seconds.
+    
+    This trigger is chosen specifically to respect the user's autonomy and initial goal (Rules 3.7, 3.12). It avoids being an intrusive pop-up that immediately blocks content upon arrival, which can be jarring and frustrating. By waiting for a sign of engagement, the system presents the featured products as a helpful suggestion rather than a disruptive advertisement. This behavior builds trust by showing that the website respects the user's time and attention, and it ensures informed consent by allowing the user to first orient themselves on the page before being presented with this optional content (Rule 3.8). It avoids causing stress and protects the user's emotional well-being (Rule 3.1).
+
+    *****Response*****
+
+    Question 3: Can you describe the full range of interactions users can have with the widget?
+    
+    The user has three clear and distinct interaction paths, giving them complete control over the experience:
+    
+    1.  **Engage:** The user can hover over any of the four product cards, which provides visual feedback (a slight lift and shadow). Clicking anywhere on a product card—the image, title, or price—will navigate them directly to that specific product's detail page. This provides a clear path to learn more and supports their autonomy to explore what interests them (Rule 3.7).
+    
+    2.  **Dismiss:** The user can click the prominent "×" close button located in the top-right corner. This action immediately and permanently (for the current session) closes the banner. This is a critical feature for user control, ensuring they can easily remove the component if it is not relevant to them, which helps them feel calm and in control (Rule 3.12).
+    
+    3.  **Ignore:** The user can choose to do nothing. The banner is positioned in a way that does not obstruct the main content of the website. They can simply scroll past it and continue their browsing journey unimpeded, preserving their original intent and moral agency (Rule 3.9).
+    -->
+
+</body>

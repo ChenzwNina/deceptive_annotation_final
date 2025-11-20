@@ -1,0 +1,25 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a clean, rectangular card with rounded corners that floats near the top-center of the screen. It has a soft white background and a subtle drop shadow, giving it a gentle lift from the page content. The color palette is intentionally calm and professional, using a dark blue-gray for text, a trustworthy blue for key metrics and bars, and a muted gold for star ratings. This palette avoids the emotional bias of aggressive colors like bright green or red, helping users feel in control and not manipulated (Rule 3.12, 3.4).
+
+The layout is hierarchical. A clear header identifies the component, followed by a two-column summary: a large overall score on the left and a detailed star-rating bar chart on the right. This transparently shows both the average and the full distribution of ratings, fostering trust (Rule 3.6). Below the summary, two individual reviews with clear titles and author details provide qualitative context. A single, clear link at the bottom invites further exploration. This structured design makes information easy to digest, enabling all users to succeed (Rule 3.5).
+*****Response*****
+Question 2: What triggers the appearance of this widget?
+
+The appearance of this widget is designed to be helpful, not intrusive, thereby respecting user autonomy and welfare (Rule 3.7, 3.1). It would not appear immediately on page load, as that can be jarring and disruptive. Instead, the ideal trigger is based on user intent.
+
+The widget would appear after the user has demonstrated interest in the specific product by dwelling on the product details section of the page for a short period, such as 3-5 seconds. This "timed dwell" trigger suggests the user is actively considering the item and would likely find social proof like customer ratings valuable at that moment. This approach avoids interrupting a user who is just quickly scanning the page, ensuring the system behaves in an expected and respectful manner (Rule 3.6). This makes the user feel in control of their browsing experience, rather than being subjected to unwanted pop-ups (Rule 3.12).
+*****Response*****
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have four main interactions, all designed to support their autonomy and provide a sense of control (Rule 3.7, 3.12).
+
+1.  **Information Consumption:** The primary interaction is to read and understand the ratings. Users can quickly see the overall score, assess the distribution of ratings via the bar chart, and read excerpts from both highly positive and more moderate reviews. This provides a balanced view, avoiding bias and helping users make an informed choice (Rule 3.4, 3.8).
+
+2.  **Dismissal:** Users can immediately and permanently (for the session) close the widget by clicking the prominent 'X' icon in the top-right corner. This is a critical feature that gives users ultimate control over their interface, ensuring the widget never becomes an obstacle.
+
+3.  **Deeper Exploration:** By clicking the "Read all... reviews" link in the footer, the user can navigate to the full, comprehensive reviews section on the product page. This interaction allows users to act on their curiosity and delve deeper if they choose, without being forced to.
+
+4.  **No Forced Action:** Importantly, the user can also choose to simply ignore the widget and continue scrolling and interacting with the main page content. The widget's fixed position keeps it accessible but does not obstruct core page functions.
+-->
+</body>

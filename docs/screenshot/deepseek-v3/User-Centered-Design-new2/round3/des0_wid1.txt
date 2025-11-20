@@ -1,0 +1,7 @@
+Question 1: The widget features a clean, modern design with a light gray background (#f8f9fa) and white product cards. Cards have subtle shadows and rounded corners (12px radius) for a soft appearance. Product images are 200px tall with consistent aspect ratios. Typography uses a clear hierarchy: section title (2rem, #2c3e50), product names (1.2rem), and prices (1.3rem, red #e74c3c). The grid layout adapts responsively with minimum 280px columns. These choices prioritize readability, visual appeal, and mobile responsiveness while using e-commerce best practices for conversion.
+
+Question 2: This featured products widget appears automatically when users land on the homepage or main product category pages. It's a permanent section designed to showcase popular or promoted items without requiring user interaction to trigger its display. The widget loads with the page content as part of the initial render, making featured products immediately visible to all visitors to drive engagement and sales from high-value items.
+
+Question 3: Users can hover over product cards to see a lift animation with enhanced shadow. They can click "Add to Cart" buttons to add items directly to their shopping cart. The entire product card is visually interactive with hover states, though only the button triggers the cart action. Users can also view product images, read descriptions, see ratings, and compare prices across different featured items. The responsive grid allows easy browsing on all device sizes.
+-->
+</body>

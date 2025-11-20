@@ -1,0 +1,7 @@
+Question 1: The widget features a vibrant gradient background (red to orange) with white text for high contrast and visibility. It uses a clean, modern layout with deal items arranged horizontally, each with subtle glassmorphism effects. The design choices prioritize attention-grabbing colors while maintaining readability. Button styling provides clear call-to-action elements with hover effects for better user engagement. The overall size is substantial enough to be noticeable without overwhelming the page content.
+
+    Question 2: The banner appears automatically after a 1-second delay upon page load, using a smooth fade-in transition. This timing ensures users see the deals after the main page content has loaded but before they begin deep navigation. The delayed appearance prevents banner blindness while still capturing attention effectively. The banner can also be manually triggered through JavaScript functions if needed for specific user actions.
+
+    Question 3: Users can interact with the banner in three main ways: 1) Clicking "Shop Now" buttons redirects to relevant product pages or deal sections. 2) Hovering over buttons triggers visual feedback (color change and lift effect). 3) Clicking the close (×) button permanently dismisses the banner for that session. The banner is also responsive and adapts to different screen sizes, ensuring mobile users have the same interactive experience.
+    -->
+</body>

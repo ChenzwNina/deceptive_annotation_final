@@ -1,0 +1,22 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+    The widget is a clean, rectangular banner with rounded corners and a soft shadow, giving it a modern, elevated appearance. It features a crisp white background. The layout uses flexbox: on the left is a square image placeholder (120x120px), and on the right is the text content. The heading "Join the AuraClub Rewards" is in a dark, professional grey-blue, followed by a descriptive paragraph in a slightly lighter grey. The primary call-to-action, a "Join for Free" button, is a vibrant green with white text, making it stand out as the main interactive element. A subtle '×' close button is positioned in the top-right corner.
+
+    These choices create a clear visual hierarchy that is easy to understand. The calm color palette feels trustworthy and professional, avoiding alarmist colors like red or yellow. The prominent, positively-phrased green button encourages action without pressure, and the clearly visible close button respects the user's choice to ignore the offer, aligning with user-friendly design principles. The layout is balanced and adapts well to smaller screens.
+    
+    *****Response*****
+    Question 2: What triggers the appearance of this widget?
+
+    The appearance of this widget is triggered by user engagement rather than an immediate, disruptive event. It would not appear as soon as a user lands on the website. Instead, a good trigger would be when a user demonstrates clear interest in the products. For instance, the widget could appear after the user has viewed their third product detail page during a single session. Another effective, non-intrusive trigger could be when a non-logged-in user scrolls 60% of the way down a product listing page. These triggers ensure the offer is presented to engaged potential customers who are more likely to see value in a rewards program, rather than annoying new visitors and increasing the bounce rate. This respects the user's initial browsing experience and makes the offer feel more relevant and timely.
+    
+    *****Response*****
+    Question 3: Can you describe the full range of interactions users can have with the widget?
+
+    Users have two clear and direct interactions with this widget, both designed to be simple and predictable.
+
+    1. Affirmative Action: The user can click the green "Join for Free" button. This action would navigate them away from the current page to a dedicated membership signup page (e.g., `/rewards-signup`). The button provides visual feedback on hover (it darkens slightly) to confirm it is interactive. This path is for users who are interested in the offer.
+
+    2. Dismissive Action: The user can click the '×' button in the top-right corner. This action immediately and permanently dismisses the widget for the remainder of their browser session. The button also has a hover state (it darkens) to indicate interactivity. This allows users who are not interested to easily remove the banner and continue their browsing session without interruption, respecting their autonomy and decision not to engage with the offer. There are no other hidden or complex interactions.
+    -->
+
+</body>

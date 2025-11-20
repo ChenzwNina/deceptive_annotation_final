@@ -1,0 +1,22 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The component is a sleek, rectangular banner positioned near the top of the viewport. It has a soft, light cyan background (#E0F7FA) with dark, desaturated blue text (#1A237E) for high contrast and readability. The layout uses flexbox to neatly arrange content: on the left, there's a primary headline in a bold, 16px font ("Mid-Season Savings...") and a secondary, smaller text (14px) below it with details ("Offer valid through..."). On the right are the actions: a prominent call-to-action button with a standard blue background (#007BFF) and white text, and a subtle '×' close button. Rounded corners and a gentle box-shadow give it a modern, calm appearance.
+
+These choices are deliberate. The calm color palette is chosen to avoid causing user anxiety, supporting Rule 3.12 (help users feel calm). The high-contrast text ensures accessibility for users with visual impairments, adhering to Rule 3.5 (enable all users to succeed). The clear, predictable layout fosters trust (Rule 3.6), and the prominent close button provides users with full control and autonomy over their experience (Rule 3.7). The text is informative and transparent about the deal's terms, ensuring informed consent (Rule 3.8).
+*****Response*****
+Question 2: What triggers the appearance of this widget?
+
+The banner's appearance is triggered by the page loading. It is intended to be one of the first elements a user sees when they arrive on a relevant page, such as the homepage or a main category page. It should not appear on every single page, especially checkout or account pages, to avoid being disruptive.
+
+Crucially, to respect user autonomy (Rule 3.7) and create a trustworthy system (Rule 3.6), its appearance should be managed. Once a user dismisses the banner using the close button, its state should be remembered (e.g., using `sessionStorage`). This prevents the banner from reappearing on subsequent page loads within the same browsing session. This design choice avoids frustrating the user by honoring their decision to dismiss the information, thereby ensuring the system behaves reliably and respects their control over the interface. For longer-term promotions, `localStorage` could be used to hide it for a full day or longer after dismissal.
+*****Response*****
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have three clear and distinct interactions with the banner, designed to provide full control and clarity.
+
+1.  **Engage with the Offer:** The primary interaction is clicking the "Shop The Sale" button. This action would navigate the user directly to a dedicated landing page or a filtered category view showcasing all the items included in the sale. This provides a direct path to act on the promotional information, enabling user success (Rule 3.5).
+
+2.  **Dismiss the Offer:** The user can click the '×' button. This immediately and smoothly removes the banner from view for the remainder of their session. This is a critical interaction that supports user autonomy and control (Rules 3.7 & 3.12), ensuring the banner does not become an unavoidable annoyance. The action is final for the session, which builds trust (Rule 3.6).
+
+3.  **Ignore the Offer:** The user can choose to do nothing. The banner is designed to be noticeable but not intrusive. It does not block content or demand immediate attention. This allows users to continue their primary task (e.g., searching for a specific item) without being forced to interact, thus respecting their goals and preserving their sense of agency (Rule 3.9).
+-->

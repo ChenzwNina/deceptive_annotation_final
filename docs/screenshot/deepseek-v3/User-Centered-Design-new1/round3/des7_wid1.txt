@@ -1,0 +1,7 @@
+Question 1: The widget features a clean, modern design with a light gray background (#f8f9fa) and subtle shadow for depth. The average rating (4.5) is prominently displayed in large, bold text (2.5rem) in dark blue-gray (#2c3e50) for immediate visibility. Gold stars (#ffc107) provide visual rating cues. Rating bars use green (#28a745) progress indicators against light gray backgrounds, with clear percentage labels. This design prioritizes readability and trustworthiness through high contrast, intuitive color coding, and organized visual hierarchy.
+
+Question 2: The widget appears automatically on product detail pages when users view individual products. It loads immediately with the page content, positioned near the product description and pricing information. No user action is required to trigger its initial display, as customer ratings are essential purchase decision information. The widget remains visible throughout the product browsing experience to provide continuous social proof.
+
+Question 3: Users can view the overall rating and detailed rating distribution. They can click the "Rate this product" button to open a rating submission form. Hovering over stars may show tooltips or highlight potential ratings. Clicking rating bars could filter reviews by specific star ratings. The widget may also allow sorting reviews by date or helpfulness if expanded. Users can read individual reviews by clicking review count links. All interactions provide immediate visual feedback through hover states and transitions.
+-->
+</body>

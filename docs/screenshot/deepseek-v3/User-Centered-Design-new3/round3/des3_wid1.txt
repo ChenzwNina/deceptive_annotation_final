@@ -1,0 +1,7 @@
+Question 1: The widget features a modern gradient background (#667eea to #764ba2) with clean white elements. It uses a centered layout with a prominent search bar (600px max-width) and filter dropdowns. The design employs ample padding (30px), rounded corners (8-12px), and subtle shadows for depth. The color contrast ensures readability while the gradient creates visual appeal. The responsive design adapts to mobile with stacked elements. These choices prioritize usability, visual hierarchy, and modern aesthetics to enhance user engagement.
+
+Question 2: This search widget appears prominently on the website's homepage or dedicated search page as a primary navigation element. It may also appear in the header of category pages or as a modal overlay when users click a search icon. The widget is designed to be immediately visible to help users quickly find products, serving as a central navigation tool throughout the shopping experience.
+
+Question 3: Users can type search queries in the input field, submit searches via the button or Enter key, and apply filters through dropdown menus (category, price range, rating). The search input supports real-time suggestions if implemented. Hover effects provide visual feedback on interactive elements. On mobile, the layout adapts to stacked elements for better touch interaction. The widget also supports keyboard navigation and screen readers through proper ARIA labels.
+-->
+</body>

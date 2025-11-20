@@ -1,0 +1,22 @@
+### Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a clean, rectangular search panel centered horizontally near the top of the viewport. It has a white background, soft rounded corners, and a subtle gray border, with a gentle shadow that lifts it off the page, indicating it's a temporary overlay. The layout uses flexbox to neatly arrange three main elements: a large text input field on the left, a search icon button, and a close icon button on the far right. 
+
+The color palette is minimalist and calming: a white background for clarity, neutral grays for text and the close icon, and a friendly, accessible blue for the search icon and focus indicators. The font size for the input text is a legible 16px. These choices are made to create a trustworthy and user-friendly experience. The clean design minimizes distractions, helping users feel in control, while the clear visual hierarchy and feedback (like the blue focus ring) guide them effortlessly through the task of searching.
+
+### Question 2: What triggers the appearance of this widget?
+
+The appearance of this search panel is typically triggered by a direct user action indicating an intent to search. The most common trigger would be the user clicking on a search icon (magnifying glass) located in the website's main header or navigation bar. When clicked, that static icon would initiate the display of this more comprehensive search component as an overlay. 
+
+Another potential trigger could be a keyboard shortcut, such as `Ctrl+K` or `/`, a convention becoming popular on modern web applications. This provides an efficient alternative for power users. The key principle is that the widget appears only when the user explicitly requests it, which respects their autonomy and prevents intrusive, unexpected interface changes.
+
+### Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have a clear and predictable set of interactions with this widget, ensuring ease of use and control. The interactions are:
+1.  **Typing:** The user can click into the input field and type their search query. The placeholder text provides guidance and disappears upon typing.
+2.  **Submitting Search:** The user can submit their query in two ways: by clicking the blue search icon (magnifying glass) or by pressing the "Enter" key on their keyboard while the input field is focused.
+3.  **Closing the Panel:** The user can dismiss the search panel without searching. This can be done by clicking the "X" (close) button. For enhanced usability, this action could also be mapped to the "Escape" key.
+4.  **Visual Feedback:** The user receives visual feedback for their actions. Hovering over the buttons changes their background color to indicate they are interactive. When the entire panel or an element within it is focused, a blue outer glow appears, aiding keyboard navigation and accessibility.
+
+-->
+</body>

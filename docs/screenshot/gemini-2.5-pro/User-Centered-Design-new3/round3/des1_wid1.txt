@@ -1,0 +1,19 @@
+### Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a clean, rectangular banner that spans the width of the viewport, with a maximum width of 1200px to maintain readability on large screens. It features a calm, light blue background (`#EAF4FF`) with dark, high-contrast text (`#1C2A39`) for optimal legibility, adhering to accessibility standards (Rule 3.5). The layout, managed by Flexbox, neatly aligns the text content and a prominent call-to-action (CTA) button on the left, with a dismiss ('X') button on the right. The typography uses 'Lato', a sans-serif font, for a modern and clear feel. These design choices are intentional to help users feel calm and in control (Rule 3.12). The non-intrusive color palette and clear, honest messaging ("Up to 40% off") are designed to foster user trust and avoid causing stress or pressure (Rule 3.1, 3.6).
+
+### Question 2: What triggers the appearance of this widget?
+
+The banner is triggered to appear on page load for visitors landing on key entry points of the website, such as the homepage or main category pages. To respect user autonomy and create a predictable experience (Rule 3.6, 3.7), its appearance is managed. After a user dismisses the banner by clicking the close button, a cookie or session storage flag would be set in a real-world application. This prevents the banner from reappearing for a defined period (e.g., for the rest of the session or 24 hours). This ensures the user’s choice is respected and they are not repeatedly interrupted, which supports a feeling of control over their browsing environment (Rule 3.12).
+
+### Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have three primary interactions with the widget, all designed to support user autonomy and informed choice:
+
+1.  **Engage with the Offer:** The user can click the "Shop Deals" button. This action clearly communicates its intent (Rule 3.8) and navigates them directly to a page displaying all items included in the sale. This provides a direct path for interested users to succeed in their goal of finding discounted products (Rule 3.5).
+
+2.  **Dismiss the Banner:** The user can click the 'X' icon. This immediately and smoothly removes the banner from view, giving the user full control over their interface (Rule 3.7). This action is simple, irreversible for the session, and respects the user’s desire to focus on other content.
+
+3.  **Ignore the Banner:** The user can choose to do nothing. The banner remains fixed at the top of the viewport but is designed to be unobtrusive, allowing them to scroll and interact with the main page content without interference.
+-->
+</body>

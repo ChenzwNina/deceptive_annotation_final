@@ -1,0 +1,25 @@
+Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The banner has a soft, light green background (#E6F4EA) with dark green text (#1A3C24), ensuring high readability and a fresh, natural feel appropriate for an "Outdoor Living Sale." It spans most of the page width (90%) but is capped at 1100px to maintain balance on large screens. The layout, managed by flexbox, cleanly separates a tag icon, the text, a primary call-to-action (CTA) button, and a close button.
+
+The main title font is larger and bolder than the subtitle to create a clear visual hierarchy. The CTA button uses a vibrant, contrasting green (#28a745) to stand out as the primary action without being jarring. The close button is subtle but universally recognizable. These choices create an aesthetically pleasing, non-intrusive component that clearly communicates its message and makes actions easy to find and understand, respecting the user's attention.
+
+*****Response*****
+Question 2: What triggers the appearance of this widget?
+
+The appearance of this banner is triggered by the initial page load. When a user navigates to a key page on the e-commerce site, such as the homepage or a major category page, the banner is rendered immediately at the top of the viewport.
+
+This approach is chosen because the banner contains timely and widely relevant information about a site-wide sale. Unlike a targeted pop-up, its purpose is to inform every visitor of the promotion from the moment they arrive. Triggering it on page load ensures that no user misses this important information, which could significantly influence their browsing and purchasing decisions. It serves as a helpful, persistent (until dismissed) announcement rather than an interruption.
+
+*****Response*****
+Question 3: Can you describe the full range of interactions users can have with the widget?
+
+Users have three primary interactions with the banner, designed to be clear and straightforward:
+
+1.  **Informing Themselves:** The user can read the banner's text to learn about the "Outdoor Living Sale," the discount percentage (up to 30%), the eligible product categories, and the sale's end date. They can also click the "See Details" link for more specific terms.
+
+2.  **Taking Action:** The user can click the main "Shop All Deals" button. This is the primary call-to-action, which would navigate them directly to a curated landing page displaying all products included in the promotion.
+
+3.  **Dismissing:** If the user is not interested, they can click the '×' close button. This action hides the banner, respecting their choice to ignore the promotion and declutter their view. The banner would then ideally remain hidden for the duration of their session to avoid repeatedly annoying the user.
+-->
+</body>

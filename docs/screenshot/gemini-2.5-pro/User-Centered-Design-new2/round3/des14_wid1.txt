@@ -1,0 +1,24 @@
+### Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+
+The widget is a clean, rectangular container with rounded corners and a subtle box shadow, making it float visually above the page content. It's positioned centrally at the top of the viewport. The layout is structured logically from top to bottom: a header with the order status and a clear 'close' button, followed by the current status ("Out for Delivery") with a reassuring truck icon, a visual progress bar, and finally a section showing the product image and name.
+
+The color palette is intentionally simple and professional. A white background with dark grey text (#333) ensures high readability. The primary action color is a standard blue (#007bff), used for the progress bar and the border of the "View Full Details" button to draw attention to key information and actions. A friendly green (#28a745) is used for the status icon to provide a quick, positive visual cue. This design prioritizes clarity and providing information at a glance, ensuring the interaction is as easy as possible (Rule 3.2) and all important information is immediately visible (Rule 3.1).
+
+### Question 2: What triggers the appearance of this widget?
+
+The appearance of this widget is triggered contextually to be helpful, not intrusive. It appears when a logged-in user, who has a recent order with a status of "shipped" or "out for delivery," visits a main page of the website, such as the homepage or their account dashboard.
+
+This proactive approach anticipates the user's primary question ("Where is my order?") without forcing them to navigate through menus to find the tracking page. By only showing it to users with active, in-transit orders, the widget provides relevant, timely information and avoids cluttering the interface for other users. This design choice adheres to the principle of not forcing users into additional actions to access key functionality (Rule 3.5), as it brings the most sought-after information directly to them.
+
+### Question 3: Can you describe the full range of interactions users can have with the widget?
+
+User interactions with this widget are designed to be straightforward and empowering, with no manipulative patterns. The interactions are:
+
+1.  **Viewing Information:** The primary purpose is informational. A user can immediately see their order's most critical details—current status, ETA, and the item—without any clicks. This at-a-glance utility respects the user's time.
+
+2.  **Requesting More Detail:** The user can click the "View Full Details" button. This is the main call-to-action and would navigate them to a dedicated page with a more comprehensive tracking history, a map view, and full order specifics. This action is presented as an option, not a requirement.
+
+3.  **Dismissing the Widget:** The user can click the '×' button in the top-right corner. This action immediately and permanently closes the widget for their current session, allowing them to continue their browsing experience unimpeded. The button is standard and easy to find, ensuring the design does not dissuade a user from an action they wish to take (Rule 3.3).
+
+-->
+</body>

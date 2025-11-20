@@ -1,0 +1,7 @@
+Question 1: The widget features a clean, modern design with a white background, blue primary buttons (#3498db), and dark gray text (#2c3e50). Product cards use subtle shadows and rounded corners (12px radius) for a contemporary feel. The responsive grid layout adapts to different screen sizes, with cards that lift slightly on hover. I chose these colors for good contrast and readability, with the blue button providing a clear call-to-action. The layout maximizes product visibility while maintaining clean spacing and hierarchy.
+
+Question 2: This featured products widget appears automatically when users land on the homepage or main product category pages. It's designed to be immediately visible without any user interaction required, serving as a prominent showcase of key products. The widget loads with the page content and remains static in its designated section, providing consistent exposure to featured items throughout the user's browsing session.
+
+Question 3: Users can hover over product cards to see a subtle lift animation and enhanced shadow effect. They can click "Add to Cart" buttons to add items directly to their shopping cart. The responsive grid automatically adjusts the number of columns based on screen size, providing optimal viewing on different devices. Users can also click product images or names (though no additional functionality is implemented here) which could typically lead to product detail pages in a full implementation.
+-->
+</body>
