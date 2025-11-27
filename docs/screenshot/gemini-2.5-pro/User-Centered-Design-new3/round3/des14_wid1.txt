@@ -1,18 +1,30 @@
 Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
 
-The widget is a clean, rectangular card with rounded corners and a soft shadow, making it float gently above the main page content. It uses a professional and calming color palette: a white background for clarity, dark grey for primary text to ensure readability, and a trustworthy blue (#0d6efd) as an accent for key information like the current status and progress bar. The layout is structured logically from top to bottom: a clear header, item details, current status, a visual progress bar, and a final call-to-action button. Font sizes create a visual hierarchy, with the main status ("In Transit") and header being prominent. These choices were made to help users feel calm and in control (Rule 3.12). The clear, uncluttered presentation of information fosters trust (Rule 3.6) and enables users to succeed in their goal of quickly understanding their order's status (Rule 3.5).
+    The widget is a clean, card-style component centered at the top of the screen. It has a white background with soft, rounded corners and a subtle shadow, making it feel modern and friendly. The layout is structured logically from top to bottom: a header with the order status, a highlighted section with the estimated delivery date, a visual progress bar, a preview of an item in the order, and finally, action links. 
 
-*****Response*****
-Question 2: What triggers the appearance of this widget?
+    The color palette is deliberately calm and reassuring. A trustworthy blue (#007bff) is used for the active step and links, while a positive green (#28a745) highlights the arrival status and completed steps. Text is a highly readable dark gray (#343a40). The estimated delivery date is given the largest font size to immediately answer the user's primary question. These choices are made to create a calming, informative experience that builds trust and gives the user a sense of control, directly adhering to design rules #6 (foster trust) and #12 (help users feel calm and in control).
+    
+    *****Response*****
+    
+    Question 2: What triggers the appearance of this widget?
 
-The appearance of this widget is triggered contextually when a user with a recently shipped order visits the website, specifically on high-traffic pages like the homepage or their account dashboard. It would not appear on every single page visit to avoid being intrusive. The system would check the user's recent order history upon page load. If an order's status has been updated to "Shipped" or "In Transit" within a specific timeframe (e.g., the last 7 days), the widget animates into view from the top. This proactive approach provides timely and relevant information without requiring the user to actively search for it, supporting their goal of tracking their purchase efficiently (Rule 3.5) and fostering trust through helpful communication (Rule 3.6).
+    This widget is triggered contextually to be helpful, not intrusive. It appears automatically for a logged-in user when they visit the main account dashboard or the homepage, but only under specific conditions: 1) They have an order that has been shipped but not yet delivered, and 2) They have not dismissed this specific notification during their current session. 
 
-*****Response*****
-Question 3: Can you describe the full range of interactions users can have with the widget?
+    This trigger is designed to be proactive, providing valuable information right when the user is most likely to be looking for it, thus enabling their success (Rule #5). By showing it only once per session and for active orders, it respects the user's attention and autonomy, avoiding notification fatigue and ensuring the information is always relevant. This prevents the widget from becoming an annoyance, which supports user welfare and a sense of control (Rules #1 and #12). It would not appear for guest users or for users with no active shipments.
+    
+    *****Response*****
+    
+    Question 3: Can you describe the full range of interactions users can have with the widget?
 
-Users have three primary interactions with the widget, designed to provide both information and control:
-1.  **Viewing:** The main interaction is passive. The user can immediately see the most critical information—what the item is, the current status, and the estimated arrival date—without any clicks, fulfilling their immediate need for an update.
-2.  **Dismissing:** The user can click the '×' button in the top-right corner. This action immediately closes the widget, giving the user full control over their browsing experience. This respects their autonomy and ensures the component does not become an annoyance (Rules 3.7 & 3.12).
-3.  **Drilling Down:** The user can click the "View Full Tracking Details" button. This is the main call to action and would navigate them to a dedicated, more comprehensive tracking page with a map view, detailed shipping history, and carrier information. This allows users to seek more information if they choose, supporting their autonomy and need for detailed information.
--->
+    The user interactions are intentionally focused and simple to maintain clarity and control. The full range of interactions includes:
+
+    1.  **Reading Information:** The primary interaction is consuming the clearly presented information, such as the estimated delivery date, the current step in the delivery process via the visual progress bar, and confirming the item ordered.
+
+    2.  **Dismissing the Widget:** The user has complete autonomy to close the widget at any time by clicking the '×' button in the top-right corner. This immediately hides the component, respecting their control over the interface (Rule #7).
+
+    3.  **Viewing More Details:** The user can click the "View Full Order Details" link. This is a clear call-to-action that navigates them to a separate, more comprehensive order tracking page. This page would contain granular details like the carrier's tracking number, a full list of all items in the order, and a detailed history of tracking events, allowing users to dive deeper if they choose (Rule #8, informed consent).
+
+    There are no hidden interactions, dark patterns, or attempts to upsell, ensuring the system behaves reliably and preserves the user's sense of agency (Rules #6 and #9).
+    
+    -->
 </body>

@@ -1,19 +1,19 @@
-### Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?
+**Question 1: Can you describe how the widget looks, such as its colors, size of elements, and layout? Why do you make these design choices?**
 
-The widget is a clean, rectangular banner that spans the width of the viewport, with a maximum width of 1200px to maintain readability on large screens. It features a calm, light blue background (`#EAF4FF`) with dark, high-contrast text (`#1C2A39`) for optimal legibility, adhering to accessibility standards (Rule 3.5). The layout, managed by Flexbox, neatly aligns the text content and a prominent call-to-action (CTA) button on the left, with a dismiss ('X') button on the right. The typography uses 'Lato', a sans-serif font, for a modern and clear feel. These design choices are intentional to help users feel calm and in control (Rule 3.12). The non-intrusive color palette and clear, honest messaging ("Up to 40% off") are designed to foster user trust and avoid causing stress or pressure (Rule 3.1, 3.6).
+The component is a rectangular banner with rounded corners and a subtle shadow, making it float cleanly above the page content. Its layout is a single, horizontal row that is centered on the screen. The background color is a calm, light blue (#eaf2ff) with dark blue text (#1c2a4e) for high contrast and readability, which is crucial for accessibility (Rule 3.5). The call-to-action (CTA) button uses a stronger, saturated blue (#0052cc) to attract attention without causing alarm. A prominent '×' button is placed on the far right for easy dismissal. These choices were made to create a calm, trustworthy, and helpful user experience (Rule 3.12). The design avoids aggressive colors or demanding language, instead presenting the information clearly to help users make an informed choice without pressure (Rule 3.8).
 
-### Question 2: What triggers the appearance of this widget?
+**Question 2: What triggers the appearance of this widget?**
 
-The banner is triggered to appear on page load for visitors landing on key entry points of the website, such as the homepage or main category pages. To respect user autonomy and create a predictable experience (Rule 3.6, 3.7), its appearance is managed. After a user dismisses the banner by clicking the close button, a cookie or session storage flag would be set in a real-world application. This prevents the banner from reappearing for a defined period (e.g., for the rest of the session or 24 hours). This ensures the user’s choice is respected and they are not repeatedly interrupted, which supports a feeling of control over their browsing environment (Rule 3.12).
+The banner appears automatically upon page load when a user visits key pages of the e-commerce website, such as the homepage, category pages, or popular product landing pages. It is not triggered by a specific user action like scrolling or clicking. This approach ensures that all visitors are immediately and transparently informed of major site-wide promotions without being intrusive. The appearance is a passive event, intended as a helpful notification rather than a reaction to user behavior. This respects user autonomy by presenting information upfront without demanding interaction (Rule 3.7) and ensures all users have an equal opportunity to benefit from the deals (Rule 3.5).
 
-### Question 3: Can you describe the full range of interactions users can have with the widget?
+**Question 3: Can you describe the full range of interactions users can have with the widget?**
 
-Users have three primary interactions with the widget, all designed to support user autonomy and informed choice:
+Users have three clear and simple interaction paths with the banner, giving them complete control.
+1.  **Engage:** The user can click the "Shop All Deals" button. This action navigates them directly to a dedicated page showcasing all the items included in the sale, fulfilling the promise made in the banner text.
+2.  **Dismiss:** The user can click the '×' close button. This immediately removes the banner from their view, and ideally, this action would be remembered for their session to prevent it from reappearing, respecting their choice to decline the offer (Rule 3.7).
+3.  **Ignore:** The user can choose to do nothing. Since the banner is fixed at the top but does not obstruct the core content or functionality of the page, they are free to scroll and interact with the rest of the website without interference. This frictionless design helps users feel in control and not forced into an interaction (Rule 3.12).
 
-1.  **Engage with the Offer:** The user can click the "Shop Deals" button. This action clearly communicates its intent (Rule 3.8) and navigates them directly to a page displaying all items included in the sale. This provides a direct path for interested users to succeed in their goal of finding discounted products (Rule 3.5).
-
-2.  **Dismiss the Banner:** The user can click the 'X' icon. This immediately and smoothly removes the banner from view, giving the user full control over their interface (Rule 3.7). This action is simple, irreversible for the session, and respects the user’s desire to focus on other content.
-
-3.  **Ignore the Banner:** The user can choose to do nothing. The banner remains fixed at the top of the viewport but is designed to be unobtrusive, allowing them to scroll and interact with the main page content without interference.
+*****Response*****
 -->
+
 </body>
